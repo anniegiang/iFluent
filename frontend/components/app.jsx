@@ -2,6 +2,7 @@ import React from 'react';
 import NavBarContainer from './navbar/navbar_container';
 import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/signup_form_container';
+import Splash from './splash/splash';
 import { Route } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
@@ -10,6 +11,7 @@ const App = () => (
     <header>
       <h1>iFluent</h1>
       <NavBarContainer />
+      <Splash />
     </header>
 
     <AuthRoute path="/signup" component={SignupFormContainer} />
