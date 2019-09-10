@@ -24,26 +24,30 @@
 }
 
 .main-nav {
-	margin-right: 25px;
+	margin-right: 20px;
 }
 
-.right-nav a {
+.right-nav a, 
+.left-nav a {
 	color: #fff;
 	background-color: transparent;
 	margin: 10px;
 	border: 1px solid #fff;
 	border-radius: 17px;
-	padding: 10px 16px;
+	padding: 10px 13px;
 	
 }
 
-.right-nav a:hover {
+.right-nav a:hover,
+.left-nav a:hover {
 	color: black;
 	background-color: #fff;
 	
 }
 
-.right-nav span {
+.right-nav span,
+.left-nav span {
 	text-transform: uppercase;
 	cursor: pointer;
 }
+

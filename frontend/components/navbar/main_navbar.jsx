@@ -16,12 +16,11 @@ class MainNavBar extends React.Component {
       return (
         <div className="main-nav"> 
           <div className="left-nav">
-            <button>Languages</button>
+            <a><span>Languages</span></a>
           </div>
           <div className="right-nav">
-            <h2>Welcome, {currentUser.name}!</h2>
-            <button><span>Find a Teacher</span></button>
-            <button onClick={logout}><span>Logout</span></button>
+            <a><span>Find a Teacher</span></a>
+            <a onClick={logout}><span>Logout</span></a>
           </div>
         </div>
       )
@@ -29,9 +28,9 @@ class MainNavBar extends React.Component {
       return (
         <div className="main-nav">
           <div className="right-nav">
+            <a onClick={this.demoLogin}><span>Demo</span></a>
             <Link to="/login"><span>Log In</span></Link>
             <Link to="/signup"><span>Sign Up</span></Link>
-            <a onClick={this.demoLogin}><span>Demo</span></a>
           </div>
         </div>
       )
