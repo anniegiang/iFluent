@@ -4,7 +4,7 @@ class Splash extends React.Component {
     render() {
         return (
             <div>
-                <img src="assets/splash-temp.jpg"/>
+                <img class="homepage-pic" src="assets/splash-temp.jpg"/>
             </div>
         )
     }
