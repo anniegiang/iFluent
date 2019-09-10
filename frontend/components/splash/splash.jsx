@@ -4,7 +4,7 @@ class Splash extends React.Component {
     render() {
         return (
             <div>
-                <img src="assets/italki-landing.gif" />
+                {/* <img class="splash-gif" src="assets/italki-landing.gif" /> */}
             </div>
         )
     }
