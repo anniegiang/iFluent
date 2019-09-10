@@ -11,6 +11,7 @@
 
 .searchbar {
     display: flex;
+    width: 83.5%;
     height: 48px;
     font-size: 20px;
     color: #333;
@@ -19,7 +20,7 @@
 
 .search-container p {
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 1.5;
     margin-bottom: 20px;
 }
@@ -34,6 +35,10 @@
     background-color: #fff;
     color: black;
     cursor: pointer;
+}
+
+.search-input::placeholder {
+    color: gray;
 }
 
 .search-btn {
