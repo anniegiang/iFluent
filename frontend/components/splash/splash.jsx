@@ -4,7 +4,7 @@ class Splash extends React.Component {
     render() {
         return (
             <div>
-                <h1>splash gif here</h1>
+                <img src="assets/splash-temp.jpg"/>
             </div>
         )
     }
