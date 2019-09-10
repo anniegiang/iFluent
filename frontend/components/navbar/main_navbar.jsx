@@ -46,7 +46,8 @@ class MainNavBar extends React.Component {
 
   render() {
     return (
-      <div className="navbar">
+      <div className="navbar-container">
+        <h1>logo</h1>
         {this.displayNavBar()}
       </div>
     )

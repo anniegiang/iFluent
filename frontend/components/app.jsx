@@ -9,11 +9,10 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 const App = () => (
   <div>
     <header>
-      <h1>iFluent</h1>
       <MainNavBarContainer />
-      <Splash />
     </header>
 
+    <Splash />
     <AuthRoute path="/signup" component={SignupFormContainer} />
     <AuthRoute path="/login" component={LoginFormContainer} />
     
