@@ -1,0 +1,27 @@
+.search-container {
+    color: white;
+}
+
+.search-container h1 {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.search-container p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.searchbar {
+    position: relative;
+    padding: 14px 160px 12px 15px;
+    flex: 1 1;
+    font-size: 16px;
+    border: 0;
+    border-radius: 4px 0 0 4px;
+    background-color: #fff;
+    cursor: pointer;
+}
