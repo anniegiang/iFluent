@@ -1,5 +1,5 @@
 import React from 'react';
-import NavBarContainer from './navbar/navbar_container';
+import MainNavBarContainer from './navbar/main_navbar_container';
 import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/signup_form_container';
 import Splash from './splash/splash';
@@ -10,7 +10,7 @@ const App = () => (
   <div>
     <header>
       <h1>iFluent</h1>
-      <NavBarContainer />
+      <MainNavBarContainer />
       <Splash />
     </header>
 
