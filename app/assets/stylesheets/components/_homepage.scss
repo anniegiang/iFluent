@@ -1,3 +1,12 @@
+.homepage-background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background-image: linear-gradient(90deg, #866a4a,rgba(210, 180, 145, 0));
+}
+
 .homepage-hero, .homepage-video {
 	position: relative;
 }
@@ -11,7 +20,7 @@
 
 .homepage-fluent {
 	position: absolute;
-	top: 54%;
+	top: 50%;
 	left: 10vw;
 	width: 480px;
 	transform: translateY(-70%);
