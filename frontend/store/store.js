@@ -4,7 +4,7 @@ import logger from "redux-logger";
 import rootReducer from '../reducers/root_reducer';
 
 const configureSore = (preloadedState = {}) => {
-  return createStore(rootReducer, preloadedState, applyMiddleware(thunk, logger));
+  return createStore(rootReducer, preloadedState, applyMiddleware(thunk));
 }
 
 export default configureSore;
