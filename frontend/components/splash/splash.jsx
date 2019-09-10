@@ -11,7 +11,7 @@ class Splash extends React.Component {
                     type='video/mp4'
                 >
                 </video>
-                <div class="homepage-background">
+                <div className="homepage-background">
 
                 </div>
             </div>
