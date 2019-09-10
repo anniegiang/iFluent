@@ -8,15 +8,15 @@ import { Route } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
-  <div class="italki">
-    <header class="header">
+  <div className="italki">
+    <header className="header">
         <MainNavBarContainer />
     </header>
-    <div class="flex-container">
-      <div class="homepage">
-        <div class="homepage-hero">
+    <div className="flex-container">
+      <div className="homepage">
+        <div className="homepage-hero">
           <Splash />
-          <div class="homepage-fluent">
+          <div className="homepage-fluent">
             <SearchBar />
           </div>
         </div>

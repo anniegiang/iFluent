@@ -25,3 +25,12 @@
     background-color: #fff;
     cursor: pointer;
 }
+
+.search-btn {
+    display: flex;
+    width: 64px;
+    height: 48px;
+    border-radius: 0 4px 4px 0;
+    background: linear-gradient(90deg,#ff786b,#ff4338);
+    align-items: center;
+}
