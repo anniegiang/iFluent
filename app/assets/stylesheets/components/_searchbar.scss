@@ -8,6 +8,14 @@
     line-height: 1.4;
 }
 
+.searchbar {
+    display: flex;
+    height: 48px;
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+}
+
 .search-container p {
     font-size: 16px;
     font-weight: 300;
@@ -15,22 +23,27 @@
     margin-bottom: 20px;
 }
 
-.searchbar {
+.search-input {
     position: relative;
-    padding: 14px 160px 12px 15px;
+    padding: 14px 25px 12px 15px;
     flex: 1 1;
     font-size: 16px;
     border: 0;
     border-radius: 4px 0 0 4px;
     background-color: #fff;
+    color: black;
     cursor: pointer;
 }
 
 .search-btn {
-    display: flex;
-    width: 64px;
+    width: 40px;
     height: 48px;
     border-radius: 0 4px 4px 0;
     background: linear-gradient(90deg,#ff786b,#ff4338);
-    align-items: center;
 }
+
+.search-container img {
+    width: 24px;
+    height: 24px;
+}
+
