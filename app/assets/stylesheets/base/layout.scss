@@ -1,9 +1,15 @@
-html {
-	position: relative;
+#root {
 	height: 100%;
 }
 
 body {
 	font-family: Roboto, Times New Roman, Times,serif, sans-serif;
 	font-size: 12px;
+}
+
+.italki {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	min-height: 768px;
 }

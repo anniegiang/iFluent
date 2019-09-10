@@ -31,7 +31,7 @@ class MainNavBar extends React.Component {
           <div className="right-nav">
             <Link to="/login"><span>Log In</span></Link>
             <Link to="/signup"><span>Sign Up</span></Link>
-            <button onClick={this.demoLogin}><span>Demo</span></button>
+            <a onClick={this.demoLogin}><span>Demo</span></a>
           </div>
         </div>
       )
@@ -49,7 +49,6 @@ class MainNavBar extends React.Component {
     return (
       <div className="navbar-container">
         <img 
-          // src="https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/logo_red.149c838d.svg" 
           src="https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/logo_white.72e72948.svg" 
           class="logo"
           />

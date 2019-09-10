@@ -8,7 +8,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
   <div class="italki">
-    <header>
+    <header class="header">
         <MainNavBarContainer />
     </header>
     <div class="flex-container">

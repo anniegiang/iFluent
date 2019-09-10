@@ -3,8 +3,15 @@
 	height: 38px;
 }
 
-.navbar-container {
+.header {
 	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 999;
+}
+
+.navbar-container {
 	display:flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -15,13 +22,13 @@
 	// background: transparent;
 }
 
-.right-nav {
+.right-nav a {
 	color: #fff;
 	background-color: transparent;
-	margin: 30px;
-	// border: 1px solid #fff;
-	// border-radius: 17px;
-	// padding: 17px;
+	margin: 10px;
+	border: 1px solid #fff;
+	border-radius: 17px;
+	padding: 17px;
 	
 }
 
