@@ -46,16 +46,12 @@ class MainNavBar extends React.Component {
 
 
   render() {
-    let logoResize = {
-      width: "75px",
-      height: "38px"
-    }
     return (
       <div className="navbar-container">
         <img 
           // src="https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/logo_red.149c838d.svg" 
           src="https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/logo_white.72e72948.svg" 
-          style={logoResize}
+          class="logo"
           />
         {this.displayNavBar()}
       </div>

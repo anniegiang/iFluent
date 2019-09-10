@@ -7,15 +7,19 @@ import { Route } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
-  <div>
+  <div class="italki">
     <header>
-      <MainNavBarContainer />
+        <MainNavBarContainer />
     </header>
-
-    <Splash />
-    <AuthRoute path="/signup" component={SignupFormContainer} />
-    <AuthRoute path="/login" component={LoginFormContainer} />
-    
+    <div class="flex-container">
+      <div class="homepage">
+        <div class="homepage-hero">
+          <Splash />
+        </div>
+      </div>
+    </div>
+      <AuthRoute path="/signup" component={SignupFormContainer} />
+      <AuthRoute path="/login" component={LoginFormContainer} />
   </div>
 );
 
