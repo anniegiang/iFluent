@@ -6,6 +6,7 @@
     font-size: 40px;
     font-weight: 500;
     line-height: 1.4;
+    margin-bottom: 10px;
 }
 
 .searchbar {
@@ -36,13 +37,14 @@
 }
 
 .search-btn {
-    width: 40px;
+    width: 64px;
     height: 48px;
     border-radius: 0 4px 4px 0;
     background: linear-gradient(90deg,#ff786b,#ff4338);
 }
 
 .search-container img {
+    margin: 0 auto;
     width: 24px;
     height: 24px;
 }
