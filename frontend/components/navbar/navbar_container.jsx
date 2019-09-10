@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import NavBar from './navbar';
-import { logoutUser, loginUser } from '../../actions/session_action';
+import { logoutUser, loginUser } from '../../actions/session_actions';
 import { withRouter } from 'react-router-dom'
 
 const mapStateToProps = state => {
