@@ -20,8 +20,8 @@ class MainNavBar extends React.Component {
           </div>
           <div className="right-nav">
             <h2>Welcome, {currentUser.name}!</h2>
-            <button>Find a Teacher</button>
-            <button onClick={logout}>Logout</button>
+            <button><span>Find a Teacher</span></button>
+            <button onClick={logout}><span>Logout</span></button>
           </div>
         </div>
       )
@@ -29,9 +29,9 @@ class MainNavBar extends React.Component {
       return (
         <div className="main-nav">
           <div className="right-nav">
-            <button onClick={this.demoLogin}>Demo</button>
-            <Link to="/login">Log In</Link>
-            <Link to="/signup">Sign Up</Link>
+            <Link to="/login"><span>Log In</span></Link>
+            <Link to="/signup"><span>Sign Up</span></Link>
+            <button onClick={this.demoLogin}><span>Demo</span></button>
           </div>
         </div>
       )
