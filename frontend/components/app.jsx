@@ -3,6 +3,7 @@ import MainNavBarContainer from './navbar/main_navbar_container';
 import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/signup_form_container';
 import Splash from './splash/splash';
+import SearchBar from './search/search_bar';
 import { Route } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
@@ -15,6 +16,9 @@ const App = () => (
       <div class="homepage">
         <div class="homepage-hero">
           <Splash />
+          <div class="homepage-fluent">
+            <SearchBar />
+          </div>
         </div>
       </div>
     </div>
