@@ -27,8 +27,19 @@
 	margin-right: 20px;
 }
 
-.right-nav a, 
-.left-nav a {
+.main-nav-logged-in {
+	display:flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	height: 70px;
+	padding-left: 30px;
+	background: rgba(0,0,0,.25);
+	// background: transparent;
+}
+
+.right-nav button, 
+.left-nav button {
 	color: #fff;
 	background-color: transparent;
 	margin: 10px;
@@ -38,15 +49,15 @@
 	
 }
 
-.right-nav a:hover,
-.left-nav a:hover {
+.right-nav button:hover,
+.left-nav button:hover {
 	color: black;
 	background-color: #fff;
 	
 }
 
-.right-nav span,
-.left-nav span {
+.right-nav button,
+.left-nav button {
 	text-transform: uppercase;
 	cursor: pointer;
 }

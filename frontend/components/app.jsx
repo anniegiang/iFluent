@@ -10,6 +10,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
   <div className="italki">
+    <Modal />
     <header className="header">
         <MainNavBarContainer />
     </header>
@@ -23,8 +24,8 @@ const App = () => (
         </div>
       </div>
     </div>
-      <AuthRoute path="/signup" component={SignupFormContainer} />
-      <AuthRoute path="/login" component={LoginFormContainer} />
+      {/* <AuthRoute path="/signup" component={SignupFormContainer} />
+      <AuthRoute path="/login" component={LoginFormContainer} /> */}
   </div>
 );
 

@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import MainNavBar from './main_navbar';
 import { logoutUser, loginUser } from '../../actions/session_actions';
+import { openModal, closeModal } from '../../actions/modal_actions';
 import { withRouter } from 'react-router-dom'
 
 const mapStateToProps = state => {
@@ -10,8 +11,11 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  login: user => dispatch(loginUser(user)),
-  logout: () => dispatch(logoutUser())
+  loginUser: user => dispatch(dispatch(loginUser(user))),
+  logoutUser: () => dispatch(dispatch(logoutUser())),
+  openModalLogin: () => dispatch(openModal("login")),
+  openModalSignup: () => dispatch(openModal("signup")),
+  closeModal: () => dispatch(closeModal())
 });
 
 

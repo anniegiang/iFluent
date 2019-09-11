@@ -1,6 +1,17 @@
-// .modal-backdrop {
-//     background-color: rgba(0,0,0,.25);
-//     height: 100vh;
-//     z-index: 1;
-//     width: 100%;
-// }
+.modal-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  transition: opacity .2;
+  z-index: 9999;
+}
+
+.modal-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

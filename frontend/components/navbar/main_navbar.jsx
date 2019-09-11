@@ -14,13 +14,13 @@ class MainNavBar extends React.Component {
     const { currentUser, logout } = this.props;
     if (currentUser) {
       return (
-        <div className="main-nav"> 
+        <div className="main-nav-logged-in"> 
           <div className="left-nav">
-            <a><span>Languages</span></a>
+            <button><span>Languages</span></button>
           </div>
           <div className="right-nav">
-            <a><span>Find a Teacher</span></a>
-            <a onClick={logout}><span>Logout</span></a>
+            <button><span>Find a Teacher</span></button>
+            <button onClick={this.props.logoutUser}><span>Logout</span></button>
           </div>
         </div>
       )
@@ -28,9 +28,15 @@ class MainNavBar extends React.Component {
       return (
         <div className="main-nav">
           <div className="right-nav">
-            <a onClick={this.demoLogin}><span>Demo</span></a>
-            <Link to="/login"><span>Log In</span></Link>
-            <Link to="/signup"><span>Sign Up</span></Link>
+            <button onClick={this.demoLogin}><span>Demo</span></button>
+            <button onClick={this.props.openModalSignup}>
+              Signup
+            </button>
+            <button onClick={this.props.openModalLogin}>
+              Log In
+            </button>
+            {/* <Link to="/login"><span>Log In</span></Link>
+            <Link to="/signup"><span>Sign Up</span></Link> */}
           </div>
         </div>
       )
@@ -39,7 +45,7 @@ class MainNavBar extends React.Component {
 
   demoLogin(e) {
      e.preventDefault();
-     this.props.login({email: "guest@aa.io", password: "password"})
+     this.props.loginUser({email: "guest@aa.io", password: "password"})
       .then(() => this.props.history.push("/"))
   }
 
