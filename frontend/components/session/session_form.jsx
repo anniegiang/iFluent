@@ -100,7 +100,7 @@ class SessionForm extends React.Component {
     } 
 
     return (
-      <p className="errors">{error}</p>
+      <span className="errors">{error}</span>
     )
 
   }

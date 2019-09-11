@@ -30,7 +30,7 @@ class MainNavBar extends React.Component {
           <div className="right-nav">
             <button onClick={this.demoLogin}><span>Demo</span></button>
             <button onClick={this.props.openModalSignup}>
-              Signup
+              Sign Up
             </button>
             <button onClick={this.props.openModalLogin}>
               Log In
