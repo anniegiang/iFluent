@@ -15,6 +15,7 @@ class SessionForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleInput = this.handleInput.bind(this);
     this.renderOtherFormLink = this.renderOtherFormLink.bind(this);
+    this.renderError = this.renderError.bind(this);
   }
   
   componentDidMount() {
@@ -80,17 +81,39 @@ class SessionForm extends React.Component {
     }
   }
 
+  renderError(type) {
+    let error;
+    switch(type) {
+      case "name":
+        error = this.props.errors[1];
+      case "email":
+        error = this.props.errors[0];
+      case "password":
+        error = this.props.errors[2];
+      default:
+        error = "";
+    }
+
+    if (!error && this.state[type] === "" ) {
+      error = "Field can't be empty";
+    } 
+
+    return (
+      <p className="errors">{error}</p>
+    )
+
+  }
+
   render() {
     return (
       <div className="modal-form-container">
         <div className="modal-body">
           {this.renderHeader()}
-          <br/>
-          <br/>
-          {this.props.errors.map((error, idx) => <li key={idx}>{error}</li>)}
+          <hr/>
+
           <form onSubmit={this.handleSubmit}>
-            
             {this.renderNameInput()}
+            {this.props.errors[1] && this.renderError("name")}
             <br/>
             <br/>
             <label>
@@ -101,6 +124,7 @@ class SessionForm extends React.Component {
                 placeholder="Email"
                 >
               </input>
+              {this.props.errors[0] && this.renderError("email")}
             </label>
             <br/>
             <br/>
@@ -112,6 +136,7 @@ class SessionForm extends React.Component {
                 placeholder="Password"
               >
               </input>
+              {this.props.errors[2] && this.renderError("password")}
             </label>
             <br/>
             <br/>
