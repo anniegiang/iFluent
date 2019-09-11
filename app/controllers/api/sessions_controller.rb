@@ -7,7 +7,7 @@ class Api::SessionsController < ApplicationController
 			login!(@user)
 			render :show
 		else
-			if !User.exists?(:email => params[:user][:email])
+			if !User.exists?(:email => params[:user][:email]) 
 				render json: ["User does not exist"], status: 422
 			else
 				render json: ["Invalid credentials"], status: 422

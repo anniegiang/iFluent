@@ -44,6 +44,10 @@
   color: #333;
 }
 
+.modal-body input:focus {
+  border: 1px solid #ff4338;
+}
+
 .modal-body h1 {
   font-size: 30px;
   text-align: center;
