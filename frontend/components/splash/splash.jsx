@@ -7,7 +7,8 @@ class Splash extends React.Component {
                 {/* <img className="homepage-video" src="assets/splash-temp.jpg"/> */}
                 <video 
                     autoPlay loop
-                    src="assets/homepagevideo_short_version2.98c5bfce.mp4"
+                    // src="assets/homepagevideo_short_version2.98c5bfce.mp4"
+                    src={window.splashVideo}
                     type='video/mp4'
                 >
                 </video>
