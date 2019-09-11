@@ -11,8 +11,8 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  loginUser: user => dispatch(dispatch(loginUser(user))),
-  logoutUser: () => dispatch(dispatch(logoutUser())),
+  loginUser: user => dispatch(loginUser(user)),
+  logoutUser: () => dispatch(logoutUser()),
   openModalLogin: () => dispatch(openModal("login")),
   openModalSignup: () => dispatch(openModal("signup")),
   closeModal: () => dispatch(closeModal())

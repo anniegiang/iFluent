@@ -14,6 +14,7 @@ class SessionForm extends React.Component {
     this.renderNameInput = this.renderNameInput.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleInput = this.handleInput.bind(this);
+    this.renderOtherFormLink = this.renderOtherFormLink.bind(this);
   }
   
   componentDidMount() {
@@ -36,18 +37,30 @@ class SessionForm extends React.Component {
   renderHeader() {
     if(this.props.formType === "login") {
       return (
-        <div>
-          <h1>Log in</h1>
-          <Link to="/signup">Sign up</Link>
-        </div>
+        <h1> Log In </h1>
       )
-    } else if (this.props.formType === "signup") {
+    } else {
+      return (
+        <h1> Sign Up </h1>
+      )
+    }
+  }
+
+  renderOtherFormLink(type) {
+    if(type === "login") {
       return (
         <div>
-          <h1>Sign up</h1>
-          <Link to="/login">Log in</Link>
+          <p>No account yet?</p>
+          <a href="/signup">Sign up</a>
         </div>
       )
+    } else if(type === "signup") {
+        return (
+          <div>
+            <p>Already have an account?</p>
+            <a href="/login">Log in</a>
+          </div>
+        )
     }
   }
 
@@ -69,37 +82,43 @@ class SessionForm extends React.Component {
 
   render() {
     return (
-      <div>
-        {this.renderHeader()}
-
-        {this.props.errors.map((error, idx) => <li key={idx}>{error}</li>)}
-        
-        <form onSubmit={this.handleSubmit}>
-          
-          {this.renderNameInput()}
-          
-          <label>
-            <input 
-              onChange={this.handleInput("email")} 
-              type="text" 
-              value={this.state.email}
-              placeholder="Email"
+      <div className="modal-form-container">
+        <div className="modal-body">
+          {this.renderHeader()}
+          <br/>
+          <br/>
+          {this.props.errors.map((error, idx) => <li key={idx}>{error}</li>)}
+          <form onSubmit={this.handleSubmit}>
+            
+            {this.renderNameInput()}
+            <br/>
+            <br/>
+            <label>
+              <input 
+                onChange={this.handleInput("email")} 
+                type="text" 
+                value={this.state.email}
+                placeholder="Email"
+                >
+              </input>
+            </label>
+            <br/>
+            <br/>
+            <label>
+              <input 
+                onChange={this.handleInput("password")} 
+                type="password" 
+                value={this.state.password}
+                placeholder="Password"
               >
-            </input>
-          </label>
-
-          <label>
-            <input 
-              onChange={this.handleInput("password")} 
-              type="password" 
-              value={this.state.password}
-              placeholder="Password"
-            >
-            </input>
-          </label>
-          
-          <button>{this.props.formType}</button>
-        </form>
+              </input>
+            </label>
+            <br/>
+            <br/>
+            <button>{this.props.formType === "login" ? "log in" : "sign up"}</button>
+            {this.renderOtherFormLink(this.props.formType)}
+          </form>
+        </div>
       </div>
     )
   }
