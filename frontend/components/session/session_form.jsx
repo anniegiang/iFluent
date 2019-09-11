@@ -53,14 +53,14 @@ class SessionForm extends React.Component {
       return (
         <div>
           <p>No account yet?</p>
-          <a href="/signup">Sign up</a>
+          {this.props.otherForm()}
         </div>
       )
     } else if(type === "signup") {
         return (
           <div>
             <p>Already have an account?</p>
-            <a href="/login">Log in</a>
+            {this.props.otherForm()}
           </div>
         )
     }
@@ -105,17 +105,13 @@ class SessionForm extends React.Component {
 
   }
 
-  renderButton(type) {
-
-  }
-
   render() {
     return (
       <div className="modal-form-container">
         <div className="modal-body">
           {this.renderHeader()}
           <hr/>
-
+          {this.props.formType === "signup" ? <br/> : ""}
           <form onSubmit={this.handleSubmit}>
             {this.renderNameInput()}
             {this.props.errors[1] && this.renderError("name")}
