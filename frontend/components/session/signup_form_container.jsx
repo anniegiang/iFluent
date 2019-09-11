@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom'
 import SessionForm from './session_form';
 import { signupUser, clearErrors } from '../../actions/session_actions';
 import { openModal, closeModal } from '../../actions/modal_actions';
@@ -16,7 +17,8 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
         Log In
       </button>
     ),
+  closeModal: () => dispatch(closeModal()),
   clearErrors: () => dispatch(clearErrors())
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(SessionForm);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SessionForm));
