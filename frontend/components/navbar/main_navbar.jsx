@@ -8,7 +8,21 @@ class MainNavBar extends React.Component {
     super(props)
     this.displayNavBar = this.displayNavBar.bind(this);
     this.demoLogin = this.demoLogin.bind(this);
+    this.handleScroll = this.handleScroll.bind(this);
   }
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  };
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  };
+
+  handleScroll(e) {
+    let nav = document.querySelector(".navbar-container");
+      nav.classList.toggle("scrolled");
+    // $nav.toggleClass('.scrolled', $(this).scrollTop() > $nav.height());
+  };
 
   displayNavBar() {
     const { currentUser, logout } = this.props;
@@ -35,8 +49,6 @@ class MainNavBar extends React.Component {
             <button onClick={this.props.openModalLogin}>
               Log In
             </button>
-            {/* <Link to="/login"><span>Log In</span></Link>
-            <Link to="/signup"><span>Sign Up</span></Link> */}
           </div>
         </div>
       )
