@@ -7,7 +7,6 @@ class MainNavBar extends React.Component {
   constructor(props) {
     super(props)
     this.displayNavBar = this.displayNavBar.bind(this);
-    this.demoLogin = this.demoLogin.bind(this);
     this.handleScroll = this.handleScroll.bind(this);
   }
   componentDidMount() {
@@ -45,25 +44,17 @@ class MainNavBar extends React.Component {
       return (
         <div className="main-nav">
           <div className="right-nav">
-            <button onClick={this.demoLogin}><span>Demo</span></button>
-            <button onClick={this.props.openModalSignup}>
-              Sign Up
-            </button>
             <button onClick={this.props.openModalLogin}>
               Log In
+            </button>
+            <button onClick={this.props.openModalSignup}>
+              Sign Up
             </button>
           </div>
         </div>
       )
     }
   }
-
-  demoLogin(e) {
-     e.preventDefault();
-     this.props.loginUser({email: "guest@aa.io", password: "password"})
-      .then(() => this.props.history.push("/"))
-  }
-
 
   render() {
     return (
