@@ -68,10 +68,10 @@ class MainNavBar extends React.Component {
   render() {
     return (
       <div className="navbar-container">
-        <img 
+        <a href="/"><img 
           src="https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/logo_white.72e72948.svg"
           className="logo"
-          />
+          /></a>
         {this.displayNavBar()}
       </div>
     )

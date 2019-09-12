@@ -6,11 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 User.destroy_all
-const guest = User.create({name: "Guest", email: "guest@aa.io", password: "password"});
-const user1 = User.create({name: "user1", email: "user1@aa.io", password: "password"});
+guest = User.create({name: "Guest", email: "guest@aa.io", password: "password"});
+user1 = User.create({name: "user1", email: "user1@aa.io", password: "password"});
 
 TeacherDetail.create({
-  teacher_id: 2,
+  teacher_id: user1.id,
   country: "USA",
   about_me: "This is a random piece of sentence that acts a place holder",
   title: "Professional Teacher",

@@ -16,6 +16,8 @@ class SessionForm extends React.Component {
     this.handleInput = this.handleInput.bind(this);
     this.renderOtherFormLink = this.renderOtherFormLink.bind(this);
     this.renderError = this.renderError.bind(this);
+    this.renderDemoButton =this.renderDemoButton.bind(this);
+    this.demoLogin = this.demoLogin.bind(this);
   }
   
   componentDidMount() {
@@ -110,6 +112,20 @@ class SessionForm extends React.Component {
 
   }
 
+  renderDemoButton() {
+    return (
+      <button onClick={this.demoLogin}><span>Demo</span></button>
+    )
+  }
+
+  demoLogin(e) {
+     e.preventDefault();
+     this.props.processForm({email: "guest@aa.io", password: "password"})
+      .then(() => this.props.history.push("/"))
+      .then(() => this.props.closeModal());
+  }
+
+
   render() {
     return (
       <div className="modal-form-container modal-open">
@@ -150,6 +166,7 @@ class SessionForm extends React.Component {
             </label>
             <br/>
             <button>{this.props.formType === "login" ? "log in" : "sign up"}</button>
+            {this.renderDemoButton()}
             {this.renderOtherFormLink(this.props.formType)}
           </form>
         </div>
