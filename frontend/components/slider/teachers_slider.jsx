@@ -1,5 +1,5 @@
 import React from 'react';
-import TeachersCarousel from './teachers_carousel';
+// import TeachersCarousel from './teachers_carousel';
 
 class TeachersSlider extends React.Component {
 
@@ -14,7 +14,7 @@ class TeachersSlider extends React.Component {
             <span>Any language.</span>
           </span>
         </h1>
-        <TeachersCarousel />
+        {/* <TeachersCarousel /> */}
       </div>
     )
   }

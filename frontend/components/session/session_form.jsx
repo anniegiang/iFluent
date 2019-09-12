@@ -30,7 +30,7 @@ class SessionForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const user = Object.assign({});
+    const user = Object.assign({}, this.state);
     this.props.processForm(user)
     .then(() => this.props.history.push("/"))
     .then(() => this.props.closeModal());
@@ -98,9 +98,11 @@ class SessionForm extends React.Component {
         error = this.props.errors[i]
       }
     }
-
+    
+    // let newType = type[0].toLowerCase() + type.slice(1);
     if (this.state[type] === "" ) {
       error = `${type} can't be empty`;
+      console.log(error);
     }
     return (
       <div className="error-box">{error}</div>
