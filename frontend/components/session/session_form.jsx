@@ -108,6 +108,9 @@ class SessionForm extends React.Component {
   render() {
     return (
       <div className="modal-form-container">
+        <div className="modal-close">
+          <img src="https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/cross_icon.ad79cc7a.svg" alt="close"/>
+        </div>
         <div className="modal-body">
           {this.renderHeader()}
           <hr/>

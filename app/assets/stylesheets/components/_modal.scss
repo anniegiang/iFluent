@@ -86,3 +86,16 @@
   margin-top: 5px;
   margin-left: 3px;
 }
+
+.modal-close {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  display: flex;
+  flex-direction: row;
+  // justify-content: flex-end;
+  align-items: center;
+  cursor: pointer;
+}
