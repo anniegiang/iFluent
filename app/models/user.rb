@@ -21,7 +21,7 @@ class User < ApplicationRecord
 	has_one :teacher_detail,
 		primary_key: :id,
 		foreign_key: :teacher_id,
-    class_name: 'User'
+    class_name: 'TeacherDetail'
 
 	def self.generate_session_token
 		SecureRandom::urlsafe_base64

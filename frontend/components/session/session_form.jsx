@@ -18,6 +18,7 @@ class SessionForm extends React.Component {
     this.renderError = this.renderError.bind(this);
     this.renderDemoButton =this.renderDemoButton.bind(this);
     this.demoLogin = this.demoLogin.bind(this);
+    this.renderOr = this.renderOr.bind(this);
   }
   
   componentDidMount() {
@@ -114,7 +115,7 @@ class SessionForm extends React.Component {
 
   renderDemoButton() {
     return (
-      <button onClick={this.demoLogin}><span>Demo</span></button>
+      <button className="demo-btn" onClick={this.demoLogin}>Demo</button>
     )
   }
 
@@ -123,6 +124,14 @@ class SessionForm extends React.Component {
      this.props.processForm({email: "guest@aa.io", password: "password"})
       .then(() => this.props.history.push("/"))
       .then(() => this.props.closeModal());
+  }
+
+  renderOr() {
+    return (
+      <div className="or">
+        <span>----------------   or   ---------------- </span>
+      </div>
+    )
   }
 
 
@@ -165,10 +174,16 @@ class SessionForm extends React.Component {
               {this.renderError("Password")}
             </label>
             <br/>
-            <button>{this.props.formType === "login" ? "log in" : "sign up"}</button>
-            {this.renderDemoButton()}
-            {this.renderOtherFormLink(this.props.formType)}
+            <button className="submit-btn">{this.props.formType === "login" ? "log in" : "sign up"}</button>
+            
+            {this.props.formType === "login" ? this.renderOr() : ""}
+            {this.props.formType === "login" ? this.renderDemoButton() : ""}
+  
+            {/* {this.renderOtherFormLink(this.props.formType)} */}
           </form>
+        </div>
+        <div className="modal-footer">
+
         </div>
       </div>
     )

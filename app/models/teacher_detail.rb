@@ -21,7 +21,7 @@
 class TeacherDetail < ApplicationRecord
   validates :teacher_id, :country, :about_me, :title, presence: true
 
-  belongs_to :user,
+  belongs_to :teacher,
     primary_key: :id,
     foreign_key: :teacher_id,
     class_name: 'User'
