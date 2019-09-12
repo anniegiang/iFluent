@@ -142,3 +142,22 @@ div.or::after {
 .modal-body :last-child {
     margin-bottom: 0;
 }
+
+.sign-type-hint {
+  font-size: 14px;
+  position: absolute;
+  top: 36%;
+  left: 30px;
+  color: #333;
+}
+
+.changeTypeText {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  font-size: 14px;
+  transform: translateY(-50%);
+  user-select: none;
+  cursor: pointer;
+  color: #0071b9;
+}

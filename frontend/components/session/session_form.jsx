@@ -183,7 +183,12 @@ class SessionForm extends React.Component {
           </form>
         </div>
         <div className="modal-footer">
-
+          <div className="sign-type-hint">
+            <span>{this.props.formType === "login" ? "No account yet?" : "Already have an account?"}</span>
+          </div>
+          <div className="changeTypeText">
+            <span>{this.props.otherForm()}</span>
+          </div>
         </div>
       </div>
     )
