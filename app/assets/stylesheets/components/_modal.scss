@@ -74,13 +74,6 @@
   background-image: linear-gradient(90deg,#ff4338,#ff786b);
 }
 
-.modal-body span {
-  max-height: 5px;
-  color: #ff4338;
-  font-size: 16px;
-}
-
-
 .modal-body a{
   cursor: pointer;
   color: #ff4338;
@@ -88,6 +81,7 @@
 
 .error-box {
   color: #ff4338;
+  height: 6px;
   margin-top: 5px;
   margin-left: 3px;
 }
@@ -100,3 +94,11 @@
   right: 10px;
   cursor: pointer;
 }
+
+// body {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+// }

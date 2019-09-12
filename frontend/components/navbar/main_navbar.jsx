@@ -21,14 +21,10 @@ class MainNavBar extends React.Component {
   handleScroll() {
     let nav = document.querySelector(".navbar-container");
     if(window.scrollY > 70) {
-      console.log("not top of page");
       nav.classList.add("scrolled");
-      // nav.classList.remove("navbar-container");
     } else {
       nav.classList.remove("scrolled");
-      // nav.classList.add("navbar-container");
     }
-    // $nav.toggleClass('.scrolled', $(this).scrollTop() > $nav.height());
   };
 
   displayNavBar() {

@@ -20,11 +20,17 @@ class SessionForm extends React.Component {
   
   componentDidMount() {
     this.props.clearErrors();
+    document.body.style.overflow = 'hidden';
   }
+
+  componentWillUnmount() {
+    document.body.style.overflow = 'unset';
+}
+
 
   handleSubmit(e) {
     e.preventDefault();
-    const user = Object.assign({}, this.state);
+    const user = Object.assign({});
     this.props.processForm(user)
     .then(() => this.props.history.push("/"))
     .then(() => this.props.closeModal());
@@ -87,30 +93,24 @@ class SessionForm extends React.Component {
 
   renderError(type) {
     let error;
-    // debugger
     for(let i = 0; i < this.props.errors.length; i++) {
-      console.log(this.props.errors[i]);
-      if (this.props.errors[i].includes(type)) {
+      if (this.props.errors[i].includes(type) || this.props.errors[i].includes("Invalid credentials") || this.props.errors[i].includes("User does not exist")) {
         error = this.props.errors[i]
       }
     }
 
     if (this.state[type] === "" ) {
       error = `${type} can't be empty`;
-    } 
-    // console.log("full errors: ", this.props.errors);
-    // console.log("error: ", error);
-    // console.log(type);
-    // console.log(typeof type);
+    }
     return (
-      <span className="error-box">{error}</span>
+      <div className="error-box">{error}</div>
     )
 
   }
 
   render() {
     return (
-      <div className="modal-form-container">
+      <div className="modal-form-container modal-open">
         <div className="modal-close">
           <img 
             src="https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/cross_icon.ad79cc7a.svg" 
@@ -136,7 +136,6 @@ class SessionForm extends React.Component {
               {this.renderError("Email")}
             </label>
             <br/>
-            <br/>
             <label>
               <input 
                 onChange={this.handleInput("password")} 
@@ -147,7 +146,6 @@ class SessionForm extends React.Component {
               </input>
               {this.renderError("Password")}
             </label>
-            <br/>
             <br/>
             <button>{this.props.formType === "login" ? "log in" : "sign up"}</button>
             {this.renderOtherFormLink(this.props.formType)}
