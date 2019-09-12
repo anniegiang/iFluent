@@ -1,6 +1,7 @@
 import React from 'react';
+import TeachersCarousel from './teachers_carousel';
 
-class TeacherSlider extends React.Component {
+class TeachersSlider extends React.Component {
 
 
   render() {
@@ -13,9 +14,10 @@ class TeacherSlider extends React.Component {
             <span>Any language.</span>
           </span>
         </h1>
+        <TeachersCarousel />
       </div>
     )
   }
 }
 
-export default TeacherSlider;
+export default TeachersSlider;
