@@ -87,8 +87,9 @@ class SessionForm extends React.Component {
 
   renderError(type) {
     let error;
-
-    for(let i = 0; i < this.props.errors; i++) {
+    // debugger
+    for(let i = 0; i < this.props.errors.length; i++) {
+      console.log(this.props.errors[i]);
       if (this.props.errors[i].includes(type)) {
         error = this.props.errors[i]
       }
@@ -97,9 +98,12 @@ class SessionForm extends React.Component {
     if (this.state[type] === "" ) {
       error = `${type} can't be empty`;
     } 
-    console.log(this.props.errors)
+    // console.log("full errors: ", this.props.errors);
+    // console.log("error: ", error);
+    // console.log(type);
+    // console.log(typeof type);
     return (
-      <span className="errors">{error}</span>
+      <span className="error-box">{error}</span>
     )
 
   }
