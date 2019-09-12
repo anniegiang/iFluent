@@ -69,36 +69,35 @@ class SessionForm extends React.Component {
   renderNameInput() {
     if (this.props.formType === "signup") {
       return (
-        <label>
-            <input 
-              onChange={this.handleInput("name")} 
-              type="text" 
-              value={this.state.name}
-              placeholder="Name"
-              >
-            </input>
-        </label>
+        <div>
+          <label>
+              <input 
+                onChange={this.handleInput("name")} 
+                type="text" 
+                value={this.state.name}
+                placeholder="Name"
+                >
+              </input>
+          </label>
+          {this.renderError("Name")}
+        </div>
       )
     }
   }
 
   renderError(type) {
     let error;
-    switch(type) {
-      case "name":
-        error = this.props.errors[1];
-      case "email":
-        error = this.props.errors[0];
-      case "password":
-        error = this.props.errors[2];
-      default:
-        error = "";
+
+    for(let i = 0; i < this.props.errors; i++) {
+      if (this.props.errors[i].includes(type)) {
+        error = this.props.errors[i]
+      }
     }
 
-    if (!error && this.state[type] === "" ) {
-      error = "Field can't be empty";
+    if (this.state[type] === "" ) {
+      error = `${type} can't be empty`;
     } 
-
+    console.log(this.props.errors)
     return (
       <span className="errors">{error}</span>
     )
@@ -121,8 +120,6 @@ class SessionForm extends React.Component {
           {this.props.formType === "signup" ? <br/> : ""}
           <form onSubmit={this.handleSubmit}>
             {this.renderNameInput()}
-            {this.props.errors[1] && this.renderError("name")}
-            <br/>
             <br/>
             <label>
               <input 
@@ -132,7 +129,7 @@ class SessionForm extends React.Component {
                 placeholder="Email"
                 >
               </input>
-              {this.props.errors[0] && this.renderError("email")}
+              {this.renderError("Email")}
             </label>
             <br/>
             <br/>
@@ -144,7 +141,7 @@ class SessionForm extends React.Component {
                 placeholder="Password"
               >
               </input>
-              {this.props.errors[2] && this.renderError("password")}
+              {this.renderError("Password")}
             </label>
             <br/>
             <br/>

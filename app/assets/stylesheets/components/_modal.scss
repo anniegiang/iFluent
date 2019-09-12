@@ -37,7 +37,7 @@
   font-size: 14px;
   box-sizing: border-box;
   height: 38px;
-  width: 97%;
+  width: 99%;
   padding: 13px 15px;
   border: 1px solid #ccc;
   outline: none;
@@ -74,11 +74,16 @@
   background-image: linear-gradient(90deg,#ff4338,#ff786b);
 }
 
-.modal-body span,
-.modal-body a,{
-  cursor: pointer;
+.modal-body span {
+  max-height: 5px;
   color: #ff4338;
   font-size: 16px;
+}
+
+
+.modal-body a{
+  cursor: pointer;
+  color: #ff4338;
 }
 
 .errors {
@@ -88,14 +93,10 @@
 }
 
 .modal-close {
-  width: 20px;
-  height: 20px;
   position: absolute;
+  width: 25px;
+  height: 25px;
   top: 12px;
   right: 10px;
-  display: flex;
-  flex-direction: row;
-  // justify-content: flex-end;
-  align-items: center;
   cursor: pointer;
 }
