@@ -1,0 +1,27 @@
+# == Schema Information
+#
+# Table name: teacher_details
+#
+#  id              :bigint           not null, primary key
+#  teacher_id      :integer          not null
+#  country         :string           not null
+#  about_me        :text             not null
+#  title           :string           not null
+#  video_url       :string
+#  picture_url     :string
+#  hourly_rate     :float
+#  trial_rate      :float
+#  work_experience :string
+#  education       :string
+#  certificates    :string
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#
+
+require 'test_helper'
+
+class TeacherDetailTest < ActiveSupport::TestCase
+  # test "the truth" do
+  #   assert true
+  # end
+end

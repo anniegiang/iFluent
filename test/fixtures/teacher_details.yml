@@ -1,0 +1,31 @@
+# == Schema Information
+#
+# Table name: teacher_details
+#
+#  id              :bigint           not null, primary key
+#  teacher_id      :integer          not null
+#  country         :string           not null
+#  about_me        :text             not null
+#  title           :string           not null
+#  video_url       :string
+#  picture_url     :string
+#  hourly_rate     :float
+#  trial_rate      :float
+#  work_experience :string
+#  education       :string
+#  certificates    :string
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# This model initially had no columns defined. If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+one: {}
+# column: value
+#
+two: {}
+# column: value
