@@ -5,9 +5,14 @@ class Dashboard extends React.Component {
         super(props);
     }
 
+    componentDidMount() {
+        this.props.fetchTeacherDetails(this.props.currentUserId);
+    }
+
     render() {
         return (
             <div>
+                {this.props.userDetails.name}
                 <h1>Dashboard</h1>
             </div>
         )

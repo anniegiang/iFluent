@@ -19,8 +19,9 @@ document.addEventListener('DOMContentLoaded', () => {
     store = configureStore();
   }
 
-  window.fetchAllTeacherDetails = fetchAllTeacherDetails
-  window.fetchTeacherDetail = fetchTeacherDetail
+  window.fetchAllTeacherDetails = fetchAllTeacherDetails;
+  window.fetchTeacherDetail = fetchTeacherDetail;
+  window.state = store.getState();
 
   const root = document.getElementById("root");
   ReactDOM.render(<Root store={store}/>, root);

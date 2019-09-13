@@ -5,10 +5,9 @@ const teacherDetailsReducer = (state = {}, action) => {
     const newState = Object.assign({}, state);
     switch (action.type) {
         case RECEIVE_ALL_TEACHER_DETAILS:
-            return action.teacherDetail;
+            return newState[action.teacherDetail.id] = action.teacherDetail;
         case RECEIVE_TEACHER_DETAIL:
-            const newState= { [action.teacherDetail.id]: action.teacherDetail };
-            return Object.assign({}, state, newState);
+            return action.teacherDetail;
         default:
             return state;
     }
