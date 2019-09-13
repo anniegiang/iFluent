@@ -1,0 +1,12 @@
+json.extract! teacher_detail, 
+    :teacher_id, 
+    :country, 
+    :about_me,
+    :title,
+    :video_url,
+    :picture_url,
+    :hourly_rate,
+    :trial_rate,
+    :work_experience,
+    :education,
+    :certificates

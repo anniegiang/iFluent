@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Redirect, Route, withRouter } from 'react-router-dom';
-
+import { openModal } from '../actions/modal_actions';
 const mapStateToProps = state => ({
   loggedIn: Boolean(state.session.currentUser),
 });
@@ -19,7 +19,7 @@ const Protected = ({ component: Component, path, loggedIn }) => (
   <Route
     path={path}
     render={props => (
-      loggedIn ? <Component {...props} /> : <Redirect to="/signup" />
+      loggedIn ? <Component {...props} /> : <Redirect to="/" />
     )}
   />
 );

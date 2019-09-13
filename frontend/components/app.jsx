@@ -8,8 +8,9 @@ import TeachersSlider from './slider/teachers_slider';
 import WhyItalki from './why_italki/why_italki';
 import Companies from './why_italki/companies';
 import HowItWorks from './how_it_works/how_it_works';
+import Dashboard from './dashboard/dashboard';
 import SearchBar from './search/search_bar';
-import { Route } from 'react-router-dom';
+import { Route, Redirect, Switch, Link } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
@@ -41,6 +42,11 @@ const App = () => (
         </div>
       </div>
     </div>
+
+    {/* <ProtectedRoute exact path="/dashboard" component={Dashboard} /> */}
+    <Route exact path="/dashboard" component={Dashboard}/>
+    <Route exact path="/" component={Dashboard}/>
+
   </div>
 );
 
