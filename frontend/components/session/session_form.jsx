@@ -123,7 +123,7 @@ class SessionForm extends React.Component {
      e.preventDefault();
      this.props.processForm({email: "guest@aa.io", password: "password"})
       .then(() => this.props.history.push("/"))
-      .then(() => this.props.closeModal());
+      .then(() => this.props.closeModal())
   }
 
   renderOr() {

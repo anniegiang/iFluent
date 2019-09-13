@@ -32,21 +32,19 @@ def randomTitle
 end
 
 users.each do |user|
-  5.times do
-    TeacherDetail.create(
-      teacher_id: user.id,
-      country: Faker::Address.country,
-      about_me: Faker::Lorem.paragraph(sentence_count: 2, supplemental: false, random_sentences_to_add: 4),
-      title: randomTitle,
-      video_url: Faker::LoremFlickr.image,
-      picture_url: Faker::Avatar.image,
-      hourly_rate: Faker::Commerce.price(range: 0..30.0, as_string: false) ,
-      trial_rate: Faker::Commerce.price(range: 0..20.0, as_string: false) ,
-      work_experience: Faker::Job.field,
-      education: Faker::Educator.degree,
-      certificates: Faker::Number.between(from: 1, to: 10) ,
-    )
-  end
+  TeacherDetail.create(
+    teacher_id: user.id,
+    country: Faker::Address.country,
+    about_me: Faker::Lorem.paragraph(sentence_count: 2, supplemental: false, random_sentences_to_add: 4),
+    title: randomTitle,
+    video_url: Faker::LoremFlickr.image,
+    picture_url: Faker::Avatar.image,
+    hourly_rate: Faker::Commerce.price(range: 0..30.0, as_string: false) ,
+    trial_rate: Faker::Commerce.price(range: 0..20.0, as_string: false) ,
+    work_experience: Faker::Job.field,
+    education: Faker::Educator.degree,
+    certificates: Faker::Number.between(from: 1, to: 10) ,
+  )
 end
 
 

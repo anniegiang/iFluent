@@ -6,11 +6,16 @@ import HomePageHowItWorks from './homepage_how_it_works';
 
 const HomePage = props => {
     return (
-        <div className="homepage">
-            <HomePageHero />
-            <HomePageTeachersSlider />
-            <HomePageWhyItalki />
-            <HomePageHowItWorks />
+        <div>
+            
+            <div className="flex-container">
+                <div className="homepage">
+                    <HomePageHero />
+                    <HomePageTeachersSlider />
+                    <HomePageWhyItalki />
+                    <HomePageHowItWorks />
+                </div>
+        </div>
       </div>
     )
 }
