@@ -6,7 +6,6 @@ class Api::TeacherDetailsController < ApplicationController
 
     def show
         @teacher_detail = TeacherDetail.find(params[:id])
-        debugger
         render :show
     end
 end
