@@ -8,7 +8,6 @@
 
 .homepage-why-tialki-container {
     display: flex;
-    align-content: space-between;
     margin: 0 auto;
     width: 980px;
 }
@@ -56,4 +55,9 @@
     width: 100%;
     height: 3px;
     background-image: linear-gradient(90deg,#ffac7b,#ff685f);
+}
+
+.homepage-why-tialki-learing,
+.homepage-why-tialki-pay {
+    margin-right: 50px;
 }
