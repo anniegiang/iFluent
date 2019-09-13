@@ -7,6 +7,7 @@ import Modal from './modal/modal';
 import TeachersSlider from './slider/teachers_slider';
 import WhyItalki from './why_italki/why_italki';
 import Companies from './why_italki/companies';
+import HowItWorks from './how_it_works/how_it_works';
 import SearchBar from './search/search_bar';
 import { Route } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
@@ -33,6 +34,10 @@ const App = () => (
           <h1 className="why-italki-title"><span>Why ifluent?</span></h1> 
           <WhyItalki />     
           <Companies />
+        </div>
+        <div className="homepage-how-works">
+          <h1 className="how-it-works-title"><span>How does it work?</span></h1>
+          <HowItWorks />
         </div>
       </div>
     </div>
