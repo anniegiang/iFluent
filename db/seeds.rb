@@ -5,17 +5,19 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+require 'faker'
+
 User.destroy_all
 guest = User.create({name: "Guest", email: "guest@aa.io", password: "password"});
-user1 = User.create({name: "user1", email: "user1@aa.io", password: "password"});
 
-TeacherDetail.create({
-  teacher_id: user1.id,
-  country: "USA",
-  about_me: "This is a random piece of sentence that acts a place holder",
-  title: "Professional Teacher",
-  video_url: "https://www.youtube.com/watch?v=tXPZ6R6iEWQ",
-  picture_url: "https://imagesavatar-static01.italki.com/T054942180_Avatar.jpg",
-  hourly_rate: 8.00,
-  trial_rate: 10.00
-});
+5.times do 
+  User.create(
+    name: Faker::Name.name ,
+    email: Faker::Internet.email,
+    password: "password"
+  )
+end
+
+
+# TeacherDetail.destroy_all

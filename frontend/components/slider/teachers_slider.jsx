@@ -15,6 +15,7 @@ class TeachersSlider extends React.Component {
           </span>
         </h1>
         {/* <TeachersCarousel /> */}
+        <h1>Carousel here</h1>
       </div>
     )
   }

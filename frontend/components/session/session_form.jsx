@@ -178,8 +178,6 @@ class SessionForm extends React.Component {
             
             {this.props.formType === "login" ? this.renderOr() : ""}
             {this.props.formType === "login" ? this.renderDemoButton() : ""}
-  
-            {/* {this.renderOtherFormLink(this.props.formType)} */}
           </form>
         </div>
         <div className="modal-footer">

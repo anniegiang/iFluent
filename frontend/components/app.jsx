@@ -5,6 +5,7 @@ import SignupFormContainer from './session/signup_form_container';
 import Splash from './splash/splash';
 import Modal from './modal/modal';
 import TeachersSlider from './slider/teachers_slider';
+import WhyItalki from './why_italki/why_italki';
 import SearchBar from './search/search_bar';
 import { Route } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
@@ -25,6 +26,11 @@ const App = () => (
         </div>
         <div className="homepage-teachers-slider">
           <TeachersSlider />
+        </div>
+        <div className="homepage-top-gray"></div>
+        <div className="homepage-why-italki">
+          <h1><span>Why italki?</span></h1> 
+          <WhyItalki />     
         </div>
       </div>
     </div>
