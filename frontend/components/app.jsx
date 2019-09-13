@@ -29,7 +29,7 @@ const App = () => (
         </div>
         <div className="homepage-top-gray"></div>
         <div className="homepage-why-italki">
-          <h1 className="why-italki-title"><span>Why italki?</span></h1> 
+          <h1 className="why-italki-title"><span>Why ifluent?</span></h1> 
           <WhyItalki />     
         </div>
       </div>
