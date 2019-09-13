@@ -33,7 +33,7 @@ const WhyItalkiItem = props => {
             <img src={props.imgUrl} alt="italki-learning" style={imgStyle}/>
             <div className={imgDivStyle2}></div>
         </div>
-        <h1>{props.h1Text}</h1>
+        <h1><span>{props.h1Text}</span></h1>
         <div className="homepage-dividers"></div>
         <p><span>{props.pText}</span></p>
         <div className="homepage-why-italki-gradient"></div>

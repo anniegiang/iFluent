@@ -1,11 +1,3 @@
-.homepage-why-italki h1 {
-	margin-bottom: 30px;
-    font-size: 40px;
-    font-weight: 300;
-    text-align: center;
-    color: #414042;
-}
-
 .homepage-why-tialki-container {
     display: flex;
     margin: 0 auto;
@@ -24,9 +16,18 @@
     overflow: hidden;
 }
 
+.why-italki-title {
+	margin-bottom: 30px;
+    font-size: 40px;
+    font-weight: 300;
+    text-align: center;
+    color: #414042;
+}
+
 .homepage-why-tialki-learing h1,
 .homepage-why-tialki-pay h1,
 .homepage-why-tialki-any h1 {
+    margin: 0;
     font-size: 18px;
     font-weight: 400;
 	color: #414042;
