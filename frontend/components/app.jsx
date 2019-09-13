@@ -6,6 +6,7 @@ import Splash from './splash/splash';
 import Modal from './modal/modal';
 import TeachersSlider from './slider/teachers_slider';
 import WhyItalki from './why_italki/why_italki';
+import Companies from './why_italki/companies';
 import SearchBar from './search/search_bar';
 import { Route } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
@@ -31,6 +32,7 @@ const App = () => (
         <div className="homepage-why-italki">
           <h1 className="why-italki-title"><span>Why ifluent?</span></h1> 
           <WhyItalki />     
+          <Companies />
         </div>
       </div>
     </div>

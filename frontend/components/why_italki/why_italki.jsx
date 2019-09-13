@@ -1,10 +1,11 @@
 import React from 'react';
 import WhyItalkiItem from './why_italki_item';
 
-const WhyItalki = props => {
 
+const WhyItalki = props => {
   return (
     <div className="homepage-why-tialki-container">
+    
       <WhyItalkiItem 
         className="homepage-why-tialki-learing" 
         h1Text="Customized Learning"
@@ -23,7 +24,6 @@ const WhyItalki = props => {
         pText="Take online lessons at the time and place that suits you"
         imgUrl="https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/illustrations-03.a64719fe.svg"
       /> 
-
     </div>
   )
 }
