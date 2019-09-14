@@ -7,17 +7,15 @@ import HomePageStudentSays from './homepage_student_says';
 
 const HomePage = props => {
     return (
-        <div>
-            <div className="flex-container">
-                <div className="homepage">
-                    <HomePageHero />
-                    <HomePageTeachersSlider />
-                    <HomePageWhyItalki />
-                    <HomePageHowItWorks />
-                    <HomePageStudentSays />
-                </div>
+        <div className="flex-container">
+            <div className="homepage">
+                <HomePageHero />
+                <HomePageTeachersSlider />
+                <HomePageWhyItalki />
+                <HomePageHowItWorks />
+                <HomePageStudentSays />
             </div>
-      </div>
+        </div>
     )
 }
 
