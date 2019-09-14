@@ -7,6 +7,7 @@ const HomePageHowItWorks = props => {
         <div className="homepage-how-works">
           <h1 className="how-it-works-title"><span>How does it work?</span></h1>
           <HowItWorks />
+          <div className="homepage-bottom-gray"></div>
         </div>
     )
 };

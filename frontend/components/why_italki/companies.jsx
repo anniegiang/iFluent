@@ -2,6 +2,22 @@ import React from 'react';
 import Company from './company';
 
 const Companies = props => {
+
+    const companyStyle3 = {
+        position: "relative", 
+        overflow: "hidden", 
+        display: "flex", 
+        flexDirection: "column", 
+        justifyContent: "center", 
+        alignItems: "center", 
+        height: "46px",
+    }
+
+     const imgStyle3 = {
+        height: "46px",
+        visibility: "visible"
+    };
+
     return (
         <ul className="homepage-companies">
             <Company 
@@ -28,10 +44,12 @@ const Companies = props => {
                 imgUrl="https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/lifehacker-new.17be92a8.svg"
                 alt="lifehacker"
             />
-            <Company 
-                imgUrl="https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/post.b5d4953a.svg"
-                alt="post"
-            />
+            <li>
+                <div className={companyStyle3}>
+                    <img style={imgStyle3} src="https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/post.b5d4953a.svg" alt="post"/>
+                    <div className={companyStyle3}></div>
+                </div>
+            </li>
         </ul>
     )
 }
