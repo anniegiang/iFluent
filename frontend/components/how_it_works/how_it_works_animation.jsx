@@ -7,7 +7,7 @@ const Animation = props => {
             <video 
                 autoPlay
                 loop
-                playsInLine
+                playsInline
                 src={props.src}
                 poster={props.poster}
                 className={props.className}
