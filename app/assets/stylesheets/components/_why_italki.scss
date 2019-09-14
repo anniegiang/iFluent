@@ -80,3 +80,17 @@
 .huffington-post {
     height: 46px;
 }
+
+@media (max-width: 850px) {
+    .homepage-why-tialki-container {
+        display: block;
+        float: left;
+        width: 100%;
+    }
+    .homepage-why-tialki-learing,
+    .homepage-why-tialki-pay,
+    .homepage-why-tialki-any {
+        margin: 30px auto;
+        width: 60%;
+    }
+}
