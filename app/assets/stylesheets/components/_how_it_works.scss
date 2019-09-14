@@ -72,5 +72,42 @@
     left: 85%;
 }
 
+@media (max-width: 900px) {
+    .homepage-how-works {
+        display: block;
+        width: 100%;
+    }
 
+    .homepage-how-works-animations {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .homepage-how-step-1,
+    .homepage-how-step-2,
+    .homepage-how-step-3 {
+        display: block;
+        margin: 0 auto;
+        
+    }
+
+    .homepage-how-gif {
+        background: none;
+        // display: none;
+    }
+
+    .homepage-how-works-number {
+        top: 0px;
+        left: 10%
+    }
+
+    .homepage-how-step-2 .homepage-how-steps {
+        text-align: left;
+    }
+
+    .homepage-how-step-2 .homepage-how-works-number {
+        left: 10%;
+    }
+}
 
