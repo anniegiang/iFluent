@@ -5,9 +5,10 @@ export const fetchAllTeacherDetails = ()=> (
     })
 );
 
-export const fetchTeacherDetail = id => (
-    $.ajax({
+export const fetchTeacherDetail = id => {
+    debugger
+    return $.ajax({
         method: 'GET',
         url: `/api/teacher_details/${id}`
     })
-);
+}

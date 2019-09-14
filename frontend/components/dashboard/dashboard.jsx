@@ -3,10 +3,11 @@ import React from 'react';
 class Dashboard extends React.Component {
     constructor(props) {
         super(props);
+        debugger
     }
 
-    componentDidMount() {
-        this.props.fetchTeacherDetails(this.props.currentUserId);
+    componentWillMount() {
+        this.props.fetchTeacherDetails(this.props.userDetails.id);
     }
 
     render() {

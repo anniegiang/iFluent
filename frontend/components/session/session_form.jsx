@@ -105,7 +105,6 @@ class SessionForm extends React.Component {
     // let newType = type[0].toLowerCase() + type.slice(1);
     if (this.state[type] === "" ) {
       error = `${type} can't be empty`;
-      console.log(error);
     }
     return (
       <div className="error-box">{error}</div>
