@@ -1,6 +1,16 @@
 import React from 'react';
 
 class Splash extends React.Component {
+
+
+    handleDownArrow(e) {
+        window.scrollTo({
+            top: 777,
+            left: 777,
+            behavior: 'smooth'
+        });
+    }
+
     render() {
         return (
             <div className="homepage-video">
@@ -13,7 +23,8 @@ class Splash extends React.Component {
                 >
                 </video>
                 <div className="homepage-background">
-
+                <div className="homepage-video-triangle"></div>
+                <div onClick={this.handleDownArrow.bind(this)} className="homepage-downarrow"></div>
                 </div>
             </div>
         )

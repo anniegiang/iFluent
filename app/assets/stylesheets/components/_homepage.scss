@@ -27,6 +27,50 @@
 	z-index: 99;
 }
 
+.homepage-video-triangle {
+	position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 0;
+    border-left: 100vw solid #fff;
+}
+
+.homepage-downarrow {
+	position: absolute;
+    left: 50%;
+    bottom: .7%;
+    margin-left: -20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,.1);
+    transform: rotate(-45deg);
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.homepage-downarrow:after, .homepage-downarrow:before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 12px;
+    height: 2px;
+    background-color: #414042;
+}
+
+.homepage-downarrow:before {
+    left: 16px;
+    top: 23px;
+}
+
+.homepage-downarrow:after {
+    top: 18px;
+    left: 11px;
+    transform: rotate(90deg);
+}
+
 .homepage-top-gray {
 	margin-top: 40px;
 	padding-top: 60px;
