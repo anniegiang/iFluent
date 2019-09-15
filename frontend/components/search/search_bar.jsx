@@ -35,14 +35,14 @@ class SearchBar extends React.Component {
                 <p><span>Choose from over 10,000 teachers for 1-on-1 lessons based on your goals and interests.</span></p>
                 <form className="homepage-menu-choice">
                     <input 
+                        className="homepage-menu-select" 
+                        placeholder="Choose a language"
+                        type="text"  
                         onChange={this.handleInputChange} 
                         onClick={this.handleDropDown} 
-                        className="search-input" 
-                        type="text"  
-                        placeholder="Choose a language"
                         />
-                    <button className="search-btn">
-                        <img src="https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/icon-search.5d60d25a.svg"/>
+                    <button className="homepage-search-icon">
+                        <span><img src="https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/icon-search.5d60d25a.svg"/></span>
                     </button>
                 </form>
             </div>
