@@ -28,7 +28,7 @@ class SessionForm extends React.Component {
 
   componentWillUnmount() {
     document.body.style.overflow = 'unset';
-}
+  }
 
 
   handleSubmit(e) {

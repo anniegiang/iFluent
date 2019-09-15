@@ -18,10 +18,10 @@ class User < ApplicationRecord
 	after_initialize :ensure_session_token 
 	attr_reader :password
 
-	has_one :teacher_detail,
+	has_one :teacher_info,
 		primary_key: :id,
 		foreign_key: :teacher_id,
-    class_name: 'TeacherDetail'
+    class_name: 'TeacherInfo'
 
 	def self.generate_session_token
 		SecureRandom::urlsafe_base64

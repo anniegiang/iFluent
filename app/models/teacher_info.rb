@@ -18,10 +18,12 @@
 #  updated_at      :datetime         not null
 #
 
-require 'test_helper'
+class TeacherInfo < ApplicationRecord
+  validates :teacher_id, :country, :about_me, :title, presence: true
 
-class TeacherDetailTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  belongs_to :teacher,
+    primary_key: :id,
+    foreign_key: :teacher_id,
+    class_name: 'User'
+
 end
