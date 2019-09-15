@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
 import { fetchAllUsers, fetchUser } from './util/users_api_util';
+import { fetchAllLanguages } from './util/languages_api_util';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -23,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.state = store.getState();
   window.fetchAllUsers = fetchAllUsers;
   window.fetchUser = fetchUser;
+  window.fetchAllLanguages = fetchAllLanguages;
   
   const root = document.getElementById("root");
   ReactDOM.render(<Root store={store}/>, root);
