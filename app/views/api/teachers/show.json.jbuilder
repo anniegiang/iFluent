@@ -1,8 +1,10 @@
-json.teacherInfo do
-    json.partial! 'teacher', teacher: @teacher
-end
+json.set! @teacher.id do
+    json.teacherInfo do
+        json.partial! 'teacher', teacher: @teacher
+    end
 
-json.userInfo do
-    json.user_id @user.id
-    json.extract! @user, :name, :profile_picture
+    json.userInfo do
+        json.user_id @user.id
+        json.extract! @user, :name, :profile_picture
+    end
 end
