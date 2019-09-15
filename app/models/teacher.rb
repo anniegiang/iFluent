@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: teachers_info
+# Table name: teachers
 #
 #  id              :bigint           not null, primary key
 #  teacher_id      :integer          not null
@@ -18,10 +18,10 @@
 #  updated_at      :datetime         not null
 #
 
-class TeacherInfo < ApplicationRecord
+class Teacher < ApplicationRecord
   validates :teacher_id, :country, :about_me, :title, presence: true
 
-  belongs_to :teacher,
+  belongs_to :teacher_user,
     primary_key: :id,
     foreign_key: :teacher_id,
     class_name: 'User'

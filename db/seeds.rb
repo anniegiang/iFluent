@@ -10,40 +10,46 @@ require 'faker'
 
 # Users
 User.destroy_all
-guest = User.create({name: "Guest", email: "guest@aa.io", password: "password"});
+
+guest = User.create({
+  name: "Guest", 
+  email: "guest@aa.io", 
+  password: "password", 
+  profile_picture: "https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/default.13c19308.svg"
+});
 
 users = []
 
-5.times do
+10.times do
   user = User.create(
     name: Faker::Name.name,
     email: Faker::Internet.email,
     password: "password",
-    picture_url: Faker::Avatar.image
+    profile_picture: Faker::Avatar.image
   )
   users.push(user)
 end
 
 # Teacher Details
-TeacherInfo.destroy_all
+Teacher.destroy_all
 
 def randomTitle 
   titles = ["Professional Teachers", "Community Tutors", "All"]
   return titles.sample
 end
 
-users.each do |user|
-  TeacherInfo.create(
+users.slice(0, users.length/2).each do |user|
+  Teacher.create(
     teacher_id: user.id,
     country: Faker::Address.country,
     about_me: Faker::Lorem.paragraph(sentence_count: 2, supplemental: false, random_sentences_to_add: 4),
     title: randomTitle,
     video_url: Faker::LoremFlickr.image,
-    hourly_rate: Faker::Commerce.price(range: 0..30.0, as_string: false) ,
-    trial_rate: Faker::Commerce.price(range: 0..20.0, as_string: false) ,
+    hourly_rate: Faker::Commerce.price(range: 0..30.0, as_string: false),
+    trial_rate: Faker::Commerce.price(range: 0..20.0, as_string: false),
     work_experience: Faker::Job.field,
     education: Faker::Educator.degree,
-    certificates: Faker::Number.between(from: 1, to: 10) ,
+    certificates: Faker::Number.between(from: 1, to: 10),
   )
 end
 

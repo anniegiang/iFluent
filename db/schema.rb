@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_15_000543) do
+ActiveRecord::Schema.define(version: 2019_09_15_010050) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 2019_09_15_000543) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
-  create_table "teacher_info", force: :cascade do |t|
+  create_table "teachers", force: :cascade do |t|
     t.integer "teacher_id", null: false
     t.string "country", null: false
     t.text "about_me", null: false
@@ -49,17 +49,17 @@ ActiveRecord::Schema.define(version: 2019_09_15_000543) do
     t.string "certificates"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["teacher_id"], name: "index_teacher_info_on_teacher_id"
+    t.index ["teacher_id"], name: "index_teachers_on_teacher_id"
   end
 
   create_table "users", force: :cascade do |t|
     t.string "email", null: false
     t.string "name", null: false
+    t.string "profile_picture"
     t.string "password_digest", null: false
     t.string "session_token", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "profile_picture"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["session_token"], name: "index_users_on_session_token", unique: true
   end

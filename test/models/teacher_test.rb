@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: teachers_info
+# Table name: teachers
 #
 #  id              :bigint           not null, primary key
 #  teacher_id      :integer          not null
@@ -18,14 +18,10 @@
 #  updated_at      :datetime         not null
 #
 
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+require 'test_helper'
 
-# This model initially had no columns defined. If you add columns to the
-# model remove the '{}' from the fixture names and add the columns immediately
-# below each fixture, per the syntax in the comments below
-#
-one: {}
-# column: value
-#
-two: {}
-# column: value
+class TeacherTest < ActiveSupport::TestCase
+  # test "the truth" do
+  #   assert true
+  # end
+end

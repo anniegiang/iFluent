@@ -1,1 +1,1 @@
-json.partial! 'teacher', teachers_info: @teachers_info
+json.partial! 'teacher', teacher: @teacher
