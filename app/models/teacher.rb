@@ -8,7 +8,6 @@
 #  about_me        :text             not null
 #  title           :string           not null
 #  video_url       :string
-#  picture_url     :string
 #  hourly_rate     :float
 #  trial_rate      :float
 #  work_experience :string

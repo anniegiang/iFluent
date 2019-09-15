@@ -1,4 +1,5 @@
-json.extract! teachers_detail, 
+json.extract! teacher, 
+    :id,
     :teacher_id, 
     :country, 
     :about_me,
