@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Suggestions from './suggestions';
+import MenuItems from './menu_items';
 
 class SearchBar extends React.Component {
     constructor(props) {
@@ -17,9 +17,14 @@ class SearchBar extends React.Component {
     
     
     handleDropDown(e) {
-        return (
-            <Suggestions languages={this.props.languages} />
-        )
+        const menuChoice = document.querySelector(".homepage-menu-choice");
+        const menuSelect = document.querySelector(".homepage-menu-select");
+        const searchIcon = document.querySelector(".homepage-search-icon");
+        
+        menuSelect.classList.add(".homepage-menu-select-open");
+        searchIcon.classList.add(".homepage-search-icon-open");
+        
+        menuChoice.insertAdjacentHTML("afterend", <MenuItems languages={ this.props.languages }/>);
     }
 
     // handleInputChange(e) {

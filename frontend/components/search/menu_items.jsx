@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 
- const Suggestions = (props) => {
+ const MenuItems = (props) => {
 
      const options = props.languages.forEach(language => (
          <li key={language.id}>
@@ -16,5 +16,5 @@ import React, { PureComponent } from 'react'
      )
  }
 
- export default Suggestions;
+ export default MenuItems;
     
