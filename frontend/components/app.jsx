@@ -5,7 +5,6 @@ import MainNavBarContainer from './navbar/main_navbar_container';
 import Modal from './modal/modal';
 
 import HomePage from './homepage/homepage';
-import DashboardContainer from './dashboard/dashboard_container';
 
 const App = () => (
   <div className="italki">
@@ -15,7 +14,7 @@ const App = () => (
     </header>
 
     <Switch>
-      <ProtectedRoute exact path="/dashboard" component={DashboardContainer} />
+      {/* <ProtectedRoute exact path="/dashboard" component={HomePage} /> */}
       <AuthRoute exact path="/" component={HomePage}/>
     </Switch>
 
