@@ -1,6 +1,6 @@
 import React from 'react';
 import Splash from '../splash/splash';
-import SearchBar from '../search/search_bar';
+import SearchBarContainer from '../search/search_bar_container';
 
 const HomePageHero = props => {
 
@@ -8,7 +8,7 @@ const HomePageHero = props => {
         <div className="homepage-hero">
             <Splash />
             <div className="homepage-fluent">
-            <SearchBar />
+            <SearchBarContainer />
             </div>
         </div>
     )

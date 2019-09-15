@@ -1,4 +1,4 @@
-import RECEIVE_ALL_LANGUAGES from '../actions/language_actions';
+import { RECEIVE_ALL_LANGUAGES } from '../actions/language_actions';
 
 const languagesReducer = (state = {}, action) => {
     Object.freeze(state);

@@ -5,9 +5,13 @@ class SearchBar extends React.Component {
         super(props);
         this.handleSearchClick = this.handleSearchClick.bind(this);    
     }
+
+    componentDidMount() {
+        this.props.fetchAllLanguages();
+    }
     
     handleSearchClick(e) {
-        console.log("clickeedd");
+        console.log(this.props.languages);
     }
 
     render() {

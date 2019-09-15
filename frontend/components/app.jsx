@@ -4,7 +4,6 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import MainNavBarContainer from './navbar/main_navbar_container';
 import DashboardContainer from './dashboard/dashboard_container';
 import Modal from './modal/modal';
-
 import HomePage from './homepage/homepage';
 
 const App = () => (
