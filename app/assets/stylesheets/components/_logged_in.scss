@@ -1,0 +1,13 @@
+.italki-logged-in {
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 100px;
+    flex-direction: column;
+    height: 100%;
+    min-height: 768px;
+}
+
+.flex-container-logged-in {
+    position: relative;
+    flex: 1 1;
+}

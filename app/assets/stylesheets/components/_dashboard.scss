@@ -1,0 +1,55 @@
+.dashboard {
+    margin-bottom: 50px;
+}
+
+.dashboard-hero {
+    margin-bottom: 40px;
+}
+
+.dashboard-user {
+    display: flex;
+    width: 945px;
+    margin: 0 auto;
+}
+
+.dashboard-info {
+    width: 366px;
+    padding: 20px 0 20px 20px;
+    margin-right: 10px;
+    position: relative;
+}
+
+.dashboard-user .dashboard-info, .dashboard-user, .dashboard-info-tablet, .dashboard-user, .dashboard-lesson {
+    display: -ms-flexbox;
+    display: flex;
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px 0 rgba(8,19,68,.1);
+}
+
+
+
+
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+
+.dashboard-info .dashboard-person {
+    margin-left: 20px;
+}
+
+.dashboard-info, .dashboard-person, .dashboard-name {
+    font-size: 20px;
+    font-weight: 500;
+    color: #333;
+}
+
+.dashboard-user .dashboard-name-common {
+    max-width: 170px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}

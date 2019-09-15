@@ -15,7 +15,6 @@ const App = () => (
       <ProtectedRoute exact path="/dashboard" component={DashboardContainer} />
       <AuthRoute exact path="/" component={HomePage}/>
     </Switch>
-
   </div>
 );
 
