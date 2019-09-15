@@ -1,8 +1,8 @@
-.search-container {
+.homepage-menu{
     color: white;
 }
 
-.search-container h1 {
+.homepage-menu h1 {
     margin-bottom: 10px;
     font-size: 40px;
     line-height: 1.4;
@@ -10,7 +10,7 @@
     color: #fff;
 }
 
-.searchbar {
+.homepage-menu-choice {
     display: flex;
     width: 83.5%;
     height: 48px;
@@ -19,7 +19,7 @@
     cursor: pointer;
 }
 
-.search-container p {
+.homepage-menu p {
     font-size: 16px;
     font-weight: 100;
     line-height: 1.5;
@@ -49,7 +49,7 @@
     background: linear-gradient(90deg,#ff786b,#ff4338);
 }
 
-.search-container img {
+.homepage-menu img {
     margin: 0 auto;
     width: 24px;
     height: 24px;

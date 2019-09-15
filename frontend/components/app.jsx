@@ -6,6 +6,7 @@ import DashboardContainer from './dashboard/dashboard_container';
 import Modal from './modal/modal';
 import HomePage from './homepage/homepage';
 
+
 const App = () => (
   <div className="italki">
     <Modal />
