@@ -1,5 +1,4 @@
-
-.header {
+.header-container {
 	position: fixed;
 	width: 100%;
 	top: 0;
@@ -7,59 +6,66 @@
 	z-index: 999;
 }
 
+.header-banner {
+	display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+	height: 70px;
+    padding-left: 30px;
+}
+
+.homepage-nav {
+	background-image: linear-gradient(0deg,transparent,rgba(0,0,0,.25));
+}
+
+.main-nav {
+	background-color: #fff;
+}
+
+.header-banner img {
+    vertical-align: middle;
+}
+
 .logo {
 	width: 75px;
 	height: 38px;
 }
 
-.navbar-container {
-	display:flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-	height: 70px;
-	padding-left: 30px;
-	// background: transparent;
-	background-image: linear-gradient(0deg,transparent,rgba(0,0,0,.25));
+.Header-button-wrap,
+.Header-button {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+    position: relative;
+	cursor: pointer;
+    padding: 20px;
+    height: 56px;
 }
 
-.main-nav {
-	margin-right: 20px;
+.homepage-nav-btn {
+	padding-right: 30px;
 }
 
-.main-nav-logged-in {
-	display:flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-	height: 70px;
-	padding-left: 30px;
-	// background: rgba(0,0,0,.25);
-	background: transparent;
-}
-
-.right-nav button, 
-.left-nav button {
-	color: #fff;
-	background-color: transparent;
-	margin: 10px;
-	border: 1px solid #fff;
-	border-radius: 17px;
-	padding: 10px 13px;
+.homepage-nav-btn button {
+	margin-left: 25px;
+    padding: 10px 13px;
+    border: 1px solid #fff;
+    border-radius: 17px;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #fff;
+    position: relative;
+    cursor: pointer;
 	
 }
 
-.right-nav button:hover,
-.left-nav button:hover {
+.homepage-nav-btn button:hover {
 	color: black;
 	background-color: #fff;
 	
-}
-
-.right-nav button,
-.left-nav button {
-	text-transform: uppercase;
-	cursor: pointer;
 }
 
 .scrolled {

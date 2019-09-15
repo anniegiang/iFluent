@@ -10,10 +10,7 @@ import HomePage from './homepage/homepage';
 const App = () => (
   <div className="italki">
     <Modal />
-    <header className="header">
-        <MainNavBarContainer />
-    </header>
-
+    <MainNavBarContainer />
     <Switch>
       <ProtectedRoute exact path="/dashboard" component={DashboardContainer} />
       <AuthRoute exact path="/" component={HomePage}/>

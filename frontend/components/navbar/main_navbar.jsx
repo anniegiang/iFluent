@@ -18,7 +18,7 @@ class MainNavBar extends React.Component {
   };
 
   handleScroll() {
-    let nav = document.querySelector(".navbar-container");
+    let nav = document.querySelector(".header-banner");
     if(window.scrollY > 70) {
       nav.classList.add("scrolled");
     } else {
@@ -27,28 +27,56 @@ class MainNavBar extends React.Component {
   };
 
   displayNavBar() {
-    const { currentUser, logout } = this.props;
+    const { currentUser } = this.props;
+    const logoUrl = this.props.currentUser ? 
+      "https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/logo_red.149c838d.svg" :
+      "https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/logo_white.72e72948.svg";
+
     if (currentUser) {
       return (
-        <div className="main-nav-logged-in"> 
-          <div className="left-nav">
-            <button><span>Languages</span></button>
-          </div>
-          <div className="right-nav">
-            <button><span>Find a Teacher</span></button>
-            <button onClick={this.props.logoutUser}><span>Logout</span></button>
+        <div className="header-banner main-nav">
+          <a href="/"><img 
+            src="https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/logo_red.149c838d.svg"
+            className="logo"
+            />
+          </a>
+          <div className="Header-button-wrap">
+            <a id="find-teacher" href="/teachers">
+              <div className="Header-button">
+                <span>Find a Teacher</span>
+              </div>
+            </a>
+            <a id="messages" href="/messages">
+              <div className="Header-button">
+                <span>Messages</span>
+              </div>
+            </a>
+            <a onClick={this.props.logoutUser}>
+              <div className="Header-button">
+                <span>Log out</span>
+              </div>
+            </a>
           </div>
         </div>
       )
     } else {
       return (
-        <div className="main-nav">
-          <div className="right-nav">
+        <div className="header-banner homepage-nav">
+          <a href="/">
+            <img 
+              src="https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/logo_white.72e72948.svg"
+              className="logo"
+            />
+          </a>
+          <div className="homepage-nav-btn">
             <button onClick={this.props.openModalLogin}>
               Log In
             </button>
             <button onClick={this.props.openModalSignup}>
               Sign Up
+            </button>
+            <button onClick={this.props.openModalSignup}>
+              Become a Teacher
             </button>
           </div>
         </div>
@@ -57,17 +85,12 @@ class MainNavBar extends React.Component {
   }
 
   render() {
-    return (
-      <div className="navbar-container">
-        <a href="/"><img 
-          // src="assets/logo_white.svg"
-          src="https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/logo_white.72e72948.svg"
-          className="logo"
-          /></a>
-        {this.displayNavBar()}
-      </div>
-    )
     
+    return (
+      <header className="header-container">
+        {this.displayNavBar()}
+      </header>
+    )
   }
 };
 
