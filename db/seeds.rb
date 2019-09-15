@@ -30,7 +30,7 @@ users = []
   users.push(user)
 end
 
-# Teacher Details
+# Teachers
 Teacher.destroy_all
 
 def randomTitle 
@@ -53,5 +53,22 @@ users.slice(0, users.length/2).each do |user|
   )
 end
 
+# Languages
+Language.destroy_all
+languages = Language.create(
+  [
+    { language: 'English' }, 
+    { language: 'Chinese (Mandarin)'}, 
+    { language: 'French' },
+    { language: 'Spanish' },
+    { language: 'Portuguese' },
+    { language: 'German' },
+    { language: 'Japanese' },
+    { language: 'Korean' },
+    { language: 'Hindi' },
+    { language: 'Italian' },
+    { language: 'Arabic' }
+  ]
+)
 
 
