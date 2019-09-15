@@ -41,12 +41,12 @@ class MainNavBar extends React.Component {
             />
           </a>
           <div className="Header-button-wrap">
-            <a id="find-teacher" href="/teachers">
+            <a id="find-teacher" href="#">
               <div className="Header-button">
                 <span>Find a Teacher</span>
               </div>
             </a>
-            <a id="messages" href="/messages">
+            <a id="messages" href="#">
               <div className="Header-button">
                 <span>Messages</span>
               </div>
@@ -75,8 +75,8 @@ class MainNavBar extends React.Component {
             <button onClick={this.props.openModalSignup}>
               Sign Up
             </button>
-            <button onClick={this.props.openModalSignup}>
-              Become a Teacher
+            <button>
+              Contact
             </button>
           </div>
         </div>
