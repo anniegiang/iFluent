@@ -10,3 +10,4 @@ json.extract! teacher,
     :work_experience,
     :education,
     :certificates
+    json.name teacher.teacher_user.name

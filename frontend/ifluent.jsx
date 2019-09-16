@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   
   // testing
-  window.state = store.getState();
+  window.store = store;
   window.fetchAllUsers = fetchAllUsers;
   window.fetchUser = fetchUser;
   window.fetchAllLanguages  = fetchAllLanguages;

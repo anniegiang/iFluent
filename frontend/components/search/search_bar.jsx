@@ -16,7 +16,9 @@ class SearchBar extends React.Component {
     }
 
     handleItemClick(e) {
-        this.props.fetchAllTeachersByLanguage(e.target.innerText)
+        const language = e.target.innerText;
+        this.props.fetchAllTeachersByLanguage(language)
+        .then(() => this.props.history.push(`/teachers/${language}`));
     }
 
     getMenuItems() {

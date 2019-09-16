@@ -3,6 +3,7 @@ import { Route, Redirect, Switch, Link } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import MainNavBarContainer from './navbar/main_navbar_container';
 import DashboardContainer from './dashboard/dashboard_container';
+import SearchResultsContainer from './search/search_results_container';
 import Modal from './modal/modal';
 import HomePage from './homepage/homepage';
 
@@ -12,6 +13,7 @@ const App = () => (
     <Modal />
     <MainNavBarContainer />
     <Switch>
+      <Route path="/teachers" component={SearchResultsContainer} />
       <ProtectedRoute exact path="/dashboard" component={DashboardContainer} />
       <AuthRoute exact path="/" component={HomePage}/>
     </Switch>
