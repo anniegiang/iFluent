@@ -22,9 +22,10 @@ class SearchBar extends React.Component {
         for(let language of this.props.languages) {
             let li = document.createElement("li");
             li.innerHTML = language.language;
+            li.classList.add("homepage-menu-item");
             ul.appendChild(li);
         }
-        ul.classList.add("homepage-menu-items")
+        ul.classList.add("homepage-menu-items");
         return ul;
     }
     
