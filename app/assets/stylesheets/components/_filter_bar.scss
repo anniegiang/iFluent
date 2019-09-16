@@ -13,3 +13,23 @@
     transition: margin 0.2s ease 0s;
     border-top: 1px solid rgb(221, 221, 221);
 }
+
+.tag-filter {
+    display: inline-block;
+    padding: 0 20px;
+    margin-right: 10px;
+    min-width: 100px;
+    width: auto;
+    height: 42px;
+    font-size: 14px;
+    line-height: 42px;
+    text-align: center;
+    border-radius: 42px;
+    color: #777;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    white-space: nowrap;
+    transition: all .2s;
+    cursor: pointer;
+    user-select: none;
+}
