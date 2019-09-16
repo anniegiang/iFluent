@@ -4,3 +4,7 @@ export const fetchAllLanguages = () => {
         url: '/api/languages'
     })
 };
+
+export const fetchLanguage = id => {
+
+}

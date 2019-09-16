@@ -1,3 +1,3 @@
-export const fetchTeachers = () => {
-    // return 
+export const fetchAllTeachers = id => {
+    
 }
