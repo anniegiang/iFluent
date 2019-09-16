@@ -25,4 +25,10 @@ class Teacher < ApplicationRecord
     foreign_key: :teacher_id,
     class_name: 'User'
 
+  has_many :taught_languages,
+    primary_key: :id,
+    foreign_key: :teacher_id,
+    class_name: 'TeacherTeach'
+
+
 end

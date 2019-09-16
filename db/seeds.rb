@@ -20,7 +20,7 @@ guest = User.create({
 
 users = []
 
-200.times do
+24.times do
   user = User.create(
     name: Faker::Name.name,
     email: Faker::Internet.email,
@@ -38,8 +38,10 @@ def randomTitle
   return titles.sample
 end
 
+teachers = []
+
 users.slice(0, users.length/2).each do |user|
-  Teacher.create(
+  teacher = Teacher.create(
     teacher_id: user.id,
     country: Faker::Address.country,
     about_me: Faker::Lorem.paragraph(sentence_count: 2, supplemental: false, random_sentences_to_add: 4),
@@ -51,6 +53,8 @@ users.slice(0, users.length/2).each do |user|
     education: Faker::Educator.degree,
     certificates: Faker::Number.between(from: 1, to: 10),
   )
+
+  teachers.push(teacher)
 end
 
 # Languages
@@ -73,5 +77,12 @@ languages = Language.create(
 )
 
 # Teacher teaches
+TeacherTeach.destroy_all
 
-
+(1...12).each do |i|
+  TeacherTeach.create({
+    language_id: Language.all[i].id,
+    teacher_id: Teacher.all[i].id,
+    fluency: rand(1..5)
+  })
+end
