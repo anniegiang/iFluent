@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import SearchBar from './search_bar';
 import { fetchAllLanguages } from '../../actions/language_actions';
+import { fetchAllTeachersByLanguage } from '../../actions/teacher_actions';
 
 const msp = state => {
     return {
@@ -10,7 +11,8 @@ const msp = state => {
 
 const mdp = dispatch => {
     return {
-        fetchAllLanguages: () => dispatch(fetchAllLanguages())
+        fetchAllLanguages: () => dispatch(fetchAllLanguages()),
+        fetchAllTeachersByLanguage: languageName => dispatch(fetchAllTeachersByLanguage(languageName))
     }
 }
 
