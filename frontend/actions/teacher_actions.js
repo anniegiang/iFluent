@@ -4,7 +4,7 @@ export const RECEIVE_ALL_TEACHERS = "RECEIVE_ALL_TEACHERS";
 export const RECEIVE_TEACHER = "RECEIVE_TEACHER";
 
 const receiveAllTeachers = teachers => ({
-    type: RECEIVE_ALL_TEACHERS,
+    type: 3,
     teachers
 });
 

@@ -18,7 +18,6 @@ class TeacherTeach < ApplicationRecord
         foreign_key: :teacher_id,
         class_name: 'User'
         
-
     belongs_to :language,
         primary_key: :id, 
         foreign_key: :language_id,
