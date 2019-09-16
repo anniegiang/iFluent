@@ -8,11 +8,16 @@ class SearchBar extends React.Component {
         }
         this.renderDropDown = this.renderDropDown.bind(this);    
         this.getMenuItems = this.getMenuItems.bind(this);    
+        this.handleItemClick = this.handleItemClick.bind(this);    
 
     }
 
     componentDidMount() {
         this.props.fetchAllLanguages();
+    }
+
+    handleItemClick(e) {
+        
     }
 
     getMenuItems() {
@@ -29,6 +34,7 @@ class SearchBar extends React.Component {
             let span = document.createElement("span");
             divMenuItem.classList.add("homepage-menu-item");
 
+            divMenuItem.onclick = this.handleItemClick;
             span.innerHTML = language.language;
 
             divMenuItem.appendChild(span);

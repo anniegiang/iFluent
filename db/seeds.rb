@@ -65,9 +65,10 @@ languages = Language.create(
     { language: 'German' },
     { language: 'Japanese' },
     { language: 'Korean' },
+    { language: 'Arabic' },
     { language: 'Hindi' },
     { language: 'Italian' },
-    { language: 'Arabic' }
+    { language: 'Russian' }
   ]
 )
 
