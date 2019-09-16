@@ -24,6 +24,7 @@ class SearchBar extends React.Component {
             li.innerHTML = language.language;
             ul.appendChild(li);
         }
+        ul.classList.add("homepage-menu-items")
         return ul;
     }
     
@@ -37,12 +38,12 @@ class SearchBar extends React.Component {
         menuSelect.classList.add(".homepage-menu-select-open");
         searchIcon.classList.add(".homepage-search-icon-open");
         
-        menuChoice.appendChild(menuItems);
+        menuChoice.append(menuItems);
 
-        document.body.addEventListener("click", () => {
+        document.body.addEventListener("click", (e) => {
             menuSelect.classList.remove(".homepage-menu-select-open");
             searchIcon.classList.remove(".homepage-search-icon-open");
-            menuChoice.parentNode.removeChild(menuItems);
+            menuChoice.removeChild(menuItems);
         });
     }
 
