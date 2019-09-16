@@ -11,3 +11,4 @@ json.extract! teacher,
     :education,
     :certificates
     json.name teacher.teacher_user.name
+    json.profilePicture teacher.teacher_user.profile_picture

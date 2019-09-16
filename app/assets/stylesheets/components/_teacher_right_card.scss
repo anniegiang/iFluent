@@ -1,0 +1,45 @@
+.teacher-card-right {
+    padding: 25px 20px 20px;
+    width: 386px;
+    border-radius: 0 6px 6px 0;
+    background: #fff;
+    box-shadow: 5px 7px 25px 0 rgba(0,0,0,.1);
+}
+
+.teacher-card-tab-head, .teacher-card-tabs {
+    display: flex;
+    justify-content: center;
+}
+
+.teacher-card-tab-head {
+    margin-bottom: 17px;
+}
+
+.teacher-card-tabs {
+    position: relative;
+}
+
+.teacher-card-tab-head, .teacher-card-tabs {
+    display: flex;
+    justify-content: center;
+}
+
+.teacher-card-tab {
+    margin: 0 20px 10px 0;
+    cursor: pointer;
+}
+
+.teacher-card-tab>p {
+    font-size: 14px;
+}
+
+.iframe-video, .video-player {
+    position: relative;
+    height: 192px;
+}
+.iframe-video {
+    margin: 0 auto;
+    width: 343px;
+    border-radius: 6px;
+    overflow: hidden;
+}

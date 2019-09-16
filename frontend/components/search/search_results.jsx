@@ -1,5 +1,6 @@
 import React from 'react';
 import SearchFilterBar from './search_filter_bar';
+import TeacherCard from './teacher_card';
 
 
 class SearchResults extends React.Component {
@@ -18,11 +19,14 @@ class SearchResults extends React.Component {
                         <div className="teachers-filter">
                             <div className="teach-language" style={{top: "0px"}}>
                                 <p className="teach-language-choice">
-                                    <span id="language-to-learn">banana</span>
+                                    <span id="language-to-learn">extra hot</span>
                                     <span className="arrow-down"></span>
                                 </p>
                                 <SearchFilterBar />
-                                {this.props.teachers.map(teacher => <h2>{teacher.name}</h2>)}
+                                <div className="teachers">
+                                    <p className="teachers-result" id="found-teacher-count"><span>1 teacher found</span></p>
+                                    {this.props.teachers.map(teacher => <TeacherCard key={teacher.id} teacher={teacher}/>)}
+                                </div>
                             </div>
                         </div>
                     </div>
