@@ -1,18 +1,30 @@
 import React, { Component } from 'react';
-import MenuItems from './menu_items';
 
 class SearchBar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            query: "",
+            query: ""
         }
         this.handleDropDown = this.handleDropDown.bind(this);    
-        // this.handleInputChange = this.handleInputChange.bind(this); 
+        this.getMenuItems = this.getMenuItems.bind(this);    
+
     }
 
     componentDidMount() {
         this.props.fetchAllLanguages();
+    }
+
+    getMenuItems() {
+        const ul = document.createElement("ul");
+        const languages = [];
+
+        for(let language of this.props.languages) {
+            let li = document.createElement("li");
+            li.innerHTML = language.language;
+            ul.appendChild(li);
+        }
+        return ul;
     }
     
     
@@ -20,18 +32,19 @@ class SearchBar extends React.Component {
         const menuChoice = document.querySelector(".homepage-menu-choice");
         const menuSelect = document.querySelector(".homepage-menu-select");
         const searchIcon = document.querySelector(".homepage-search-icon");
-        
+        const menuItems = this.getMenuItems();
+
         menuSelect.classList.add(".homepage-menu-select-open");
         searchIcon.classList.add(".homepage-search-icon-open");
         
-        menuChoice.insertAdjacentHTML("afterend", <MenuItems languages={ this.props.languages }/>);
-    }
+        menuChoice.appendChild(menuItems);
 
-    // handleInputChange(e) {
-    //     this.setState({ query: e.target.value }, () => {
-    //         console.log(this.state.query)
-    //     });
-    // }
+        document.body.addEventListener("click", () => {
+            menuSelect.classList.remove(".homepage-menu-select-open");
+            searchIcon.classList.remove(".homepage-search-icon-open");
+            menuChoice.parentNode.removeChild(menuItems);
+        });
+    }
 
     render() {
         return (
@@ -41,7 +54,7 @@ class SearchBar extends React.Component {
                         className="homepage-menu-select" 
                         placeholder="Choose a language"
                         type="text"  
-                        // onChange={this.handleInputChange} 
+
                         onClick={this.handleDropDown} 
                         />
                     <span className="homepage-search-icon">
