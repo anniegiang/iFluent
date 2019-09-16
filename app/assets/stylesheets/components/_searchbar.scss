@@ -57,7 +57,7 @@
 
 .homepage-menu-items {
     position: absolute;
-    top: 48px;
+    top: 46px;
     left: 0;
     padding: 20px 0;
     width: 100%;
@@ -79,5 +79,13 @@
     color: #414042;
     align-items: center;
     cursor: pointer;
+}
+
+#homepage-menu-items-title {
+    margin-bottom: 10px;
+    padding: 0 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #414042;
 }
 

@@ -6,7 +6,7 @@ class SearchBar extends React.Component {
         this.state = {
             query: ""
         }
-        this.handleDropDown = this.handleDropDown.bind(this);    
+        this.renderDropDown = this.renderDropDown.bind(this);    
         this.getMenuItems = this.getMenuItems.bind(this);    
 
     }
@@ -17,6 +17,7 @@ class SearchBar extends React.Component {
 
     getMenuItems() {
         const ul = document.createElement("ul");
+        
         const languages = [];
 
         for(let language of this.props.languages) {
@@ -30,16 +31,18 @@ class SearchBar extends React.Component {
     }
     
     
-    handleDropDown(e) {
+    renderDropDown(e) {
         const menuChoice = document.querySelector(".homepage-menu-choice");
         const menuSelect = document.querySelector(".homepage-menu-select");
         const searchIcon = document.querySelector(".homepage-search-icon");
         const menuItems = this.getMenuItems();
+        
 
         menuSelect.classList.add(".homepage-menu-select-open");
         searchIcon.classList.add(".homepage-search-icon-open");
         
         menuChoice.append(menuItems);
+        menuItems.insertAdjacentHTML("afterbegin", "<h1 id='homepage-menu-items-title'>Popular languages</h1>");
 
         document.body.addEventListener("click", (e) => {
             menuSelect.classList.remove(".homepage-menu-select-open");
@@ -57,7 +60,7 @@ class SearchBar extends React.Component {
                         placeholder="Choose a language"
                         type="text"  
 
-                        onClick={this.handleDropDown} 
+                        onClick={this.renderDropDown} 
                         />
                     <span className="homepage-search-icon">
                         <img src="https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/icon-search.5d60d25a.svg" alt="search"/>
