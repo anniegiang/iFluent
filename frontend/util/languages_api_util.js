@@ -5,6 +5,9 @@ export const fetchAllLanguages = () => {
     })
 };
 
-export const fetchLanguage = id => {
-
+export const fetchTeachersByLanguage = languageId => {
+    return $.ajax({
+        method: 'GET',
+        url: `/api/languages/${languageId}`
+    })
 }
