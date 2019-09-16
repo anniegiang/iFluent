@@ -1,7 +1,7 @@
 class Api::TeachersController < ApplicationController
 
     def index
-        @language = Language.find(params[:language])
+        @language = Language.find_by(language: params[:language]) #language name
         @teachers = @language.teachers
     end
 
