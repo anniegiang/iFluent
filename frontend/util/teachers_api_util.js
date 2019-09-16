@@ -1,7 +1,7 @@
-export const fetchAllTeachers = () => {
+export const fetchAllTeachersByLanguage = languageName => {
     return $.ajax({
         method: 'GET',
-        url: '/api/teachers'
+        url: `/api/teachers?language=${languageName}`
     })
 }
 

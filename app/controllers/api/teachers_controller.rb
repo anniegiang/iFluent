@@ -1,8 +1,13 @@
 class Api::TeachersController < ApplicationController
 
     def index
-        @language = Language.find_by(language: params[:language]) #language name
-        @teachers = @language.teachers
+         
+        if Language.find_by(language: params[:language])
+            @language = Language.find_by(language: params[:language]) #language name
+            @teachers = @language.teachers
+        else
+            render json: ["No teachers found"], status: 422
+        end
     end
 
     def show

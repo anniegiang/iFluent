@@ -3,8 +3,8 @@ import * as APIUtil from '../util/teachers_api_util';
 export const RECEIVE_ALL_TEACHERS = "RECEIVE_ALL_TEACHERS";
 export const RECEIVE_TEACHER = "RECEIVE_TEACHER";
 
-const receiveAllTeachers = teachers => ({
-    type: 3,
+const receiveAllTeachers= teachers => ({
+    type: RECEIVE_ALL_TEACHERS,
     teachers
 });
 
@@ -15,8 +15,8 @@ const receiveTeacher = teacher => ({
 
 // thunk
 
-export const fetchAllTeachers = () => dispatch => {
-    return APIUtil.fetchAllTeachers()
+export const fetchAllTeachersByLanguage = languageName => dispatch => {
+    return APIUtil.fetchAllTeachersByLanguage(languageName)
         .then(teachers => dispatch(receiveAllTeachers(teachers)))
 };
 
