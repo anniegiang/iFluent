@@ -1,0 +1,15 @@
+.filter-bar {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    display: flex;
+    height: 62px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px 0px;
+    align-items: center;
+    z-index: 3;
+    padding: 0px 20px;
+    background: rgb(255, 255, 255);
+    transition: margin 0.2s ease 0s;
+    border-top: 1px solid rgb(221, 221, 221);
+}

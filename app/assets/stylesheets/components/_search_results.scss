@@ -1,0 +1,70 @@
+.teachers-list {
+    min-height: 300px;
+}
+
+.teach-language {
+    position: fixed;
+    top: 0px;
+    left: 130px;
+    z-index: 1000;
+    transition: margin 0.2s ease 0s;
+}
+
+.teach-language-choice {
+    display: flex;
+    margin-top: 15px;
+    padding-left: 25px;
+    height: 42px;
+    font-size: 23px;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid rgb(221, 221, 221);
+}
+
+.teach-language-choice > span {
+    cursor: pointer;
+}
+
+.teach-language-choice .arrow-down, .teach-language-choice .arrow-up {
+    position: static;
+}
+
+.arrow-down {
+    transform: rotate(45deg);
+}
+
+.arrow-down, .arrow-up {
+    position: absolute;
+    display: inline-block;
+    margin-top: -8px;
+    top: 50%;
+    width: 16px;
+    height: 16px;
+    right: 12px;
+    transition: transform .2s;
+}
+
+.arrow-down:before, .arrow-up:before {
+    left: 4px;
+    top: 7px;
+}
+
+.arrow-down:after, .arrow-down:before {
+    background-color: #333;
+}
+
+.arrow-down:after, .arrow-up:after {
+    top: 4px;
+    left: 7px;
+    transform: rotate(90deg);
+}
+.arrow-down:after, .arrow-down:before, .arrow-up:after, .arrow-up:before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 8px;
+    height: 2px;
+}
+.arrow-down:after, .arrow-down:before {
+    background-color: #333;
+}
