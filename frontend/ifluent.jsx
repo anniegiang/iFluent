@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
 import { fetchAllUsers, fetchUser } from './util/users_api_util';
-import { fetchAllLanguages, fetchTeachersByLanguage } from './util/languages_api_util';
+import { fetchAllLanguages, fetchLanguage } from './util/languages_api_util';
 import { fetchTeacher, fetchAllTeachersByLanguage } from './util/teachers_api_util';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.fetchAllUsers = fetchAllUsers;
   window.fetchUser = fetchUser;
   window.fetchAllLanguages  = fetchAllLanguages;
-  window.fetchTeachersByLanguage = fetchTeachersByLanguage;
+  window.fetchLanguage = fetchLanguage;
   window.fetchAllTeachersByLanguage = fetchAllTeachersByLanguage;
   window.fetchTeacher = fetchTeacher;
   
