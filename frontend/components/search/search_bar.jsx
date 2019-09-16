@@ -16,18 +16,28 @@ class SearchBar extends React.Component {
     }
 
     getMenuItems() {
-        const ul = document.createElement("ul");
+        const divMenuItems = document.createElement("div");
+        const divMenuGroup = document.createElement("div");
+
+        divMenuItems.classList.add("homepage-menu-items");
+        divMenuGroup.classList.add("homepage-menu-group");
         
         const languages = [];
 
         for(let language of this.props.languages) {
-            let li = document.createElement("li");
-            li.innerHTML = language.language;
-            li.classList.add("homepage-menu-item");
-            ul.appendChild(li);
+            let divMenuItem = document.createElement("div");
+            let span = document.createElement("span");
+            divMenuItem.classList.add("homepage-menu-item");
+
+            span.innerHTML = language.language;
+
+            divMenuItem.appendChild(span);
+            divMenuGroup.appendChild(divMenuItem);
         }
-        ul.classList.add("homepage-menu-items");
-        return ul;
+
+
+        divMenuItems.appendChild(divMenuGroup);
+        return divMenuItems;
     }
     
     

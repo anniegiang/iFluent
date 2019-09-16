@@ -55,6 +55,11 @@
     height: 24px;
 }
 
+.homepage-menu-group {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .homepage-menu-items {
     position: absolute;
     top: 46px;
