@@ -1,5 +1,6 @@
 import React from 'react'
 import FilterSection from './filter_section';
+import SearchTeacher from './search_teacher';
 
 class SearchFilterBar extends React.Component {
 
@@ -11,6 +12,7 @@ class SearchFilterBar extends React.Component {
                 <FilterSection tag="Price" />
                 <FilterSection tag="Availability" />
                 <FilterSection tag="Native speaker" />
+                <SearchTeacher />
             </div>
         )
     }

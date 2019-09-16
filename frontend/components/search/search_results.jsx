@@ -1,6 +1,7 @@
 import React from 'react';
 import SearchFilterBar from './search_filter_bar';
 
+
 class SearchResults extends React.Component {
     constructor(props) {
         super(props)

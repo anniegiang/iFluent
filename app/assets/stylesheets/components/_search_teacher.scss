@@ -1,0 +1,33 @@
+.search-teacher-input {
+    flex: 1 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.search-teachers-input-icon {
+    width: 70px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    border-left: 1px solid #ddd;
+}
+
+.search-teachers-input-icon img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.search-form-hide {
+    display: none;
+}
+
+.search-teacher-input input {
+    padding: 0 10px;
+    width: 200px;
+    height: 60px;
+    font-size: 14px;
+    font-weight: 300;
+    border: 0;
+}
