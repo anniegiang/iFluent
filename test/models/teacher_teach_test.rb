@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Api::TeacherDetailsControllerTest < ActionDispatch::IntegrationTest
+class TeacherTeachTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

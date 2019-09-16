@@ -9,7 +9,6 @@ class SearchBar extends React.Component {
         this.renderDropDown = this.renderDropDown.bind(this);    
         this.getMenuItems = this.getMenuItems.bind(this);    
         this.handleItemClick = this.handleItemClick.bind(this);    
-
     }
 
     componentDidMount() {
@@ -65,6 +64,8 @@ class SearchBar extends React.Component {
             searchIcon.classList.remove(".homepage-search-icon-open");
             menuChoice.removeChild(menuItems);
         });
+
+        
     }
 
     render() {

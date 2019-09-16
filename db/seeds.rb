@@ -20,7 +20,7 @@ guest = User.create({
 
 users = []
 
-10.times do
+200.times do
   user = User.create(
     name: Faker::Name.name,
     email: Faker::Internet.email,
@@ -71,5 +71,7 @@ languages = Language.create(
     { language: 'Russian' }
   ]
 )
+
+# Teacher teaches
 
 
