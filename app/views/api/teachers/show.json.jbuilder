@@ -7,4 +7,9 @@ json.set! @teacher.id do
         json.user_id @user.id
         json.extract! @user, :name, :profile_picture
     end
+
+    json.taughtLanguages do
+        json.extract! @languages_taught, :language
+        json.fluency @fluency
+    end
 end

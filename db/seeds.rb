@@ -79,7 +79,7 @@ languages = Language.create(
 # Teacher teaches
 TeacherTeach.destroy_all
 
-(1...12).each do |i|
+(0...12).each do |i|
   TeacherTeach.create({
     language_id: Language.all[i].id,
     teacher_id: Teacher.all[i].id,
