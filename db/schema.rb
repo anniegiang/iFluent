@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_17_033933) do
+ActiveRecord::Schema.define(version: 2019_09_17_155532) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -56,8 +56,6 @@ ActiveRecord::Schema.define(version: 2019_09_17_033933) do
     t.integer "fluency", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["language_id"], name: "index_teacher_teaches_on_language_id", unique: true
-    t.index ["teacher_id"], name: "index_teacher_teaches_on_teacher_id", unique: true
   end
 
   create_table "teachers", force: :cascade do |t|

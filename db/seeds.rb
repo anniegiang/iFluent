@@ -87,3 +87,10 @@ TeacherTeach.destroy_all
   })
 end
 
+
+TeacherTeach.create({
+  language_id: Language.all[3].id,
+  teacher_id: Teacher.all[9].id,
+  fluency: rand(1..5)
+})
+

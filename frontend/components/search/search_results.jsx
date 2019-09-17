@@ -32,7 +32,10 @@ class SearchResults extends React.Component {
                         </div>
                         
                         <div className="teachers">
-                            <p className="teachers-result" id="found-teacher-count"><span>{this.props.teachers.length} teacher found</span></p>
+                            <p className="teachers-result" id="found-teacher-count">
+                                <span>{this.props.teachers.length} </span>
+                                {this.props.teachers.length > 1 ? "teachers found" : "teacher found"}
+                            </p>
                             {this.props.teachers.map(teacher => 
                                 <TeacherCard 
                                 key={teacher.id} 

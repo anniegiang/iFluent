@@ -22,7 +22,8 @@ class TeacherRightCard extends React.Component {
                         <div className="iframe-video">
                             <div className="video-player">
                                 {/* <img src={this.props.teacher.videoUrl} alt=""/> */}
-                                <iframe 
+                                <img src="https://i.imgflip.com/15a5s4.jpg" alt=""/>
+                                {/* <iframe 
                                     title="video" 
                                     width="343" 
                                     height="193" 
@@ -31,11 +32,11 @@ class TeacherRightCard extends React.Component {
                                     // allow="autoplay" 
                                     allowFullScreen="" 
                                     style={{display: "block"}}
-                                ></iframe>
+                                ></iframe> */}
 
-                                {/* <div className="video-poster-overlay">
+                                <div className="video-poster-overlay">
                                     <i className="video-play-icon"></i>
-                                </div> */}
+                                </div>
                             </div>
                         </div>
                     </div>
