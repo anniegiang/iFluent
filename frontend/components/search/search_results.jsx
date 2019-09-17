@@ -39,6 +39,9 @@ class SearchResults extends React.Component {
                             {this.props.teachers.map(teacher => 
                                 <TeacherCard 
                                 key={teacher.id} 
+                                teacherId={teacher.id}
+                                fetchTeacher={this.props.fetchTeacher}
+                                history={this.props.history}
                                 teacher={teacher}
                                 language={this.props.match.params.languageName}
                             />

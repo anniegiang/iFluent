@@ -48,7 +48,7 @@ users.slice(0, users.length/2).each do |user|
     about_me: Faker::Lorem.paragraph(sentence_count: 2, supplemental: false, random_sentences_to_add: 4),
     title: randomTitle,
     video_url: Faker::LoremPixel.image,
-    hourly_rate: Faker::Commerce.price(range: 0..30.0, as_string: false),
+    hourly_rate: Faker::Commerce.price(range: 20.0..30.0, as_string: false),
     trial_rate: Faker::Commerce.price(range: 0..20.0, as_string: false),
     work_experience: Faker::Job.field,
     education: Faker::Educator.degree,

@@ -4,6 +4,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import MainNavBarContainer from './navbar/main_navbar_container';
 import DashboardContainer from './dashboard/dashboard_container';
 import SearchResultsContainer from './search/search_results_container';
+import TeacherProfileContainer from './profile/teacher_profile_container';
 import Modal from './modal/modal';
 import HomePage from './homepage/homepage';
 
@@ -13,6 +14,7 @@ const App = () => (
     <Modal />
     <MainNavBarContainer />
     <Switch>
+      <Route exact path="/teachers/:teacherId/:languageName" component={TeacherProfileContainer} />
       <Route path="/teachers/:languageName" component={SearchResultsContainer} />
       <ProtectedRoute exact path="/dashboard" component={DashboardContainer} />
       <AuthRoute exact path="/" component={HomePage}/>
