@@ -25,7 +25,7 @@ users = []
     name: Faker::Name.name,
     email: Faker::Internet.email,
     password: "password",
-    profile_picture: Faker::Avatar.image
+    profile_picture: Faker::LoremFlickr.image
   )
   users.push(user)
 end
@@ -34,7 +34,7 @@ end
 Teacher.destroy_all
 
 def randomTitle 
-  titles = ["Professional Teachers", "Community Tutors", "All"]
+  titles = ["Professional Teacher", "Community Tutor", "All"]
   return titles.sample
 end
 
@@ -46,7 +46,7 @@ users.slice(0, users.length/2).each do |user|
     country: Faker::Address.country,
     about_me: Faker::Lorem.paragraph(sentence_count: 2, supplemental: false, random_sentences_to_add: 4),
     title: randomTitle,
-    video_url: Faker::LoremFlickr.image,
+    video_url: Faker::LoremPixel.image,
     hourly_rate: Faker::Commerce.price(range: 0..30.0, as_string: false),
     trial_rate: Faker::Commerce.price(range: 0..20.0, as_string: false),
     work_experience: Faker::Job.field,

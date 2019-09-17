@@ -170,3 +170,21 @@
     text-transform: uppercase;
 }
 
+.avatar-big.avatar-shadow, .avatar-hero.avatar-shadow {
+    border: 2px solid #fff;
+}
+.avatar-placeholder {
+    border-radius: 50%;
+    background: #ccc;
+}
+.avatar-shadow {
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,.25);
+}
+.avatar-big {
+    width: 100px;
+    height: 100px;
+}
+.avatar {
+    display: inline-block;
+    position: relative;
+}
