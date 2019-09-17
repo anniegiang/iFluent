@@ -33,6 +33,6 @@ class Teacher < ApplicationRecord
   has_many :languages,
     through: :taught_languages,
     source: :language
-
+  
 
 end

@@ -1,5 +1,23 @@
+.teachers {
+    margin: 100px auto 0;
+    width: 950px;
+    transition: margin .2s;
+}
+
 .teachers-list {
     min-height: 300px;
+}
+
+.teachers-result {
+    margin-bottom: 30px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.teacher-card {
+    position: relative;
+    display: flex;
+    margin-bottom: 20px;
 }
 
 .teach-language {
@@ -17,7 +35,7 @@
     height: 42px;
     font-size: 23px;
     align-items: center;
-    justify-content: center;
+    // justify-content: center;
     border-left: 1px solid rgb(221, 221, 221);
 }
 

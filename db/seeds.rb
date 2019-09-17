@@ -86,3 +86,4 @@ TeacherTeach.destroy_all
     fluency: rand(1..5)
   })
 end
+

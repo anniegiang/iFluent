@@ -27,11 +27,12 @@ class SearchResults extends React.Component {
                                     <span className="arrow-down"></span>
                                 </p>
                                 <SearchFilterBar />
-                                <div className="teachers">
-                                    <p className="teachers-result" id="found-teacher-count"><span>1 teacher found</span></p>
-                                    {this.props.teachers.map(teacher => <TeacherCard key={teacher.id} teacher={teacher}/>)}
-                                </div>
                             </div>
+                        </div>
+                        
+                        <div className="teachers">
+                            <p className="teachers-result" id="found-teacher-count"><span>1 teacher found</span></p>
+                            {this.props.teachers.map(teacher => <TeacherCard key={teacher.id} teacher={teacher}/>)}
                         </div>
                     </div>
                 </div>
