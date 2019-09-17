@@ -9,6 +9,7 @@ class MainNavBar extends React.Component {
     this.displayNavBar = this.displayNavBar.bind(this);
     this.handleScroll = this.handleScroll.bind(this);
   }
+
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
   };
@@ -31,8 +32,9 @@ class MainNavBar extends React.Component {
     const logoUrl = this.props.currentUser ? 
       "https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/logo_red.149c838d.svg" :
       "https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/logo_white.72e72948.svg";
+      // debugger
 
-    if (currentUser) {
+    if (currentUser || this.props.location.pathname.includes("/teachers")) {
       return (
         <div className="header-banner main-nav">
           <a href="/"><img 

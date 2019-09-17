@@ -19,7 +19,7 @@ class TeacherLeftCard extends React.Component {
     render() {
         
         const randomNum = this.randomLessonNum();
-        
+
         const { 
             name, 
             profilePicture,
@@ -41,7 +41,7 @@ class TeacherLeftCard extends React.Component {
                     <div className="teacher-card-information">
                         <h1>
                             <span>{name}</span>
-                            <i className="fas fa-globe-americas"></i>
+                            {/* <i className="fas fa-globe-americas"></i> */}
                         </h1>
                         <p><span>{title}</span></p>
                         <div className="teacher-card-divider"></div>
