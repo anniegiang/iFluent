@@ -32,14 +32,12 @@ class SearchBar extends React.Component {
 
         for(let language of this.props.languages) {
             let divMenuItem = document.createElement("div");
-            // let span = document.createElement("span");
             divMenuItem.classList.add("homepage-menu-item");
 
             divMenuItem.onclick = this.handleItemClick;
             divMenuItem.innerHTML = language.language;
 
             divMenuGroup.appendChild(divMenuItem);
-            // divMenuGroup.appendChild(divMenuItem);
         }
 
 

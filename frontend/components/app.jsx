@@ -13,7 +13,7 @@ const App = () => (
     <Modal />
     <MainNavBarContainer />
     <Switch>
-      <Route path="/teachers" component={SearchResultsContainer} />
+      <Route path="/teachers/:languageName" component={SearchResultsContainer} />
       <ProtectedRoute exact path="/dashboard" component={DashboardContainer} />
       <AuthRoute exact path="/" component={HomePage}/>
     </Switch>

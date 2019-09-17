@@ -11,6 +11,10 @@ class SearchResults extends React.Component {
         }
     }
 
+    componentDidMount() {
+        this.props.fetchAllTeachersByLanguage(this.props.match.params.languageName);
+    }
+
     render() {
         return (
             <div className="flex-container">
