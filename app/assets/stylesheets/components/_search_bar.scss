@@ -5,6 +5,10 @@
     border-radius: 4px;
 }
 
+.homepage-menu:hover {
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,.3);
+}
+
 .homepage-menu-choice {
     display: -ms-flexbox;
     display: flex;

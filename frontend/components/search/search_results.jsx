@@ -34,7 +34,7 @@ class SearchResults extends React.Component {
                         <div className="teachers">
                             <p className="teachers-result" id="found-teacher-count">
                                 <span>{this.props.teachers.length} </span>
-                                {this.props.teachers.length > 1 ? "teachers found" : "teacher found"}
+                                {this.props.teachers.length === 0 || this.props.teachers.length > 1 ? "teachers found" : "teacher found"}
                             </p>
                             {this.props.teachers.map(teacher => 
                                 <TeacherCard 

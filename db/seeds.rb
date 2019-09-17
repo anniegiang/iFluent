@@ -20,7 +20,7 @@ guest = User.create({
 
 users = []
 
-24.times do
+192.times do
   user = User.create(
     name: Faker::Name.name,
     email: Faker::Internet.email,
@@ -78,19 +78,80 @@ languages = Language.create(
 
 # Teacher teaches
 TeacherTeach.destroy_all
+# teacherTeach = 0
 
-(0...12).each do |i|
-  TeacherTeach.create({
-    language_id: Language.all[i].id,
-    teacher_id: Teacher.all[i].id,
-    fluency: rand(1..5)
-  })
+# (0...12).each do |langIdx|
+#   (teacherTeach..teachers.length-1).each do |teacherIdx|
+#     teacherSkip = 0
+#     if teacherSkip < 2
+#       puts "innnnn"
+#       debugger
+#       # TeacherTeach.create({
+#       #   language_id: Language.all[langIdx].id,
+#       #   teacher_id: Teacher.all[teacherIdx].id,
+#       #   fluency: rand(1..5)
+#       # })
+#       teacherTeach += 1
+#       teacherSkip += 1
+#     else
+#       next
+#     end
+#   end
+# end
+
+# (0...languages.length).each do |langIdx|
+#   teachers.shuffle.each_with_index do |teacher, teacherIdx|
+#     next if teacherIdx > 2
+    # TeacherTeach.create({
+    #     language_id: languages[langIdx].id,
+    #     teacher_id: teacher.id,
+    #     fluency: rand(1..5)
+    #   })
+#   end
+# end
+
+lang = ["a", "b"]
+t = [1, 2, 3, 4]
+
+x = 0
+y = 0
+c = 0
+
+while x < languages.length
+	c = 0
+	while y < teachers.length
+		if c == 8
+			c = 0
+      x += 1
+      if x != languages.length
+        TeacherTeach.create({
+          language_id: languages[x].id,
+          teacher_id: teachers[y].id,
+          fluency: rand(1..5)
+        })
+      
+			# puts languages[x]
+			# puts teachers[y]
+        y += 1
+        c += 1
+      else
+        break
+      end
+    else
+      if x != languages.length
+        TeacherTeach.create({
+          language_id: languages[x].id,
+          teacher_id: teachers[y].id,
+          fluency: rand(1..5)
+        })
+        # puts lang[x]
+        # puts t[y]
+        c += 1
+        y += 1
+      else
+        break
+      end
+		end
+	end
+	break
 end
-
-
-TeacherTeach.create({
-  language_id: Language.all[3].id,
-  teacher_id: Teacher.all[9].id,
-  fluency: rand(1..5)
-})
-
