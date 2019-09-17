@@ -21,11 +21,12 @@ guest = User.create({
 users = []
 
 192.times do
+  pic = Faker::LoremFlickr.image
   user = User.create(
     name: Faker::Name.name,
     email: Faker::Internet.email,
     password: "password",
-    profile_picture: Faker::LoremFlickr.image
+    profile_picture: pic
   )
   users.push(user)
 end
@@ -78,26 +79,6 @@ languages = Language.create(
 
 # Teacher teaches
 TeacherTeach.destroy_all
-# teacherTeach = 0
-
-# (0...12).each do |langIdx|
-#   (teacherTeach..teachers.length-1).each do |teacherIdx|
-#     teacherSkip = 0
-#     if teacherSkip < 2
-#       puts "innnnn"
-#       debugger
-#       # TeacherTeach.create({
-#       #   language_id: Language.all[langIdx].id,
-#       #   teacher_id: Teacher.all[teacherIdx].id,
-#       #   fluency: rand(1..5)
-#       # })
-#       teacherTeach += 1
-#       teacherSkip += 1
-#     else
-#       next
-#     end
-#   end
-# end
 
 # (0...languages.length).each do |langIdx|
 #   teachers.shuffle.each_with_index do |teacher, teacherIdx|
@@ -129,9 +110,6 @@ while x < languages.length
           teacher_id: teachers[y].id,
           fluency: rand(1..5)
         })
-      
-			# puts languages[x]
-			# puts teachers[y]
         y += 1
         c += 1
       else
@@ -144,8 +122,6 @@ while x < languages.length
           teacher_id: teachers[y].id,
           fluency: rand(1..5)
         })
-        # puts lang[x]
-        # puts t[y]
         c += 1
         y += 1
       else

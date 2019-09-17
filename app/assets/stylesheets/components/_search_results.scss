@@ -20,6 +20,25 @@
     margin-bottom: 20px;
 }
 
+.teacher-card:hover {
+    animation-name: pulse;
+    animation-duration: .3s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scaleX(1);
+    }
+    50% {
+        transform: scale3d(1.0075,1.0075,1.0075);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
 .teach-language {
     position: fixed;
     top: 0px;
