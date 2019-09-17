@@ -1,4 +1,7 @@
 import React from 'react';
+import TeacherMain from './teacher_main';
+import TeacherRight from './teacher_right';
+
 
 class TeacherProfile extends React.Component {
 
@@ -13,7 +16,12 @@ class TeacherProfile extends React.Component {
         
         return (
             <div className="flex-container">
-
+                <div style={{position: "static", zIndex: "inherit"}}>
+                    <div className="Teacher Teacher-desktop">
+                        <TeacherMain />
+                        <TeacherRight />
+                    </div>
+                </div>
             </div>
         )
     }
