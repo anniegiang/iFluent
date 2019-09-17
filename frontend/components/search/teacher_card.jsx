@@ -10,14 +10,12 @@ class TeacherCard extends React.Component {
         this.state = {
              
         }
-
         this.handleClick = this.handleClick.bind(this);
     }
     
     handleClick(e) {
         const id = e.currentTarget.id;
-        this.props.fetchTeacher(id)
-            .then(() => this.props.history.push(`/teachers/${id}/${this.props.language}`))
+        this.props.history.push(`/teachers/${id}/${this.props.language}`)
     }
 
     render() {
