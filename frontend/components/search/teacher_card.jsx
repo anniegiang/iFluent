@@ -7,8 +7,8 @@ class TeacherCard extends React.Component {
     render() {
         return (
             <div className="teacher-card">
-                <TeacherLeftCard teacher={this.props.teacher} />
-                <TeacherRightCard teacher={this.props.teacher} />
+                <TeacherLeftCard language={this.props.language} teacher={this.props.teacher} />
+                <TeacherRightCard language={this.props.language} teacher={this.props.teacher} />
             </div>
         )
     }

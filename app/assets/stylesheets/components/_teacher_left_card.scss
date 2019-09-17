@@ -3,15 +3,15 @@
     position: relative;
     padding: 25px 25px 20px;
     width: 564px;
-    min-height: 284px;
+    min-height: 224px;
     border-radius: 6px;
     background: #fff;
     box-shadow: 0 7px 25px 0 rgba(0,0,0,.1);
     cursor: pointer;
 }
 
-.teacher-card-detail-bottom, .teacher-card-detail-top {
-    display: -ms-flexbox;
+.teacher-card-detail-bottom 
+.teacher-card-detail-top {
     display: flex;
 }
 
