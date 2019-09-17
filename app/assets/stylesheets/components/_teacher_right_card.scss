@@ -43,3 +43,35 @@
     border-radius: 6px;
     overflow: hidden;
 }
+
+.video-player img {
+    width: 100%;
+    transform: translateY(-32px);
+}
+.video-player img {
+    width: 100%;
+    transform: translateY(-32px);
+}
+img {
+    vertical-align: middle;
+}
+
+.video-poster-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.4);
+    cursor: pointer;
+}
+
+.video-play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    background: url(https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/play.bc96a11e.svg) no-repeat 50%/50px 50px;
+    transform: translate(-50%,-50%);
+}
