@@ -32,7 +32,7 @@ class SearchResults extends React.Component {
                         </div>
                         
                         <div className="teachers">
-                            <p className="teachers-result" id="found-teacher-count"><span>1 teacher found</span></p>
+                            <p className="teachers-result" id="found-teacher-count"><span>{this.props.teachers.length} teacher found</span></p>
                             {this.props.teachers.map(teacher => 
                                 <TeacherCard 
                                 key={teacher.id} 

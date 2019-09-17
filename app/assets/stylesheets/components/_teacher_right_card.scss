@@ -75,3 +75,88 @@ img {
     background: url(https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/play.bc96a11e.svg) no-repeat 50%/50px 50px;
     transform: translate(-50%,-50%);
 }
+
+.teacher-card-video-hidden {
+    display: none;
+}
+
+.teacher-card-intro>p {
+    padding: 0 10px 10px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #777;
+    line-height: 1.57;
+    word-wrap: break-word;
+}
+
+.small-schedule {
+    position: relative;
+    min-height: 180px;
+}
+
+.small-schedule-days {
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 5px;
+    padding-left: 70px;
+}
+
+.small-schedule-day {
+    -ms-flex: 1 1;
+    flex: 1 1;
+    font-size: 12px;
+    font-weight: 300;
+    color: #333;
+    text-align: center;
+}
+
+.small-schedule-hours {
+    display: -ms-flexbox;
+    display: flex;
+    height: 156px;
+}
+
+.small-schedule-range, .small-schedule-range>p {
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+}
+
+.small-schedule-range>p {
+    -ms-flex: 1 1;
+    flex: 1 1;
+    font-size: 12px;
+    font-weight: 300;
+    color: #333;
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.small-schedule-hour {
+    -ms-flex: 1 1;
+    flex: 1 1;
+    display: -ms-flexbox;
+    display: flex;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.small-schedule-section {
+    -ms-flex: 1 1;
+    flex: 1 1;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.small-schedule-cell {
+    height: 26px;
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+}
+
+.small-schedule-cell-active {
+    height: 100%;
+    width: 100%;
+    background: #7ec937;
+}

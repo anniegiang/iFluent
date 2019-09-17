@@ -1,9 +1,25 @@
 import React from 'react';
 
 class TeacherLeftCard extends React.Component {
+    constructor(props) {
+        super(props)
+    
+        this.state = {
+             
+        }
 
+        this.randomLessonNum = this.randomLessonNum.bind(this);
+    }
+    
+
+    randomLessonNum() {
+        return Math.floor(Math.random() * Math.floor(4000));
+    }
     
     render() {
+        
+        const randomNum = this.randomLessonNum();
+        
         const { 
             name, 
             profilePicture,
@@ -45,7 +61,7 @@ class TeacherLeftCard extends React.Component {
                                 <span className="star"></span>
                             </div>
                         </div>
-                        <p><span>243 LESSONS</span></p>
+                        <p><span>{randomNum} LESSONS</span></p>
                     </div>
 
                     <div className="teacher-card-information">
