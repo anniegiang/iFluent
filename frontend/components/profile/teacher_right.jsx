@@ -4,6 +4,14 @@ import TeacherSchedule from './teacher_schedule';
 
 class TeacherRight extends React.Component {
 
+    render() {
+        return (
+            <div className="teacher-right" style={{left: "auto", top: "auto", bottom: "auto" }}>
+                <TeacherBook />
+                <TeacherSchedule />
+            </div>
+        )
+    }
 }
 
 export default TeacherRight;
