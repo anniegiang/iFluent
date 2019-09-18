@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import OutsideAlerter from './outside_alerter';
 
 
 class SearchBar extends React.Component {
@@ -75,7 +74,6 @@ class SearchBar extends React.Component {
         return (
             <div className="homepage-menu">
                 <form className="homepage-menu-choice">
-                    {/* <OutsideAlerter /> */}
                     <input 
                         className="homepage-menu-select" 
                         placeholder="Choose a language"

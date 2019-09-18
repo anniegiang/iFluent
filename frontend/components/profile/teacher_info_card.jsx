@@ -31,7 +31,7 @@ class TeacherInfoCard extends React.Component {
                             <div className="teacherCard-middle">
                                 <div className="teacherCard-name">
                                     Julia
-                                    <img src="https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/am.a5752aba.svg" alt="AM" width="30px" height="16px" className="flag-icon"/>
+                                    {/* <img src="https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/am.a5752aba.svg" alt="AM" width="30px" height="16px" className="flag-icon"/> */}
                                 </div>
                                 <div className="teacherCard-personalInfo"></div>
                             </div>
