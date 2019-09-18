@@ -5,6 +5,7 @@ import Root from './components/root';
 import { fetchAllUsers, fetchUser } from './util/users_api_util';
 import { fetchAllLanguages, fetchLanguage } from './util/languages_api_util';
 import { fetchTeacher, fetchAllTeachersByLanguage } from './util/teachers_api_util';
+import { fetchAllLessonsByTeacher, fetchLesson } from './util/lessons_api_util';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -28,6 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
   window.fetchAllLanguages  = fetchAllLanguages;
   window.fetchLanguage = fetchLanguage;
   window.fetchAllTeachersByLanguage = fetchAllTeachersByLanguage;
+  window.fetchAllLessonsByTeacher = fetchAllLessonsByTeacher;
+  window.fetchLesson = fetchLesson;
   window.fetchTeacher = fetchTeacher;
   
   const root = document.getElementById("root");

@@ -110,3 +110,7 @@
     background-color: rgba(76,209,208,.1);
     white-space: nowrap;
 }
+
+.lessonCard-box:hover .lessonCard-bar {
+    background-color: hsla(0,0%,80%,.2);
+}
