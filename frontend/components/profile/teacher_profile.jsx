@@ -18,8 +18,8 @@ class TeacherProfile extends React.Component {
             <div className="flex-container">
                 <div style={{position: "static", zIndex: "inherit"}}>
                     <div className="Teacher">
-                        <TeacherMain />
-                        <TeacherRight />
+                        <TeacherMain teacher={this.props.teacher} />
+                        <TeacherRight teacher={this.props.teacher} />
                     </div>
                 </div>
             </div>

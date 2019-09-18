@@ -9,10 +9,10 @@ class TeacherMain extends React.Component {
     render() {
         return (
             <div className="Teacher-main">
-                <TeacherInfoCard />
-                <TeacherLessonsCard />
-                <TeacherStatisticsCard />
-                <TeacherReview />
+                <TeacherInfoCard teacher={this.props.teacher} />
+                <TeacherLessonsCard teacher={this.props.teacher} />
+                <TeacherStatisticsCard teacher={this.props.teacher} />
+                <TeacherReview teacher={this.props.teacher} />
             </div>
         )
 
