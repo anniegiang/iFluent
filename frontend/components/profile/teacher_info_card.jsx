@@ -66,6 +66,16 @@ class TeacherInfoCard extends React.Component {
                                     </div>
                                 </div>
                                 <div className="teacherCard-right-body">
+                                    <div className="teacherCard-stars">
+                                        <div class="stars-box">
+                                            <div class="star"></div>
+                                            <div class="star"></div>
+                                            <div class="star"></div>
+                                            <div class="star"></div>
+                                            <div class="star"></div>
+                                            <span class="number">5.0</span>
+                                        </div>
+                                    </div>
 
                                 </div>
                             </div>
