@@ -19,6 +19,10 @@ class MainNavBar extends React.Component {
   };
 
   handleScroll() {
+    if (this.props.location.pathname.includes("/teachers")) {
+      return;
+    }
+
     let nav = document.querySelector(".header-banner");
     if(window.scrollY > 70) {
       nav.classList.add("scrolled");
@@ -60,7 +64,7 @@ class MainNavBar extends React.Component {
           </div>
         </div>
       )
-    } else {
+    } else if (!currentUser || this.props.location.pathname.includes("/teachers")) {
       return (
         <div className="header-banner homepage-nav">
           <a href="/">
