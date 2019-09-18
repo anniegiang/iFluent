@@ -110,7 +110,7 @@ class MainNavBar extends React.Component {
 							<span>Log In</span>
 						</div>
 					</a>
-					<a onClick={this.props.logoutUser}>
+					<a onClick={this.handleLogout}>
 						<div className="Header-button">
 							<span>Sign Up</span>
 						</div>
@@ -122,7 +122,7 @@ class MainNavBar extends React.Component {
 
 	handleLogout(e) {
 		this.props.logoutUser()
-			.then(() => this.history.push("/"));
+			.then(() => this.props.history.push("/"));
 	}
 
 
