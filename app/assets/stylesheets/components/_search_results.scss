@@ -63,15 +63,18 @@
     cursor: pointer;
 }
 
-.teach-language-choice .arrow-down, .teach-language-choice .arrow-up {
+.teach-language-choice .arrow-down, 
+.teach-language-choice .arrow-up {
     position: static;
 }
+
 
 .arrow-down {
     transform: rotate(45deg);
 }
 
-.arrow-down, .arrow-up {
+.arrow-down, 
+.arrow-up {
     position: absolute;
     display: inline-block;
     margin-top: -8px;
@@ -80,29 +83,42 @@
     height: 16px;
     right: 12px;
     transition: transform .2s;
+    transition: transform .2s,-webkit-transform .2s;
 }
 
-.arrow-down:before, .arrow-up:before {
-    left: 4px;
-    top: 7px;
-}
-
-.arrow-down:after, .arrow-down:before {
-    background-color: #333;
-}
-
-.arrow-down:after, .arrow-up:after {
-    top: 4px;
-    left: 7px;
-    transform: rotate(90deg);
-}
-.arrow-down:after, .arrow-down:before, .arrow-up:after, .arrow-up:before {
+.arrow-down:after, 
+.arrow-down:before, 
+.arrow-up:after, 
+.arrow-up:before {
     content: "";
     position: absolute;
     display: inline-block;
     width: 8px;
     height: 2px;
 }
-.arrow-down:after, .arrow-down:before {
+
+.arrow-down:before, 
+.arrow-up:before {
+    left: 4px;
+    top: 7px;
+}
+
+.arrow-down:after, 
+.arrow-down:before {
     background-color: #333;
+}
+
+.arrow-down:after, 
+.arrow-up:after {
+    top: 4px;
+    left: 7px;
+    transform: rotate(90deg);
+}
+
+.arrow-up {
+    transform: translate(1px,-2px) rotate(-135deg);
+}
+
+.arrow-up:after, .arrow-up:before {
+    background-color: #ff4338;
 }

@@ -6,13 +6,37 @@ import TeacherCard from './teacher_card';
 class SearchResults extends React.Component {
     constructor(props) {
         super(props)
-        this.state = {
-             
-        }
+
+        this.handleDownArrow = this.handleDownArrow.bind(this);
+        this.handleUpArrow = this.handleUpArrow.bind(this);
     }
 
     componentDidMount() {
         this.props.fetchAllTeachersByLanguage(this.props.match.params.languageName);
+    }
+
+    handleDownArrow(e) {
+        const parentEl = document.querySelector("#language-to-learn");
+        const downArrow = document.querySelector(".arrow-down");
+        const upArrow = document.createElement("span");
+        
+        upArrow.classList.add("arrow-up");
+        upArrow.onclick = this.handleUpArrow;
+
+        parentEl.removeChild(downArrow);
+        parentEl.appendChild(upArrow);
+    }
+
+    handleUpArrow(e) {
+        const parentEl = document.querySelector("#language-to-learn");
+        const upArrow = document.querySelector(".arrow-up");
+        const downArrow = document.createElement("span");
+
+        downArrow.classList.add("arrow-down");
+        downArrow.onclick = this.handleDownArrow;
+
+        parentEl.removeChild(upArrow);
+        parentEl.appendChild(downArrow);
     }
 
     render() {
@@ -24,8 +48,9 @@ class SearchResults extends React.Component {
                         <div className="teachers-filter">
                             <div className="teach-language" style={{top: "0px"}}>
                                 <p className="teach-language-choice">
-                                    <span id="language-to-learn">{this.props.match.params.languageName}</span>
-                                    <span className="arrow-down"></span>
+                                    <span id="language-to-learn">{this.props.match.params.languageName}
+                                    <span onClick={this.handleDownArrow} className="arrow-down"></span>
+                                    </span>
                                 </p>
                                 <SearchFilterBar />
                             </div>
