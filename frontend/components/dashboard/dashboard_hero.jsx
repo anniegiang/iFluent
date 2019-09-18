@@ -6,7 +6,7 @@ class DashboardHero extends React.Component {
     }
 
     render() {
-        const { name, profilePicture } = this.props
+        const { name, profilePicture } = this.props.currentUser
         return (
             <div className="dashboard-user">
                 <section className="dashboard-info">

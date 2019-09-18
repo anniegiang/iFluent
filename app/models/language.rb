@@ -18,5 +18,10 @@ class Language < ApplicationRecord
     has_many :teachers,
         through: :teachers_teaching_language,
         source: :teacher
+
+    has_many :lessons,
+        primary_key: :id,
+        foreign_key: :language_id,
+        class_name: 'Lesson'
         
 end

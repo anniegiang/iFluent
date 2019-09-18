@@ -3,7 +3,7 @@ import React from 'react';
 class TeacherInfoCard extends React.Component {
 
     render() {
-        const { country, about_me, title, videoUrl, hourlyRate, trialRate, workExperience, education, certificates, name, profilePicture } = this.props.teacher;
+        const { country, aboutMe, title, videoUrl, hourlyRate, trialRate, workExperience, education, certificates, name, profilePicture } = this.props.teacher;
         return (
             <div className="TeacherInfoCard teacherCard-box1 TeacherInfoCard-desktop">
                 <div className="Video">
@@ -47,18 +47,18 @@ class TeacherInfoCard extends React.Component {
                                         <img width="24" height="24" src="https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/favourite.63cfc0be.svg" alt="fav"/>
                                     </span>
                                     <div className="share-teacher-wrapper">
-                                        <div class="TagMenu TagMenu-desktop TagMenu-rerotate90">
-                                            <div class="chat-send-attachment-btn">
+                                        <div className="TagMenu TagMenu-desktop TagMenu-rerotate90">
+                                            <div className="chat-send-attachment-btn">
                                                 <img src="https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/shareBtn.5fa47672.svg" alt="shares" width="24" height="24"/>
                                             </div>
-                                        <div class="TagMenu-menu TagMenu-menu-bottom-right TagMenu-hidden">
-                                            <div class="TagMenu-menu-option" data-value="1">
+                                        <div className="TagMenu-menu TagMenu-menu-bottom-right TagMenu-hidden">
+                                            <div className="TagMenu-menu-option" data-value="1">
                                                 Share this teacher
                                             </div>
-                                            <div class="TagMenu-menu-option" data-value="2">
+                                            <div className="TagMenu-menu-option" data-value="2">
                                                 Report this teacher
                                             </div>
-                                            <div class="TagMenu-menu-option" data-value="3">
+                                            <div className="TagMenu-menu-option" data-value="3">
                                                 Block this teacher
                                             </div>
                                         </div>
@@ -67,13 +67,13 @@ class TeacherInfoCard extends React.Component {
                                 </div>
                                 <div className="teacherCard-right-body">
                                     <div className="teacherCard-stars">
-                                        <div class="stars-box">
-                                            <div class="star"></div>
-                                            <div class="star"></div>
-                                            <div class="star"></div>
-                                            <div class="star"></div>
-                                            <div class="star"></div>
-                                            <span class="number">5.0</span>
+                                        <div className="stars-box">
+                                            <div className="star"></div>
+                                            <div className="star"></div>
+                                            <div className="star"></div>
+                                            <div className="star"></div>
+                                            <div className="star"></div>
+                                            <span className="number">5.0</span>
                                         </div>
                                     </div>
                                     <div><span>956 LESSONS</span></div>
@@ -141,19 +141,13 @@ class TeacherInfoCard extends React.Component {
                 </div>
                     <div className="aboutMe">
                         <div>
-                            <h2 class="cardTitle"><span>About Me</span></h2>
+                            <h2 className="cardTitle"><span>About Me</span></h2>
                             <div className="aboutMe-introduction">
-                                <div class="TextOverflow" style={{maxHeight: "63px", lineHeight: "21px"}}>Don't stop just yet! 
-                                    Every one of us reaches that point in language learning when progress is slow, new methods are few, and you end up losing motivation. THAT'S WHERE I COME.
-                                    I'm here in order to help you through out these situations as I've been there and going through it again with French and Spanish.
-                                    In my lessons, you should expect FUN methods like Reading STORIES and books ( you can have the freedom of choice of books) Multiple entertaining exercises from riddles to games, to all the fun stuff.
-                                    We'll go together through basic conversations and take it step by step to higher levels.
-                                    One thing should always be on your mind; LANGUAGES ARE MEANT TO BE SPOKEN, so stop just memorizing all these grammatical rules and first LET'S TALK! 
-                                    I'll let you know a secret; the best way to learn a language is to forget you're learning and just have fun. Just like the difference in pressure between you dedicating an hour a day for a workout or just adding some activities to your day like cycling to your destinations.
-                                    So let all your stress go away and just enjoy the journey of learning a language in a totally different way.
-                                    <span class="TextOverflow-readMore">
-                                        <span class="TextOverflow-readMore-ellipsis">&nbsp;...</span>
-                                        <span class="TextOverflow-readMore-text">
+                                <div className="TextOverflow" style={{maxHeight: "63px", lineHeight: "21px"}}>
+                                    {aboutMe}
+                                    <span className="TextOverflow-readMore">
+                                        <span className="TextOverflow-readMore-ellipsis">&nbsp;...</span>
+                                        <span className="TextOverflow-readMore-text">
                                             <span>Read more</span>
                                         </span>
                                     </span>
