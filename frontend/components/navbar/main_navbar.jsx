@@ -105,12 +105,12 @@ class MainNavBar extends React.Component {
 							<span>Find a Teacher</span>
 						</div>
 					</a>
-					<a onClick={this.redirectToLogIn} id="log-in" href="#">
+					<a id="log-in" href="#/login">
 						<div className="Header-button">
 							<span>Log In</span>
 						</div>
 					</a>
-					<a onClick={this.handleLogout}>
+					<a id="sign-up" href="#/signup">
 						<div className="Header-button">
 							<span>Sign Up</span>
 						</div>
