@@ -8,7 +8,7 @@ class TeacherInfoCard extends React.Component {
             <div className="TeacherInfoCard teacherCard-box1 TeacherInfoCard-desktop">
                 <div className="Video">
                     <iframe 
-                        src="https://www.youtube.com/embed/b19yQ1noWBM?enablejsapi=1&modestbranding=1&rel=0&showinfo=0"
+                        src={videoUrl}
                         frameBorder="0"
                         width="100%"
                         height="422"

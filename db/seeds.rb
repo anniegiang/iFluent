@@ -19,14 +19,72 @@ guest = User.create({
 });
 
 users = []
+vid_url = [
+  "https://v.italki.cn/xitalki100031658.mp4",
+  "https://v.italki.cn/xitalki100016625.mp4",
+  "https://v.italki.cn/xitalki100029598.mp4",
+  "https://v.italki.cn/xitalki100030565.mp4",
+  "https://v.italki.cn/xitalki100022403.mp4",
+  "https://v.italki.cn/xitalki100032801.mp4",
+  "https://v.italki.cn/xitalki100021439.mp4",
+  "https://v.italki.cn/xitalki100025584.mp4",
+  "https://v.italki.cn/xitalki100017337.mp4",
+  "https://v.italki.cn/xitalki100026899.mp4",
+  "https://v.italki.cn/xitalki100033723.mp4",
+  "https://www.youtube.com/embed/WAl88MpARH4?enablejsapi=1&modestbranding=1&rel=0&showinfo=0",
+  "https://www.youtube.com/embed/Vx0hBKiHclo?enablejsapi=1&modestbranding=1&rel=0&showinfo=0",
+  "https://www.youtube.com/embed/gtkL2faqLyY?enablejsapi=1&modestbranding=1&rel=0&showinfo=0",
+  "https://www.youtube.com/embed/r_IoOinoH7s?enablejsapi=1&modestbranding=1&rel=0&showinfo=0",
+  "https://www.youtube.com/embed/sgGl7FD9ZX4?enablejsapi=1&modestbranding=1&rel=0&showinfo=0",
+  "https://www.youtube.com/embed/Sdox8YdhKAE?enablejsapi=1&modestbranding=1&rel=0&showinfo=0",
+  "https://www.youtube.com/embed/9vE16nnkfYg?enablejsapi=1&modestbranding=1&rel=0&showinfo=0",
+  "https://www.youtube.com/embed/vLCXQarl0WU?enablejsapi=1&modestbranding=1&rel=0&showinfo=0",
+  "https://www.youtube.com/embed/E1TiJW1yxkw?enablejsapi=1&modestbranding=1&rel=0&showinfo=0",
+  "https://www.youtube.com/embed/dOh1tjYVs20?enablejsapi=1&modestbranding=1&rel=0&showinfo=0",
+  "https://www.youtube.com/embed/esGAhzLYBVo?enablejsapi=1&modestbranding=1&rel=0&showinfo=0",
+  "https://www.youtube.com/embed/yY8-MyOKaSo?enablejsapi=1&modestbranding=1&rel=0&showinfo=0",
+  "https://www.youtube.com/embed/sjZjrp_BUQM?enablejsapi=1&modestbranding=1&rel=0&showinfo=0",
+  "https://www.youtube.com/embed/W6-phwW5uz8?enablejsapi=1&modestbranding=1&rel=0&showinfo=0",
+  "https://www.youtube.com/embed/kIrPMwE04ms?enablejsapi=1&modestbranding=1&rel=0&showinfo=0",
+  "https://www.youtube.com/embed/f4vXgzM0lhg?enablejsapi=1&modestbranding=1&rel=0&showinfo=0"
+]
+
+pic_url = [
+  "https://imagesavatar-static01.italki.com/T062853910_Avatar.jpg",
+  "https://imagesavatar-static01.italki.com/1T038639550_Avatar.jpg",
+  "https://imagesavatar-static01.italki.com/5T030951701_Avatar.jpg",
+  "https://imagesavatar-static01.italki.com/1T058978680_Avatar.jpg",
+  "https://imagesavatar-static01.italki.com/2T055083430_Avatar.jpg",
+  "https://imagesavatar-static01.italki.com/1T041224710_Avatar.jpg",
+  "https://imagesavatar-static01.italki.com/8T015671220_Avatar.jpg",
+  "https://imagesavatar-static01.italki.com/1T058076150_Avatar.jpg",
+  "https://imagesavatar-static01.italki.com/T038328532_Avatar.jpg",
+  "https://imagesavatar-static01.italki.com/1T057901190_Avatar.jpg",
+  "https://imagesavatar-static01.italki.com/4T024114984_Avatar.jpg",
+  "https://imagesavatar-static01.italki.com/8T016504020_Avatar.jpg",
+  "https://imagesavatar-static01.italki.com/1T055005920_Avatar.jpg",
+  "https://imagesavatar-static01.italki.com/4T030233289_Avatar.jpg",
+  "https://imagesavatar-static01.italki.com/24T014533410_Avatar.jpg",
+  "https://imagesavatar-static01.italki.com/19T016224830_Avatar.jpg",
+  "https://imagesavatar-static01.italki.com/14T035080570_Avatar.jpg",
+  "https://imagesavatar-static01.italki.com/1T057538080_Avatar.jpg",
+  "https://imagesavatar-static01.italki.com/T054506930_Avatar.jpg",
+  "https://imagesavatar-static01.italki.com/15T040382660_Avatar.jpg",
+  "https://imagesavatar-static01.italki.com/1T060199630_Avatar.jpg",
+  "https://imagesavatar-static01.italki.com/8T036780330_Avatar.jpg",
+  "https://imagesavatar-static01.italki.com/T054370530_Avatar.jpg",
+  "https://imagesavatar-static01.italki.com/1T027946779_Avatar.jpg",
+  "https://imagesavatar-static01.italki.com/T064042050_Avatar.jpg",
+  "https://imagesavatar-static01.italki.com/T049874910_Avatar.jpg",
+  "https://imagesavatar-static01.italki.com/5T031561200_Avatar.jpg"
+]
 
 192.times do
-  pic = Faker::LoremFlickr.image
   user = User.create(
     name: Faker::Name.name,
     email: Faker::Internet.email,
     password: "password",
-    profile_picture: pic
+    profile_picture: pic_url.sample
   )
   users.push(user)
 end
@@ -34,20 +92,16 @@ end
 # Teachers
 Teacher.destroy_all
 
-def randomTitle 
-  titles = ["Professional Teacher", "Community Tutor", "All"]
-  return titles.sample
-end
-
+titles = ["Professional Teacher", "Community Tutor", "All"]
 teachers = []
 
 users.slice(0, users.length/2).each do |user|
   teacher = Teacher.create(
     teacher_id: user.id,
     country: Faker::Address.country,
-    about_me: Faker::Lorem.paragraph(sentence_count: 2, supplemental: false, random_sentences_to_add: 4),
-    title: randomTitle,
-    video_url: Faker::LoremPixel.image,
+    about_me: Faker::Lorem.paragraph(sentence_count: 6, supplemental: false, random_sentences_to_add: 4),
+    title: titles.sample,
+    video_url: vid_url.sample,
     hourly_rate: Faker::Commerce.price(range: 20.0..30.0, as_string: false),
     trial_rate: Faker::Commerce.price(range: 0..20.0, as_string: false),
     work_experience: Faker::Job.field,
@@ -79,17 +133,6 @@ languages = Language.create(
 
 # Teacher teaches
 TeacherTeach.destroy_all
-
-# (0...languages.length).each do |langIdx|
-#   teachers.shuffle.each_with_index do |teacher, teacherIdx|
-#     next if teacherIdx > 2
-    # TeacherTeach.create({
-    #     language_id: languages[langIdx].id,
-    #     teacher_id: teacher.id,
-    #     fluency: rand(1..5)
-    #   })
-#   end
-# end
 
 lang = ["a", "b"]
 t = [1, 2, 3, 4]
@@ -131,3 +174,37 @@ while x < languages.length
 	end
 	break
 end
+
+# Teacher Speaks
+
+# Lessons
+Lesson.destroy_all
+
+lesson_cat = ["General", "Trial lesson", "Conversation Practice", "Instant tutoring", "Test Preparation"]
+lesson_title = ["Trial lesson", "Informal teaching", "Formal tutoring with materials", "Conversational", "Business vocabulary", "For absolute beginners", "For advanced students", "For intermediate students", "Test prep"]
+duration = [15, 30, 45, 60, 120]
+
+teachers.each do |teacher|
+  3.times do
+    Lesson.create({
+      teacher_id: teacher.id,
+      language_id: languages.sample.id,
+      title: lesson_title.sample,
+      description: Faker::Lorem.paragraph(sentence_count: 2, supplemental: false, random_sentences_to_add: 4),
+      category: lesson_cat.sample,
+      price: teacher.hourly_rate,
+      duration:  duration.sample,
+    });
+  end
+end
+
+#  teacher_id  :integer          not null
+#  language_id :integer          not null
+#  title       :string           not null
+#  description :text             not null
+#  category    :string           not null
+#  price       :float            not null
+#  duration    :integer          not null
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
