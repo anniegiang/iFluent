@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import TeacherProfile from './teacher_profile';
 import { fetchTeacher } from '../../actions/teacher_actions';
+import { fetchAllLessonsByTeacher } from '../../actions/lesson_actions';
 
 const msp = (state, ownProps) => {
     return {
@@ -10,7 +11,8 @@ const msp = (state, ownProps) => {
 
 const mdp = dispatch => {
     return {
-        fetchTeacher: id => dispatch(fetchTeacher(id))
+        fetchTeacher: id => dispatch(fetchTeacher(id)),
+        fetchLessons: teacherId => dispatch(fetchAllLessonsByTeacher(teacherId))
     }
 };
 

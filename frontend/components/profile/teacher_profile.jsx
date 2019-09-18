@@ -7,6 +7,7 @@ class TeacherProfile extends React.Component {
 
     componentDidMount() {
         this.props.fetchTeacher(parseInt(this.props.match.params.teacherId));
+        this.props.fetchLessons(parseInt(this.props.match.params.teacherId));
     }
 
     render() {
