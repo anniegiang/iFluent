@@ -1,0 +1,112 @@
+.teacherCard-box {
+    // width: 752px;
+    margin-bottom: 20px;
+    padding: 40px 30px;
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow: 0 7px 25px 0 rgba(0,0,0,.1);
+}
+
+.teacherCard-bar {
+    padding: 30px 0 40px;
+    border-bottom: 1px solid #ddd;
+}
+
+.teacherCard-box>div:last-child {
+    padding-top: 41px;
+    padding-bottom: 0;
+    border: none;
+}
+
+.teacherCard-box>div:first-child {
+    padding-top: 0;
+}
+
+.cardTitle.LessonsCard-title {
+    margin-bottom: 30px;
+}
+.cardTitle {
+    height: 27px;
+    margin-top: 0;
+    margin-bottom: 40px;
+    display: flex;
+    flex: 1 1;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 23px;
+    font-weight: 500;
+    color: #333;
+}
+
+.cardTitle-flexStart {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.lessonCards-bar {
+    display: flex;
+    flex-direction: column;
+}
+
+.lessonCard-box {
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+}
+
+.lessonCard-bar {
+    padding: 12px 15px 11px;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+}
+
+.lessonCard-title {
+    font-size: 14px;
+    color: #333;
+}
+
+.blackbar {
+    width: 10px;
+    height: 4px;
+    border-bottom: 1px solid #333;
+}
+
+.blackbar {
+    height: auto;
+    margin: 7px 0 10px;
+}
+
+.lessonCard-content {
+    font-size: 12px;
+    color: #777;
+}
+
+.lessonCard-content .lesson-count-lowercase {
+    text-transform: lowercase;
+}
+
+.lessonCard-price-green {
+    min-width: 88px;
+    height: 30px;
+    padding: 0 15px;
+    border-radius: 103px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: #4cd1d0;
+    background-color: rgba(76,209,208,.1);
+    white-space: nowrap;
+}
