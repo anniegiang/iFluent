@@ -80,9 +80,6 @@ class MainNavBar extends React.Component {
             <button onClick={this.props.openModalSignup}>
               Sign Up
             </button>
-            <button>
-              Contact
-            </button>
           </div>
         </div>
       )

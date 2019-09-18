@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import OutsideAlerter from './outside_alerter';
+
 
 class SearchBar extends React.Component {
     constructor(props) {
@@ -62,7 +64,8 @@ class SearchBar extends React.Component {
         document.body.addEventListener("click", (e) => {
             menuSelect.classList.remove(".homepage-menu-select-open");
             searchIcon.classList.remove(".homepage-search-icon-open");
-            menuChoice.removeChild(menuItems);
+            menuItems.style.display = "none";
+            // menuChoice.removeChild(menuItems);
         });
 
         
@@ -72,6 +75,7 @@ class SearchBar extends React.Component {
         return (
             <div className="homepage-menu">
                 <form className="homepage-menu-choice">
+                    {/* <OutsideAlerter /> */}
                     <input 
                         className="homepage-menu-select" 
                         placeholder="Choose a language"
