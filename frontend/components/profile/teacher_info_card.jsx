@@ -76,6 +76,8 @@ class TeacherInfoCard extends React.Component {
                                             <span class="number">5.0</span>
                                         </div>
                                     </div>
+                                    <div><span>956 LESSONS</span></div>
+                                    <div><span>103 STUDENTS</span></div>
 
                                 </div>
                             </div>
@@ -137,6 +139,29 @@ class TeacherInfoCard extends React.Component {
                         </button>
                     </div>
                 </div>
+                    <div className="aboutMe">
+                        <div>
+                            <h2 class="cardTitle"><span>About Me</span></h2>
+                            <div className="aboutMe-introduction">
+                                <div class="TextOverflow" style={{maxHeight: "63px", lineHeight: "21px"}}>Don't stop just yet! 
+                                    Every one of us reaches that point in language learning when progress is slow, new methods are few, and you end up losing motivation. THAT'S WHERE I COME.
+                                    I'm here in order to help you through out these situations as I've been there and going through it again with French and Spanish.
+                                    In my lessons, you should expect FUN methods like Reading STORIES and books ( you can have the freedom of choice of books) Multiple entertaining exercises from riddles to games, to all the fun stuff.
+                                    We'll go together through basic conversations and take it step by step to higher levels.
+                                    One thing should always be on your mind; LANGUAGES ARE MEANT TO BE SPOKEN, so stop just memorizing all these grammatical rules and first LET'S TALK! 
+                                    I'll let you know a secret; the best way to learn a language is to forget you're learning and just have fun. Just like the difference in pressure between you dedicating an hour a day for a workout or just adding some activities to your day like cycling to your destinations.
+                                    So let all your stress go away and just enjoy the journey of learning a language in a totally different way.
+                                    <span class="TextOverflow-readMore">
+                                        <span class="TextOverflow-readMore-ellipsis">&nbsp;...</span>
+                                        <span class="TextOverflow-readMore-text">
+                                            <span>Read more</span>
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
             </div>
         )
 

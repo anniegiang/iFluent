@@ -312,3 +312,64 @@
     font-weight: 500;
     color: #fec400;
 }
+
+.aboutMe {
+    margin-bottom: 30px;
+    padding-top: 30px;
+}
+.aboutMe {
+    margin: 0 30px 40px;
+    padding-top: 40px;
+    border-top: 1px solid #ddd;
+    white-space: pre-wrap;
+}
+
+.aboutMe .cardTitle {
+    margin-bottom: 20px;
+}
+
+.cardTitle {
+    height: 27px;
+    margin-top: 0;
+    margin-bottom: 40px;
+    display: flex;
+    flex: 1 1;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 23px;
+    font-weight: 500;
+    color: #333;
+}
+
+.aboutMe-introduction {
+    white-space: pre-wrap;
+}
+
+.TextOverflow {
+    overflow: hidden;
+    position: relative;
+    z-index: 7;
+    word-break: break-word;
+}
+
+.TextOverflow-readMore {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 8;
+}
+
+.TextOverflow-readMore-ellipsis {
+    padding-left: 20px;
+    background: -webkit-gradient(linear,left top,right top,from(transparent),color-stop(66%,#fff));
+    background: -webkit-linear-gradient(left,transparent,#fff 66%);
+    background: linear-gradient(90deg,transparent,#fff 66%);
+}
+
+.TextOverflow-readMore-text {
+    padding-right: 70px;
+    background-color: #fff;
+    color: #337ab7;
+    cursor: pointer;
+}
