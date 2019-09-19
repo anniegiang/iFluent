@@ -18,7 +18,7 @@ class TeacherBook extends React.Component {
 
                             <div className="bookCard-right">
                                 <div className="bookCard-priceNew">
-                                    <span>USD 4.00</span>
+                                    <span>USD {this.props.teacher.trialRate}</span>
                                 </div>
                             </div>
 
@@ -38,7 +38,7 @@ class TeacherBook extends React.Component {
 
                             <div className="bookCard-right">
                                 <div className="bookCard-priceNew">
-                                    <span>USD 4.00</span>
+                                    <span>USD {this.props.teacher.hourlyRate}</span>
                                 </div>
                             </div>
                             <div className="bookCard-price-from"><span>FROM</span></div>
