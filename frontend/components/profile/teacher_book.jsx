@@ -5,7 +5,52 @@ class TeacherBook extends React.Component {
     render() {
         return (
             <div className="teacher-book">
-                <h1>Book Now</h1>
+                <div className="bookCards">
+                    <div className="bookCard-box">
+
+                        <div className="bookCard">
+
+                            <div className="bookCard-left">
+                                <div className="bookCard-title">
+                                    <span>Trial Lesson</span>
+                                </div>
+                            </div>
+
+                            <div className="bookCard-right">
+                                <div className="bookCard-priceNew">
+                                    <span>USD 4.00</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div className="bookCard-hr"></div>
+                    <div className="bookCard-box">
+
+                        <div className="bookCard">
+
+                            <div className="bookCard-left">
+                                <div className="bookCard-title">
+                                    <span>Lessons</span>
+                                </div>
+                            </div>
+
+                            <div className="bookCard-right">
+                                <div className="bookCard-priceNew">
+                                    <span>USD 4.00</span>
+                                </div>
+                            </div>
+                            <div className="bookCard-price-from"><span>FROM</span></div>
+
+                        </div>
+
+                    </div>
+                    <div className="bookCard-hr"></div>
+                    <button id="schedule-lesson" type="button" className="teacher-right-booknow btn btn-standard btn-main btn-gradient">
+                        <span>BOOK NOW</span>
+                    </button>
+                </div>
             </div>
         )
     }

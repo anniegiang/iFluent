@@ -10,7 +10,9 @@ const LessonCardBox = props => {
                 <div className="lessonCard-title">{props.lesson.title}</div>
                 <div className="blackbar"></div>
                 <div className="lessonCard-content">
-                    <span className="lesson-count-lowercase">{randLesson}&nbsp;<span>Lessons</span></span>
+                    <span className="lesson-count-lowercase">
+                        {randLesson}&nbsp;<span>Lessons</span
+                    ></span>
                 </div>
             </div>
             <div className="lessonCard-right">
