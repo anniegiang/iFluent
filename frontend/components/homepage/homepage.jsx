@@ -4,6 +4,7 @@ import HomePageTeachersSlider from './homepage_teachers_slider';
 import HomePageWhyItalki from './homepage_why_italki';
 import HomePageHowItWorks from './homepage_how_it_works';
 import HomePageStudentSays from './homepage_student_says';
+import HomepageBottomBanner from './homepage_bottom_banner';
 
 const HomePage = props => {
     return (
@@ -14,6 +15,7 @@ const HomePage = props => {
                 <HomePageWhyItalki />
                 <HomePageHowItWorks />
                 <HomePageStudentSays />
+                <HomepageBottomBanner />
             </div>
         </div>
     )
