@@ -28,7 +28,6 @@ class TeacherLeftCard extends React.Component {
             trialRate, 
         } = this.props.teacher;
 
-        // debugger
         return (
             <div className="teacher-card-left">
                 <div className="teacher-card-detail-top">

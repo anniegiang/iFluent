@@ -10,7 +10,7 @@ class TeacherMain extends React.Component {
         return (
             <div className="Teacher-main">
                 <TeacherInfoCard teacher={this.props.teacher} />
-                <TeacherLessonsCard teacher={this.props.teacher} />
+                <TeacherLessonsCard lessons={this.props.lessons} teacher={this.props.teacher} />
                 {/* <TeacherStatisticsCard teacher={this.props.teacher} />
                 <TeacherReview teacher={this.props.teacher} /> */}
             </div>

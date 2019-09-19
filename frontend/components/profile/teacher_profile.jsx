@@ -11,15 +11,14 @@ class TeacherProfile extends React.Component {
     }
 
     render() {
-        if (!this.props.teacher) {
+        if (!this.props.teacher || !this.props.lessons) {
             return null
         }
-        
         return (
             <div className="flex-container">
                 <div style={{position: "static", zIndex: "inherit"}}>
                     <div className="Teacher">
-                        <TeacherMain teacher={this.props.teacher} />
+                        <TeacherMain lessons={this.props.lessons} teacher={this.props.teacher} />
                         <TeacherRight teacher={this.props.teacher} />
                     </div>
                 </div>
