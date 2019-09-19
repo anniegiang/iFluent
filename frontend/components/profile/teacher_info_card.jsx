@@ -3,6 +3,8 @@ import React from 'react';
 class TeacherInfoCard extends React.Component {
 
     render() {
+        const randLessons = Math.floor(Math.random() * Math.floor(200));
+        const randStudents = Math.floor(Math.random() * Math.floor(200));
         const { country, aboutMe, title, videoUrl, hourlyRate, trialRate, workExperience, education, certificates, name, profilePicture } = this.props.teacher;
         return (
             <div className="TeacherInfoCard teacherCard-box1 TeacherInfoCard-desktop">
@@ -76,8 +78,8 @@ class TeacherInfoCard extends React.Component {
                                             <span className="number">5.0</span>
                                         </div>
                                     </div>
-                                    <div><span>956 LESSONS</span></div>
-                                    <div><span>103 STUDENTS</span></div>
+                                    <div><span>{randLessons} LESSONS</span></div>
+                                    <div><span>{randStudents} STUDENTS</span></div>
 
                                 </div>
                             </div>
@@ -134,9 +136,9 @@ class TeacherInfoCard extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        <button type="button" className="teacherCard-switch-profile-btn btn btn-standard btn-ghost-default">
+                        {/* <button type="button" className="teacherCard-switch-profile-btn btn btn-standard btn-ghost-default">
                             <span>Switch to User Profile</span>
-                        </button>
+                        </button> */}
                     </div>
                 </div>
                     <div className="aboutMe">
@@ -145,12 +147,12 @@ class TeacherInfoCard extends React.Component {
                             <div className="aboutMe-introduction">
                                 <div className="TextOverflow" style={{maxHeight: "63px", lineHeight: "21px"}}>
                                     {aboutMe}
-                                    <span className="TextOverflow-readMore">
+                                    {/* <span className="TextOverflow-readMore">
                                         <span className="TextOverflow-readMore-ellipsis">&nbsp;...</span>
                                         <span className="TextOverflow-readMore-text">
                                             <span>Read more</span>
                                         </span>
-                                    </span>
+                                    </span> */}
                                 </div>
                             </div>
                         </div>

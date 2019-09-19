@@ -99,7 +99,7 @@ users.slice(0, users.length/2).each do |user|
   teacher = Teacher.create(
     teacher_id: user.id,
     country: Faker::Address.country,
-    about_me: Faker::Lorem.paragraph(sentence_count: 6, supplemental: false, random_sentences_to_add: 4),
+    about_me: Faker::Lorem.paragraph(sentence_count: 24, supplemental: false, random_sentences_to_add: 4),
     title: titles.sample,
     video_url: vid_url.sample,
     hourly_rate: Faker::Commerce.price(range: 20.0..30.0, as_string: false),

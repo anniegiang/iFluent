@@ -346,30 +346,30 @@
     white-space: pre-wrap;
 }
 
-.TextOverflow {
-    overflow: hidden;
-    position: relative;
-    z-index: 7;
-    word-break: break-word;
-}
+// .TextOverflow {
+//     overflow: hidden;
+//     position: relative;
+//     z-index: 7;
+//     word-break: break-word;
+// }
 
-.TextOverflow-readMore {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: 8;
-}
+// .TextOverflow-readMore {
+//     position: absolute;
+//     bottom: 0;
+//     right: 0;
+//     z-index: 8;
+// }
 
-.TextOverflow-readMore-ellipsis {
-    padding-left: 20px;
-    background: -webkit-gradient(linear,left top,right top,from(transparent),color-stop(66%,#fff));
-    background: -webkit-linear-gradient(left,transparent,#fff 66%);
-    background: linear-gradient(90deg,transparent,#fff 66%);
-}
+// .TextOverflow-readMore-ellipsis {
+//     padding-left: 20px;
+//     background: -webkit-gradient(linear,left top,right top,from(transparent),color-stop(66%,#fff));
+//     background: -webkit-linear-gradient(left,transparent,#fff 66%);
+//     background: linear-gradient(90deg,transparent,#fff 66%);
+// }
 
-.TextOverflow-readMore-text {
-    padding-right: 70px;
-    background-color: #fff;
-    color: #337ab7;
-    cursor: pointer;
-}
+// .TextOverflow-readMore-text {
+//     padding-right: 70px;
+//     background-color: #fff;
+//     color: #337ab7;
+//     cursor: pointer;
+// }

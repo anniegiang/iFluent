@@ -1,8 +1,8 @@
 import React from 'react';
-import LessonCardBox from './lesson_card_box';
+import LessonCardBoxContainer from './lesson_card_box_container';
 
 class TeacherLessonsCard extends React.Component {
-
+    
     render() {
         return (
             <div className="LessonsCard teacherCard-box LessonsCard-desktop">
@@ -13,7 +13,7 @@ class TeacherLessonsCard extends React.Component {
                         </span>
                     </h2>
                     <div className="lessonCard-box">
-                        {this.props.lessons.map(lesson => <LessonCardBox key={lesson.id} lesson={lesson} />)}
+                        {this.props.lessons.map(lesson => <LessonCardBoxContainer key={lesson.id} lesson={lesson} />)}
                     </div>
                 </div>
             </div>

@@ -8,7 +8,7 @@ const HomepageBottomBanner = props => {
             <div className="homepage-bottom-section-content">
                 <h1><span>Learn more than just a language</span></h1>
                 <p><span>On italki it’s about mastering a timeless skill, cultivating new perspectives, and connecting with fascinating people from around the world.</span></p>
-                <a href="/teachers">
+                <a href="#/teachers/English">
                     <div className="homepage-bottom-section-btn">
                         <span>GET STARTED NOW</span>
                     </div>
