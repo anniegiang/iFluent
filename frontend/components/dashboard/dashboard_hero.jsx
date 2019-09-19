@@ -11,12 +11,12 @@ class DashboardHero extends React.Component {
             <div className="dashboard-user">
                 <section className="dashboard-info">
                     <div className="avatar">
-                        <img src={profilePicture} alt=""/>
+                        {/* <img src={profilePicture} alt=""/> */}
                     </div>
                 </section>
                 <section className="dashboard-person">
                     <div className="dashboard-name dashboard-name-common">
-                        {this.props.currentUser.name}
+                        Welcome, {this.props.currentUser.name}!
                     </div>
                 </section>
             </div>
