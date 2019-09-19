@@ -25,7 +25,7 @@ class LessonItem extends React.Component {
                     <div className="modal-head-title">
                         <span>Lesson Details</span>
                     </div>
-                    <div className="modal-close">
+                    <div onClick={this.props.closeLesson} className="modal-close">
                         <img src="https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/cross_icon.ad79cc7a.svg" alt="close"/>
                     </div>
                 </div>
