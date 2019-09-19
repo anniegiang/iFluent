@@ -30,11 +30,11 @@ class LessonItem extends React.Component {
                     <div className="modal-head-title">
                         <span>Lesson Details</span>
                     </div>
-                    <div onClick={this.props.closeLesson} className="modal-close">
+                    <div onClick={this.props.closeLesson} className="modal-close-lesson">
                         <img src="https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/cross_icon.ad79cc7a.svg" alt="close"/>
                     </div>
                 </div>
-                <div className="modal-body" style={{maxHeight: "617px"}}>
+                <div className="modal-body-lesson" style={{maxHeight: "617px"}}>
                     <div className="modal-flex">
                         <div className="modal-lessonDetail-title">{title}</div>
                         <div className="modal-lessonDetail-taught">{randLesson} <span>Lessons taught</span></div>
@@ -82,6 +82,11 @@ class LessonItem extends React.Component {
                             </div>
                         </div>
                     </div>
+                </div>
+                <div className="modal-footer-lesson flex-row-center">
+                    <button type="button" className="modal-lessonDetail-bookBtn">
+                        <span>BOOK NOW</span>
+                    </button>
                 </div>
             </div>
         )

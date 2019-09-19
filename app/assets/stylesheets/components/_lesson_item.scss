@@ -1,7 +1,7 @@
 .modal-container {
     position: relative;
     margin: 50px auto;
-    width: 730px;
+    width: 650px;
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 0 55px 0 rgba(0,0,0,.3);
@@ -27,17 +27,21 @@
     text-align: center;
 }
 
-// .modal-close {
-//     position: absolute;
-//     top: 2%;
-//     width: 20px;
-//     height: 20px;
+.modal-close-lesson {
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    cursor: pointer;
 
-// }
+}
 
-.modal-body {
+.modal-body-lesson {
     padding: 40px 30px 0;
     overflow-y: auto;
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px 30px 30px;
+    border-radius: 10px;
 }
 
 .modal-flex {
@@ -58,9 +62,9 @@
     
 }
 
-// .title {
-//     font-size: 16px;
-// }
+.title {
+    margin-bottom: 3px;
+}
 
 .content {
     color: #333;
@@ -86,7 +90,8 @@
 
 .modal-lessonDetail-tags span {
     display: inline-block;
-    border: 1px solid #777;
+    border: 1px solid #333;
+    color: #333;
     border-radius: 5px;
     padding: 6px 8px;
     margin-right: 12px;
@@ -148,4 +153,35 @@
 .notice-text span {
     font-size: 14px;
     color: #333;
+}
+
+.flex-row-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-footer-lesson {
+    height: 82px;
+    padding: 16px 30px;
+    border-top: 1px solid #ddd;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 53px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.07);
+}
+
+.modal-lessonDetail-bookBtn {
+    min-width: 550px;
+    background: #ff4238;
+    font-weight: 500;
+    color: #fff;
+    padding: 15px 12px;
+    font-size: 14px;
+    border-radius: 3px;
+    text-align: center;
 }
