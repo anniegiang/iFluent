@@ -34,9 +34,9 @@ class TeacherRightCard extends React.Component {
                                     style={{display: "block"}}
                                 ></iframe>
 
-                                <div className="video-poster-overlay">
+                                {/* <div className="video-poster-overlay">
                                     <i className="video-play-icon"></i>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </div>
