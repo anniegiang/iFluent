@@ -7,7 +7,7 @@ class LessonItem extends React.Component {
     }
 
     componentDidMount() {
-        // this.props.fetchAllLessonsByTeacher(this.props.lesson.teacherId);
+        this.props.fetchAllLessonsByTeacher(this.props.lesson.teacherId);
         document.body.style.overflow = 'hidden';
     }
     componentWillUnmount() {

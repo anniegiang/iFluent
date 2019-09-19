@@ -105,12 +105,12 @@ class MainNavBar extends React.Component {
 							<span>Find a Teacher</span>
 						</div>
 					</a>
-					<a id="log-in" href="#/login">
+					<a id="log-in" href="#/">
 						<div className="Header-button">
 							<span>Log In</span>
 						</div>
 					</a>
-					<a id="sign-up" href="#/signup">
+					<a id="sign-up" href="#/">
 						<div className="Header-button">
 							<span>Sign Up</span>
 						</div>

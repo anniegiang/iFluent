@@ -58,9 +58,11 @@ class DashboardHero extends React.Component {
                     </div>
 
                 </div>
-                <a href="#/teachers/English" type="button" className="find-your-teacher-btn">
-                    <span>FIND YOUR TEACHER</span>
-                </a>
+                <div className="recommend-teacher-slider-container">
+                    <a href="#/teachers/English" type="button" className="find-your-teacher-btn">
+                        <span>FIND YOUR TEACHER</span>
+                    </a>
+                </div>
             </div>
         )
     }
