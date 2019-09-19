@@ -35,3 +35,117 @@
 
 // }
 
+.modal-body {
+    padding: 40px 30px 0;
+    overflow-y: auto;
+}
+
+.modal-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-container .modal-lessonDetail-title {
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+}
+
+.modal-container, .modal-lessonDetail-category {
+    color: #777;
+    font-size: 12px;
+    
+}
+
+// .title {
+//     font-size: 16px;
+// }
+
+.content {
+    color: #333;
+    font-size: 16px;
+}
+
+.modal-lessonDetail-description {
+    margin-bottom: 30px;
+    font-size: 14px;
+    line-height: 1.5;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    color: #333;
+}
+
+.modal-lessonDetail-language, 
+.modal-lessonDetail-taught, 
+.modal-lessonDetail-tags, 
+.modal-lessonDetail-category,
+.modal-lessonDetail-description {
+    margin-bottom: 20px;
+}
+
+.modal-lessonDetail-tags span {
+    display: inline-block;
+    border: 1px solid #777;
+    border-radius: 5px;
+    padding: 6px 8px;
+    margin-right: 12px;
+    margin-bottom: 8px;
+}
+
+.modal-lessonDetail-price {
+    margin-bottom: 5px;
+    font-size: 12px;
+    color: #777;
+    text-transform: uppercase;
+}
+
+.modal-lessonDetail-prieCard {
+    width: 153px;
+    height: 91px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-lessonDetail-prieCard-time {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.lessonCard-price-green {
+    cursor: default;
+}
+.lessonCard-price-red {
+    color: #ff7b73;
+    background-color: rgba(255,123,115,.1);
+}
+
+.space-detail {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: row;
+    margin-top: 20px;
+}
+
+.notice-text {
+    margin-left: 12px;
+    margin-right: 30px;
+    line-height: 20px;
+}
+
+.space-detail img {
+    width: 17px;
+}
+
+.notice-text span {
+    font-size: 14px;
+    color: #333;
+}
