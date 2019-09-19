@@ -13,7 +13,7 @@ class TeacherLessonsCard extends React.Component {
                         </span>
                     </h2>
                     <div className="lessonCard-box">
-                        {this.props.lessons.map(lesson => <LessonCardBoxContainer key={lesson.id} lesson={lesson} />)}
+                        {this.props.lessons.map(lesson => <LessonCardBoxContainer lessonId={lesson.id} key={lesson.id} lesson={lesson} />)}
                     </div>
                 </div>
             </div>

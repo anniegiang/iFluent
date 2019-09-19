@@ -19,7 +19,7 @@ function Modal({modal, closeModal}) {
       component = <SignupFormContainer />;
       break;
     case 'lessonItem':
-      component = <LessonItem />;
+      component = <LessonItemContainer />;
       break;
     default:
       return null;

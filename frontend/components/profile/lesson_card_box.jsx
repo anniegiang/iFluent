@@ -7,8 +7,8 @@ class LessonCardBox extends React.Component {
     }
     
     openLesson(e) {
-        console.log(e.target);
-        // this.props.openLesson();
+        this.props.fetchLesson(this.props.lessonId)
+            .then(() => this.props.openLesson())
     }
 
 
