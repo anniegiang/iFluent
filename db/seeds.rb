@@ -190,7 +190,7 @@ teachers.each do |teacher|
       teacher_id: teacher.id,
       language_id: languages.sample.id,
       title: lesson_title.sample,
-      description: Faker::Lorem.paragraph(sentence_count: 2, supplemental: false, random_sentences_to_add: 4),
+      description: Faker::Lorem.paragraph(sentence_count: 24, supplemental: false, random_sentences_to_add: 4),
       category: lesson_cat.sample,
       price: teacher.hourly_rate,
       duration:  duration.sample,
@@ -198,13 +198,4 @@ teachers.each do |teacher|
   end
 end
 
-#  teacher_id  :integer          not null
-#  language_id :integer          not null
-#  title       :string           not null
-#  description :text             not null
-#  category    :string           not null
-#  price       :float            not null
-#  duration    :integer          not null
-#  created_at  :datetime         not null
-#  updated_at  :datetime         not null
-#
+

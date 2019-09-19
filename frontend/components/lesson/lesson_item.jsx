@@ -14,8 +14,6 @@ class LessonItem extends React.Component {
         document.body.style.overflow = 'unset';
     }
 
-    
-
     render() {
         const { title, description, category, price, duration } = this.props.lesson
         if (!this.props.lesson) {

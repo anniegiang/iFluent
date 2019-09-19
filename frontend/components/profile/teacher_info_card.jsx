@@ -145,15 +145,15 @@ class TeacherInfoCard extends React.Component {
                         <div>
                             <h2 className="cardTitle"><span>About Me</span></h2>
                             <div className="aboutMe-introduction">
-                                <div className="TextOverflow" style={{maxHeight: "63px", lineHeight: "21px"}}>
                                     {aboutMe}
-                                    {/* <span className="TextOverflow-readMore">
+                                {/* <div className="TextOverflow" style={{maxHeight: "63px", lineHeight: "21px"}}>
+                                    <span className="TextOverflow-readMore">
                                         <span className="TextOverflow-readMore-ellipsis">&nbsp;...</span>
                                         <span className="TextOverflow-readMore-text">
                                             <span>Read more</span>
                                         </span>
-                                    </span> */}
-                                </div>
+                                    </span>
+                                </div> */}
                             </div>
                         </div>
 
