@@ -4,7 +4,7 @@ import { fetchAllLanguages } from '../../actions/language_actions';
 import { closeModal } from '../../actions/modal_actions';
 
 const msp = state => ({
-    languages: state.entities.languages
+    languages: Object.values(state.entities.languages)
 });
 
 const mdp = dispatch => ({

@@ -17,7 +17,7 @@ const App = () => (
     <MainNavBarContainer />
     <Switch>
       <Route exact path="/teachers/:teacherId/:languageName" component={TeacherProfileContainer} />
-      <Route path="/teachers/:languageName" component={SearchResultsContainer} />
+      <Route exact path="/teachers/:languageName" component={SearchResultsContainer} />
       <Route exact path="/login" component={LoginFormContainer} />
       <Route exact path="/signup" component={SignupFormContainer} />
       <ProtectedRoute exact path="/dashboard" component={DashboardContainer} />
