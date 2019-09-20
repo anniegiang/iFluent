@@ -5,6 +5,7 @@ import LoginFormContainer from '../session/login_form_container';
 import SignupFormContainer from '../session/signup_form_container';
 import LessonItemContainer from '../lesson/lesson_item_container';
 import LessonItem from '../lesson/lesson_item';
+import SearchDropDownContainer from '../search/search_drop_down_container';
 
 function Modal({modal, closeModal}) {
   if (!modal) {
@@ -20,6 +21,9 @@ function Modal({modal, closeModal}) {
       break;
     case 'lessonItem':
       component = <LessonItemContainer />;
+      break;
+    case 'searchDropDown':
+      component = <SearchDropDownContainer />;
       break;
     default:
       return null;

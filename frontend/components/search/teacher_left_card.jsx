@@ -77,7 +77,7 @@ class TeacherLeftCard extends React.Component {
 
                     </div>
                 </div>
-                <i className="teacher-card-favorite"></i>
+                <i onClick={() => alert("Feature coming soon! :D")} className="teacher-card-favorite"></i>
             </div>
         )
     }

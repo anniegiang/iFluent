@@ -82,7 +82,7 @@ class LessonItem extends React.Component {
                     </div>
                 </div>
                 <div className="modal-footer-lesson flex-row-center">
-                    <button type="button" className="modal-lessonDetail-bookBtn">
+                    <button onClick={() => alert("Feature coming soon! :D")} type="button" className="modal-lessonDetail-bookBtn">
                         <span>BOOK NOW</span>
                     </button>
                 </div>

@@ -23,7 +23,7 @@ class TeacherRightCard extends React.Component {
                             <div className="video-player">
                                 <img src={this.props.teacher.videoUrl} alt=""/>
                                 {/* <img src="https://i.imgflip.com/15a5s4.jpg" alt=""/> */}
-                                <video 
+                                <iframe 
                                     title="video" 
                                     width="343" 
                                     height="193" 
@@ -32,7 +32,7 @@ class TeacherRightCard extends React.Component {
                                     // allow="autoplay" 
                                     allowFullScreen="" 
                                     style={{display: "block"}}
-                                ></video>
+                                ></iframe>
 
                                 {/* <div className="video-poster-overlay">
                                     <i className="video-play-icon"></i>

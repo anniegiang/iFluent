@@ -4,7 +4,6 @@ import { fetchTeacher } from '../../actions/teacher_actions';
 import { fetchAllLessonsByTeacher } from '../../actions/lesson_actions';
 
 const msp = (state, ownProps) => {
-    debugger
     return {
         teacher: state.entities.teachers[ownProps.match.params.teacherId],
         lessons: Object.values(state.entities.lessons)

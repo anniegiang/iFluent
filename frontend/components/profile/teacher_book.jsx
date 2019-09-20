@@ -47,7 +47,7 @@ class TeacherBook extends React.Component {
 
                     </div>
                     <div className="bookCard-hr"></div>
-                    <button id="schedule-lesson" type="button" className="teacher-right-booknow btn btn-standard btn-main btn-gradient">
+                    <button onClick={() => alert("Feature coming soon! :D")} id="schedule-lesson" type="button" className="teacher-right-booknow btn btn-standard btn-main btn-gradient">
                         <span>BOOK NOW</span>
                     </button>
                 </div>

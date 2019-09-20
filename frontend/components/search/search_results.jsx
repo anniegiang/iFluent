@@ -25,6 +25,8 @@ class SearchResults extends React.Component {
 
         parentEl.removeChild(downArrow);
         parentEl.appendChild(upArrow);
+
+        this.props.openDropDown();
     }
 
     handleUpArrow(e) {
@@ -48,7 +50,7 @@ class SearchResults extends React.Component {
                         <div className="teachers-filter">
                             <div className="teach-language" style={{top: "0px"}}>
                                 <p className="teach-language-choice">
-                                    <span id="language-to-learn">{this.props.match.params.languageName}
+                                    <span onClick={this.handleDownArrow} id="language-to-learn">{this.props.match.params.languageName}
                                     <span onClick={this.handleDownArrow} className="arrow-down"></span>
                                     </span>
                                 </p>
