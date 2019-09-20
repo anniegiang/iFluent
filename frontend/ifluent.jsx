@@ -6,6 +6,7 @@ import { fetchAllUsers, fetchUser } from './util/users_api_util';
 import { fetchAllLanguages, fetchLanguage } from './util/languages_api_util';
 import { fetchTeacher, fetchAllTeachersByLanguage } from './util/teachers_api_util';
 import { fetchAllLessonsByTeacher, fetchLesson } from './util/lessons_api_util';
+import { createLessonEnrollment } from './util/lesson_enrollments_api_util';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -30,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.fetchLanguage = fetchLanguage;
   window.fetchAllTeachersByLanguage = fetchAllTeachersByLanguage;
   window.fetchAllLessonsByTeacher = fetchAllLessonsByTeacher;
+  window.createLessonEnrollment = createLessonEnrollment
   window.fetchLesson = fetchLesson;
   window.fetchTeacher = fetchTeacher;
   

@@ -1,24 +1,11 @@
-# README
+# iFluent
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+iFluent is a clone of iTalki, a platform for language learning enthusiasts. This project was built in 11 days and encaptures the core features of iTalki, such as exploring a broad range teachers and booking lessons. Noteworthy technologies used: Ruby on Rails and React/Redux. Read on more to find out the approaches I took to solving the problems I faced.
 
-Things you may want to cover:
+## Technologies
+* Backend: PostgreSQL 11, Ruby on Rails 5.2.3
+* Frontend: React 16.9.0, Redux 4.0.4
 
-* Ruby version
+## Features
+* Secure frontend/backend user authentication using BCrypt
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

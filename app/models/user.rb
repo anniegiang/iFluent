@@ -29,6 +29,10 @@ class User < ApplicationRecord
 		foreign_key: :student_id,
 		class_name: 'LessonEnrollment'
 
+	has_many :enrolled_lessons,
+		through: :enrollments,
+		source: :lesson
+
 	def self.generate_session_token
 		SecureRandom::urlsafe_base64
 	end

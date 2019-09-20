@@ -52,7 +52,7 @@ class DashboardHero extends React.Component {
                             <span>Total Balance</span>
                         </header>
                         <section className="dashboard-total-money">$0 USD</section>
-                        <a className="dashboard-total-Credits" href="/payment">
+                        <a onClick={() => alert("Feature coming soon! :D")} className="dashboard-total-Credits" href="/payment">
                             <section><span>Add Credits</span></section>
                         </a>
                     </div>
