@@ -30,7 +30,7 @@ class DashboardHero extends React.Component {
 
                     <div className="dashboard-lesson">
                         <section className="lesson-info">
-                            <div>{lessons.length}</div>
+                            <div>0</div>
                             <div>
                                 <span className="upcoming-lessons">Upcoming Lessons</span>
                             </div>
