@@ -11,7 +11,7 @@ class Dashboard extends React.Component {
             <div className="flex-container">
                 <div style={{position: "static", zIndex: "inherit"}}>
                     <div className="dashboard">
-                        <DashboardHero currentUser={this.props.currentUser}/>
+                        <DashboardHero lessons={this.props.lessons} currentUser={this.props.currentUser}/>
                     </div>
                 </div>
             </div>

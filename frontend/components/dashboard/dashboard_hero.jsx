@@ -7,6 +7,7 @@ class DashboardHero extends React.Component {
 
     render() {
         const { name, profilePicture } = this.props.currentUser
+        const { lessons } = this.props
         return (
             <div className="dashboard-hero" style={{marginBottom: "40px"}}>
                 <div className="dashboard-user">
@@ -29,7 +30,7 @@ class DashboardHero extends React.Component {
 
                     <div className="dashboard-lesson">
                         <section className="lesson-info">
-                            <div>0</div>
+                            <div>{lessons.length}</div>
                             <div>
                                 <span className="upcoming-lessons">Upcoming Lessons</span>
                             </div>

@@ -3,6 +3,7 @@ import React from 'react';
 class TeacherBook extends React.Component {
 
     render() {
+        debugger
         return (
             <div className="teacher-book">
                 <div className="bookCards">

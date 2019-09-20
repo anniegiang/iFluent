@@ -3,7 +3,8 @@ import Dashboard from './dashboard';
 import { fetchAllUsers, fetchUser } from '../../actions/user_actions';
 
 const msp = state => ({
-    currentUser: state.entities.users[state.session.id]
+    currentUser: state.entities.users[state.session.id],
+    lessons:  Object.values(state.entities.users[state.session.id].enrolledLessons)
 })
 
 
