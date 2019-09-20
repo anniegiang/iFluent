@@ -15,6 +15,10 @@ class Language < ApplicationRecord
         foreign_key: :language_id,
         class_name: 'TeacherTeach'
 
+    has_many :teachers_speaking_language,
+        foreign_key: :language_id,
+        class_name: 'TeacherSpeak'
+
     has_many :teachers,
         through: :teachers_teaching_language,
         source: :teacher

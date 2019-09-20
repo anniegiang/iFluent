@@ -30,6 +30,15 @@ class Teacher < ApplicationRecord
     foreign_key: :teacher_id,
     class_name: 'TeacherTeach'
 
+  has_many :spoken_languages,
+    primary_key: :id,
+    foreign_key: :teacher_id,
+    class_name: 'TeacherSpeak'
+
+  has_many :languages_spoken,
+    through: :spoken_languages,
+    source: :language
+
   has_many :languages,
     through: :taught_languages,
     source: :language

@@ -12,3 +12,11 @@ json.extract! teacher,
     :certificates
     json.name teacher.teacher_user.name
     json.profilePicture teacher.teacher_user.profile_picture
+
+teacher.languages_spoken.each do |language|
+    json.language_spoken language.language
+end
+
+teacher.languages.each do |language|
+    json.language_taught language.language
+end

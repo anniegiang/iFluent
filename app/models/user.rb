@@ -24,7 +24,7 @@ class User < ApplicationRecord
 		foreign_key: :teacher_id,
 		class_name: 'Teacher'
 		
-	has_many :lesson_enrollments,
+	has_many :enrollments,
 		primary_key: :id,
 		foreign_key: :student_id,
 		class_name: 'LessonEnrollment'

@@ -5,7 +5,7 @@ class TeacherInfoCard extends React.Component {
     render() {
         const randLessons = Math.floor(Math.random() * Math.floor(200));
         const randStudents = Math.floor(Math.random() * Math.floor(200));
-        const { country, aboutMe, title, videoUrl, hourlyRate, trialRate, workExperience, education, certificates, name, profilePicture } = this.props.teacher;
+        const { country, aboutMe, title, videoUrl, hourlyRate, trialRate, workExperience, education, certificates, name, profilePicture, languageSpoken, languageTaught } = this.props.teacher;
         return (
             <div className="TeacherInfoCard teacherCard-box1 TeacherInfoCard-desktop">
                 <div className="Video">
@@ -92,7 +92,7 @@ class TeacherInfoCard extends React.Component {
                                 <div className="teacherCard-teaches-languages">
                                     <div>
                                         <span className="language">
-                                            <span>Placeholder</span>
+                                            <span>{languageTaught}</span>
                                         </span>
                                         <span className="tooltip-container-box" gap="5">
                                             <span className="tooltip-container" placement="bottom">
@@ -117,7 +117,7 @@ class TeacherInfoCard extends React.Component {
                                 <div className="teacherCard-teaches-languages">
                                     <div>
                                         <span className="language">
-                                            <span>Placeholder</span>
+                                            <span>{languageSpoken}</span>
                                         </span>
                                         <span className="tooltip-container-box" gap="5">
                                             <span className="tooltip-container" placement="bottom">
