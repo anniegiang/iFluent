@@ -30,6 +30,13 @@ guest = User.create({
   profile_picture: "https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/default.13c19308.svg"
 })
 
+user11 = User.create({
+  name: "Annie",
+  email: Faker::Internet.email,
+  password: "password", 
+  profile_picture: "https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/default.13c19308.svg"
+})
+
 # ---- ENGLISH ----
 
 # USER 1
