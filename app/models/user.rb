@@ -22,7 +22,12 @@ class User < ApplicationRecord
 	has_one :teacher_info,
 		primary_key: :id,
 		foreign_key: :teacher_id,
-        class_name: 'Teacher'
+		class_name: 'Teacher'
+		
+	has_many :lesson_enrollments,
+		primary_key: :id,
+		foreign_key: :student_id,
+		class_name: 'LessonEnrollment'
 
 	def self.generate_session_token
 		SecureRandom::urlsafe_base64

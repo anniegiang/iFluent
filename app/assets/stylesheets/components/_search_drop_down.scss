@@ -6,9 +6,7 @@
     height: auto!important;
     z-index: 3;
 }
-.menu-no-border {
-    border: 0;
-}
+
 .menu {
     position: relative;
     margin: 0;
@@ -21,10 +19,9 @@
     user-select: none;
 }
 
-.teach-menu-tablet .menu-items, .teach-menu .menu-items {
+.teach-menu .menu-items {
     position: static;
     border: 0;
-    -webkit-transform: scaleY(1)!important;
     transform: scaleY(1)!important;
     opacity: 1!important;
 }

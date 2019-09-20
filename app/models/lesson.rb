@@ -26,4 +26,9 @@ class Lesson < ApplicationRecord
         primary_key: :id,
         foreign_key: :language_id,
         class_name: 'Language'
+
+    has_many :lesson_enrollements,
+        primary_key: :id,
+        foreign_key: :lesson_id,
+        class_name: 'LessonEnrollment'
 end
