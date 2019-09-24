@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_20_165209) do
+ActiveRecord::Schema.define(version: 2019_09_24_064719) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,6 +49,12 @@ ActiveRecord::Schema.define(version: 2019_09_20_165209) do
     t.datetime "updated_at", null: false
     t.index ["lesson_id"], name: "index_lesson_enrollments_on_lesson_id"
     t.index ["student_id"], name: "index_lesson_enrollments_on_student_id"
+  end
+
+  create_table "lesson_items", force: :cascade do |t|
+    t.integer "lesson_id", null: false
+    t.integer "duration", null: false
+    t.float "price", null: false
   end
 
   create_table "lessons", force: :cascade do |t|
@@ -95,6 +101,15 @@ ActiveRecord::Schema.define(version: 2019_09_20_165209) do
     t.index ["teacher_id"], name: "index_teachers_on_teacher_id"
   end
 
+  create_table "user_likes", force: :cascade do |t|
+    t.integer "teacher_id", null: false
+    t.integer "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["teacher_id"], name: "index_user_likes_on_teacher_id"
+    t.index ["user_id"], name: "index_user_likes_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", null: false
     t.string "name", null: false
@@ -102,7 +117,8 @@ ActiveRecord::Schema.define(version: 2019_09_20_165209) do
     t.string "session_token", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "profile_picture", default: "https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/default.13c19308.svg", null: false
+    t.string "profile_picture_url", default: "https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/default.13c19308.svg", null: false
+    t.text "profile_about_me"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["session_token"], name: "index_users_on_session_token", unique: true
   end
