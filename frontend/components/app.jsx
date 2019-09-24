@@ -9,6 +9,7 @@ import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/signup_form_container';
 import Modal from './modal/modal';
 import HomePage from './homepage/homepage';
+import Footer from './footer/footer';
 
 
 const App = () => (
@@ -23,6 +24,7 @@ const App = () => (
       <ProtectedRoute exact path="/dashboard" component={DashboardContainer} />
       <AuthRoute exact path="/" component={HomePage}/>
     </Switch>
+    <Footer />
   </div>
 );
 
