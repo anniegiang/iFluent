@@ -2,36 +2,37 @@
 #
 # Table name: users
 #
-#  id              :bigint           not null, primary key
-#  email           :string           not null
-#  name            :string           not null
-#  profile_picture :string
-#  password_digest :string           not null
-#  session_token   :string           not null
-#  created_at      :datetime         not null
-#  updated_at      :datetime         not null
+#  id                  :bigint           not null, primary key
+#  email               :string           not null
+#  name                :string           not null
+#  password_digest     :string           not null
+#  session_token       :string           not null
+#  created_at          :datetime         not null
+#  updated_at          :datetime         not null
+#  profile_picture_url :string           default("https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/default.13c19308.svg"), not null
+#  profile_about_me    :text
 #
 
 class User < ApplicationRecord
-    validates :email, :session_token, presence: true, uniqueness: true
+	validates :email, :session_token, presence: true, uniqueness: true
 	validates :name, :password_digest, presence: true
 	validates :password, length: {minimum: 6}, allow_nil: true
 	after_initialize :ensure_session_token 
 	attr_reader :password
 
-	has_one :teacher_info,
-		primary_key: :id,
-		foreign_key: :teacher_id,
-		class_name: 'Teacher'
-		
-	has_many :enrollments,
+	has_many :lesson_enrollments
 		primary_key: :id,
 		foreign_key: :student_id,
 		class_name: 'LessonEnrollment'
 
-	has_many :enrolled_lessons,
-		through: :enrollments,
+	has_many :lessons,
+		through: :lesson_enrollments,
 		source: :lesson
+
+	has_many :teachers,
+		primary_key: :id,
+		foreign_key: :teacher_id,
+		class_name: 'Teacher'
 
 	def self.generate_session_token
 		SecureRandom::urlsafe_base64

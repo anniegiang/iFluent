@@ -9,23 +9,23 @@
 #
 
 class Language < ApplicationRecord
-    validates :language, presence: true
+  validates :language, presence: true
+  
+  has_many :teachers_speak,
+    primary_key: :id,
+    foreign_key: :language_id,
+    class_name: 'TeacherSpeak'
 
-    has_many :teachers_teaching_language,
-        foreign_key: :language_id,
-        class_name: 'TeacherTeach'
+  has_many :teachers_teach,
+    primary_key: :id,
+    foreign_key: :language_id,
+    class_name: 'TeacherTeach'
 
-    has_many :teachers_speaking_language,
-        foreign_key: :language_id,
-        class_name: 'TeacherSpeak'
+  has_many :spoken_by_teachers,
+    through: :teachers_speak,
+    source: :teacher
 
-    has_many :teachers,
-        through: :teachers_teaching_language,
-        source: :teacher
-
-    has_many :lessons,
-        primary_key: :id,
-        foreign_key: :language_id,
-        class_name: 'Lesson'
-        
+  has_many :taught_by_teachers,
+    through: :teachers_teach,
+    source: :teacher
 end

@@ -20,33 +20,36 @@
 class Teacher < ApplicationRecord
   validates :teacher_id, :country, :about_me, :title, presence: true
 
-  belongs_to :teacher_user,
+  belongs_to :user,
     primary_key: :id,
     foreign_key: :teacher_id,
     class_name: 'User'
 
-  has_many :taught_languages,
+  has_many :lessons,
     primary_key: :id,
     foreign_key: :teacher_id,
-    class_name: 'TeacherTeach'
+    class_name: 'Lesson'
 
   has_many :spoken_languages,
     primary_key: :id,
     foreign_key: :teacher_id,
     class_name: 'TeacherSpeak'
 
+  has_many :taught_languages,
+    primary_key: :id,
+    foreign_key: :teacher_id,
+    class_name: 'TeacherTeach'
+
   has_many :languages_spoken,
     through: :spoken_languages,
     source: :language
 
-  has_many :languages,
+  has_many :languages_taught,
     through: :taught_languages,
     source: :language
 
-  has_many :lessons,
-    primary_key: :id,
-    foreign_key: :teacher_id,
-    class_name: 'Lesson'
-  
+  has_many :students,
+    through: :lessons,
+    source: :student
 
 end

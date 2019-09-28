@@ -10,17 +10,17 @@
 #
 
 class LessonEnrollment < ApplicationRecord
-    validates :lesson_id, :student_id, presence: true
+  validates :lesson_id, :student_id, presence :true
+
+   belongs_to :lesson,
+    primary_key: :id,
+    foreign_key: :lesson_id,
+    class_name: 'Lesson'
 
     belongs_to :student,
-        primary_key: :id,
-        foreign_key: :student_id,
-        class_name: 'User'
-    
-    belongs_to :lesson,
-        primary_key: :id,
-        foreign_key: :lesson_id,
-        class_name: 'Lesson'
+      primary_key: :id,
+      foreign_key: :student_id,
+      class_name: 'User'
 
 
 end

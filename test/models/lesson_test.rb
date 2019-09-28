@@ -2,16 +2,15 @@
 #
 # Table name: lessons
 #
-#  id          :bigint           not null, primary key
-#  teacher_id  :integer          not null
-#  language_id :integer          not null
-#  title       :string           not null
-#  description :text             not null
-#  category    :string           not null
-#  price       :float            not null
-#  duration    :integer          not null
-#  created_at  :datetime         not null
-#  updated_at  :datetime         not null
+#  id             :bigint           not null, primary key
+#  teacher_id     :integer          not null
+#  language_name  :integer          not null
+#  title          :string           not null
+#  description    :text             not null
+#  category       :string           not null
+#  created_at     :datetime         not null
+#  updated_at     :datetime         not null
+#  lessons_taught :integer
 #
 
 require 'test_helper'

@@ -11,16 +11,15 @@
 #
 
 class TeacherTeach < ApplicationRecord
-    validates :teacher_id, :language_id, :fluency, presence: true
-    
-    belongs_to :teacher,
-        primary_key: :id,
-        foreign_key: :teacher_id,
-        class_name: 'Teacher'
-        
-    belongs_to :language,
-        primary_key: :id, 
-        foreign_key: :language_id,
-        class_name: "Language" 
+  validates :teacher_id, :language_id, :fluency, presence :true
 
+  belongs_to :teacher,
+    primary_key: :id,
+    foreign_key: :teacher_id,
+    class_name: 'Teacher'
+
+  belongs_to :language,
+    primary_key: :id,
+    foreign_key: :language_id,
+    class_name: 'Language'
 end
