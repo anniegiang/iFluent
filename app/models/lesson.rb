@@ -4,7 +4,7 @@
 #
 #  id             :bigint           not null, primary key
 #  teacher_id     :integer          not null
-#  language_name  :integer          not null
+#  language_name  :string           not null
 #  title          :string           not null
 #  description    :text             not null
 #  category       :string           not null
@@ -14,17 +14,22 @@
 #
 
 class Lesson < ApplicationRecord
-    validates :teacher_id, :language_name, :title, :description, :category, presence :true
+    validates :teacher_id, :language_name, :title, :description, :category, presence: :true
 
     belongs_to :teacher,
       primary_key: :id,
       foreign_key: :teacher_id,
       class_name: 'Teacher'
 
-    has_many :lesson_enrollments
+    has_many :lesson_enrollments,
       primary_key: :id,
       foreign_key: :lesson_id,
       class_name: 'LessonEnrollment'
+
+    has_many :lesson_items,
+      primary_key: :id,
+      foreign_key: :lesson_id,
+      class_name: 'LessonItem'
 
     has_many :students,
       through: :lesson_enrollments,

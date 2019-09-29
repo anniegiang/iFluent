@@ -11,7 +11,7 @@
 #
 
 class TeacherSpeak < ApplicationRecord
-  validates :teacher_id, :language_id, :fluency, presence :true
+  validates :teacher_id, :language_id, :fluency, presence: :true
 
   belongs_to :teacher,
     primary_key: :id,

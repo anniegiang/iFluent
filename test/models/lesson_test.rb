@@ -4,7 +4,7 @@
 #
 #  id             :bigint           not null, primary key
 #  teacher_id     :integer          not null
-#  language_name  :integer          not null
+#  language_name  :string           not null
 #  title          :string           not null
 #  description    :text             not null
 #  category       :string           not null

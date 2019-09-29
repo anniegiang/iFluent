@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_28_232155) do
+ActiveRecord::Schema.define(version: 2019_09_29_002825) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -92,9 +92,6 @@ ActiveRecord::Schema.define(version: 2019_09_28_232155) do
     t.string "video_url"
     t.float "hourly_rate"
     t.float "trial_rate"
-    t.string "work_experience"
-    t.string "education"
-    t.string "certificates"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["teacher_id"], name: "index_teachers_on_teacher_id"

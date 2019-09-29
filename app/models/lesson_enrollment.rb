@@ -10,7 +10,7 @@
 #
 
 class LessonEnrollment < ApplicationRecord
-  validates :lesson_id, :student_id, presence :true
+  validates :lesson_id, :student_id, presence: :true
 
    belongs_to :lesson,
     primary_key: :id,

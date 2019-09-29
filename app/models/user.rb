@@ -20,7 +20,7 @@ class User < ApplicationRecord
 	after_initialize :ensure_session_token 
 	attr_reader :password
 
-	has_many :lesson_enrollments
+	has_many :lesson_enrollments,
 		primary_key: :id,
 		foreign_key: :student_id,
 		class_name: 'LessonEnrollment'
@@ -57,7 +57,6 @@ class User < ApplicationRecord
 		end
 	end
 		
-
 	def password=(password)
 		@password = password
 		self.password_digest = BCrypt::Password.create(password)

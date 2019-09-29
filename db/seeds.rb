@@ -6,105 +6,206 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# require 'faker'
+require 'faker'
 
-# # Languages
-# Language.destroy_all
+# Languages
+Language.destroy_all
 
-# english = Language.create({ language: 'English' })
-# chinese = Language.create({ language: 'Chinese (Mandarin)'})
-# french = Language.create({ language: 'French' })
-# spanish = Language.create({ language: 'Spanish' })
-# portuguese = Language.create({ language: 'Portuguese' })
-# german = Language.create({ language: 'German' })
+english = Language.create({ language: 'English' })
+chinese = Language.create({ language: 'Chinese (Mandarin)'})
+french = Language.create({ language: 'French' })
+spanish = Language.create({ language: 'Spanish' })
+portuguese = Language.create({ language: 'Portuguese' })
+german = Language.create({ language: 'German' })
+japanese = Language.create({ language: 'Japanese' })
+korean = Language.create({ language: 'Korean' })
+arabic = Language.create({ language: 'Arabic' })
+hindi = Language.create({ language: 'Hindi' })
+italian = Language.create({ language: 'Italian' })
+russian = Language.create({ language: 'Russian' })
 
-# languages = [english, chinese, french, spanish, portuguese, german]
+languages = [
+  english, 
+  chinese, 
+  french, 
+  spanish, 
+  portuguese, 
+  german, 
+  japanese, 
+  korean, 
+  arabic,
+  hindi,
+  italian,
+  russian
+]
 
-# # # Users
-# User.destroy_all
+# Users
+User.destroy_all
 
-# guest = User.create({
-#   name: "Guest", 
-#   email: "guest@aa.io", 
-#   password: "password", 
-#   profile_picture: "https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/default.13c19308.svg"
-# })
+guest = User.create({
+  name: "Guest", 
+  email: "guest@aa.io", 
+  password: "guestuser", 
+  profile_picture_url: "https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/default.13c19308.svg",
+  profile_about_me: "I am a guest user!"
+})
 
-# user11 = User.create({
-#   name: "Annie",
-#   email: "annie",
-#   password: "password", 
-#   profile_picture: "https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/default.13c19308.svg"
-# })
+student1 = User.create({
+  name: "Annie",
+  email: "annie@gmail.com",
+  password: "password", 
+  profile_about_me: "Hi! My name is Annie. I love to learn new languages. Looking forward to meeting new people and learning new cultures."
+})
 
-# user12 = User.create({
-#   name: "Jake",
-#   email: Faker::Internet.email,
-#   password: "password", 
-#   profile_picture: "https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/default.13c19308.svg"
-# })
+student2 = User.create({
+  name: "Jake",
+  email: "jake@gmail.com",
+  password: "password", 
+  profile_about_me: "Hi! My name is Jake. I love to learn new languages. Looking forward to meeting new people and learning new cultures."
+})
 
-# # ---- ENGLISH ----
+# ---- ENGLISH ----
 
-# # USER 1
-# user1 = User.create({
-#   name: "Rogers Stephen",
-#   email: Faker::Internet.email,
-#   password: "password",
-#   profile_picture: "https://imagesavatar-static01.italki.com/1T035196670_Avatar.jpg"
-# })
+user_teacher1 = User.create({
+  name: "Andrew Bradbury",
+  email: Faker::Internet.email,
+  password: "password",
+  profile_picture_url: "https://imagesavatar-static01.italki.com/T026578497_Avatar.jpg"
+})
 
-# eng1 = Teacher.create(
-#   teacher_id: user1.id,
-#   country: "United States",
-#   about_me: "All lessons are fun and engaging. My main goal is to help you gain confidence and fluency so that you can communicate clearly without feeling uncomfortable. As language learners, we can be very hard on ourselves, and not very patient when we make mistakes. But mistakes are actually a necessary part of the process. ;) I will correct your mistakes but in a very gentle way. I have many resources I can share with you and lots of advice that will help you improve very quickly!",
-#   title: "Community Teacher",
-#   video_url: "https://www.youtube.com/embed/BxeZ4pYfHPU?enablejsapi=1&modestbranding=1&rel=0&showinfo=0",
-#   hourly_rate: 10.55,
-#   trial_rate: 8.35,
-#   work_experience: Faker::Job.field,
-#   education: Faker::Educator.degree,
-#   certificates: Faker::Number.between(from: 1, to: 10),
-# )
+eng1 = Teacher.create(
+  teacher_id: user_teacher1.id,
+  trial_rate: 8.00,
+  hourly_rate: 11.00,
+  title: "Professional Teacher",
+  country: "United States",
+  video_url: "https://www.youtube.com/watch?v=kVXcqvpJYcI",
+  about_me: "Hi, I'm Andrew! I was born and grew up in Sheffield, England. I have also lived in Taiwan for over a year and currently I live with my wife in the Philippines. In England I helped my family operate a construction business for a number of years before I moved overseas to teach English.I really enjoy teaching English online as it allows me to meet many interesting people and work remotely.My interests include traveling, culture, music, food, cycling, nature etc.I also love meeting new people and helping them to improve their English."
+)
 
-# TeacherTeach.create({
-#   language_id: english.id,
-#   teacher_id: eng1.id,
-#   fluency: 5
-# })
+TeacherTeach.create({
+  language_id: english.id,
+  teacher_id: eng1.id,
+  fluency: rand(4..5)
+})
 
-# TeacherSpeak.create({
-#   language_id: languages.sample.id,
-#   teacher_id: eng1.id,
-#   fluency: 4
-# })
+TeacherSpeak.create({
+  language_id: languages.sample.id,
+  teacher_id: eng1.id,
+  fluency: rand(1..5)
+})
 
-# TeacherSpeak.create({
-#   language_id: languages.sample.id,
-#   teacher_id: eng1.id,
-#   fluency: 3
-# })
+TeacherSpeak.create({
+  language_id: languages.sample.id,
+  teacher_id: eng1.id,
+  fluency: rand(1..5)
+})
 
-# Lesson.create({
-#   teacher_id: eng1.id,
-#   language_id: english.id,
-#   title: "Trial lesson",
-#   description: "Hello! We'll get to know each other a little bit and find out how we can help you improve together!",
-#   category: "Trial",
-#   price: 8.35,
-#   duration: 30,
-# })
+lesson1 = Lesson.create({
+  teacher_id: eng1.id,
+  lessons_taught: 237,
+  language_name: "English",
+  title: "Trial lesson",
+  category: "Trial",
+  description: "In a trial lesson I will demonstrate my teaching methods. It also gives me an opportunity to understand what level the student is at and make a lesson plan.",
+})
 
-# Lesson.create({
-#   teacher_id: eng1.id,
-#   language_id: english.id,
-#   title: "Great Conversations! Increase Your Confidence While Speaking English!",
-#   description: "In these lessons I will help you improve your conversation skills and confidence! xD We can plan to talk about specific topics like ordering food, or technology, or just have free conversation. Talking with me will feel like talking with a friend. ;) I will correct your mistakes and we will learn new words and expressions together!",
-#   category: "Conversation Practice",
-#   price: 16.99,
-#   duration: 45,
-# })
+LessonEnrollment.create({
+  lesson_id: lesson1.id,
+  student_id: student1.id
+})
 
+lesson_item1 = LessonItem.create({
+  lesson_id: lesson1.id,
+  duration: 30,
+  price: 8.00
+})
+
+lesson2 = Lesson.create({
+  teacher_id: eng1.id,
+  language_name: "English",
+  lessons_taught: 727,
+  title: "Practical Grammar Lessons",
+  description: "We follow an online curriculum together that helps improve all aspects of the English language. Lessons are made to suit your needs and interests. Subject material includes tenses, grammar rules, prepositions, articles and much more! Materials will be provided and homework can be assigned.",
+  category: "General",
+})
+
+LessonEnrollment.create({
+  lesson_id: lesson2.id,
+  student_id: student2.id
+})
+
+lesson_item2 = LessonItem.create({
+  lesson_id: lesson2.id,
+  duration: 30,
+  price: 11.50
+})
+
+lesson_item2 = LessonItem.create({
+  lesson_id: lesson2.id,
+  duration: 45,
+  price: 15.00
+})
+
+lesson_item3 = LessonItem.create({
+  lesson_id: lesson2.id,
+  duration: 60,
+  price: 18.00
+})
+
+lesson3 = Lesson.create({
+  teacher_id: eng1.id,
+  language_name: "English",
+  lessons_taught: 1079,
+  title: "English Conversation",
+  description: "Subjects we can talk about include travel, sports, music, food, photography, cycling or any other subject that interests you. We can work to improve your vocabulary, pronunciation, grammar and confidence to have conversations in English.",
+  category: "Conversation Practice",
+})
+
+lesson_item4 = LessonItem.create({
+  lesson_id: lesson3.id,
+  duration: 30,
+  price: 11.00
+})
+
+lesson_item2 = LessonItem.create({
+  lesson_id: lesson3.id,
+  duration: 45,
+  price: 14.50
+})
+
+lesson_item3 = LessonItem.create({
+  lesson_id: lesson3.id,
+  duration: 60,
+  price: 17.00
+})
+
+lesson4 = Lesson.create({
+  teacher_id: eng1.id,
+  language_name: "English",
+  lessons_taught: 233,
+  title: "TOEFL Preparation",
+  description: "In this course I will help you prepare for the four part of the TOEFL exam, however more attention is paid to the speaking and writing parts as these are usually the most challenging for most students. Having said that, the lessons will be tailored to you individual needs. After each session, homework for the writing part of the test will be assigned. I will mark the homework and we will discuss your written work in each following session.",
+  category: "Test Preparation",
+})
+
+lesson_item5 = LessonItem.create({
+  lesson_id: lesson3.id,
+  duration: 30,
+  price: 13.00
+})
+
+lesson_item6 = LessonItem.create({
+  lesson_id: lesson3.id,
+  duration: 60,
+  price: 20.00
+})
+
+lesson_item7 = LessonItem.create({
+  lesson_id: lesson3.id,
+  duration: 90,
+  price: 28.00
+})
 
 # # USER 2
 
@@ -277,416 +378,6 @@
 #   category: "General",
 #   price: 12.99,
 #   duration: 60,
-# })
-
-# # ---- FRENCH ---- 
-
-# # USER 5
-
-# user5 = User.create({
-#   name: "Sébastien",
-#   email: Faker::Internet.email,
-#   password: "password",
-#   profile_picture: "https://imagesavatar-static01.italki.com/2T008918630_Avatar.jpg"
-# })
-
-# french1 = Teacher.create(
-#   teacher_id: user5.id,
-#   country: "France",
-#   about_me: "I can draw from my extensive experience in learning languages abroad and at home to help you achieve fluency in your target language. I have had the opportunity of meeting many polyglots at numerous polyglot gatherings/conferences, and the people I met at these events have taught me a number of techniques that I can share with you.",
-#   title: "Community Tutor",
-#   video_url: "https://www.youtube.com/embed/JALWWYZLZjM?enablejsapi=1&modestbranding=1&rel=0&showinfo=0",
-#   hourly_rate: 15.99,
-#   trial_rate: 4.99,
-#   work_experience: Faker::Job.field,
-#   education: Faker::Educator.degree,
-#   certificates: Faker::Number.between(from: 1, to: 10),
-# )
-
-# TeacherTeach.create({
-#   language_id: french.id,
-#   teacher_id: french1.id,
-#   fluency: 5
-# })
-
-# TeacherSpeak.create({
-#   language_id: languages.sample.id,
-#   teacher_id: french1.id,
-#   fluency: 3
-# })
-
-# TeacherSpeak.create({
-#   language_id: languages.sample.id,
-#   teacher_id: french1.id,
-#   fluency: 4
-# })
-
-# TeacherSpeak.create({
-#   language_id: languages.sample.id,
-#   teacher_id: french1.id,
-#   fluency: 5
-# })
-
-# Lesson.create({
-#   teacher_id: french1.id,
-#   language_id: french.id,
-#   title: "Trial lesson",
-#   description: "I will make you speak a lot, I will write down very detailed corrections and I'm flexible.",
-#   category: "Trial",
-#   price: 4.25,
-#   duration: 30,
-# })
-
-# Lesson.create({
-#   teacher_id: french1.id,
-#   language_id: french.id,
-#   title: "Informal Tutoring",
-#   description: "Regular conversation lessons. We will usually talk about what you did during the week for the first few minutes, then pick a topic together for the rest of the lesson. At the end of the lesson we will review to vocabulary and practice pronunciation.",
-#   category: "Conversation Practice",
-#   price: 19.45,
-#   duration: 45,
-# })
-
-# # USER 10
-# user10 = User.create({
-#   name: "Raphaëlle",
-#   email: Faker::Internet.email,
-#   password: "password",
-#   profile_picture: "https://imagesavatar-static01.italki.com/6T045365090_Avatar.jpg"
-# })
-
-
-# french2 = Teacher.create(
-#   teacher_id: user10.id,
-#   country: "Hati",
-#   about_me: "Bonjour, Bonsoir, Honè. Haïti (Cheri), it's a cute little island where I'm leaving. Yes, I'm Haïtian and I speak French, Creole and English. I think french it's a beautiful language, that's why I love to read, watch french movies, and I love teaching it. I will be happy to help you with this language.",
-#   title: "Community Tutor",
-#   video_url: "https://www.youtube.com/embed/jWhdUdDApeA?enablejsapi=1&modestbranding=1&rel=0&showinfo=0",
-#   hourly_rate: 6.99,
-#   trial_rate: 5.99,
-#   work_experience: Faker::Job.field,
-#   education: Faker::Educator.degree,
-#   certificates: Faker::Number.between(from: 1, to: 10),
-# )
-
-# TeacherTeach.create({
-#   language_id: french.id,
-#   teacher_id: french2.id,
-#   fluency: 5
-# })
-
-# TeacherSpeak.create({
-#   language_id: languages.sample.id,
-#   teacher_id: french2.id,
-#   fluency: 4
-# })
-
-# Lesson.create({
-#   teacher_id: french2.id,
-#   language_id: french.id,
-#   title: "One-one tutoring French",
-#   description: "Hi! You were thinking about learning a new language and it's french!? guess what? I can help you! I will do my best to make you read, write and speak well French. We will do some exercises for your pronunciation, we can read, etc...",
-#   category: "General",
-#   price: 8.99,
-#   duration: 45,
-# })
-
-# Lesson.create({
-#   teacher_id: french2.id,
-#   language_id: french.id,
-#   title: "Pronunciation only",
-#   description: "On fera plein d'exercices de prononciation afin d'améliorer votre prononciation. Ce sera très amusant! et pratique.",
-#   category: "Conversation Practice",
-#   price: 11.99,
-#   duration: 60,
-# })
-
-# Lesson.create({
-#   teacher_id: french2.id,
-#   language_id: french.id,
-#   title: "Beginner",
-#   description: "Beginner in french. I can help you by teaching you some basic sentences to be able to talk in real life with native french people.",
-#   category: "General",
-#   price: 12.99,
-#   duration: 90,
-# })
-
-
-# # # ---- Spanish ----
-
-# # USER 6
-
-# user6 = User.create({
-#   name: "Victoria Cáceres",
-#   email: Faker::Internet.email,
-#   password: "password",
-#   profile_picture: "https://imagesavatar-static01.italki.com/9T038756090_Avatar.jpg"
-# })
-
-# spanish1 = Teacher.create(
-#   teacher_id: user6.id,
-#   country: " Argentina",
-#   about_me: "Hi! I´m Victoria a Spanish teacher from Buenos Aires, Argentina. I love languages, so that´s why I studied to become a Spanish teacher. I ´ve studied in International House Buenos Aires to become a Spanish Teacher for foreign people. I have experience in teaching people from all over the world, and different levels. I love travelling and I used to teach people, or just give conversation classes in order to improve their pronunciation and fluency. I teach people from A1 level (begginers) up to C2 (advanced). Classes are based on your own personal goals, so you may achieve them in an easy and quickly way. Contact me to ask any question you would like to know. See you!!! :D",
-#   title: "Professional Teacher",
-#   video_url: "https://www.youtube.com/embed/yEOtlamNFEE?enablejsapi=1&modestbranding=1&rel=0&showinfo=0",
-#   hourly_rate: 8.99,
-#   trial_rate: 7.60,
-#   work_experience: Faker::Job.field,
-#   education: Faker::Educator.degree,
-#   certificates: Faker::Number.between(from: 1, to: 10),
-# )
-
-# TeacherTeach.create({
-#   language_id: spanish.id,
-#   teacher_id: spanish1.id,
-#   fluency: 5
-# })
-
-# TeacherSpeak.create({
-#   language_id: languages.sample.id,
-#   teacher_id: spanish1.id,
-#   fluency: 3
-# })
-
-# TeacherSpeak.create({
-#   language_id: languages.sample.id,
-#   teacher_id: spanish1.id,
-#   fluency: 3
-# })
-
-# Lesson.create({
-#   teacher_id: spanish1.id,
-#   language_id: spanish.id,
-#   title: "Writing correction - Corrección de textos",
-#   description: "Need some help with your homework?
-#   Do you need to correct an essay, email, CV or any kind of text?
-#   Send it and i will send it back to with corrections :D",
-#   category: "General",
-#   price: 8.50,
-#   duration: 45,
-# })
-
-# Lesson.create({
-#   teacher_id: spanish1.id,
-#   language_id: spanish.id,
-#   title: "Spanish Classes / Clases de Español",
-#   description: "Classes based on your own interests and goals. I provide books and audios. I may give you homework to practice if you need. Don´t hesitate to ask any doubts you have :D",
-#   category: "General",
-#   price: 15.40,
-#   duration: 60,
-# })
-
-# Lesson.create({
-#   teacher_id: spanish1.id,
-#   language_id: spanish.id,
-#   title: "Conversación / conversation",
-#   description: "¡Hablaremos en español todo el tiempo! (si lo necesitas, podemos traducir algunas palabras en inglés u otros idiomas). Trabajaremos tu fluidez al hablar y distintas situaciones de comunicación.
-#   Sólo para estudiantes intermedio-avanzados y avanzados.",
-#   category: "Conversation Practice",
-#   price: 13.55,
-#   duration: 60,
-# })
-
-# # USER 7 
-# user7 = User.create({
-#   name: "Oscar Carbajal",
-#   email: Faker::Internet.email,
-#   password: "password",
-#   profile_picture: "https://imagesavatar-static01.italki.com/1T055092350_Avatar.jpg"
-# })
-
-# spanish2 = Teacher.create(
-#   teacher_id: user7.id,
-#   country: "Brazil",
-#   about_me: "Mi nombre es Oscar soy de Mexico y vivo en Oaxaca, una de las mas hermosas ciudades del sur de Mexico y de las mas populares para extranjeros que vienen a aprender español o a perfeccionar sus habilidades en el idioma.
-#   Hace 4 años que he estado enseñando el idioma de español a estudiantes extranjeros de manera grupal y personalizada. Disfruto el enseñar mi idioma natal y al mismo tiempo desempeñar mi profesión como maestro de español.",
-#   title: "Professional Teacher",
-#   video_url: "https://www.youtube.com/embed/99J9dpPWTAs?enablejsapi=1&modestbranding=1&rel=0&showinfo=0",
-#   hourly_rate: 8.20,
-#   trial_rate: 5.35,
-#   work_experience: Faker::Job.field,
-#   education: Faker::Educator.degree,
-#   certificates: Faker::Number.between(from: 1, to: 10),
-# )
-
-# TeacherTeach.create({
-#   language_id: spanish.id,
-#   teacher_id: spanish2.id,
-#   fluency: 5
-# })
-
-# TeacherSpeak.create({
-#   language_id: languages.sample.id,
-#   teacher_id: spanish2.id,
-#   fluency: 5
-# })
-
-# TeacherSpeak.create({
-#   language_id: languages.sample.id,
-#   teacher_id: spanish2.id,
-#   fluency: 3
-# })
-
-# Lesson.create({
-#   teacher_id: spanish2.id,
-#   language_id: spanish.id,
-#   title: "Español Conversacional",
-#   description: "Practica tu Español y mejoralo a través de diferentes maneras. Haz uso de vocabulario, gramática, verbos, modismos (slang) y expresiones cotidianas en la vida diaria, así mismo revisaremos vocabulario nuevo al final de cada clase e incluiremos otros recursos de audio y vídeo, como Ted Talks que nos ayudaran a tener temas de conversación y debate.",
-#   category: "General",
-#   price: 10.30,
-#   duration: 45,
-# })
-
-# Lesson.create({
-#   teacher_id: spanish2.id,
-#   language_id: spanish.id,
-#   title: "Spanish for beginners",
-#   description: "Learn Spanish from the very beginning. We will learn how to structure sentences, vocabulary, verbs and develop your conversational and listening skills with the help of different resources.",
-#   category: "General",
-#   price: 15.20,
-#   duration: 60,
-# })
-
-# Lesson.create({
-#   teacher_id: spanish2.id,
-#   language_id: spanish.id,
-#   title: "Trial lesson",
-#   description: "Practica tu Español y mejoralo a través de diferentes maneras. Haz uso de vocabulario, gramática, verbos, modismos (slang) y expresiones cotidianas en la vida diaria, así mismo revisaremos vocabulario nuevo al final de cada clase e incluiremos otros recursos de audio y vídeo, como Ted Talks que nos ayudaran a tener temas de conversación y debate.",
-#   category: "Trial",
-#   price: 10.35,
-#   duration: 45,
-# })
-
-# # ---- Portuguese ---- 
-
-# # USER 8
-
-# user8 = User.create({
-#   name: "Douglas A. Ferreira",
-#   email: Faker::Internet.email,
-#   password: "password",
-#   profile_picture: "https://imagesavatar-static01.italki.com/1T058163140_Avatar.jpg"
-# })
-
-# portuguese1 = Teacher.create(
-#   teacher_id: user8.id,
-#   country: "Brazil",
-#   about_me: "I have been practicing the art of teaching for 5 years, driven by the gratifying feeling of seeing the progress of my students. I have the “TEFL Level 5” certificate, I specialize in American pronunciation and online English teaching by FutureLearn.",
-#   title: "Professional Teacher",
-#   video_url: "https://www.youtube.com/embed/LNA_l9DDnaI?enablejsapi=1&modestbranding=1&rel=0&showinfo=0",
-#   hourly_rate: 8.00,
-#   trial_rate: 5.00,
-#   work_experience: Faker::Job.field,
-#   education: Faker::Educator.degree,
-#   certificates: Faker::Number.between(from: 1, to: 10),
-# )
-
-# TeacherTeach.create({
-#   language_id: portuguese.id,
-#   teacher_id: portuguese1.id,
-#   fluency: 5
-# })
-
-# TeacherSpeak.create({
-#   language_id: languages.sample.id,
-#   teacher_id: portuguese1.id,
-#   fluency: 5
-# })
-
-# TeacherSpeak.create({
-#   language_id: languages.sample.id,
-#   teacher_id: portuguese1.id,
-#   fluency: 3
-# })
-
-# Lesson.create({
-#   teacher_id: portuguese1.id,
-#   language_id: portuguese.id,
-#   title: "Trial lesson",
-#   description: "An introductory lesson to establish the student's necessities and the methodology that will be used.",
-#   category: "Trial",
-#   price: 5.00,
-#   duration: 30,
-# })
-
-# Lesson.create({
-#   teacher_id: portuguese1.id,
-#   language_id: portuguese.id,
-#   title: "Aulas de Conversação - Conversation Classes",
-#   description: "Conversation lessons to practice speaking and listening. I work with a diverse range of audiovisual materials which help with the immersion of the language, ensuring the contact with the varied forms of English. There’s also the practice of pronunciation during the classes. At the end of each lesson, I make a revision and I correct the grammatical errors, pronunciation, and vocabulary.",
-#   category: "Conversation Practice",
-#   price: 10.00,
-#   duration: 60,
-# })
-
-# # USER 9
-
-# user9 = User.create({
-#   name: "Isabel",
-#   email: Faker::Internet.email,
-#   password: "password",
-#   profile_picture: "https://imagesavatar-static01.italki.com/4T017951445_Avatar.jpg"
-# })
-
-# portuguese2 = Teacher.create(
-#   teacher_id: user9.id,
-#   country: "Brazil",
-#   about_me: "I'll be happy to help you reach your goals and guide you through your language-learning journey!",
-#   title: "Professional Teacher",
-#   video_url: "https://www.youtube.com/embed/tCkT-jU7KPs?enablejsapi=1&modestbranding=1&rel=0&showinfo=0",
-#   hourly_rate: 16.00,
-#   trial_rate: 10.00,
-#   work_experience: Faker::Job.field,
-#   education: Faker::Educator.degree,
-#   certificates: Faker::Number.between(from: 1, to: 10),
-# )
-
-# TeacherTeach.create({
-#   language_id: portuguese.id,
-#   teacher_id: portuguese2.id,
-#   fluency: 5
-# })
-
-# TeacherSpeak.create({
-#   language_id: languages.sample.id,
-#   teacher_id: portuguese2.id,
-#   fluency: 5
-# })
-
-# TeacherSpeak.create({
-#   language_id: languages.sample.id,
-#   teacher_id: portuguese2.id,
-#   fluency: 3
-# })
-
-# Lesson.create({
-#   teacher_id: portuguese2.id,
-#   language_id: portuguese.id,
-#   title: "Portuguese - CRASH COURSE (Elementary)",
-#   description: "This course will focus on developing basic communication skills in everyday situations a non-native speaker can encounter in a Portuguese-speaking country.",
-#   category: "General",
-#   price: 19.50,
-#   duration: 45,
-# })
-
-# Lesson.create({
-#   teacher_id: portuguese2.id,
-#   language_id: portuguese.id,
-#   title: "Portuguese - FLUENCY BUILDING (Intermediate & Advanced)",
-#   description: "These classes will focus mainly on the discussion of articles, podcasts and videos of a range of themes of your interest. If you also want to improve your writing, I will be happy to suggest and correct writing prompts about the topics discussed in class.",
-#   category: "General",
-#   price: 23.50,
-#   duration: 60,
-# })
-
-# Lesson.create({
-#   teacher_id: portuguese2.id,
-#   language_id: portuguese.id,
-#   title: "Portuguese - PROFICIENCY EXAMS (CELPE-Bras)",
-#   description: "Esta aula visa preparar alunos para o exame de proficiência de português brasileiro CELPE-Bras. Recomenda-se que o aluno tenha um nível de no mínimo intermediário superior.",
-#   category: "Test Prep",
-#   price: 32.00,
-#   duration: 90,
 # })
 
 
