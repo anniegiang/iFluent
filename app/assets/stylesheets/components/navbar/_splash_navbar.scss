@@ -1,0 +1,34 @@
+.splash-nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.25);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  max-height: 70px;
+}
+
+.splash-logo img {
+  width: 70px;
+  height: 70px;
+  padding-left: 33px;
+}
+
+.splash-nav-links {
+  padding-right: 30px;
+
+  button {
+    margin-left: 25px;
+    text-transform: uppercase;
+    font-size: 12px;
+    border: 1px white solid;
+    border-radius: 17px;
+    padding: 10px 13px;
+    color: #fff;
+    cursor: pointer;
+  }
+}

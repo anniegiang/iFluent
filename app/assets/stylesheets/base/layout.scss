@@ -1,0 +1,19 @@
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  font-family: Roboto, Times New Roman, Times, serif, sans-serif,
+    Microsoft YaHei, 微软雅黑;
+}
+
+#root {
+  height: 100%;
+}
+
+body {
+  background-color: #fafafc;
+}
