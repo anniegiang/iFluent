@@ -57,38 +57,47 @@ class SignupForm extends React.Component {
   render() {
     return (
       <div className="session-form-container">
-        <div className="session-form-close">
-          <img
-            src="https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/cross_icon.ad79cc7a.svg"
-            alt="close"
-            onClick={this.props.closeModal}
-          />
+        <div className="session-form-head">
+          <div className="session-form-close">
+            <img
+              src="https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/cross_icon.ad79cc7a.svg"
+              alt="close"
+              onClick={this.props.closeModal}
+            />
+          </div>
         </div>
-        <h2>Sign Up</h2>
-        <form onSubmit={this.handleSubmit}>
-          <input
-            type="text"
-            onChange={this.handleInput("name")}
-            value={this.state.name}
-            placeholder="Name"
-          />
-          {this.renderError("Name")}
-          <input
-            type="text"
-            onChange={this.handleInput("email")}
-            value={this.state.email}
-            placeholder="Email"
-          />
-          {this.renderError("Email")}
-          <input
-            type="password"
-            onChange={this.handleInput("password")}
-            value={this.state.password}
-            placeholder="Password"
-          />
-          {this.renderError("Password")}
-          <input type="submit" value="Sign Up" />
-        </form>
+        <div className="session-form-body">
+          <h2>Sign Up</h2>
+          <hr />
+          <br />
+          <form onSubmit={this.handleSubmit}>
+            <input
+              type="text"
+              onChange={this.handleInput("name")}
+              value={this.state.name}
+              placeholder="Name"
+            />
+            {this.renderError("Name")}
+            <br />
+            <input
+              type="text"
+              onChange={this.handleInput("email")}
+              value={this.state.email}
+              placeholder="Email"
+            />
+            {this.renderError("Email")}
+            <br />
+            <input
+              type="password"
+              onChange={this.handleInput("password")}
+              value={this.state.password}
+              placeholder="Password"
+            />
+            {this.renderError("Password")}
+            <br />
+            <button className="submit-btn">Sign Up</button>
+          </form>
+        </div>
 
         <div className="session-other-form">
           <p>Already have an account?</p>
