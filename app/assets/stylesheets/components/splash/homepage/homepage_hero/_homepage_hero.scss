@@ -1,0 +1,13 @@
+.homepage-hero,
+.homepage-hero_video {
+  position: relative;
+}
+
+.homepage-hero_video {
+  video {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+}
