@@ -1,14 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import configureStore from './store/store';
-import Root from './components/root';
-import { fetchAllUsers, fetchUser } from './util/users_api_util';
-import { fetchAllLanguages, fetchLanguage } from './util/languages_api_util';
-import { fetchTeacher, fetchAllTeachersByLanguage } from './util/teachers_api_util';
-import { fetchAllLessonsByTeacher, fetchLesson } from './util/lessons_api_util';
-import { createLessonEnrollment } from './util/lesson_enrollments_api_util';
+import React from "react";
+import ReactDOM from "react-dom";
+import configureStore from "./store/store";
+import Root from "./components/root";
+import { login, signup, logout } from "./util/session_api_util";
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   let store;
   if (window.currentUser) {
     const preloadedState = {
@@ -22,19 +18,13 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     store = configureStore();
   }
-  
+
   // testing
   window.store = store;
-  window.fetchAllUsers = fetchAllUsers;
-  window.fetchUser = fetchUser;
-  window.fetchAllLanguages  = fetchAllLanguages;
-  window.fetchLanguage = fetchLanguage;
-  window.fetchAllTeachersByLanguage = fetchAllTeachersByLanguage;
-  window.fetchAllLessonsByTeacher = fetchAllLessonsByTeacher;
-  window.createLessonEnrollment = createLessonEnrollment
-  window.fetchLesson = fetchLesson;
-  window.fetchTeacher = fetchTeacher;
-  
+  window.login = login;
+  window.signup = signup;
+  window.logout = logout;
+
   const root = document.getElementById("root");
-  ReactDOM.render(<Root store={store}/>, root);
+  ReactDOM.render(<Root store={store} />, root);
 });
