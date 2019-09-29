@@ -42,14 +42,14 @@
     border: 0;
     box-shadow: 0 0 1px 1px #ff4338;
   }
-}
 
-.session-form-body :last-child {
-  margin-bottom: 0;
-}
+  :last-child {
+    margin-bottom: 0;
+  }
 
-.session-form-body input:focus {
-  border: 1px solid #ff4338;
+  input:focus {
+    border: 1px solid #ff4338;
+  }
 }
 
 .session-other-form {
@@ -74,6 +74,10 @@
     color: #0071b9;
   }
 
+  a:hover {
+    color: #296bd6;
+  }
+
   p {
     font-size: 14px;
     position: absolute;
@@ -81,10 +85,6 @@
     left: 30px;
     color: #333;
   }
-}
-
-.session-other-form a:hover {
-  color: #296bd6;
 }
 
 .session-form-close {
