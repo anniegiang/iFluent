@@ -1,13 +1,12 @@
 import React from "react";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
-import SessionForm from "./session_form";
 import SignupForm from "./signup_form";
 import { signup, clearErrors } from "../../actions/session_actions";
 import { openModal, closeModal } from "../../actions/modal_actions";
 
 const mapStateToProps = (state, ownProps) => ({
-  errors: state.errors.session,
+  errors: state.errors.session
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
