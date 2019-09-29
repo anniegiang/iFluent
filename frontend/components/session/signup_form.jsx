@@ -1,16 +1,16 @@
 import React from "react";
 
-class LoginForm extends React.Component {
+class SignupForm extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
+      name: "",
       email: "",
       password: ""
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.demoLogin = this.demoLogin.bind(this);
     this.renderError = this.renderError.bind(this);
   }
 
@@ -32,15 +32,7 @@ class LoginForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props
-      .login(this.state)
-      .then(() => this.props.history.push("/dashboard"))
-      .then(() => this.props.closeModal());
-  }
-
-  demoLogin(e) {
-    e.preventDefault();
-    this.props
-      .processForm({ email: "guest@aa.io", password: "password" })
+      .signup(this.state)
       .then(() => this.props.history.push("/dashboard"))
       .then(() => this.props.closeModal());
   }
@@ -72,8 +64,15 @@ class LoginForm extends React.Component {
             onClick={this.props.closeModal}
           />
         </div>
-        <h2>Log In</h2>
+        <h2>Sign Up</h2>
         <form onSubmit={this.handleSubmit}>
+          <input
+            type="text"
+            onChange={this.handleInput("name")}
+            value={this.state.name}
+            placeholder="Name"
+          />
+          {this.renderError("Name")}
           <input
             type="text"
             onChange={this.handleInput("email")}
@@ -88,17 +87,11 @@ class LoginForm extends React.Component {
             placeholder="Password"
           />
           {this.renderError("Password")}
-          <input type="submit" value="Log In" />
-          <div className="login-or">
-            <span>or</span>
-          </div>
-          <button className="demo-btn" onClick={this.demoLogin}>
-            Demo
-          </button>
+          <input type="submit" value="Sign Up" />
         </form>
 
         <div className="session-other-form">
-          <p>No account yet?</p>
+          <p>Already have an account?</p>
           {this.props.otherForm()}
         </div>
       </div>
@@ -106,4 +99,4 @@ class LoginForm extends React.Component {
   }
 }
 
-export default LoginForm;
+export default SignupForm;
