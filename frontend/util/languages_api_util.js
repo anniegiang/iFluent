@@ -1,13 +1,13 @@
 export const fetchAllLanguages = () => {
-    return $.ajax({
-        method: 'GET',
-        url: '/api/languages'
-    })
+  return $.ajax({
+    method: "GET",
+    url: "/api/languages"
+  });
 };
 
 export const fetchLanguage = id => {
-    return $.ajax({
-        method: 'GET',
-        url: `/api/languages/${id}`
-    })
+  return $.ajax({
+    method: "GET",
+    url: `/api/languages/${id}`
+  });
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import HomePageHeroMenu from "./homepage_hero_menu";
+import HomePageHeroMenuContainer from "./homepage_hero_menu_container";
 class HomePageHero extends React.Component {
   render() {
     return (
@@ -21,7 +21,7 @@ class HomePageHero extends React.Component {
             Choose from over 10,000 teachers for 1-on-1 lessons based on your
             goals and interests.
           </p>
-          <HomePageHeroMenu />
+          <HomePageHeroMenuContainer />
         </div>
       </div>
     );
