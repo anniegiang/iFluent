@@ -20,7 +20,9 @@ const mdp = dispatch => {
   };
 };
 
-export default connect(
-  msp,
-  mdp
-)(SplashNavBar);
+export default withRouter(
+  connect(
+    msp,
+    mdp
+  )(SplashNavBar)
+);
