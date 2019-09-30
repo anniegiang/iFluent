@@ -32,3 +32,27 @@
   );
   background-image: linear-gradient(90deg, #866a4a, rgba(210, 180, 145, 0));
 }
+
+.homepage-hero_fluent {
+  position: absolute;
+  top: 50%;
+  left: 10vw;
+  width: 480px;
+  z-index: 99;
+
+  h1 {
+    margin-bottom: 10px;
+    font-size: 40px;
+    line-height: 1.4;
+    font-weight: 500;
+    color: #fff;
+  }
+
+  p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #fff;
+  }
+}
