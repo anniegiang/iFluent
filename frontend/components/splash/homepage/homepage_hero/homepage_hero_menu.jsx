@@ -1,9 +1,26 @@
 import React from "react";
+import HomePageHeroMenuItems from "./homepage_hero_menu_items";
 
 class HomePageHeroMenu extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      menuOpen: false
+    };
+    this.toggleMenu = this.toggleMenu.bind(this);
+  }
+
+  toggleMenu(e) {
+    this.setState({ menuOpen: !this.state.menuOpen });
+  }
+
   render() {
     return (
-      <div className="homepage-hero_menu">
+      <div
+        className="homepage-hero_menu"
+        onFocus={this.toggleMenu}
+        onBlur={this.toggleMenu}
+      >
         <div className="homepage-hero_menu-choice">
           <input
             className="homepage-hero_menu-choice-select"
@@ -19,6 +36,7 @@ class HomePageHeroMenu extends React.Component {
             />
           </span>
         </div>
+        {this.state.menuOpen && <HomePageHeroMenuItems />}
       </div>
     );
   }
