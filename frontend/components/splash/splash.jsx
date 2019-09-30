@@ -8,16 +8,6 @@ class Splash extends React.Component {
       <div className="splash-container">
         <SplashNavBarContainer />
         <HomePage />
-        <h1>scrolling</h1>
-        <h1>scrolling</h1>
-        <h1>scrolling</h1>
-        <h1>scrolling</h1>
-        <h1>scrolling</h1>
-        <h1>scrolling</h1>
-        <h1>scrolling</h1>
-        <h1>scrolling</h1>
-        <h1>scrolling</h1>
-        <h1>scrolling</h1>
       </div>
     );
   }

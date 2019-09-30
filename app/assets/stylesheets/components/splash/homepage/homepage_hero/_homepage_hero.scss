@@ -57,6 +57,51 @@
   }
 }
 
+.homepage-hero_downarrow {
+  position: absolute;
+  left: 50%;
+  bottom: 0.7%;
+  margin-left: -20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+  transform: rotate(-45deg);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.homepage-hero_downarrow:after,
+.homepage-hero_downarrow:before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 12px;
+  height: 2px;
+  background-color: #414042;
+}
+
+.homepage-hero_downarrow:before {
+  left: 16px;
+  top: 23px;
+}
+
+.homepage-hero_downarrow:after {
+  top: 18px;
+  left: 11px;
+  transform: rotate(90deg);
+}
+
+.homepage-hero_video-triangle {
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 0;
+  border-left: 100vw solid #fff;
+}
+
 .homepage-hero_menu {
   position: relative;
   width: 400px;

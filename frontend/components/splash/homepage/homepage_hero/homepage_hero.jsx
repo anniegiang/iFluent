@@ -1,6 +1,21 @@
 import React from "react";
 import HomePageHeroMenuContainer from "./homepage_hero_menu_container";
+
 class HomePageHero extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.handleDownArrow = this.handleDownArrow.bind(this);
+  }
+
+  handleDownArrow(e) {
+    window.scrollTo({
+      top: 777,
+      left: 777,
+      behavior: "smooth"
+    });
+  }
+
   render() {
     return (
       <div className="homepage-hero">
@@ -13,6 +28,11 @@ class HomePageHero extends React.Component {
             type="video/mp4"
           ></video>
           <div className="homepage-hero_background"></div>
+          <div className="homepage-hero_video-triangle"></div>
+          <div
+            onClick={this.handleDownArrow.bind(this)}
+            className="homepage-hero_downarrow"
+          ></div>
         </div>
 
         <div className="homepage-hero_fluent">
