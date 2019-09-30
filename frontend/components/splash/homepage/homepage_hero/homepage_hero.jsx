@@ -6,11 +6,11 @@ class HomePageHero extends React.Component {
       <div className="homepage-hero">
         <div className="homepage-hero_video">
           <video
-            loop=""
-            playsInline=""
-            autoPlay=""
-            // poster="https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/hero-img.5353d1d3.jpg"
+            autoPlay
+            loop
+            poster="https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/hero-img.5353d1d3.jpg"
             src={window.splashVideo}
+            type="video/mp4"
           ></video>
           <div className="homepage-hero_background"></div>
         </div>
