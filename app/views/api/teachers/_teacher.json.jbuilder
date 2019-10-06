@@ -6,17 +6,14 @@ json.extract! teacher,
     :title,
     :video_url,
     :hourly_rate,
-    :trial_rate,
-    :work_experience,
-    :education,
-    :certificates
-    json.name teacher.teacher_user.name
-    json.profilePicture teacher.teacher_user.profile_picture
+    :trial_rate
+    json.name teacher.user.name
+    json.profilePicture teacher.user.profile_picture_url
 
 teacher.languages_spoken.each do |language|
     json.language_spoken language.language
 end
 
-teacher.languages.each do |language|
+teacher.languages_taught.each do |language|
     json.language_taught language.language
 end

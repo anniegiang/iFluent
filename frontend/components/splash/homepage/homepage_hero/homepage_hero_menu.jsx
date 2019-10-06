@@ -16,7 +16,7 @@ class HomePageHeroMenu extends React.Component {
   }
 
   handleItemClick(e) {
-    const language = e.target.innerText.toLowerCase();
+    const language = e.target.innerText;
     this.props
       .fetchAllTeachersByLanguage(language)
       .then(() => this.props.history.push(`/teachers/${language}`));
