@@ -11,15 +11,24 @@ const TeacherCardRight = props => {
         <Tab>Calendar</Tab>
       </TabList>
 
-      <TabPanel>
-        <iframe src={props.teacher.videoUrl}></iframe>
+      <TabPanel className="teacher-card-tab-body">
+        <div className="teacher-card-video">
+          <div className="iframe-video">
+            <div className="video-player">
+              <iframe src={props.teacher.videoUrl}></iframe>
+              <div className="video-poster-overlay">
+                <i class="video-play-icon"></i>
+              </div>
+            </div>
+          </div>
+        </div>
       </TabPanel>
 
-      <TabPanel>
-        <p>{props.teacher.aboutMe}</p>
+      <TabPanel className="teacher-card-tab-body">
+        <p className="teacher-card-intro">{props.teacher.aboutMe}</p>
       </TabPanel>
 
-      <TabPanel>
+      <TabPanel className="teacher-card-tab-body">
         <p>Calendar goes here</p>
       </TabPanel>
     </Tabs>
