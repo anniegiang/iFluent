@@ -37,8 +37,25 @@ const TeacherCardLeft = props => {
         </div>
       </div>
       <div className="search-teacher-card_left__bottom">
-        <div className="search-teacher-card_left__bottom__rating"></div>
+        <div className="search-teacher-card_left__bottom__rating">
+          <div className="teacher-card-stars">
+            <div className="stars-box">
+              <span className="star"></span>
+              <span className="star"></span>
+              <span className="star"></span>
+              <span className="star"></span>
+              <span className="star"></span>
+            </div>
+          </div>
+          <p>
+            <span>947 LESSONS</span>
+          </p>
+        </div>
         <div className="search-teacher-card_left__bottom__info">
+          <p>
+            <span>Also speaks</span>
+          </p>
+          <h2>{languageSpoken}</h2>
           <div class="teacher-card-rate">
             <div class="teacher-card-hourly">
               <p>

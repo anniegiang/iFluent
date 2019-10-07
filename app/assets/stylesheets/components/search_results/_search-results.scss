@@ -50,7 +50,7 @@
   position: relative;
   padding: 25px 25px 20px;
   width: 555px;
-  min-height: 264px;
+  min-height: 254px;
   border-radius: 6px;
   background: #fff;
   box-shadow: 0 7px 25px 0 rgba(0, 0, 0, 0.1);
@@ -131,6 +131,7 @@
     line-height: 18px;
     color: #777;
     text-transform: uppercase;
+    margin-bottom: 4px;
   }
 
   .search-teacher-card-divider {
@@ -152,11 +153,20 @@
 }
 
 .search-teacher-card_left__bottom__info {
-  margin-left: 30px;
+  margin-left: 33px;
   flex: 1 1;
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: 0%;
+
+  h2 {
+    display: flex;
+    min-height: 25px;
+    font-size: 16px;
+    font-weight: 400;
+    flex-wrap: wrap;
+    margin-bottom: 13px;
+  }
 
   p {
     font-size: 12px;
@@ -164,6 +174,7 @@
     line-height: 18px;
     color: #777;
     text-transform: uppercase;
+    margin-bottom: 4px;
   }
 }
 
@@ -192,4 +203,39 @@
 .teacher-card-favorite {
   background: url(https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/heart-empty.96354e1f.svg)
     no-repeat 50%/30px 30px;
+}
+
+.search-teacher-card_left__bottom__rating {
+  width: 100px;
+  text-align: center;
+
+  p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 13px;
+  }
+}
+
+.teacher-card-stars {
+  margin: -5px 0 10px;
+}
+
+.stars-box {
+  height: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.stars-box .star,
+.stars-box .star_gray {
+  width: 12px;
+  height: 12px;
+  margin-right: 4px;
+}
+.stars-box .star {
+  background: url(https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/star.0f1dd6bd.svg)
+    no-repeat 50%;
 }
