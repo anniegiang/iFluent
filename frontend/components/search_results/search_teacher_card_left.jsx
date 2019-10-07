@@ -13,7 +13,8 @@ const TeacherCardLeft = props => {
     name,
     profilePictureUrl,
     languageTaught,
-    languageSpoken
+    languageSpoken,
+    totalLessons
   } = props.teacher;
 
   const formatPrice = num => {
@@ -48,7 +49,7 @@ const TeacherCardLeft = props => {
             </div>
           </div>
           <p>
-            <span>947 LESSONS</span>
+            <span>{totalLessons} LESSONS</span>
           </p>
         </div>
         <div className="search-teacher-card_left__bottom__info">

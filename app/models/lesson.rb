@@ -14,7 +14,7 @@
 #
 
 class Lesson < ApplicationRecord
-    validates :teacher_id, :language_name, :title, :description, :category, presence: :true
+    validates :teacher_id, :language_name, :title, :description, :category, :lessons_taught, presence: :true
 
     belongs_to :teacher,
       primary_key: :id,

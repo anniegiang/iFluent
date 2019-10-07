@@ -1,6 +1,6 @@
 total = 0
 teacher.lessons.each do |lesson|
-    total += lesson.lesson_items.length
+    total += lesson.lessons_taught
 end
 
 json.extract! teacher, 
