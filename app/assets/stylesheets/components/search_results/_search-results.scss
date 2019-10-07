@@ -1,4 +1,21 @@
 .search-results-container {
+  display: flex;
   min-height: 300px;
-  margin-top: 10%;
+  margin-top: 7%;
+}
+
+.search-teachers-list {
+  margin: 10px auto 0;
+  width: 950px;
+  transition: margin 0.2s;
+}
+
+.search-total {
+  margin-bottom: 30px;
+  font-size: 18px;
+  font-weight: 300;
+
+  strong {
+    font-weight: 700;
+  }
 }

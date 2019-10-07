@@ -15,9 +15,17 @@ class SearchResults extends React.Component {
   renderTotalResults() {
     const { teachers } = this.props;
     if (teachers.length > 1 || teachers.length === 0) {
-      return <p className="search-total">{teachers.length} teachers found</p>;
+      return (
+        <p className="search-total">
+          <strong>{teachers.length}</strong> teachers found
+        </p>
+      );
     } else {
-      return <p className="search-total">{teachers.length} teacher found</p>;
+      return (
+        <p className="search-total">
+          <strong>{teachers.length}</strong> teacher found
+        </p>
+      );
     }
   }
 
