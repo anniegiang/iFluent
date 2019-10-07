@@ -29,7 +29,7 @@
 .search-teacher-card_left {
   position: relative;
   padding: 25px 25px 20px;
-  width: 564px;
+  width: 555px;
   min-height: 264px;
   border-radius: 6px;
   background: #fff;
@@ -81,4 +81,80 @@
   height: 100%;
   box-sizing: border-box;
   border-radius: 50%;
+}
+
+.search-teacher-card_left__top__info {
+  margin-left: 30px;
+  flex: 1 1;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0%;
+
+  h1 {
+    margin-bottom: 5px;
+    font-size: 23px;
+    font-weight: 400;
+  }
+
+  h2 {
+    display: flex;
+    min-height: 25px;
+    font-size: 16px;
+    font-weight: 400;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  p {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 18px;
+    color: #777;
+    text-transform: uppercase;
+  }
+
+  .search-teacher-card-divider {
+    margin: 12px 0;
+    width: 15px;
+    height: 2px;
+    border-radius: 1px;
+    background: #ff4338;
+  }
+}
+
+.search-teacher-card_left__bottom {
+  margin-top: 13px;
+}
+
+.search-teacher-card_left__bottom__rating {
+  width: 100px;
+  text-align: center;
+}
+
+.search-teacher-card_left__bottom__info {
+  margin-left: 30px;
+  flex: 1 1;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0%;
+
+  p {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 18px;
+    color: #777;
+    text-transform: uppercase;
+  }
+}
+
+.teacher-card-rate {
+  display: flex;
+}
+
+.teacher-card-hourly,
+.teacher-card-trial {
+  flex: 1 1;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0%;
 }

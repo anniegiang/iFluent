@@ -8,7 +8,7 @@ json.extract! teacher,
     :hourly_rate,
     :trial_rate
     json.name teacher.user.name
-    json.profilePicture teacher.user.profile_picture_url
+    json.profilePictureUrl teacher.user.profile_picture_url
 
 teacher.languages_spoken.each do |language|
     json.language_spoken language.language
