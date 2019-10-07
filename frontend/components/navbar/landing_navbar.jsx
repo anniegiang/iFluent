@@ -1,6 +1,19 @@
 import React from "react";
 
 class LandingNavBar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.renderAuthLinks = this.renderAuthLinks.bind(this);
+  }
+
+  renderAuthLinks() {
+    if (this.currentUser) {
+      return <button onClick={this.props.logout}>Log Out</button>;
+    } else {
+      return <button onClick={this.props.loginModal}>Log in</button>;
+    }
+  }
+
   render() {
     return (
       <nav className="landing-nav-container">
@@ -11,8 +24,8 @@ class LandingNavBar extends React.Component {
           />
         </a>
         <div className="landing-nav-links">
-          <button onClick={this.props.logout}>Find a Teacher</button>
-          <button onClick={this.props.logout}>Log Out</button>
+          <button>Find a Teacher</button>
+          {this.renderAuthLinks()}
         </div>
       </nav>
     );
