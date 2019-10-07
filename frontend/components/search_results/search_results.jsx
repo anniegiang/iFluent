@@ -1,5 +1,6 @@
 import React from "react";
 import LandingNavBar from "../navbar/landing_navbar_container";
+
 class SearchResults extends React.Component {
   componentDidMount() {
     this.props.fetchAllTeachersByLanguage(this.props.match.params.languageName);
@@ -10,7 +11,7 @@ class SearchResults extends React.Component {
       <div className="search-results-container">
         <LandingNavBar />
         {this.props.teachers.map(teacher => (
-          <p>{teacher.name}</p>
+          <p key={teacher.id}>{teacher.name}</p>
         ))}
       </div>
     );

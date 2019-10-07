@@ -41,8 +41,13 @@
 }
 
 .landing-nav-links button:hover,
-a:hover {
+#find-a-teacher:hover {
   border-radius: 4px;
   background: hsla(0, 0%, 80%, 0.2);
   font-weight: 400;
+}
+
+.landing-logo a:hover,
+.splash-logo a:hover {
+  background-color: transparent;
 }

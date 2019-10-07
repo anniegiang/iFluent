@@ -29,7 +29,7 @@ class LandingNavBar extends React.Component {
           />
         </a>
         <div className="landing-nav-links">
-          <a href="#/teachers/English">Find a Teacher</a>
+          <a  id="find-a-teacher" href="#/teachers/English">Find a Teacher</a>
           {this.renderAuthLinks()}
         </div>
       </nav>
