@@ -17,7 +17,7 @@ class SearchResults extends React.Component {
     if (teachers.length > 1 || teachers.length === 0) {
       return <p className="search-total">{teachers.length} teachers found</p>;
     } else {
-      <p className="search-total">{teachers.length} teacher found</p>;
+      return <p className="search-total">{teachers.length} teacher found</p>;
     }
   }
 
@@ -27,10 +27,12 @@ class SearchResults extends React.Component {
       <React.Fragment>
         <LandingNavBar />
         <div className="search-results-container">
-          {this.renderTotalResults()}
-          {teachers.map(teacher => (
-            <TeacherCard teacher={teacher} key={teacher.id} />
-          ))}
+          <div className="search-teachers-list">
+            {this.renderTotalResults()}
+            {teachers.map(teacher => (
+              <TeacherCard teacher={teacher} key={teacher.id} />
+            ))}
+          </div>
         </div>
       </React.Fragment>
     );
