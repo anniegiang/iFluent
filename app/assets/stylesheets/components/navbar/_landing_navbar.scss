@@ -27,6 +27,7 @@
   justify-content: flex-end;
   align-items: center;
 
+  a,
   button {
     padding: 20px;
     display: flex;
@@ -39,7 +40,8 @@
   }
 }
 
-.landing-nav-links button:hover {
+.landing-nav-links button:hover,
+a:hover {
   border-radius: 4px;
   background: hsla(0, 0%, 80%, 0.2);
   font-weight: 400;
