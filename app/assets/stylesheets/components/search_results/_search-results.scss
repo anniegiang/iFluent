@@ -158,3 +158,18 @@
   flex-shrink: 1;
   flex-basis: 0%;
 }
+
+.teacher-card-favorite,
+.teacher-card-favorite-active {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.teacher-card-favorite {
+  background: url(https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/heart-empty.96354e1f.svg)
+    no-repeat 50%/30px 30px;
+}

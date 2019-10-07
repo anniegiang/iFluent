@@ -58,6 +58,7 @@ const TeacherCardLeft = props => {
             </div>
           </div>
         </div>
+        <i class="teacher-card-favorite"></i>
       </div>
     </div>
   );
