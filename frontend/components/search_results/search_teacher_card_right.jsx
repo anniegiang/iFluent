@@ -11,11 +11,14 @@ const TeacherCardRight = props => {
         <Tab>Calendar</Tab>
       </TabList>
 
+      <div className="teacher-card-tab-active"></div>
       <TabPanel className="teacher-card-tab-body">
         <div className="teacher-card-video">
           <div className="iframe-video">
             <div className="video-player">
-              <iframe src={props.teacher.videoUrl}></iframe>
+              <video controls controlsList="nodownload">
+                <source src={props.teacher.videoUrl} type="video/mp4" />
+              </video>
               <div className="video-poster-overlay">
                 <i class="video-play-icon"></i>
               </div>
