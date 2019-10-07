@@ -26,6 +26,26 @@
   margin-bottom: 20px;
 }
 
+.search-teacher-card_container:hover {
+  animation-name: pulse;
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+  animation-iteration-count: 1;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scale3d(1.0075, 1.0075, 1.0075);
+  }
+
+  100% {
+    transform: scaleX(1);
+  }
+}
+
 .search-teacher-card_left {
   position: relative;
   padding: 25px 25px 20px;
