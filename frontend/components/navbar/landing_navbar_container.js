@@ -14,9 +14,7 @@ const mdp = dispatch => {
     logout: () => dispatch(logout()),
     closeModal: () => dispatch(closeModal()),
     loginModal: () => dispatch(openModal("login")),
-    signupModal: () => (
-      <a onClick={() => dispatch(openModal("signup"))}>Sign Up</a>
-    )
+    signupModal: () => dispatch(openModal("signup"))
   };
 };
 
