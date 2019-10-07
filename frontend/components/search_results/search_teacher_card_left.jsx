@@ -57,26 +57,26 @@ const TeacherCardLeft = props => {
             <span>Also speaks</span>
           </p>
           <h2>{languageSpoken}</h2>
-          <div class="teacher-card-rate">
-            <div class="teacher-card-hourly">
+          <div className="teacher-card-rate">
+            <div className="teacher-card-hourly">
               <p>
                 <span>Hourly Rate From</span>
               </p>
-              <h2 class="teacher-price-rate">
+              <h2 className="teacher-price-rate">
                 <span>USD {formatPrice(hourlyRate)}</span>
               </h2>
             </div>
-            <div class="teacher-card-trial">
+            <div className="teacher-card-trial">
               <p>
                 <span>Trial</span>
               </p>
-              <h2 class="teacher-price-rate">
+              <h2 className="teacher-price-rate">
                 <span>USD {formatPrice(trialRate)}</span>
               </h2>
             </div>
           </div>
         </div>
-        <i class="teacher-card-favorite"></i>
+        <i className="teacher-card-favorite"></i>
       </div>
     </div>
   );

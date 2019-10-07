@@ -60,6 +60,7 @@
 .search-teacher-card_right {
   padding: 25px 20px 20px;
   width: 386px;
+  max-height: 254px;
   border-radius: 0 6px 6px 0;
   background: #fff;
   box-shadow: 5px 7px 25px 0 rgba(0, 0, 0, 0.1);
@@ -238,4 +239,26 @@
 .stars-box .star {
   background: url(https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/star.0f1dd6bd.svg)
     no-repeat 50%;
+}
+
+.react-tabs__tab-list {
+  display: flex;
+  margin-bottom: 17px;
+  justify-content: center;
+}
+
+.react-tabs__tab {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 0 20px 10px 0;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.react-tabs__tab--selected {
+  height: 2px;
+  border-radius: 1px;
+  background-color: #ff4338;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
