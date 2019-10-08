@@ -10,7 +10,7 @@ class TeacherRight extends React.Component {
         style={{ left: "auto", top: "auto", bottom: "auto" }}
       >
         <TeacherBook teacher={this.props.teacher} />
-        {/* <TeacherSchedule /> */}
+        <TeacherSchedule />
       </div>
     );
   }
