@@ -1,14 +1,24 @@
 import React from "react";
 import HomePageHero from "./homepage_hero/homepage_hero";
+// import HomePageTeachersSlider from "./homepage_teachers_slider";
+import HomePageWhyItalki from "./homepage_why_italki/homepage_why_italki";
+import HomePageHowItWorks from "./homepage_how_it_works/homepage_how_it_works";
+import HomePageStudentSays from "./homepage_student_says/homepage_student_says";
+import HomepageBottomBanner from "./homepage_bottom_banner/homepage_bottom_banner";
 
-class HomePage extends React.Component {
-  render() {
-    return (
-      <div className="homepage-container">
+const HomePage = props => {
+  return (
+    <div className="flex-container">
+      <div className="homepage">
         <HomePageHero />
+        {/* <HomePageTeachersSlider /> */}
+        <HomePageWhyItalki />
+        <HomePageHowItWorks />
+        <HomePageStudentSays />
+        <HomepageBottomBanner />
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default HomePage;
