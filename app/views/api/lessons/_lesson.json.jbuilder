@@ -1,9 +1,10 @@
 json.extract! lesson,
     :id,
     :teacher_id, 
-    :language_id, 
+    :language_name, 
     :title, 
     :description, 
     :category, 
-    :price, 
-    :duration
+    :lessons_taught
+    json.lessonItems lesson.lesson_items
+

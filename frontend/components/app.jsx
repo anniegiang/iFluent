@@ -7,6 +7,7 @@ import Modal from "./modal/modal";
 import Splash from "./splash/splash";
 import Landing from "./landing/landing";
 import SearchResultsContainer from "./search_results/search_results_container";
+import TeacherProfileContainer from "./profile/teacher_profile_container";
 
 const App = () => (
   <div className="app app-paddingTop-0">
@@ -14,6 +15,11 @@ const App = () => (
       <div style={{ position: "static", zIndex: "inherit" }}>
         <Modal />
         <Switch>
+          <Route
+            exact
+            path="/teachers/:teacherId/:languageName"
+            component={TeacherProfileContainer}
+          />
           <Route
             exact
             path="/teachers/:languageName"

@@ -20,7 +20,7 @@ const TeacherCardRight = props => {
                 <source src={props.teacher.videoUrl} type="video/mp4" />
               </video>
               <div className="video-poster-overlay">
-                <i class="video-play-icon"></i>
+                <i className="video-play-icon"></i>
               </div>
             </div>
           </div>

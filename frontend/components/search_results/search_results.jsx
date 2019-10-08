@@ -38,7 +38,12 @@ class SearchResults extends React.Component {
           <div className="search-teachers-list">
             {this.renderTotalResults()}
             {teachers.map(teacher => (
-              <TeacherCard teacher={teacher} key={teacher.id} />
+              <TeacherCard
+                history={this.props.history}
+                language={this.props.match.params.languageName}
+                teacher={teacher}
+                key={teacher.id}
+              />
             ))}
           </div>
         </div>
