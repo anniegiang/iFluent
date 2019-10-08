@@ -4,11 +4,12 @@ class LandingNavBar extends React.Component {
   constructor(props) {
     super(props);
     this.renderAuthLinks = this.renderAuthLinks.bind(this);
+    this.handleLogout = this.handleLogout.bind(this);
   }
 
   renderAuthLinks() {
     if (this.props.currentUser !== undefined) {
-      return <button onClick={this.props.logout}>Log Out</button>;
+      return <button onClick={this.this.handleLogout}>Log Out</button>;
     } else {
       return (
         <React.Fragment>
@@ -17,6 +18,10 @@ class LandingNavBar extends React.Component {
         </React.Fragment>
       );
     }
+  }
+
+  handleLogout(e) {
+    this.props.logout().then(() => this.props.history.push("/"));
   }
 
   render() {
@@ -29,7 +34,9 @@ class LandingNavBar extends React.Component {
           />
         </a>
         <div className="landing-nav-links">
-          <a  id="find-a-teacher" href="#/teachers/English">Find a Teacher</a>
+          <a id="find-a-teacher" href="#/teachers/English">
+            Find a Teacher
+          </a>
           {this.renderAuthLinks()}
         </div>
       </nav>

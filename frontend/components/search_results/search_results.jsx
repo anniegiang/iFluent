@@ -1,5 +1,5 @@
 import React from "react";
-import LandingNavBar from "../navbar/landing_navbar_container";
+import LandingNavBarContainer from "../navbar/landing_navbar_container";
 import TeacherCard from "./search_teacher_card";
 
 class SearchResults extends React.Component {
@@ -33,7 +33,7 @@ class SearchResults extends React.Component {
     const { teachers } = this.props;
     return (
       <React.Fragment>
-        <LandingNavBar />
+        <LandingNavBarContainer />
         <div className="search-results-container">
           <div className="search-teachers-list">
             {this.renderTotalResults()}

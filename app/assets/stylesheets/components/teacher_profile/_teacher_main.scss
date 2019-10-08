@@ -1,0 +1,396 @@
+.Teacher-main {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+
+.teacherCard-box1 {
+  width: 752px;
+  margin-bottom: 21px;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0 7px 25px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.teacherCard {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+  margin-bottom: 30px;
+}
+
+.teacherCard-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 30px;
+}
+
+.avatar-big.avatar-shadow,
+.avatar-hero.avatar-shadow {
+  border: 2px solid #fff;
+}
+.avatar-placeholder {
+  border-radius: 50%;
+  background: #ccc;
+}
+.avatar-shadow {
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.25);
+}
+.avatar-big {
+  width: 100px;
+  height: 100px;
+}
+.avatar {
+  display: inline-block;
+  position: relative;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+
+.Online {
+  margin-top: 15px;
+  font-size: 11px;
+  color: #777;
+}
+
+.Online:before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 5px;
+  border-radius: 4px;
+  background-color: #5ebd5e;
+}
+
+.teacherCard-body {
+  width: 100%;
+}
+
+.teacherCard-part1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.teacherCard-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-top: 30px;
+}
+
+.teacherCard-name {
+  margin-bottom: 3px;
+  font-size: 23px;
+  font-weight: 500;
+  color: #333;
+}
+
+.flag-icon {
+  margin-left: 10px;
+  vertical-align: unset;
+}
+
+.TeacherInfoCard-desktop .teacherCard-personalInfo,
+.TeacherInfoCard-mobile .teacherCard-personalInfo,
+.TeacherInfoCard-tablet .teacherCard-personalInfo {
+  margin-bottom: 15px;
+  font-size: 14px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 25px;
+  letter-spacing: normal;
+  text-align: left;
+  color: #777;
+}
+
+.redbar {
+  width: 15px;
+  border-bottom: 2px solid #ff4338;
+  border-radius: 1px;
+}
+
+.teacherCard-part2 {
+  // display: flex;
+  justify-content: space-between;
+}
+
+.teacherCard-teaches {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.teacherCard-teaches-title {
+  margin-top: 4px;
+  margin-right: 15px;
+  white-space: nowrap;
+  font-size: 11px;
+  font-weight: 300;
+  color: #777;
+  text-transform: uppercase;
+}
+
+.teacherCard-teaches-language {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.teacherCard-teaches-languages > div {
+  margin-right: 10px;
+}
+
+.teacherCard-teaches-languages > div .language {
+  text-transform: capitalize;
+}
+.language {
+  font-size: 16px;
+  text-align: left;
+  color: #333;
+}
+
+.tooltip-container-box {
+  display: inline-block;
+}
+
+.tooltip-container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.tooltip-reference {
+  height: 100%;
+  cursor: pointer;
+}
+
+.level-color-3 {
+  background-color: #ff4338;
+}
+.level-color-2 {
+  background-color: rgba(255, 67, 56, 0.5);
+}
+.level {
+  display: inline-block;
+  width: 2px;
+  height: 10px;
+  margin-left: 2px;
+  border-radius: 1px;
+}
+
+.TeacherInfoCard-desktop .teacherCard-switch-profile-btn {
+  margin-top: 30px;
+}
+.btn-standard {
+  min-height: 36px;
+  padding: 0 12px;
+  font-size: 14px;
+}
+.btn-ghost-default {
+  font-weight: 400;
+  color: #333;
+  background: transparent;
+  border: 1px solid #333;
+}
+.btn-standard {
+  // min-width: 80px;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 3px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.teacherCard-right-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.TeacherInfoCard-desktop .teacherCard-right,
+.TeacherInfoCard-mobile .teacherCard-right,
+.TeacherInfoCard-tablet .teacherCard-right {
+  width: 150px;
+  padding-top: 20px;
+  padding-right: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.Teacher-desktop .Favourite {
+  margin-left: 16px;
+}
+
+.share-teacher-wrapper {
+  margin-left: 16px;
+  position: relative;
+}
+
+.TagMenu {
+  position: relative;
+  top: 0;
+  left: 0;
+  font-size: 13px;
+}
+
+.TagMenu-desktop.TagMenu-rerotate90 > div:first-child,
+.TagMenu-mobile.TagMenu-rerotate90 > div:first-child,
+.TagMenu-tablet.TagMenu-rerotate90 > div:first-child {
+  transition: all 0.2s;
+}
+
+.TagMenu-desktop .TagMenu-menu.TagMenu-hidden,
+.TagMenu-mobile .TagMenu-menu.TagMenu-hidden,
+.TagMenu-tablet .TagMenu-menu.TagMenu-hidden {
+  display: none;
+}
+.TagMenu-desktop .TagMenu-menu,
+.TagMenu-mobile .TagMenu-menu,
+.TagMenu-tablet .TagMenu-menu {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  min-width: 210px;
+  padding: 5px;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1);
+  z-index: 99;
+}
+.TagMenu-menu .TagMenu-menu-option,
+.TagMenu-mobile .TagMenu-menu .TagMenu-menu-option,
+.TagMenu-tablet .TagMenu-menu .TagMenu-menu-option {
+  padding: 10px 7px;
+  border-radius: 3px;
+  color: #333;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.TeacherInfoCard-desktop .teacherCard-right-body,
+.TeacherInfoCard-mobile .teacherCard-right-body,
+.TeacherInfoCard-tablet .teacherCard-right-body {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  line-height: 26px;
+  font-size: 12px;
+  color: #333;
+}
+
+.TeacherInfoCard-desktop .teacherCard-stars,
+.TeacherInfoCard-mobile .teacherCard-stars,
+.TeacherInfoCard-tablet .teacherCard-stars {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.stars-box {
+  height: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.stars-box .star {
+  width: 12px;
+  height: 12px;
+  margin-right: 4px;
+  background: url(https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/star.0f1dd6bd.svg)
+    no-repeat 50%;
+}
+
+.stars-box .number {
+  font-size: 14px;
+  font-weight: 500;
+  color: #fec400;
+}
+
+.aboutMe {
+  margin-bottom: 30px;
+  padding-top: 30px;
+}
+.aboutMe {
+  margin: 0 30px 40px;
+  padding-top: 40px;
+  border-top: 1px solid #ddd;
+  white-space: pre-wrap;
+}
+
+.aboutMe .cardTitle {
+  margin-bottom: 20px;
+}
+
+.cardTitle {
+  height: 27px;
+  margin-top: 0;
+  margin-bottom: 40px;
+  display: flex;
+  flex: 1 1;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 23px;
+  font-weight: 500;
+  color: #333;
+}
+
+.aboutMe-introduction {
+  white-space: pre-wrap;
+  font-size: 14px;
+  color: #333;
+  line-height: 21px;
+}
+
+// .TextOverflow {
+//     overflow: hidden;
+//     position: relative;
+//     z-index: 7;
+//     word-break: break-word;
+// }
+
+// .TextOverflow-readMore {
+//     position: absolute;
+//     bottom: 0;
+//     right: 0;
+//     z-index: 8;
+// }
+
+// .TextOverflow-readMore-ellipsis {
+//     padding-left: 20px;
+//     background: -webkit-gradient(linear,left top,right top,from(transparent),color-stop(66%,#fff));
+//     background: -webkit-linear-gradient(left,transparent,#fff 66%);
+//     background: linear-gradient(90deg,transparent,#fff 66%);
+// }
+
+// .TextOverflow-readMore-text {
+//     padding-right: 70px;
+//     background-color: #fff;
+//     color: #337ab7;
+//     cursor: pointer;
+// }
