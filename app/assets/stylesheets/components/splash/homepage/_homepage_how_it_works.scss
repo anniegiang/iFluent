@@ -1,0 +1,113 @@
+.how-it-works-title {
+  margin-top: 60px;
+  font-size: 40px;
+  font-weight: 300;
+  text-align: center;
+  color: #414042;
+}
+
+.homepage-how-works {
+  margin: 0 auto;
+  width: 980px;
+}
+
+.homepage-how-works-animations {
+  margin: 50px 0 0;
+}
+
+.homepage-how-step-1,
+.homepage-how-step-2,
+.homepage-how-step-3 {
+  display: flex;
+}
+
+.homepage-how-gif {
+  margin-top: -20px;
+  padding: 25px 30px 15px;
+  background: url(https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/frame_desktop.5e42e1a0.svg)
+    no-repeat 50% / cover;
+}
+
+.homepage-how-steps {
+  position: relative;
+  padding: 0 90px;
+}
+
+.homepage-how-gif,
+.homepage-how-steps {
+  width: 50%;
+}
+
+.homepage-how-steps > h1 {
+  margin: 80px 0 20px;
+  font-size: 20px;
+  font-weight: 400;
+  color: #414042;
+}
+
+.homepage-how-steps > p {
+  width: 320px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.homepage-how-step-2 .homepage-how-steps {
+  text-align: right;
+}
+
+.homepage-how-works-number {
+  position: absolute;
+  top: 75px;
+  left: 9%;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 20px;
+  font-weight: 300;
+  border-radius: 50%;
+  text-align: center;
+  border: 1px solid #000;
+}
+
+.homepage-how-step-2 .homepage-how-works-number {
+  left: 85%;
+}
+
+@media (max-width: 900px) {
+  .homepage-how-works {
+    display: block;
+    width: 100%;
+  }
+
+  .homepage-how-works-animations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .homepage-how-step-1,
+  .homepage-how-step-2,
+  .homepage-how-step-3 {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .homepage-how-gif {
+    background: none;
+    // display: none;
+  }
+
+  .homepage-how-works-number {
+    top: 0px;
+    left: 10%;
+  }
+
+  .homepage-how-step-2 .homepage-how-steps {
+    text-align: left;
+  }
+
+  .homepage-how-step-2 .homepage-how-works-number {
+    left: 10%;
+  }
+}
