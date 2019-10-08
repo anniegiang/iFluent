@@ -5,7 +5,7 @@ import { withRouter } from "react-router-dom";
 
 import Modal from "./modal/modal";
 import Splash from "./splash/splash";
-import Landing from "./landing/landing";
+import DashboardContainer from "./dashboard/dashboard_container";
 import SearchResultsContainer from "./search_results/search_results_container";
 import TeacherProfileContainer from "./profile/teacher_profile_container";
 
@@ -25,7 +25,11 @@ const App = () => (
             path="/teachers/:languageName"
             component={SearchResultsContainer}
           />
-          <ProtectedRoute exact path="/dashboard" component={Landing} />
+          <ProtectedRoute
+            exact
+            path="/dashboard"
+            component={DashboardContainer}
+          />
           <AuthRoute exact path="/" component={Splash} />
         </Switch>
       </div>

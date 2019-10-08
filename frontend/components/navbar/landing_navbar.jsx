@@ -9,7 +9,7 @@ class LandingNavBar extends React.Component {
 
   renderAuthLinks() {
     if (this.props.currentUser !== undefined) {
-      return <button onClick={this.this.handleLogout}>Log Out</button>;
+      return <button onClick={this.handleLogout}>Log Out</button>;
     } else {
       return (
         <React.Fragment>
