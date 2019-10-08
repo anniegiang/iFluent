@@ -13,7 +13,6 @@ class LessonCardBox extends React.Component {
   }
 
   render() {
-    const randLesson = Math.floor(Math.random() * Math.floor(200));
     return (
       <div onClick={this.openLesson} className="lessonCard-bar">
         <div className="lessonCard-left">
@@ -21,7 +20,7 @@ class LessonCardBox extends React.Component {
           <div className="blackbar"></div>
           <div className="lessonCard-content">
             <span className="lesson-count-lowercase">
-              {randLesson}&nbsp;<span>Lessons</span>
+              {this.props.lesson.lessonsTaught}&nbsp;<span>Lessons taught</span>
             </span>
           </div>
         </div>
