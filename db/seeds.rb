@@ -190,19 +190,19 @@ lesson4 = Lesson.create({
 })
 
 lesson_item5 = LessonItem.create({
-  lesson_id: lesson3.id,
+  lesson_id: lesson4.id,
   duration: 30,
   price: 13.00
 })
 
 lesson_item6 = LessonItem.create({
-  lesson_id: lesson3.id,
+  lesson_id: lesson4.id,
   duration: 60,
   price: 20.00
 })
 
 lesson_item7 = LessonItem.create({
-  lesson_id: lesson3.id,
+  lesson_id: lesson4.id,
   duration: 90,
   price: 28.00
 })

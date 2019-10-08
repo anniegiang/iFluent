@@ -9,7 +9,7 @@ import { closeModal } from "../../actions/modal_actions";
 
 const msp = (state, ownProps) => {
   return {
-    lesson: state.entities.lessons[Object.values(state.entities.lessons)[0].id]
+    lesson: Object.values(state.entities.lessons)[0]
   };
 };
 
