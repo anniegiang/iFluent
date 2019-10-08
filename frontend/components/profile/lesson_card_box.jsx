@@ -12,6 +12,24 @@ class LessonCardBox extends React.Component {
       .then(() => this.props.openLesson());
   }
 
+  formatPrice(num) {
+    return parseFloat(Math.round(num * 100) / 100).toFixed(2);
+  }
+
+  minPrice() {
+    const { lessonItems } = this.props.lesson;
+    let min = Infinity;
+    lessonItems.forEach(item => {
+      if (item.price <= min) min = item.price;
+    });
+
+    if (lessonItems.length === 1) {
+      return this.formatPrice(min);
+    } else {
+      return `${this.formatPrice(min)}+`;
+    }
+  }
+
   render() {
     return (
       <div onClick={this.openLesson} className="lessonCard-bar">
@@ -26,7 +44,7 @@ class LessonCardBox extends React.Component {
         </div>
         <div className="lessonCard-right">
           <span className="lessonCard-price-green">
-            <span>USD {this.props.lesson.price}</span>
+            <span>USD {this.minPrice()}</span>
           </span>
         </div>
       </div>

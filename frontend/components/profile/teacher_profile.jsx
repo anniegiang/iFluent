@@ -1,6 +1,6 @@
 import React from "react";
 import TeacherMain from "./teacher_main";
-// import TeacherRight from "./teacher_right";
+import TeacherRight from "./teacher_right";
 
 class TeacherProfile extends React.Component {
   componentDidMount() {
@@ -18,7 +18,7 @@ class TeacherProfile extends React.Component {
           lessons={this.props.lessons}
           teacher={this.props.teacher}
         />
-        {/* <TeacherRight teacher={this.props.teacher} /> */}
+        <TeacherRight teacher={this.props.teacher} />
       </div>
     );
   }
