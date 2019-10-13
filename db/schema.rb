@@ -55,15 +55,6 @@ ActiveRecord::Schema.define(version: 2019_10_13_011757) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "lesson_enrollments", force: :cascade do |t|
-    t.integer "lesson_id", null: false
-    t.integer "student_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["lesson_id"], name: "index_lesson_enrollments_on_lesson_id"
-    t.index ["student_id"], name: "index_lesson_enrollments_on_student_id"
-  end
-
   create_table "lesson_items", force: :cascade do |t|
     t.integer "lesson_id", null: false
     t.integer "duration", null: false
