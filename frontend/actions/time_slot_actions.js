@@ -1,4 +1,4 @@
-import * as APIUtil from "../util/time_slot_api_util";
+import * as APIUtil from "../util/time_slots_api_util";
 
 export const RECEIVE_ALL_TIME_SLOTS = "RECEIVE_ALL_TIME_SLOTS";
 
