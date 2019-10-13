@@ -7,6 +7,9 @@ class DashboardBookings extends React.Component {
     return (
       <div className="dashboard-bookings-container">
         <h1 className="bookings-title">Upcoming Lessons</h1>
+        {!bookings.length && (
+          <h4 style={{ textAlign: "center" }}>No upcoming lessons</h4>
+        )}
         <ul className="bookings-container">
           {bookings.map(booking => (
             <li className="booking-info" key={booking.id}>

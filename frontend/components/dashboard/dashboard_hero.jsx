@@ -30,7 +30,7 @@ class DashboardHero extends React.Component {
 
           <div className="dashboard-lesson">
             <section className="lesson-info">
-              <div>0</div>
+              <div>{this.props.bookings.length}</div>
               <div>
                 <span className="upcoming-lessons">Upcoming Lessons</span>
               </div>
@@ -53,7 +53,7 @@ class DashboardHero extends React.Component {
               <span>Total Balance</span>
             </header>
             <section className="dashboard-total-money">$0 USD</section>
-            <a
+            {/* <a
               onClick={() => alert("Feature coming soon! :D")}
               className="dashboard-total-Credits"
               href="/payment"
@@ -61,7 +61,7 @@ class DashboardHero extends React.Component {
               <section>
                 <span>Add Credits</span>
               </section>
-            </a>
+            </a> */}
           </div>
         </div>
         <div className="recommend-teacher-slider-container">
