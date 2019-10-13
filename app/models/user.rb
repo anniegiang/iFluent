@@ -20,20 +20,33 @@ class User < ApplicationRecord
 	after_initialize :ensure_session_token 
 	attr_reader :password
 
-	has_many :lesson_enrollments,
-		primary_key: :id,
-		foreign_key: :student_id,
-		class_name: 'LessonEnrollment'
-
-	has_many :lessons,
-		through: :lesson_enrollments,
-		source: :lesson
-
 	has_many :teachers,
 		primary_key: :id,
 		foreign_key: :teacher_id,
 		class_name: 'Teacher'
 
+	has_many :bookings,
+		primary_key: :id,
+    foreign_key: :student_id,
+		class_name: 'Booking'
+		
+	has_many :booked_lesson_items,
+		through: :bookings,
+		source: :lesson_item
+
+	has_many :booked_times,
+		through: :bookings,
+		source: :time_slot
+
+	has_many :booked_teachers,
+		through: :bookings,
+		source: :teacher
+
+	has_many :booked_students,
+		through: :bookings,
+		source: :student
+
+		
 	def self.generate_session_token
 		SecureRandom::urlsafe_base64
 	end

@@ -1,17 +1,19 @@
 # == Schema Information
 #
-# Table name: lesson_enrollments
+# Table name: time_slots
 #
 #  id         :bigint           not null, primary key
-#  lesson_id  :integer          not null
-#  student_id :integer          not null
+#  start_time :datetime         not null
+#  end_time   :datetime         not null
+#  teacher_id :integer          not null
+#  available  :boolean          default(TRUE)
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
 require 'test_helper'
 
-class LessonEnrollmentTest < ActiveSupport::TestCase
+class TimeSlotTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

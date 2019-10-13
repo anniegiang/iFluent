@@ -31,6 +31,16 @@ class Teacher < ApplicationRecord
     through: :lessons,
     source: :lesson_items
 
+  has_many :bookings,
+    primary_key: :id,
+    foreign_key: :teacher_id,
+    class_name: 'Booking'
+
+  has_many :time_slots,
+    primary_key: :id,
+    foreign_key: :teacher_id,
+    class_name: "TimeSlot"
+
   has_many :spoken_languages,
     primary_key: :id,
     foreign_key: :teacher_id,
@@ -50,7 +60,7 @@ class Teacher < ApplicationRecord
     source: :language
 
   has_many :students,
-    through: :lessons,
+    through: :bookings,
     source: :student
 
 end

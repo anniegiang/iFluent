@@ -3,6 +3,7 @@ import { Route, Redirect, Switch, Link } from "react-router-dom";
 import { AuthRoute, ProtectedRoute } from "../util/route_util";
 import { withRouter } from "react-router-dom";
 
+import Footer from "./footer/footer";
 import Modal from "./modal/modal";
 import Splash from "./splash/splash";
 import DashboardContainer from "./dashboard/dashboard_container";
@@ -34,6 +35,7 @@ const App = () => (
         </Switch>
       </div>
     </div>
+    <Footer />
   </div>
 );
 
