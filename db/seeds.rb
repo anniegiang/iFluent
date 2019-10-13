@@ -98,6 +98,13 @@ ts2 = TimeSlot.create({
   available: false
 })
 
+ts3 = TimeSlot.create({
+  teacher_id: eng1.id,
+  start_time: t + 10*60 + 10*60,
+  end_time: t + 10*60 + 10*60 + 10*60,
+  available: true
+})
+
 TeacherTeach.create({
   language_id: english.id,
   teacher_id: eng1.id,

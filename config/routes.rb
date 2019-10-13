@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 		resources :languages, only: [:index, :show]
 		resources :lessons, only: [:index, :show]
 		resources :bookings, only: [:index, :show, :create]
+		resources :time_slots, only: [:index, :show]
 		resource :session, only: [:create, :destroy]
 	end
 	root to: 'static_pages#root'
