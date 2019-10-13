@@ -4,7 +4,8 @@ Rails.application.routes.draw do
 		resources :teachers, only: [:index, :show]
 		resources :languages, only: [:index, :show]
 		resources :lessons, only: [:index, :show]
-	    resource :session, only: [:create, :destroy]
+		resources :bookings, only: [:index, :show, :create]
+		resource :session, only: [:create, :destroy]
 	end
 	root to: 'static_pages#root'
 end

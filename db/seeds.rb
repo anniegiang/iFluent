@@ -88,6 +88,7 @@ ts1 = TimeSlot.create({
   teacher_id: eng1.id,
   start_time: t,
   end_time: t + 10*60,
+  available: false
 })
 
 TeacherTeach.create({

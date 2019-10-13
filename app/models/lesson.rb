@@ -26,5 +26,7 @@ class Lesson < ApplicationRecord
       foreign_key: :lesson_id,
       class_name: 'LessonItem'
 
+    
+
 
 end
