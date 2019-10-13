@@ -199,6 +199,17 @@
     padding: 20px 0;
     width: 60%;
     box-shadow: rgba(8, 19, 68, 0.1) 0px 2px 8px 0px;
+
+    .lesson-title,
+    .lesson-teacher {
+      font-weight: 300;
+      color: #333333;
+    }
+
+    .lesson-language {
+      color: #ff4238;
+      font-weight: 500;
+    }
   }
 
   .bookings-title {

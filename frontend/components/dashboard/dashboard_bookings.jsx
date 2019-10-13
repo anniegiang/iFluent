@@ -8,7 +8,7 @@ class DashboardBookings extends React.Component {
       <div className="dashboard-bookings-container">
         <h1 className="bookings-title">Upcoming Lessons</h1>
         {!bookings.length && (
-          <h4 style={{ textAlign: "center" }}>No upcoming lessons</h4>
+          <h5 style={{ textAlign: "center" }}>No upcoming lessons</h5>
         )}
         <ul className="bookings-container">
           {bookings.map(booking => (
