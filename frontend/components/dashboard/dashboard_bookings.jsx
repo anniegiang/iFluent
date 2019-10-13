@@ -6,13 +6,13 @@ class DashboardBookings extends React.Component {
     const { bookings } = this.props;
     return (
       <div className="dashboard-bookings-container">
-        <h1>Upcoming Lessons</h1>
-        <ul>
+        <h1 className="bookings-title">Upcoming Lessons</h1>
+        <ul className="bookings-container">
           {bookings.map(booking => (
-            <li key={booking.id}>
-              <h3>{booking.languageName}</h3>
-              <h4>{booking.title}</h4>
-              <h4>{booking.teacher}</h4>
+            <li className="booking-info" key={booking.id}>
+              <h3 className="lesson-language">{booking.languageName}</h3>
+              <h4 className="lesson-title">{booking.title}</h4>
+              <h4 className="lesson-teacher">Teacher: {booking.teacher}</h4>
               <Moment format="LLLL">{booking.startTime}</Moment> -{" "}
               <Moment format="LT">{booking.endTime}</Moment>
             </li>
