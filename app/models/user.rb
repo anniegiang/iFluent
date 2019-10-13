@@ -20,15 +20,6 @@ class User < ApplicationRecord
 	after_initialize :ensure_session_token 
 	attr_reader :password
 
-	has_many :lesson_enrollments,
-		primary_key: :id,
-		foreign_key: :student_id,
-		class_name: 'LessonEnrollment'
-
-	has_many :lessons,
-		through: :lesson_enrollments,
-		source: :lesson
-
 	has_many :teachers,
 		primary_key: :id,
 		foreign_key: :teacher_id,

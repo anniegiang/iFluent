@@ -110,10 +110,10 @@ lesson1 = Lesson.create({
   description: "In a trial lesson I will demonstrate my teaching methods. It also gives me an opportunity to understand what level the student is at and make a lesson plan.",
 })
 
-LessonEnrollment.create({
-  lesson_id: lesson1.id,
-  student_id: student1.id
-})
+# LessonEnrollment.create({
+#   lesson_id: lesson1.id,
+#   student_id: student1.id
+# })
 
 lesson_item1 = LessonItem.create({
   lesson_id: lesson1.id,
@@ -130,10 +130,10 @@ lesson2 = Lesson.create({
   category: "General",
 })
 
-LessonEnrollment.create({
-  lesson_id: lesson2.id,
-  student_id: student2.id
-})
+# LessonEnrollment.create({
+#   lesson_id: lesson2.id,
+#   student_id: student2.id
+# })
 
 lesson_item2 = LessonItem.create({
   lesson_id: lesson2.id,

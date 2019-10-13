@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_29_002825) do
+ActiveRecord::Schema.define(version: 2019_10_12_160458) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,20 +36,30 @@ ActiveRecord::Schema.define(version: 2019_09_29_002825) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "bookings", force: :cascade do |t|
+    t.integer "lesson_item_id", null: false
+    t.integer "student_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "teacher_id", default: 0, null: false
+    t.index ["lesson_item_id"], name: "index_bookings_on_lesson_item_id"
+    t.index ["student_id"], name: "index_bookings_on_student_id"
+  end
+
   create_table "languages", force: :cascade do |t|
     t.string "language", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "lesson_enrollments", force: :cascade do |t|
-    t.integer "lesson_id", null: false
-    t.integer "student_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["lesson_id"], name: "index_lesson_enrollments_on_lesson_id"
-    t.index ["student_id"], name: "index_lesson_enrollments_on_student_id"
-  end
+  # create_table "lesson_enrollments", force: :cascade do |t|
+  #   t.integer "lesson_id", null: false
+  #   t.integer "student_id", null: false
+  #   t.datetime "created_at", null: false
+  #   t.datetime "updated_at", null: false
+  #   t.index ["lesson_id"], name: "index_lesson_enrollments_on_lesson_id"
+  #   t.index ["student_id"], name: "index_lesson_enrollments_on_student_id"
+  # end
 
   create_table "lesson_items", force: :cascade do |t|
     t.integer "lesson_id", null: false

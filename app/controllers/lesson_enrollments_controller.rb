@@ -1,5 +1,0 @@
-class LessonEnrollmentsController < ApplicationController
-
-    
-
-end
