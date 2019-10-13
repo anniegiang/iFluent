@@ -60,7 +60,7 @@ class Teacher < ApplicationRecord
     source: :language
 
   has_many :students,
-    through: :lessons,
+    through: :bookings,
     source: :student
 
 end
