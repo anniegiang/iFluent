@@ -1,13 +1,17 @@
 class Api::BookingsController < ApplicationController
   
   def index # all current_user bookings
-    @user = User.find(params[:user_id])
-    @bookings = @user.bookings.includes(:time_slot, :teacher => [:user], :lesson_item => [:lesson]) # efficient queries using pre-fetch associations
+    # @user = User.find(params[:user_id])
+    # @bookings = @user.bookings.includes(:time_slot, :teacher => [:user], :lesson_item => [:lesson]) # efficient queries using pre-fetch associations
+    @bookings = current_user.bookings.includes(:time_slot, :teacher => [:user], :lesson_item => [:lesson]) # efficient queries using pre-fetch associations
   end
 
   def show 
-    @user = User.find(params[:user_id])
-    if @user.bookings.where(id: params[:id])
+    # @user = User.find(params[:user_id])
+    # if @user.bookings.where(id: params[:id])
+    #   @booking = Booking.find(params[:id])
+    booking = current_user.bookings.where(id: params[:id])
+    if booking
       @booking = Booking.find(params[:id])
     else
       render json: ["No booking found"], status: 422
