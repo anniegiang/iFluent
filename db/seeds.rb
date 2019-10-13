@@ -91,6 +91,13 @@ ts1 = TimeSlot.create({
   available: false
 })
 
+ts2 = TimeSlot.create({
+  teacher_id: eng1.id,
+  start_time: t + 10*60,
+  end_time: t + 10*60 + 10*60,
+  available: false
+})
+
 TeacherTeach.create({
   language_id: english.id,
   teacher_id: eng1.id,
@@ -210,6 +217,13 @@ Booking.create({
   student_id: guest.id,
   lesson_item_id: lesson_item1.id,
   time_slot_id: ts1.id,
+})
+
+Booking.create({
+  teacher_id: eng1.id,
+  student_id: guest.id,
+  lesson_item_id: lesson_item2.id,
+  time_slot_id: ts2.id,
 })
 
 
