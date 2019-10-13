@@ -16,4 +16,9 @@ class LessonItem < ApplicationRecord
     foreign_key: :lesson_id,
     class_name: 'Lesson'
 
+  has_many :bookings,
+    primary_key: :id,
+    foreign_key: :lesson_item_id,
+    class_name: 'Booking'
+
 end

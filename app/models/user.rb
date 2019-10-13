@@ -25,6 +25,11 @@ class User < ApplicationRecord
 		foreign_key: :teacher_id,
 		class_name: 'Teacher'
 
+	has_many :bookings,
+		primary_key: :id,
+    foreign_key: :student_id,
+    class_name: 'Booking'
+
 	def self.generate_session_token
 		SecureRandom::urlsafe_base64
 	end
