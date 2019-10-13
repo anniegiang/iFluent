@@ -3,6 +3,11 @@ teacher.lessons.each do |lesson|
     total += lesson.lessons_taught
 end
 
+# spokenLanguages = []
+# teacher.languages_spoken.each do |language|
+#     spokenLanguages.push(language.language)
+# end
+
 json.extract! teacher, 
     :id,
     :teacher_id, 
@@ -15,7 +20,7 @@ json.extract! teacher,
     json.name teacher.user.name
     json.profilePictureUrl teacher.user.profile_picture_url
     json.totalLessons total
-
+    # json.spokenLanguages spokenLanguages
 
 teacher.languages_spoken.each do |language|
     json.language_spoken language.language
