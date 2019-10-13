@@ -7,7 +7,7 @@ class DashboardHero extends React.Component {
 
   render() {
     const { name, profilePictureUrl } = this.props.currentUser;
-    const { lessons } = this.props;
+    const { bookings } = this.props;
     return (
       <div className="dashboard-hero" style={{ marginBottom: "40px" }}>
         <div className="dashboard-user">
