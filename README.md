@@ -21,13 +21,13 @@ iFluent is a full-stack clone of iTalki, an online platform that connects langua
 ```
 controllers/api/teachers_controller
 def index
-    if Language.find_by(language: params[:language])
         @language = Language.find_by(language: params[:language]) #language name
-        @teachers = @language.taught_by_teachers
-    else
-        render json: ["No teachers found for this language"], status: 422
+        if @language
+            @teachers = @language.taught_by_teachers
+        else
+            render json: ["No teachers found for this language"], status: 422
+        end
     end
-end
 ```
 
 ### Teacher Profile
