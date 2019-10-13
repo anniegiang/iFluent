@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import configureStore from "./store/store";
 import Root from "./components/root";
 import { login, signup, logout } from "./util/session_api_util";
-import { fetchAllTimeSlots } from "./util/time_slots_api_util";
 
 document.addEventListener("DOMContentLoaded", () => {
   let store;
@@ -25,7 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
   window.login = login;
   window.signup = signup;
   window.logout = logout;
-  window.fetchAllTimeSlots = fetchAllTimeSlots;
 
   const root = document.getElementById("root");
   ReactDOM.render(<Root store={store} />, root);
