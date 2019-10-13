@@ -16,18 +16,18 @@ iFluent is a full-stack clone of iTalki, an online platform that connects langua
 
 ### Search Results
 
-- Users can search for teachers based on languages. In order to filter teachers correctly, the name of the language is stored in the params upon API call to Teachers#index.
+- Users can search for teachers based on languages. In order to filter teachers correctly, the name of the language is stored in the params upon an ajax call to Teachers#index.
 
 ```
 controllers/api/teachers_controller
 def index
-        @language = Language.find_by(language: params[:language]) #language name
-        if @language
-            @teachers = @language.taught_by_teachers
-        else
-            render json: ["No teachers found for this language"], status: 422
-        end
+    @language = Language.find_by(language: params[:language]) #language name
+    if @language
+        @teachers = @language.taught_by_teachers
+    else
+        render json: ["No teachers found for this language"], status: 422
     end
+end
 ```
 
 ### Teacher Profile
