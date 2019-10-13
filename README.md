@@ -1,11 +1,37 @@
 # iFluent
 
-iFluent is a clone of iTalki, a platform for language learning enthusiasts. This project was built in 11 days and encaptures the core features of iTalki, such as exploring a broad range teachers and booking lessons. Noteworthy technologies used: Ruby on Rails and React/Redux. Read on more to find out the approaches I took to solving the problems I faced.
+iFluent is a full-stack clone of iTalki, an online platform that connects language-learning enthusiasts with teachers among a variety of languages. iFluent features the ability to discover teachers across different languages, as well as the ability to book lessons. 
 
 ## Technologies
-* Backend: PostgreSQL 11, Ruby on Rails 5.2.3
-* Frontend: React 16.9.0, Redux 4.0.4
+
+- Backend: Ruby on Rails, PostgreSQL
+- Frontend: React, Redux 
 
 ## Features
-* Secure frontend/backend user authentication using BCrypt
+
+### Secure authentication 
+- Utilized Bcrypt to create password digests.
+- Maintained state by generating a session token each time a client logged in and storing the token in the client's cookie. 
+
+### Search Results
+- Users can search for teachers based on languages. In order to filter teachers correctly, the name of the language is stored in the params upon API call to Teachers#index. 
+
+controllers/api/teachers_controller
+def index
+    if Language.find_by(language: params[:language])
+        @language = Language.find_by(language: params[:language]) #language name
+        @teachers = @language.taught_by_teachers
+    else
+        render json: ["No teachers found for this language"], status: 422
+    end
+end
+
+### Teacher Profile
+- Users can view lessons offered by teachers.
+
+ 
+
+
+
+
 
