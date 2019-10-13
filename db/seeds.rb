@@ -40,7 +40,6 @@ languages = [
 ]
 
 # Users
-User.destroy_all
 
 guest = User.create({
   name: "Guest", 
@@ -73,15 +72,23 @@ user_teacher1 = User.create({
   profile_picture_url: "https://imagesavatar-static01.italki.com/T026578497_Avatar.jpg"
 })
 
-eng1 = Teacher.create(
+eng1 = Teacher.create({
   teacher_id: user_teacher1.id,
   trial_rate: 8.00,
   hourly_rate: 11.00,
   title: "Professional Teacher",
   country: "United States",
   video_url: "https://www.youtube.com/watch?v=kVXcqvpJYcI",
-  about_me: "Hi, I'm Andrew! I was born and grew up in Sheffield, England. I have also lived in Taiwan for over a year and currently I live with my wife in the Philippines. In England I helped my family operate a construction business for a number of years before I moved overseas to teach English.I really enjoy teaching English online as it allows me to meet many interesting people and work remotely.My interests include traveling, culture, music, food, cycling, nature etc.I also love meeting new people and helping them to improve their English."
-)
+  about_me: "Hi, I'm Andrew! I was born and grew up in Sheffield, England. I have also lived in Taiwan for over a year and currently I live with my wife in the Philippines. In England I helped my family operate a construction business for a number of years before I moved overseas to teach English. I really enjoy teaching English online as it allows me to meet many interesting people and work remotely. My interests include traveling, culture, music, food, cycling, nature etc. I also love meeting new people and helping them to improve their English."
+})
+
+t = Time.new
+
+ts1 = TimeSlot.create({
+  teacher_id: eng1.id,
+  start_time: t,
+  end_time: t + 10*60,
+})
 
 TeacherTeach.create({
   language_id: english.id,
@@ -110,11 +117,6 @@ lesson1 = Lesson.create({
   description: "In a trial lesson I will demonstrate my teaching methods. It also gives me an opportunity to understand what level the student is at and make a lesson plan.",
 })
 
-# LessonEnrollment.create({
-#   lesson_id: lesson1.id,
-#   student_id: student1.id
-# })
-
 lesson_item1 = LessonItem.create({
   lesson_id: lesson1.id,
   duration: 30,
@@ -129,11 +131,6 @@ lesson2 = Lesson.create({
   description: "We follow an online curriculum together that helps improve all aspects of the English language. Lessons are made to suit your needs and interests. Subject material includes tenses, grammar rules, prepositions, articles and much more! Materials will be provided and homework can be assigned.",
   category: "General",
 })
-
-# LessonEnrollment.create({
-#   lesson_id: lesson2.id,
-#   student_id: student2.id
-# })
 
 lesson_item2 = LessonItem.create({
   lesson_id: lesson2.id,
@@ -207,6 +204,12 @@ lesson_item7 = LessonItem.create({
   price: 28.00
 })
 
+Booking.create({
+  teacher_id: eng1.id,
+  student_id: guest.id,
+  lesson_item_id: lesson_item1.id,
+  time_slot_id: ts1.id,
+})
 
 
 # lang = ["a", "b"]
