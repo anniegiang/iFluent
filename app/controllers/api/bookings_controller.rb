@@ -1,20 +1,16 @@
 class Api::BookingsController < ApplicationController
-
-  def index # teacher bookings
-    @teacher = Teacher.find_by(id: params[:teacher_id])
-    if @teacher
-      @bookings = @teacher.time_slots.where(available: false)
-    else
-      render json: ["No teachers found"], status: 422
-    end
+  
+  def index # all current_user bookings
+    @user = User.find(params[:user_id])
+    @bookings = @user.bookings.includes(:time_slot, :teacher => [:user], :lesson_item => [:lesson]) # efficient queries using pre-fetch associations
   end
 
   def show 
-    @user = User.find(params[:id]) # student id
-    if @user 
-      @bookings = @user.bookings
+    @user = User.find(params[:user_id])
+    if @user.bookings.where(id: params[:id])
+      @booking = Booking.find(params[:id])
     else
-      render json: ["No teachers found"], status: 422
+      render json: ["No booking found"], status: 422
     end
   end
 

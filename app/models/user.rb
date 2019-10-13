@@ -37,6 +37,15 @@ class User < ApplicationRecord
 	has_many :booked_times,
 		through: :bookings,
 		source: :time_slot
+
+	has_many :booked_teachers,
+		through: :bookings,
+		source: :teacher
+
+	has_many :booked_students,
+		through: :bookings,
+		source: :student
+
 		
 	def self.generate_session_token
 		SecureRandom::urlsafe_base64
