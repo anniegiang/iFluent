@@ -17,7 +17,7 @@ class TimeSlot < ApplicationRecord
   belongs_to :teacher, 
     primary_key: :id,
     foreign_key: :teacher_id,
-    class_name: "Teacher", 
+    class_name: "Teacher"
 
   has_many :bookings,
     primary_key: :id,

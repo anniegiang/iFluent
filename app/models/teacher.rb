@@ -39,7 +39,7 @@ class Teacher < ApplicationRecord
   has_many :time_slots,
     primary_key: :id,
     foreign_key: :teacher_id,
-    class_name: "TimeSlot", 
+    class_name: "TimeSlot"
 
   has_many :spoken_languages,
     primary_key: :id,
