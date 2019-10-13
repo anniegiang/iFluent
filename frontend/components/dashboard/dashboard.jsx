@@ -3,7 +3,6 @@ import DashboardHero from "./dashboard_hero";
 import DashboardBookings from "./dashboard_bookings";
 import LandingNavBarContainer from "../navbar/landing_navbar_container";
 
-
 class Dashboard extends React.Component {
   constructor(props) {
     super(props);
@@ -11,14 +10,12 @@ class Dashboard extends React.Component {
 
   componentDidMount() {
     this.props.fetchAllBookings();
-    debugger;
   }
 
   render() {
     if (!this.props.bookings) {
       return;
     }
-    debugger;
     return (
       <div className="flex-container">
         <div style={{ position: "static", zIndex: "inherit" }}>

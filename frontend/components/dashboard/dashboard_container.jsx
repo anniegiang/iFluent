@@ -4,7 +4,6 @@ import { fetchAllUsers, fetchUser } from "../../actions/user_actions";
 import { fetchAllBookings, fetchBooking } from "../../actions/booking_actions";
 
 const msp = state => {
-  debugger;
   return {
     currentUser: state.entities.users[state.session.id],
     bookings: Object.values(state.entities.bookings)
