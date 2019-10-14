@@ -44,7 +44,7 @@ class TeacherBook extends React.Component {
             </div>
           </div>
           <div className="bookCard-hr"></div>
-          <Link to={`/booking/${this.props.teacher.id}`}>
+          <Link to={`/booking/teacher/${this.props.teacher.id}`}>
             <button
               id="schedule-lesson"
               type="button"
