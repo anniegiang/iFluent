@@ -1,6 +1,6 @@
 import React from "react";
 import LandingNavBarContainer from "../navbar/landing_navbar_container";
-import Calendar from "../calendar/calendar";
+import Moment from "react-moment";
 
 class BookingForm extends React.Component {
   componentDidMount() {
@@ -19,7 +19,16 @@ class BookingForm extends React.Component {
         <LandingNavBarContainer />
         <div className="booking-form-container">
           <h1>Book a lesson</h1>
-          <Calendar />
+          {timeSlots.map(slot => (
+            <Moment format="LLLL">{slot.startTime}</Moment>
+          ))}
+          {/* <select>
+            {timeSlots.map(slot => {
+              let formatStart = <Moment format="LLLL">{slot.startTime}</Moment>;
+              debugger;
+              return <option value={slot.id}>{formatStart}</option>;
+            })}
+          </select> */}
         </div>
       </React.Fragment>
     );
