@@ -8,8 +8,8 @@ const receiveAllTimeSlots = timeSlots => ({
 });
 
 // thunk
-export const fetchAllTimeSlots = () => dispatch => {
-  return APIUtil.fetchAllTimeSlots().then(time_slots =>
+export const fetchAllTimeSlots = teacherId => dispatch => {
+  return APIUtil.fetchAllTimeSlots(teacherId).then(time_slots =>
     dispatch(receiveAllTimeSlots(time_slots))
   );
 };

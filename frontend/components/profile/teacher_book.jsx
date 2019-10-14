@@ -2,12 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 class TeacherBook extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.bookingFormClick = this.bookingFormClick.bind(this);
-  }
-
   render() {
     const formatPrice = num => {
       return parseFloat(Math.round(num * 100) / 100).toFixed(2);
@@ -50,7 +44,7 @@ class TeacherBook extends React.Component {
             </div>
           </div>
           <div className="bookCard-hr"></div>
-          <Link to="/booking">
+          <Link to={`/booking/${this.props.teacher.id}`}>
             <button
               id="schedule-lesson"
               type="button"

@@ -29,7 +29,7 @@ const App = () => (
           />
           <ProtectedRoute
             exact
-            path="/booking"
+            path="/booking/:teacherId"
             component={BookingFormContainer}
           />
           <ProtectedRoute
