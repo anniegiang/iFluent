@@ -14,6 +14,7 @@ class BookingForm extends React.Component {
       return null;
     }
     const { teacher, lessons, timeSlots } = this.props;
+    debugger;
     return (
       <React.Fragment>
         <LandingNavBarContainer />

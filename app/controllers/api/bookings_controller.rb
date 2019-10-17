@@ -1,8 +1,6 @@
 class Api::BookingsController < ApplicationController
   
   def index # all current_user bookings
-    # @user = User.find(params[:user_id])
-    # @bookings = @user.bookings.includes(:time_slot, :teacher => [:user], :lesson_item => [:lesson]) # efficient queries using pre-fetch associations
     if logged_in?
       @bookings = current_user.bookings.includes(:time_slot, :teacher => [:user], :lesson_item => [:lesson]) # efficient queries using pre-fetch associations
     else
@@ -11,9 +9,6 @@ class Api::BookingsController < ApplicationController
   end
 
   def show 
-    # @user = User.find(params[:user_id])
-    # if @user.bookings.where(id: params[:id])
-    #   @booking = Booking.find(params[:id])
     if logged_in?
       if current_user.bookings.where(id: params[:id])
         @booking = Booking.find(params[:id])
