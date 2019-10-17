@@ -5,7 +5,6 @@ import { fetchAllLessonsByTeacher } from "../../actions/lesson_actions";
 import { fetchAllTimeSlots } from "../../actions/time_slot_actions";
 
 const msp = (state, ownProps) => {
-  // debugger;
   return {
     currentUser: state.entities.users[state.session.id],
     teacher: state.entities.teachers[ownProps.match.params.teacherId],

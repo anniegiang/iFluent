@@ -14,22 +14,14 @@ class BookingForm extends React.Component {
       return null;
     }
     const { teacher, lessons, timeSlots } = this.props;
-    debugger;
     return (
       <React.Fragment>
         <LandingNavBarContainer />
         <div className="booking-form-container">
           <h1>Book a lesson</h1>
           {timeSlots.map(slot => (
-            <Moment format="LLLL">{slot.startTime}</Moment>
+            <Moment format="LLLL">{slot.endTime}</Moment>
           ))}
-          {/* <select>
-            {timeSlots.map(slot => {
-              let formatStart = <Moment format="LLLL">{slot.startTime}</Moment>;
-              debugger;
-              return <option value={slot.id}>{formatStart}</option>;
-            })}
-          </select> */}
         </div>
       </React.Fragment>
     );
