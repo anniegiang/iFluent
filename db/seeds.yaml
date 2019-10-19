@@ -24,6 +24,16 @@ users:
     email: morrison@gmail.com
     password: "password"
     profile_picture_url: "https://imagesavatar-static01.italki.com/1T051411590_Avatar.jpg"
+  - id: 6
+    name: "Patrick"
+    email: patrick@gmail.com
+    password: "password"
+    profile_picture_url: "https://imagesavatar-static01.italki.com/3T043188030_Avatar.jpg"
+  - id: 7
+    name: "Linda"
+    email: linda@gmail.com
+    password: "password"
+    profile_picture_url: "https://imagesavatar-static01.italki.com/4T064805780_Avatar.jpg"
 
 teachers:
   - id: 1
@@ -42,6 +52,22 @@ teachers:
     country: "United States"
     video_url: "https://v.italki.cn/xitalki100020338.mp4"
     about_me: "I love teaching English to people around the world and specialize in teaching adults at the intermediate to advanced stages.  I have a degree in Educational Studies and a 200hr CELTA certificate. I love traveling and exchanging culture, so teaching English to students around the world is quite exciting. I focus on fluency and confidence, using real-world situations. You'll learn common phrases, idioms, vocabulary and more to handle everyday situations."
+  - id: 3
+    teacher_id: 6
+    hourly_rate: 18.00
+    trial_rate: 12.00
+    title: "Professional Teacher"
+    country: "China"
+    video_url: "https://www.youtube.com/embed/aBx0FwTu104?enablejsapi=1&modestbranding=1&rel=0&showinfo=0"
+    about_me: "I work as a professional Chinese teacher, I teach Chinese language to local students, since I've got so many foreign friends from all over the world, it makes me wonder what would happen if I combine these two, which is to teach foreign friends Chinese. so here I am,I'll be very happy to help you with your vocabulary, pronunciation, written characters and overcome all the difficulties you've come across when learning Chinese! 大家好，我叫Patrick,我的母语是中文，我是一名地地道道的中国人。我的中文名字叫石鹏，我住在成都，我希望通过italki这个平台和来自世界各地的朋友分享汉语知识，帮助中文爱好者提高他们的中文水平。"
+  - id: 4
+    teacher_id: 7
+    hourly_rate: 14.00
+    trial_rate: 8.00
+    title: "Professional Teacher"
+    country: "China"
+    video_url: "https://www.youtube.com/embed/2f45Smme_o0?enablejsapi=1&modestbranding=1&rel=0&showinfo=0"
+    about_me: "I am confident that I have the kindness and patience to be a teacher, and I believe that the combination of these factors and professional knowledge can bring students a good learning experience!"
 
 languages:
   - id: 1
@@ -78,6 +104,14 @@ teacher_teaches:
     teacher_id: 2
     language_id: 1
     fluency: 5
+  - id: 3
+    teacher_id: 3
+    language_id: 2
+    fluency: 5
+  - id: 4
+    teacher_id: 4
+    language_id: 2
+    fluency: 5
 
 teacher_speaks:
   - id: 1
@@ -95,6 +129,14 @@ teacher_speaks:
   - id: 4
     teacher_id: 2
     language_id: 10
+    fluency: 5
+  - id: 5
+    teacher_id: 3
+    language_id: 1
+    fluency: 5
+  - id: 6
+    teacher_id: 4
+    language_id: 12
     fluency: 4
 
 lessons:
@@ -140,6 +182,34 @@ lessons:
     title: "Informal Tutoring"
     category: "General"
     description: "Are you intermediate or advanced and need someone to practice speaking English with? Let me help! You choose the topic and I'll help you by using new phrases, idioms, and vocabulary. You can practice your listening, asking questions, and responding. If you prefer I choose the topic, let me know!"
+  - id: 7
+    teacher_id: 3
+    language_name: "Chinese (Mandarin)"
+    lessons_taught: 441
+    title: "Trial lesson"
+    category: "Trial"
+    description: "In the trial lesson, we'll talk about your learning plan, goal and preferences, just feel free to book a lesson !"
+  - id: 8
+    teacher_id: 3
+    language_name: "Chinese (Mandarin)"
+    lessons_taught: 1531
+    title: "Customized lessons"
+    category: "General"
+    description: "We'll have a trial lesson first to talk about your learning plan and preferences, either you're a beginner learning Chinese or you've already had some foundation of Chinese, all lessons are customized for your needs."
+  - id: 9
+    teacher_id: 4
+    language_name: "Chinese (Mandarin)"
+    lessons_taught: 523
+    title: "Common conversation practice"
+    category: "Conversation Practice"
+    description: "In this lesson, we can talk about topics whatever you want in order to improve students' spoken Chinese. I can help you correct your grammar and pronunciation throughout the course."
+  - id: 10
+    teacher_id: 4
+    language_name: "Chinese (Mandarin)"
+    lessons_taught: 412
+    title: "Let's improve our Chinese with Boya Chinese！"
+    category: "General"
+    description: "In this session, students will be taught Chinese with the semi-intermediate level of Boya Chinese as the teaching material. Every unit will be taught with 5 periods, so every 5 sessions will be set as one package."
 
 lesson_items:
   - id: 1
@@ -194,3 +264,23 @@ lesson_items:
     lesson_id: 6
     duration: 90
     price: 25.00
+  - id: 14
+    lesson_id: 7
+    duration: 30
+    price: 12.00
+  - id: 15
+    lesson_id: 8
+    duration: 60
+    price: 18.00
+  - id: 16
+    lesson_id: 9
+    duration: 30
+    price: 14.00
+  - id: 17
+    lesson_id: 9
+    duration: 45
+    price: 18.00
+  - id: 18
+    lesson_id: 10
+    duration: 60
+    price: 23.00
