@@ -19,6 +19,11 @@ users:
     email: andrew@gmail.com
     password: "password"
     profile_picture_url: "https://imagesavatar-static01.italki.com/T026578497_Avatar.jpg"
+  - id: 5
+    name: "Morrison Shelby"
+    email: morrison@gmail.com
+    password: "password"
+    profile_picture_url: "https://imagesavatar-static01.italki.com/1T051411590_Avatar.jpg"
 
 teachers:
   - id: 1
@@ -29,6 +34,14 @@ teachers:
     country: "United States"
     video_url: "https://www.youtube.com/watch?v=kVXcqvpJYcI"
     about_me: "Hi, I'm Andrew! I was born and grew up in Sheffield, England. I have also lived in Taiwan for over a year and currently I live with my wife in the Philippines. In England I helped my family operate a construction business for a number of years before I moved overseas to teach English. I really enjoy teaching English online as it allows me to meet many interesting people and work remotely. My interests include traveling, culture, music, food, cycling, nature etc. I also love meeting new people and helping them to improve their English."
+  - id: 2
+    teacher_id: 5
+    trial_rate: 10.99
+    hourly_rate: 17.99
+    title: "Professional Teacher"
+    country: "United States"
+    video_url: "https://v.italki.cn/xitalki100020338.mp4"
+    about_me: "I love teaching English to people around the world and specialize in teaching adults at the intermediate to advanced stages.  I have a degree in Educational Studies and a 200hr CELTA certificate. I love traveling and exchanging culture, so teaching English to students around the world is quite exciting. I focus on fluency and confidence, using real-world situations. You'll learn common phrases, idioms, vocabulary and more to handle everyday situations."
 
 languages:
   - id: 1
@@ -61,6 +74,10 @@ teacher_teaches:
     teacher_id: 1
     language_id: 1
     fluency: 5
+  - id: 2
+    teacher_id: 2
+    language_id: 1
+    fluency: 5
 
 teacher_speaks:
   - id: 1
@@ -70,6 +87,14 @@ teacher_speaks:
   - id: 2
     teacher_id: 1
     language_id: 5
+    fluency: 4
+  - id: 3
+    teacher_id: 2
+    language_id: 3
+    fluency: 4
+  - id: 4
+    teacher_id: 2
+    language_id: 10
     fluency: 4
 
 lessons:
@@ -101,3 +126,71 @@ lessons:
     title: "TOEFL Preparation"
     category: "Test Preparation"
     description: "In this course I will help you prepare for the four part of the TOEFL exam, however more attention is paid to the speaking and writing parts as these are usually the most challenging for most students. Having said that, the lessons will be tailored to you individual needs. After each session, homework for the writing part of the test will be assigned. I will mark the homework and we will discuss your written work in each following session."
+  - id: 5
+    teacher_id: 2
+    language_name: "English"
+    lessons_taught: 132
+    title: "Trial lesson"
+    category: "Trial"
+    description: "Experience a typical Fluency lesson with me. Learn new vocabulary, watch a funny clip, and get to know my teaching style. Let's see if we're a good match!"
+  - id: 6
+    teacher_id: 2
+    language_name: "English"
+    lessons_taught: 242
+    title: "Informal Tutoring"
+    category: "General"
+    description: "Are you intermediate or advanced and need someone to practice speaking English with? Let me help! You choose the topic and I'll help you by using new phrases, idioms, and vocabulary. You can practice your listening, asking questions, and responding. If you prefer I choose the topic, let me know!"
+
+lesson_items:
+  - id: 1
+    lesson_id: 1
+    duration: 30
+    price: 8.00
+  - id: 2
+    lesson_id: 2
+    duration: 30
+    price: 11.50
+  - id: 3
+    lesson_id: 2
+    duration: 45
+    price: 15.00
+  - id: 4
+    lesson_id: 2
+    duration: 60
+    price: 18.00
+  - id: 5
+    lesson_id: 3
+    duration: 30
+    price: 11.00
+  - id: 6
+    lesson_id: 3
+    duration: 45
+    price: 14.50
+  - id: 7
+    lesson_id: 3
+    duration: 60
+    price: 17.00
+  - id: 8
+    lesson_id: 4
+    duration: 30
+    price: 13.00
+  - id: 9
+    lesson_id: 4
+    duration: 60
+    price: 20.00
+  - id: 10
+    lesson_id: 4
+    duration: 90
+    price: 28.00
+  - id: 11
+    lesson_id: 5
+    duration: 30
+    price: 10.99
+  - id: 12
+    lesson_id: 6
+    duration: 60
+    price: 17.99
+  - id: 13
+    lesson_id: 6
+    duration: 90
+    price: 25.00

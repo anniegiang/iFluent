@@ -14,6 +14,7 @@ Teacher.destroy_all
 TeacherTeach.destroy_all
 TeacherSpeak.destroy_all
 Lesson.destroy_all
+LessonItem.destroy_all
 
 yaml = YAML.load_file(File.join(Rails.root, 'db', 'seeds.yaml'))
 users = yaml['users']
@@ -22,6 +23,7 @@ teachers = yaml['teachers']
 teacher_teaches = yaml['teacher_teaches']
 teacher_speaks = yaml['teacher_speaks']
 lessons = yaml['lessons']
+lesson_items = yaml['lesson_items']
 
 # languages
 languages.each do |language|
@@ -51,6 +53,11 @@ end
 # lessons
 lessons.each do |lesson|
     Lesson.create!(lesson)
+end
+
+# lesson_items
+lesson_items.each do |item|
+    LessonItem.create!(item)
 end
 
 
