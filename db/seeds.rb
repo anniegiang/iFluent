@@ -15,6 +15,7 @@ TeacherTeach.destroy_all
 TeacherSpeak.destroy_all
 Lesson.destroy_all
 LessonItem.destroy_all
+TimeSlot.destroy_all
 
 yaml = YAML.load_file(File.join(Rails.root, 'db', 'seeds.yaml'))
 users = yaml['users']
@@ -59,6 +60,14 @@ end
 lesson_items.each do |item|
     LessonItem.create!(item)
 end
+
+# time slots - teacher_id 1
+
+TimeSlot.create!({
+    teacher_id: 1,
+    start_time: Time.new,
+    end_time: Time.new
+})
 
 
 # lang = ["a", "b"]
