@@ -34,9 +34,9 @@ class User < ApplicationRecord
 		through: :bookings,
 		source: :lesson_item
 
-	has_many :booked_times,
-		through: :bookings,
-		source: :time_slot
+	# has_many :booked_times,
+	# 	through: :bookings,
+	# 	source: :time_slot
 
 	has_many :booked_teachers,
 		through: :bookings,
