@@ -1,0 +1,57 @@
+users:
+  - id: 1
+    name: "Guest"
+    email: "guest@aa.io"
+    password: "guestuser"
+    profile_about_me: "I am a guest user!"
+  - id: 2
+    name: "Annie Giang"
+    email: "annie@gmail.com"
+    password: "password"
+    profile_about_me: "Hi! My name is Annie. I love to learn new languages. Looking forward to meeting new people and learning new cultures."
+  - id: 3
+    name: "Jake Burnam"
+    email: "jake@gmail.com"
+    password: "password"
+    profile_about_me: "Hi! My name is Jake. I love to learn new languages. Looking forward to meeting new people and learning new cultures."
+  - id: 4
+    name: "Andrew Bradbury"
+    email: andrew@gmail.com
+    password: "password"
+    profile_picture_url: "https://imagesavatar-static01.italki.com/T026578497_Avatar.jpg"
+
+teachers:
+  - id: 1
+    teacher_id: 4
+    trial_rate: 8.00
+    hourly_rate: 11.00
+    title: "Professional Teacher"
+    country: "United States"
+    video_url: "https://www.youtube.com/watch?v=kVXcqvpJYcI"
+    about_me: "Hi, I'm Andrew! I was born and grew up in Sheffield, England. I have also lived in Taiwan for over a year and currently I live with my wife in the Philippines. In England I helped my family operate a construction business for a number of years before I moved overseas to teach English. I really enjoy teaching English online as it allows me to meet many interesting people and work remotely. My interests include traveling, culture, music, food, cycling, nature etc. I also love meeting new people and helping them to improve their English."
+
+languages:
+  - id: 1
+    language: "English"
+  - id: 2
+    language: "Chinese (Mandarin)"
+  - id: 3
+    language: "French"
+  - id: 4
+    language: "Spanish"
+  - id: 5
+    language: "Portuguese"
+  - id: 6
+    language: "German"
+  - id: 7
+    language: "Japanese"
+  - id: 8
+    language: "Korean"
+  - id: 9
+    language: "Arabic"
+  - id: 10
+    language: "Hindi"
+  - id: 11
+    language: "Italian"
+  - id: 12
+    language: "Russian"
