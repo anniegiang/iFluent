@@ -55,3 +55,49 @@ languages:
     language: "Italian"
   - id: 12
     language: "Russian"
+
+teacher_teaches:
+  - id: 1
+    teacher_id: 1
+    language_id: 1
+    fluency: 5
+
+teacher_speaks:
+  - id: 1
+    teacher_id: 1
+    language_id: 4
+    fluency: 4
+  - id: 2
+    teacher_id: 1
+    language_id: 5
+    fluency: 4
+
+lessons:
+  - id: 1
+    teacher_id: 1
+    lessons_taught: 237
+    language_name: "English"
+    title: "Trial lesson"
+    category: "Trial"
+    description: "In a trial lesson I will demonstrate my teaching methods. It also gives me an opportunity to understand what level the student is at and make a lesson plan."
+  - id: 2
+    teacher_id: 1
+    lessons_taught: 727
+    language_name: "English"
+    title: "Practical Grammar Lessons"
+    category: "General"
+    description: "We follow an online curriculum together that helps improve all aspects of the English language. Lessons are made to suit your needs and interests. Subject material includes tenses, grammar rules, prepositions, articles and much more! Materials will be provided and homework can be assigned."
+  - id: 3
+    teacher_id: 1
+    lessons_taught: 1079
+    language_name: "English"
+    title: "English Conversation"
+    category: "Conversation Practice"
+    description: "Subjects we can talk about include travel, sports, music, food, photography, cycling or any other subject that interests you. We can work to improve your vocabulary, pronunciation, grammar and confidence to have conversations in English."
+  - id: 4
+    teacher_id: 1
+    language_name: "English"
+    lessons_taught: 233
+    title: "TOEFL Preparation"
+    category: "Test Preparation"
+    description: "In this course I will help you prepare for the four part of the TOEFL exam, however more attention is paid to the speaking and writing parts as these are usually the most challenging for most students. Having said that, the lessons will be tailored to you individual needs. After each session, homework for the writing part of the test will be assigned. I will mark the homework and we will discuss your written work in each following session."

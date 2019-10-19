@@ -9,11 +9,24 @@
 require 'faker'
 
 Language.destroy_all
+User.destroy_all
+Teacher.destroy_all
+TeacherTeach.destroy_all
+TeacherSpeak.destroy_all
+Lesson.destroy_all
 
 yaml = YAML.load_file(File.join(Rails.root, 'db', 'seeds.yaml'))
 users = yaml['users']
 languages = yaml['languages']
 teachers = yaml['teachers']
+teacher_teaches = yaml['teacher_teaches']
+teacher_speaks = yaml['teacher_speaks']
+lessons = yaml['lessons']
+
+# languages
+languages.each do |language|
+    Language.create!(language)
+end
 
 # users
 users.each do |user|
@@ -25,13 +38,20 @@ teachers.each do |teacher|
     Teacher.create!(teacher)
 end
 
+# teacher teaches
+teacher_teaches.each do |t|
+    TeacherTeach.create!(t)
+end
 
-# languages
-languages.each do |language|
-    Language.create!(language)
-  end
+# teacher speaks
+teacher_speaks.each do |s|
+    TeacherSpeak.create!(s)
+end
 
-
+# lessons
+lessons.each do |lesson|
+    Lesson.create!(lesson)
+end
 
 
 # lang = ["a", "b"]
