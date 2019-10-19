@@ -9,6 +9,7 @@ import Splash from "./splash/splash";
 import DashboardContainer from "./dashboard/dashboard_container";
 import SearchResultsContainer from "./search_results/search_results_container";
 import TeacherProfileContainer from "./profile/teacher_profile_container";
+import BookingFormContainer from "./booking/booking_form_container";
 
 const App = () => (
   <div className="app app-paddingTop-0">
@@ -25,6 +26,11 @@ const App = () => (
             exact
             path="/teachers/:languageName"
             component={SearchResultsContainer}
+          />
+          <ProtectedRoute
+            exact
+            path="/booking/teacher/:teacherId"
+            component={BookingFormContainer}
           />
           <ProtectedRoute
             exact

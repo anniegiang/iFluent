@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 class TeacherBook extends React.Component {
   render() {
@@ -43,14 +44,15 @@ class TeacherBook extends React.Component {
             </div>
           </div>
           <div className="bookCard-hr"></div>
-          <button
-            onClick={() => alert("Feature coming soon! :D")}
-            id="schedule-lesson"
-            type="button"
-            className="teacher-right-booknow btn btn-standard btn-main btn-gradient"
-          >
-            <span>BOOK NOW</span>
-          </button>
+          <Link to={`/booking/teacher/${this.props.teacher.id}`}>
+            <button
+              id="schedule-lesson"
+              type="button"
+              className="teacher-right-booknow btn btn-standard btn-main btn-gradient"
+            >
+              <span>BOOK NOW</span>
+            </button>
+          </Link>
         </div>
       </div>
     );

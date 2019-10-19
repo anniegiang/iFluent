@@ -1,0 +1,286 @@
+users:
+  - id: 1
+    name: "Guest"
+    email: "guest@aa.io"
+    password: "guestuser"
+    profile_about_me: "I am a guest user!"
+  - id: 2
+    name: "Annie Giang"
+    email: "annie@gmail.com"
+    password: "password"
+    profile_about_me: "Hi! My name is Annie. I love to learn new languages. Looking forward to meeting new people and learning new cultures."
+  - id: 3
+    name: "Jake Burnam"
+    email: "jake@gmail.com"
+    password: "password"
+    profile_about_me: "Hi! My name is Jake. I love to learn new languages. Looking forward to meeting new people and learning new cultures."
+  - id: 4
+    name: "Andrew Bradbury"
+    email: andrew@gmail.com
+    password: "password"
+    profile_picture_url: "https://imagesavatar-static01.italki.com/T026578497_Avatar.jpg"
+  - id: 5
+    name: "Morrison Shelby"
+    email: morrison@gmail.com
+    password: "password"
+    profile_picture_url: "https://imagesavatar-static01.italki.com/1T051411590_Avatar.jpg"
+  - id: 6
+    name: "Patrick"
+    email: patrick@gmail.com
+    password: "password"
+    profile_picture_url: "https://imagesavatar-static01.italki.com/3T043188030_Avatar.jpg"
+  - id: 7
+    name: "Linda"
+    email: linda@gmail.com
+    password: "password"
+    profile_picture_url: "https://imagesavatar-static01.italki.com/4T064805780_Avatar.jpg"
+
+teachers:
+  - id: 1
+    teacher_id: 4
+    trial_rate: 8.00
+    hourly_rate: 11.00
+    title: "Professional Teacher"
+    country: "United States"
+    video_url: "https://www.youtube.com/watch?v=kVXcqvpJYcI"
+    about_me: "Hi, I'm Andrew! I was born and grew up in Sheffield, England. I have also lived in Taiwan for over a year and currently I live with my wife in the Philippines. In England I helped my family operate a construction business for a number of years before I moved overseas to teach English. I really enjoy teaching English online as it allows me to meet many interesting people and work remotely. My interests include traveling, culture, music, food, cycling, nature etc. I also love meeting new people and helping them to improve their English."
+  - id: 2
+    teacher_id: 5
+    trial_rate: 10.99
+    hourly_rate: 17.99
+    title: "Professional Teacher"
+    country: "United States"
+    video_url: "https://v.italki.cn/xitalki100020338.mp4"
+    about_me: "I love teaching English to people around the world and specialize in teaching adults at the intermediate to advanced stages.  I have a degree in Educational Studies and a 200hr CELTA certificate. I love traveling and exchanging culture, so teaching English to students around the world is quite exciting. I focus on fluency and confidence, using real-world situations. You'll learn common phrases, idioms, vocabulary and more to handle everyday situations."
+  - id: 3
+    teacher_id: 6
+    hourly_rate: 18.00
+    trial_rate: 12.00
+    title: "Professional Teacher"
+    country: "China"
+    video_url: "https://www.youtube.com/embed/aBx0FwTu104?enablejsapi=1&modestbranding=1&rel=0&showinfo=0"
+    about_me: "I work as a professional Chinese teacher, I teach Chinese language to local students, since I've got so many foreign friends from all over the world, it makes me wonder what would happen if I combine these two, which is to teach foreign friends Chinese. so here I am,I'll be very happy to help you with your vocabulary, pronunciation, written characters and overcome all the difficulties you've come across when learning Chinese! 大家好，我叫Patrick,我的母语是中文，我是一名地地道道的中国人。我的中文名字叫石鹏，我住在成都，我希望通过italki这个平台和来自世界各地的朋友分享汉语知识，帮助中文爱好者提高他们的中文水平。"
+  - id: 4
+    teacher_id: 7
+    hourly_rate: 14.00
+    trial_rate: 8.00
+    title: "Professional Teacher"
+    country: "China"
+    video_url: "https://www.youtube.com/embed/2f45Smme_o0?enablejsapi=1&modestbranding=1&rel=0&showinfo=0"
+    about_me: "I am confident that I have the kindness and patience to be a teacher, and I believe that the combination of these factors and professional knowledge can bring students a good learning experience!"
+
+languages:
+  - id: 1
+    language: "English"
+  - id: 2
+    language: "Chinese (Mandarin)"
+  - id: 3
+    language: "French"
+  - id: 4
+    language: "Spanish"
+  - id: 5
+    language: "Portuguese"
+  - id: 6
+    language: "German"
+  - id: 7
+    language: "Japanese"
+  - id: 8
+    language: "Korean"
+  - id: 9
+    language: "Arabic"
+  - id: 10
+    language: "Hindi"
+  - id: 11
+    language: "Italian"
+  - id: 12
+    language: "Russian"
+
+teacher_teaches:
+  - id: 1
+    teacher_id: 1
+    language_id: 1
+    fluency: 5
+  - id: 2
+    teacher_id: 2
+    language_id: 1
+    fluency: 5
+  - id: 3
+    teacher_id: 3
+    language_id: 2
+    fluency: 5
+  - id: 4
+    teacher_id: 4
+    language_id: 2
+    fluency: 5
+
+teacher_speaks:
+  - id: 1
+    teacher_id: 1
+    language_id: 4
+    fluency: 4
+  - id: 2
+    teacher_id: 1
+    language_id: 5
+    fluency: 4
+  - id: 3
+    teacher_id: 2
+    language_id: 3
+    fluency: 4
+  - id: 4
+    teacher_id: 2
+    language_id: 10
+    fluency: 5
+  - id: 5
+    teacher_id: 3
+    language_id: 1
+    fluency: 5
+  - id: 6
+    teacher_id: 4
+    language_id: 12
+    fluency: 4
+
+lessons:
+  - id: 1
+    teacher_id: 1
+    lessons_taught: 237
+    language_name: "English"
+    title: "Trial lesson"
+    category: "Trial"
+    description: "In a trial lesson I will demonstrate my teaching methods. It also gives me an opportunity to understand what level the student is at and make a lesson plan."
+  - id: 2
+    teacher_id: 1
+    lessons_taught: 727
+    language_name: "English"
+    title: "Practical Grammar Lessons"
+    category: "General"
+    description: "We follow an online curriculum together that helps improve all aspects of the English language. Lessons are made to suit your needs and interests. Subject material includes tenses, grammar rules, prepositions, articles and much more! Materials will be provided and homework can be assigned."
+  - id: 3
+    teacher_id: 1
+    lessons_taught: 1079
+    language_name: "English"
+    title: "English Conversation"
+    category: "Conversation Practice"
+    description: "Subjects we can talk about include travel, sports, music, food, photography, cycling or any other subject that interests you. We can work to improve your vocabulary, pronunciation, grammar and confidence to have conversations in English."
+  - id: 4
+    teacher_id: 1
+    language_name: "English"
+    lessons_taught: 233
+    title: "TOEFL Preparation"
+    category: "Test Preparation"
+    description: "In this course I will help you prepare for the four part of the TOEFL exam, however more attention is paid to the speaking and writing parts as these are usually the most challenging for most students. Having said that, the lessons will be tailored to you individual needs. After each session, homework for the writing part of the test will be assigned. I will mark the homework and we will discuss your written work in each following session."
+  - id: 5
+    teacher_id: 2
+    language_name: "English"
+    lessons_taught: 132
+    title: "Trial lesson"
+    category: "Trial"
+    description: "Experience a typical Fluency lesson with me. Learn new vocabulary, watch a funny clip, and get to know my teaching style. Let's see if we're a good match!"
+  - id: 6
+    teacher_id: 2
+    language_name: "English"
+    lessons_taught: 242
+    title: "Informal Tutoring"
+    category: "General"
+    description: "Are you intermediate or advanced and need someone to practice speaking English with? Let me help! You choose the topic and I'll help you by using new phrases, idioms, and vocabulary. You can practice your listening, asking questions, and responding. If you prefer I choose the topic, let me know!"
+  - id: 7
+    teacher_id: 3
+    language_name: "Chinese (Mandarin)"
+    lessons_taught: 441
+    title: "Trial lesson"
+    category: "Trial"
+    description: "In the trial lesson, we'll talk about your learning plan, goal and preferences, just feel free to book a lesson !"
+  - id: 8
+    teacher_id: 3
+    language_name: "Chinese (Mandarin)"
+    lessons_taught: 1531
+    title: "Customized lessons"
+    category: "General"
+    description: "We'll have a trial lesson first to talk about your learning plan and preferences, either you're a beginner learning Chinese or you've already had some foundation of Chinese, all lessons are customized for your needs."
+  - id: 9
+    teacher_id: 4
+    language_name: "Chinese (Mandarin)"
+    lessons_taught: 523
+    title: "Common conversation practice"
+    category: "Conversation Practice"
+    description: "In this lesson, we can talk about topics whatever you want in order to improve students' spoken Chinese. I can help you correct your grammar and pronunciation throughout the course."
+  - id: 10
+    teacher_id: 4
+    language_name: "Chinese (Mandarin)"
+    lessons_taught: 412
+    title: "Let's improve our Chinese with Boya Chinese！"
+    category: "General"
+    description: "In this session, students will be taught Chinese with the semi-intermediate level of Boya Chinese as the teaching material. Every unit will be taught with 5 periods, so every 5 sessions will be set as one package."
+
+lesson_items:
+  - id: 1
+    lesson_id: 1
+    duration: 30
+    price: 8.00
+  - id: 2
+    lesson_id: 2
+    duration: 30
+    price: 11.50
+  - id: 3
+    lesson_id: 2
+    duration: 45
+    price: 15.00
+  - id: 4
+    lesson_id: 2
+    duration: 60
+    price: 18.00
+  - id: 5
+    lesson_id: 3
+    duration: 30
+    price: 11.00
+  - id: 6
+    lesson_id: 3
+    duration: 45
+    price: 14.50
+  - id: 7
+    lesson_id: 3
+    duration: 60
+    price: 17.00
+  - id: 8
+    lesson_id: 4
+    duration: 30
+    price: 13.00
+  - id: 9
+    lesson_id: 4
+    duration: 60
+    price: 20.00
+  - id: 10
+    lesson_id: 4
+    duration: 90
+    price: 28.00
+  - id: 11
+    lesson_id: 5
+    duration: 30
+    price: 10.99
+  - id: 12
+    lesson_id: 6
+    duration: 60
+    price: 17.99
+  - id: 13
+    lesson_id: 6
+    duration: 90
+    price: 25.00
+  - id: 14
+    lesson_id: 7
+    duration: 30
+    price: 12.00
+  - id: 15
+    lesson_id: 8
+    duration: 60
+    price: 18.00
+  - id: 16
+    lesson_id: 9
+    duration: 30
+    price: 14.00
+  - id: 17
+    lesson_id: 9
+    duration: 45
+    price: 18.00
+  - id: 18
+    lesson_id: 10
+    duration: 60
+    price: 23.00

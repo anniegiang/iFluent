@@ -29,10 +29,10 @@ class Booking < ApplicationRecord
     foreign_key: :lesson_item_id,
     class_name: 'LessonItem'
 
-  belongs_to :time_slot,
-    primary_key: :id,
-    foreign_key: :time_slot_id,
-    class_name: 'TimeSlot'
+  # belongs_to :time_slot,
+  #   primary_key: :id,
+  #   foreign_key: :time_slot_id,
+  #   class_name: 'TimeSlot'
 
   
 end
