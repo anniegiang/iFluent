@@ -1,5 +1,6 @@
 import React from "react";
 import LandingNavBarContainer from "../navbar/landing_navbar_container";
+import LessonOption from "./lesson_option";
 import Moment from "react-moment";
 
 class BookingForm extends React.Component {
@@ -7,11 +8,11 @@ class BookingForm extends React.Component {
     super(props);
 
     this.state = {
-      student_id: this.props.currentUser.id,
-      teacher_id: null,
-      lesson_item_id: null,
-      start_time: null,
-      end_time: null
+      studentId: this.props.currentUser.id,
+      teacherId: null,
+      lessonItemId: null,
+      startTime: null,
+      endTime: null
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -19,18 +20,21 @@ class BookingForm extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchTeacher(parseInt(this.props.match.params.teacherId));
-    this.props.fetchLessons(parseInt(this.props.match.params.teacherId));
-    this.props.fetchAllOpenTimeSlots(
-      parseInt(this.props.match.params.teacherId)
-    );
+    const id = this.props.match.params.teacherId;
+
+    this.props.fetchTeacher(parseInt(id));
+    this.props.fetchLessons(parseInt(id));
+    this.props.fetchAllOpenTimeSlots(parseInt(id));
   }
 
-  handleChange(lessonId) {
+  handleChange(type) {
     return e => {
-      console.log(lessonId);
+      this.setState({ [type]: e.target.value }, () => {
+        console.log(this.state);
+      });
     };
   }
+
   handleSubmit() {}
 
   render() {
@@ -45,16 +49,17 @@ class BookingForm extends React.Component {
     return (
       <React.Fragment>
         <LandingNavBarContainer />
-
         <div className="booking-form-container">
-          <h1>Book a lesson</h1>
-
-          {openTimeSlots.map(slot => (
-            <li>
-              <Moment format="LLLL">{slot.startTime}</Moment> -
-              <Moment format="LLLL">{slot.endTime}</Moment>
-            </li>
-          ))}
+          <form onSubmit={this.handleSubmit}>
+            {lessons.map(lesson => {
+              return (
+                <LessonOption
+                  handleChange={this.handleChange}
+                  lesson={lesson}
+                />
+              );
+            })}
+          </form>
         </div>
       </React.Fragment>
     );
