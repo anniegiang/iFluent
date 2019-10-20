@@ -6,69 +6,85 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-require 'faker'
+require "ice_cube"
+require "faker"
 
-Language.destroy_all
-User.destroy_all
-Teacher.destroy_all
-TeacherTeach.destroy_all
-TeacherSpeak.destroy_all
-Lesson.destroy_all
-LessonItem.destroy_all
-TimeSlot.destroy_all
+ActiveRecord::Base.transaction do 
+    Language.destroy_all
+    User.destroy_all
+    Teacher.destroy_all
+    TeacherTeach.destroy_all
+    TeacherSpeak.destroy_all
+    Lesson.destroy_all
+    LessonItem.destroy_all
+    TimeSlot.destroy_all
 
-yaml = YAML.load_file(File.join(Rails.root, 'db', 'seeds.yaml'))
-users = yaml['users']
-languages = yaml['languages']
-teachers = yaml['teachers']
-teacher_teaches = yaml['teacher_teaches']
-teacher_speaks = yaml['teacher_speaks']
-lessons = yaml['lessons']
-lesson_items = yaml['lesson_items']
+    yaml = YAML.load_file(File.join(Rails.root, 'db', 'seeds.yaml'))
+    users = yaml['users']
+    languages = yaml['languages']
+    teachers = yaml['teachers']
+    teacher_teaches = yaml['teacher_teaches']
+    teacher_speaks = yaml['teacher_speaks']
+    lessons = yaml['lessons']
+    lesson_items = yaml['lesson_items']
 
-# languages
-languages.each do |language|
-    Language.create!(language)
+    # languages
+    languages.each do |language|
+        Language.create!(language)
+    end
+
+    # users
+    users.each do |user|
+        User.create!(user)
+    end
+
+    # teachers
+    teachers.each do |teacher|
+        Teacher.create!(teacher)
+    end
+
+    # teacher teaches
+    teacher_teaches.each do |t|
+        TeacherTeach.create!(t)
+    end
+
+    # teacher speaks
+    teacher_speaks.each do |s|
+        TeacherSpeak.create!(s)
+    end
+
+    # lessons
+    lessons.each do |lesson|
+        Lesson.create!(lesson)
+    end
+
+    # lesson_items
+    lesson_items.each do |item|
+        LessonItem.create!(item)
+    end
+
+    # (10..12).each do |month|
+    #     (1..28).each do |day|
+    #         (0..24).each do |hour|
+    #             start_time = DateTime.new(2019, month, day, hour, 0)
+    #             TimeSlot.create({
+    #                 start_time: start_time,
+    #                 end_time: start_time + 30.minutes,
+    #                 occurence: 'daily'
+    #             })
+    #             TimeSlot.create({
+    #                 start_time: start_time + 30.minutes,
+    #                 end_time: start_time + 60.minutes,
+    #                 occurence: 'daily'
+    #             })
+    #         end
+    #     end
+    # end
+    
+
+
+
 end
-
-# users
-users.each do |user|
-    User.create!(user)
-end
-
-# teachers
-teachers.each do |teacher|
-    Teacher.create!(teacher)
-end
-
-# teacher teaches
-teacher_teaches.each do |t|
-    TeacherTeach.create!(t)
-end
-
-# teacher speaks
-teacher_speaks.each do |s|
-    TeacherSpeak.create!(s)
-end
-
-# lessons
-lessons.each do |lesson|
-    Lesson.create!(lesson)
-end
-
-# lesson_items
-lesson_items.each do |item|
-    LessonItem.create!(item)
-end
-
-# time slots - teacher_id 1
-
-TimeSlot.create!({
-    teacher_id: 1,
-    start_time: Time.new,
-    end_time: Time.new
-})
-
 
 # lang = ["a", "b"]
 # t = [1, 2, 3, 4]

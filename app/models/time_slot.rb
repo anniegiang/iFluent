@@ -12,17 +12,12 @@
 #
 
 class TimeSlot < ApplicationRecord
-  validates :teacher_id, presence: :true
+  validates :teacher_id, :start_time, :end_time
 
   belongs_to :teacher, 
     primary_key: :id,
     foreign_key: :teacher_id,
     class_name: "Teacher"
-
-  # has_many :bookings,
-  #   primary_key: :id,
-  #   foreign_key: :time_slot_id,
-  #   class_name: 'Booking'
 
 
 end
