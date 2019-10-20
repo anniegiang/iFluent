@@ -1,6 +1,8 @@
 import { connect } from "react-redux";
 import React from "react";
 import LessonItem from "./lesson_item";
+import { withRouter } from "react-router-dom";
+
 import {
   fetchLesson,
   fetchAllLessonsByTeacher
@@ -22,7 +24,9 @@ const mdp = dispatch => {
   };
 };
 
-export default connect(
-  msp,
-  mdp
-)(LessonItem);
+export default withRouter(
+  connect(
+    msp,
+    mdp
+  )(LessonItem)
+);

@@ -1,9 +1,11 @@
 import React from "react";
 import LessonCardPrice from "./lesson_card_price";
+import { Link } from "react-router-dom";
 
 class LessonItem extends React.Component {
   constructor(props) {
     super(props);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   componentDidMount() {
@@ -12,6 +14,11 @@ class LessonItem extends React.Component {
   componentWillUnmount() {
     this.props.fetchAllLessonsByTeacher(this.props.lesson.teacherId);
     document.body.style.overflow = "unset";
+  }
+
+  handleClick() {
+    this.props.closeLesson();
+    this.props.history.push(`/booking/teacher/${this.props.lesson.teacherId}`);
   }
 
   render() {
@@ -87,12 +94,17 @@ class LessonItem extends React.Component {
         </div>
         <div className="modal-footer-lesson flex-row-center">
           <button
-            onClick={() => alert("Feature coming soon! :D")}
+            onClick={this.handleClick}
             type="button"
             className="modal-lessonDetail-bookBtn"
           >
             <span>BOOK NOW</span>
           </button>
+          {/* <Link to={`/booking/teacher/${this.props.lesson.teacherId}`}>
+            <button type="button" className="modal-lessonDetail-bookBtn">
+              <span>BOOK NOW</span>
+            </button>
+          </Link> */}
         </div>
       </div>
     );
