@@ -25,9 +25,7 @@ class BookingForm extends React.Component {
   }
 
   handleClick(type, data) {
-    this.setState({ [type]: data }, () => {
-      console.log(this.state);
-    });
+    this.setState({ [type]: data });
   }
 
   handleSubmit(e) {
@@ -45,6 +43,7 @@ class BookingForm extends React.Component {
       };
       this.props.createBooking(data);
       this.props.deleteOpenTimeSlot(openTimeSlot.id);
+      this.props.history.push("/dashboard");
     } else {
       alert("Booking incomplete");
     }
