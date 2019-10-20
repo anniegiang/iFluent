@@ -5,7 +5,7 @@ const OpenTimeOption = props => {
   const { openTimeSlot, handleClick } = props;
   return (
     <div
-      onClick={handleClick("startTime")}
+      onClick={handleClick("openTimeSlotId")}
       className="time-option-container"
       value={openTimeSlot.id}
     >

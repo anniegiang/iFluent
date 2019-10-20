@@ -1,13 +1,13 @@
-import { RECEIVE_ALL_OPEN_TIME_SLOTS } from "../actions/open_time_slot_actions";
+import { RECEIVE_ALL_OPEN_TIME_SLOTS } from '../actions/open_time_slot_actions';
 
 const openTimeSlotsReducer = (state = {}, action) => {
-  Object.freeze(state);
+  Object.freeze(state)
   switch (action.type) {
     case RECEIVE_ALL_OPEN_TIME_SLOTS:
-      return action.openTimeSlots;
+      return action.openTimeSlots
     default:
-      return state;
+      return state
   }
-};
+}
 
-export default openTimeSlotsReducer;
+export default openTimeSlotsReducer

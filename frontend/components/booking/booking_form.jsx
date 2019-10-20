@@ -1,62 +1,64 @@
-import React from 'react';
-import LandingNavBarContainer from '../navbar/landing_navbar_container';
-import LessonOption from './lesson_option';
-import OpenTimeOption from './open_time_option';
+import React from "react";
+import LandingNavBarContainer from "../navbar/landing_navbar_container";
+import LessonOption from "./lesson_option";
+import OpenTimeOption from "./open_time_option";
 
 class BookingForm extends React.Component {
-  constructor (props) {
-    super(props)
+  constructor(props) {
+    super(props);
 
     this.state = {
       studentId: this.props.currentUser.id,
       teacherId: parseInt(this.props.match.params.teacherId),
       lessonItemId: null,
       startTime: null,
-      endTime: null
-    }
+      endTime: null,
+      openTimeSlotId: null
+    };
 
-    this.handleSubmit = this.handleSubmit.bind(this)
-    this.handleClick = this.handleClick.bind(this)
-    this.handleTimeSlot = this.handleTimeSlot.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+    this.handleTimeSlot = this.handleTimeSlot.bind(this);
   }
 
-  componentDidMount () {
-    const id = this.props.match.params.teacherId
+  componentDidMount() {
+    const id = this.props.match.params.teacherId;
 
-    this.props.fetchTeacher(parseInt(id))
-    this.props.fetchLessons(parseInt(id))
-    this.props.fetchAllOpenTimeSlots(parseInt(id))
+    this.props.fetchTeacher(parseInt(id));
+    this.props.fetchLessons(parseInt(id));
+    this.props.fetchAllOpenTimeSlots(parseInt(id));
   }
 
-  handleClick (type) {
+  handleClick(type) {
     return e => {
+      debugger;
       this.setState(
         {
-          [type]: parseInt(e.currentTarget.getAttribute('value'))
+          [type]: parseInt(e.currentTarget.getAttribute("value"))
         },
         () => {
-          console.log(this.state)
+          console.log(this.state);
         }
-      )
+      );
     };
   }
 
-  handleTimeSlot () {}
+  handleTimeSlot() {}
 
-  handleSubmit (e) {
-    e.preventDefault()
-    this.props.createBooking(this.state)
+  handleSubmit(e) {
+    e.preventDefault();
+    this.props.createBooking(this.state);
   }
 
-  render () {
+  render() {
     if (
       !this.props.teacher ||
       !this.props.lessons ||
       !this.props.openTimeSlots
     ) {
-      return null
+      return null;
     }
-    const { teacher, lessons, openTimeSlots } = this.props
+    const { teacher, lessons, openTimeSlots } = this.props;
     return (
       <React.Fragment>
         <LandingNavBarContainer />
@@ -72,7 +74,7 @@ class BookingForm extends React.Component {
                     handleClick={this.handleClick}
                     lesson={lesson}
                   />
-                )
+                );
               })}
             </div>
             <div className="time-options-container">
@@ -84,14 +86,14 @@ class BookingForm extends React.Component {
                     handleClick={this.handleClick}
                     openTimeSlot={openTimeSlot}
                   />
-                )
+                );
               })}
             </div>
           </form>
         </div>
       </React.Fragment>
-    )
+    );
   }
 }
 
-export default BookingForm
+export default BookingForm;
