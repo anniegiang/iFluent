@@ -4,7 +4,7 @@ import teachersReducer from "./teachers_reducer";
 import languagesReducer from "./languages_reducer";
 import lessonsReducer from "./lessons_reducer";
 import bookingsReducer from "./bookings_reducer";
-import timeSlotsReducer from "./time_slots_reducer";
+import openTimeSlotsReducer from "./open_time_slots_reducer";
 
 const entitiesReducer = combineReducers({
   users: usersReducer,
@@ -12,7 +12,7 @@ const entitiesReducer = combineReducers({
   languages: languagesReducer,
   lessons: lessonsReducer,
   bookings: bookingsReducer,
-  timeSlots: timeSlotsReducer
+  openTimeSlots: openTimeSlotsReducer
 });
 
 export default entitiesReducer;

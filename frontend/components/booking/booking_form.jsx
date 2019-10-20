@@ -6,7 +6,9 @@ class BookingForm extends React.Component {
   componentDidMount() {
     this.props.fetchTeacher(parseInt(this.props.match.params.teacherId));
     this.props.fetchLessons(parseInt(this.props.match.params.teacherId));
-    this.props.fetchAllTimeSlots(parseInt(this.props.match.params.teacherId));
+    this.props.fetchAllOpenTimeSlots(
+      parseInt(this.props.match.params.teacherId)
+    );
   }
 
   render() {
