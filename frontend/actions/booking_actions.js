@@ -25,3 +25,9 @@ export const fetchBooking = id => dispatch => {
     dispatch(receiveBooking(booking))
   );
 };
+
+export const createBooking = booking => dispatch => {
+  return APIUtil.createBooking(booking).then(booking =>
+    dispatch(receiveBooking(booking))
+  );
+};

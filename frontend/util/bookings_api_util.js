@@ -5,6 +5,14 @@ export const fetchAllBookings = () => {
   });
 };
 
+export const createBooking = booking => {
+  return $.ajax({
+    method: "POST",
+    url: "/api/bookings",
+    booking
+  });
+};
+
 export const fetchBooking = id => {
   return $.ajax({
     method: "GET",
