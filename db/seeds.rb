@@ -15,6 +15,7 @@ ActiveRecord::Base.transaction do
     Lesson.destroy_all
     LessonItem.destroy_all
     TimeSlot.destroy_all
+    OpenSlot.destroy_all
 
     yaml = YAML.load_file(File.join(Rails.root, 'db', 'seeds.yaml'))
     users = yaml['users']
@@ -99,8 +100,15 @@ ActiveRecord::Base.transaction do
     #         end
     #     end
     # end
-    
 
+    # open_slots
+    time_slots ||= TimeSlot.all
+    Teacher.all.each do |teacher|
+        10.times do |i|
+            rand_time_slot = time_slots.sample
+            OpenSlot.create!(teacher_id: teacher.id, time_slot_id: rand_time_slot.id)
+        end
+    end
 
 
 end
