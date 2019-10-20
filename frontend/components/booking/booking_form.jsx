@@ -26,7 +26,11 @@ class BookingForm extends React.Component {
     );
   }
 
-  handleChange() {}
+  handleChange(lessonId) {
+    return e => {
+      console.log(lessonId);
+    };
+  }
   handleSubmit() {}
 
   render() {
@@ -44,18 +48,6 @@ class BookingForm extends React.Component {
 
         <div className="booking-form-container">
           <h1>Book a lesson</h1>
-
-          <form className="booking-form" onSubmit={this.handleSubmit}>
-            <label>
-              Choose a lesson:
-              <select value={this.state.value} onChange={this.handleChange}>
-                {lessons.map(lesson => (
-                  <option value={lesson.title}>{lesson.title}</option>
-                ))}
-              </select>
-            </label>
-            <input type="submit" value="Book" />
-          </form>
 
           {openTimeSlots.map(slot => (
             <li>
