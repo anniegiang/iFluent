@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
 const LessonOption = props => {
-  const { lesson, handleClick } = props
+  const { lesson, handleClick } = props;
   const formatPrice = num => {
-    return parseFloat(Math.round(num * 100) / 100).toFixed(2)
+    return parseFloat(Math.round(num * 100) / 100).toFixed(2);
   };
   return (
     <div className="lesson-option-container">
@@ -12,7 +12,7 @@ const LessonOption = props => {
       <div className="lesson-items">
         {lesson.lessonItems.map(item => (
           <div
-            onClick={handleClick('lessonItemId')}
+            onClick={() => handleClick("lessonItem", item)}
             value={item.id}
             className="lesson-item"
           >
@@ -22,7 +22,7 @@ const LessonOption = props => {
         ))}
       </div>
     </div>
-  )
+  );
 };
 
-export default LessonOption
+export default LessonOption;

@@ -3,11 +3,11 @@ import Moment from "react-moment";
 
 const OpenTimeOption = props => {
   const { openTimeSlot, handleClick } = props;
+
   return (
     <div
-      onClick={handleClick("openTimeSlotId")}
+      onClick={() => handleClick("openTimeSlot", openTimeSlot)}
       className="time-option-container"
-      value={openTimeSlot.id}
     >
       <Moment className="time-option-start-time" format="LLL">
         {openTimeSlot.startTime}

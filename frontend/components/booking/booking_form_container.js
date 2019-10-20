@@ -2,8 +2,11 @@ import { connect } from 'react-redux';
 import BookingForm from './booking_form';
 import { fetchTeacher } from '../../actions/teacher_actions';
 import { fetchAllLessonsByTeacher } from '../../actions/lesson_actions';
-import { fetchAllOpenTimeSlots } from '../../actions/open_time_slot_actions';
-import { createbooking } from '../../actions/booking_actions';
+import {
+  fetchAllOpenTimeSlots,
+  deleteOpenTimeSlot
+} from '../../actions/open_time_slot_actions';
+import { createBooking } from '../../actions/booking_actions';
 
 const msp = (state, ownProps) => {
   return {
@@ -20,7 +23,9 @@ const mdp = dispatch => {
     createbooking: booking => dispatch(createbooking(booking)),
     fetchLessons: teacherId => dispatch(fetchAllLessonsByTeacher(teacherId)),
     fetchAllOpenTimeSlots: teacherId =>
-      dispatch(fetchAllOpenTimeSlots(teacherId))
+      dispatch(fetchAllOpenTimeSlots(teacherId)),
+    deleteOpenTimeSlot: openTimeSlotId =>
+      dispatch(deleteOpenTimeSlot(openTimeSlotId))
   }
 };
 

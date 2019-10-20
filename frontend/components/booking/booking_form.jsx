@@ -8,17 +8,12 @@ class BookingForm extends React.Component {
     super(props);
 
     this.state = {
-      studentId: this.props.currentUser.id,
-      teacherId: parseInt(this.props.match.params.teacherId),
-      lessonItemId: null,
-      startTime: null,
-      endTime: null,
-      openTimeSlotId: null
+      lessonItem: null,
+      openTimeSlot: null
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleClick = this.handleClick.bind(this);
-    this.handleTimeSlot = this.handleTimeSlot.bind(this);
   }
 
   componentDidMount() {
@@ -29,25 +24,24 @@ class BookingForm extends React.Component {
     this.props.fetchAllOpenTimeSlots(parseInt(id));
   }
 
-  handleClick(type) {
-    return e => {
-      debugger;
-      this.setState(
-        {
-          [type]: parseInt(e.currentTarget.getAttribute("value"))
-        },
-        () => {
-          console.log(this.state);
-        }
-      );
-    };
+  handleClick(type, data) {
+    this.setState({ [type]: data }, () => {
+      console.log(this.state);
+    });
   }
-
-  handleTimeSlot() {}
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.createBooking(this.state);
+    let data = {
+      studentId: this.props.currentUser.id,
+      teacherId: parseInt(this.props.match.params.teacherId),
+      lessonItemId: this.state.lessonItem.id,
+      startTime: this.state.openTimeSlot.startTime,
+      endTime: this.state.openTimeSlot.endTime
+    };
+
+    // this.props.createBooking(data);
+    // this.props.deleteOpenTimeSlot(this.state.openTimeSlot.id);
   }
 
   render() {
@@ -89,6 +83,7 @@ class BookingForm extends React.Component {
                 );
               })}
             </div>
+            <input type="submit" value="Book now" />
           </form>
         </div>
       </React.Fragment>
