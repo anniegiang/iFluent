@@ -2,10 +2,17 @@ import React from "react";
 import Moment from "react-moment";
 
 const OpenTimeOption = props => {
+  const { openTimeSlot, handleClick } = props;
   return (
-    <h1>
-      <Moment format="LLL">{props.openTimeSlot.startTime}</Moment>
-    </h1>
+    <div
+      onClick={handleClick("startTime")}
+      className="time-option-container"
+      value={openTimeSlot.id}
+    >
+      <Moment className="time-option-start-time" format="LLL">
+        {openTimeSlot.startTime}
+      </Moment>
+    </div>
   );
 };
 

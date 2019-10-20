@@ -17,6 +17,7 @@ class BookingForm extends React.Component {
 
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleClick = this.handleClick.bind(this)
+    this.handleTimeSlot = this.handleTimeSlot.bind(this)
   }
 
   componentDidMount () {
@@ -29,11 +30,18 @@ class BookingForm extends React.Component {
 
   handleClick (type) {
     return e => {
-      this.setState({
-        [type]: parseInt(e.currentTarget.getAttribute('value'))
-      })
+      this.setState(
+        {
+          [type]: parseInt(e.currentTarget.getAttribute('value'))
+        },
+        () => {
+          console.log(this.state)
+        }
+      )
     };
   }
+
+  handleTimeSlot () {}
 
   handleSubmit (e) {
     e.preventDefault()
@@ -55,26 +63,30 @@ class BookingForm extends React.Component {
         <div className="booking-form-container">
           <h1>Teacher: {teacher.name}</h1>
           <form className="booking-form" onSubmit={this.handleSubmit}>
-            <h1>Choose your lesson</h1>
-            {lessons.map(lesson => {
-              return (
-                <LessonOption
-                  key={lesson.id}
-                  handleClick={this.handleClick}
-                  lesson={lesson}
-                />
-              )
-            })}
-            <h1>Teacher Availablity</h1>
-            {openTimeSlots.map(openTimeSlot => {
-              return (
-                <OpenTimeOption
-                  key={openTimeSlot.id}
-                  handleClick={this.handleClick}
-                  openTimeSlot={openTimeSlot}
-                />
-              )
-            })}
+            <div className="lesson-options-container">
+              <h1 className="lesson-options-title">Choose your lesson</h1>
+              {lessons.map(lesson => {
+                return (
+                  <LessonOption
+                    key={lesson.id}
+                    handleClick={this.handleClick}
+                    lesson={lesson}
+                  />
+                )
+              })}
+            </div>
+            <div className="time-options-container">
+              <h1 className="time-options-title">Teacher Availablity</h1>
+              {openTimeSlots.map(openTimeSlot => {
+                return (
+                  <OpenTimeOption
+                    key={openTimeSlot.id}
+                    handleClick={this.handleClick}
+                    openTimeSlot={openTimeSlot}
+                  />
+                )
+              })}
+            </div>
           </form>
         </div>
       </React.Fragment>
