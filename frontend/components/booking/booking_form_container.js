@@ -9,7 +9,7 @@ const msp = (state, ownProps) => {
     currentUser: state.entities.users[state.session.id],
     teacher: state.entities.teachers[ownProps.match.params.teacherId],
     lessons: Object.values(state.entities.lessons),
-    fetchAllOpenTimeSlots: Object.values(state.entities.openTimeSlots)
+    openTimeSlots: Object.values(state.entities.openTimeSlots)
   };
 };
 

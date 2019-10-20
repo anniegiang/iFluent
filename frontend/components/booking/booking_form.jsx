@@ -12,16 +12,20 @@ class BookingForm extends React.Component {
   }
 
   render() {
-    if (!this.props.teacher || !this.props.lessons || !this.props.timeSlots) {
+    if (
+      !this.props.teacher ||
+      !this.props.lessons ||
+      !this.props.openTimeSlots
+    ) {
       return null;
     }
-    const { teacher, lessons, timeSlots } = this.props;
+    const { teacher, lessons, openTimeSlots } = this.props;
     return (
       <React.Fragment>
         <LandingNavBarContainer />
         <div className="booking-form-container">
           <h1>Book a lesson</h1>
-          {timeSlots.map(slot => (
+          {openTimeSlots.map(slot => (
             <Moment format="LLLL">{slot.endTime}</Moment>
           ))}
         </div>
