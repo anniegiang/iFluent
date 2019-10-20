@@ -1,0 +1,1 @@
+json.extract! @open_slot, :id
