@@ -15,12 +15,12 @@ class DashboardBookings extends React.Component {
           {bookings.sort().map(booking => (
             <li className="booking-info" key={booking.id}>
               <h3 className="lesson-language">{booking.languageName}</h3>
-              <h4 className="lesson-title">{booking.title}</h4>
-              <h4 className="lesson-teacher">Teacher: {booking.teacher}</h4>
+              <Moment format="LLLL">{booking.startTime}</Moment>
               <h4 className="lesson-teacher">
                 Duration: {booking.duration} minutes
               </h4>
-              <Moment format="LLLL">{booking.startTime}</Moment>
+              <h4 className="lesson-title">{booking.title}</h4>
+              <h4 className="lesson-teacher">Teacher: {booking.teacher}</h4>
             </li>
           ))}
         </ul>
