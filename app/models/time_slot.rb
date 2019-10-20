@@ -12,7 +12,6 @@
 #
 
 class TimeSlot < ApplicationRecord
-  validates :start_time, :end_time
-
-
+  validates :start_time, :end_time, presence: true
+  
 end

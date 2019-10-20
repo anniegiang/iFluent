@@ -6,9 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-require "ice_cube"
-require "faker"
-
 ActiveRecord::Base.transaction do 
     Language.destroy_all
     User.destroy_all
@@ -63,19 +60,41 @@ ActiveRecord::Base.transaction do
         LessonItem.create!(item)
     end
 
-    # (10..12).each do |month|
-    #     (1..28).each do |day|
+    # time_slots - 10/2019- 12/2019
+    (10..12).each do |month|
+        (1..31).each do |day|
+            (0..24).each do |hour|
+                next if month.odd? && day > 30
+                start_time = DateTime.new(2019, month, day, hour, 0)
+                TimeSlot.create({
+                    start_time: start_time,
+                    end_time: start_time + 30.minutes,
+                })
+                TimeSlot.create({
+                    start_time: start_time + 30.minutes,
+                    end_time: start_time + 60.minutes,
+                })
+            end
+        end
+    end
+
+    # # time_slots - 1/2020- 9/2020
+    # (1..9).each do |month|
+    #     (1..31).each do |day|
     #         (0..24).each do |hour|
-    #             start_time = DateTime.new(2019, month, day, hour, 0)
+    #             next if month == 2 && day > 28 
+    #             next if (month.even? || month != 8 || month == 9) && day > 30  
+
+    #             start_time = DateTime.new(2020, month, day, hour, 0)
+    #             p start_time
+    #             p "================"
     #             TimeSlot.create({
     #                 start_time: start_time,
     #                 end_time: start_time + 30.minutes,
-    #                 occurence: 'daily'
     #             })
     #             TimeSlot.create({
     #                 start_time: start_time + 30.minutes,
     #                 end_time: start_time + 60.minutes,
-    #                 occurence: 'daily'
     #             })
     #         end
     #     end
