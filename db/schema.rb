@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_20_011811) do
+ActiveRecord::Schema.define(version: 2019_10_20_012654) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -73,10 +73,10 @@ ActiveRecord::Schema.define(version: 2019_10_20_011811) do
   end
 
   create_table "open_slots", force: :cascade do |t|
-    t.integer "time_slot", null: false
+    t.integer "time_slot_id", null: false
     t.integer "teacher_id", null: false
     t.boolean "available", default: true
-    t.index ["time_slot", "teacher_id"], name: "index_open_slots_on_time_slot_and_teacher_id", unique: true
+    t.index ["time_slot_id", "teacher_id"], name: "index_open_slots_on_time_slot_id_and_teacher_id", unique: true
   end
 
   create_table "teacher_speaks", force: :cascade do |t|

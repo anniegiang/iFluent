@@ -36,10 +36,14 @@ class Teacher < ApplicationRecord
     foreign_key: :teacher_id,
     class_name: 'Booking'
 
-  has_many :time_slots,
+  has_many :open_slots,
     primary_key: :id,
     foreign_key: :teacher_id,
-    class_name: "TimeSlot"
+    class_name: "OpenSlot"
+
+  has_many :open_time_slots,
+    through: :open_slots,
+    source: :time_slot
 
   has_many :spoken_languages,
     primary_key: :id,

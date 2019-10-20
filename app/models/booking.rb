@@ -6,9 +6,10 @@
 #  teacher_id     :integer          not null
 #  student_id     :integer          not null
 #  lesson_item_id :integer          not null
-#  time_slot_id   :integer          not null
 #  created_at     :datetime         not null
 #  updated_at     :datetime         not null
+#  start_time     :datetime         not null
+#  end_time       :datetime         not null
 #
 
 class Booking < ApplicationRecord
