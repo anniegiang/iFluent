@@ -1,11 +1,24 @@
-import React from 'react';
+import React from "react";
 
 const LessonOption = props => {
+  const { lesson, handleChange } = props;
+  const formatPrice = num => {
+    return parseFloat(Math.round(num * 100) / 100).toFixed(2);
+  };
   return (
-    <li value={props.lesson.id} onClick={props.handleChange('lessonItemId')}>
-      {props.lesson.title}
-    </li>
-  )
+    <div className="lesson-option-container">
+      <h1 className="lesson-option-title">{lesson.title}</h1>
+      <p className="lesson-option-description">{lesson.description}</p>
+      <div className="lesson-items">
+        {lesson.lessonItems.map(item => (
+          <div className="lesson-item">
+            <h2 className="lesson-item-duration">{item.duration} minutes</h2>
+            <h2 className="lesson-item-price">${formatPrice(item.price)}</h2>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 };
 
-export default LessonOption
+export default LessonOption;
