@@ -16,7 +16,7 @@ class BookingForm extends React.Component {
     }
 
     this.handleSubmit = this.handleSubmit.bind(this)
-    this.handleChange = this.handleChange.bind(this)
+    this.handleClick = this.handleClick.bind(this)
   }
 
   componentDidMount () {
@@ -27,9 +27,14 @@ class BookingForm extends React.Component {
     this.props.fetchAllOpenTimeSlots(parseInt(id))
   }
 
-  handleChange (type) {
+  handleClick (type) {
     return e => {
-      this.setState({ [type]: e.target.value })
+      this.setState(
+        { [type]: parseInt(e.currentTarget.getAttribute('value')) },
+        () => {
+          console.log(this.state)
+        }
+      )
     };
   }
 
@@ -57,7 +62,7 @@ class BookingForm extends React.Component {
               return (
                 <LessonOption
                   key={lesson.id}
-                  handleChange={this.handleChange}
+                  handleClick={this.handleClick}
                   lesson={lesson}
                 />
               )
