@@ -1,4 +1,4 @@
-import { RECEIVE_ALL_TIME_SLOTS } from "../actions/open_time_slot_actions";
+import { RECEIVE_ALL_OPEN_TIME_SLOTS } from "../actions/open_time_slot_actions";
 
 const openTimeSlotsReducer = (state = {}, action) => {
   Object.freeze(state);
