@@ -11,13 +11,15 @@ class DashboardBookings extends React.Component {
           <h5 style={{ textAlign: "center" }}>No upcoming lessons</h5>
         )}
         <ul className="bookings-container">
-          {bookings.map(booking => (
+          {bookings.sort().map(booking => (
             <li className="booking-info" key={booking.id}>
               <h3 className="lesson-language">{booking.languageName}</h3>
               <h4 className="lesson-title">{booking.title}</h4>
               <h4 className="lesson-teacher">Teacher: {booking.teacher}</h4>
-              <Moment format="LLLL">{booking.startTime}</Moment> -{" "}
-              <Moment format="LT">{booking.endTime}</Moment>
+              <h4 className="lesson-teacher">
+                Duration: {booking.duration} minutes
+              </h4>
+              <Moment format="LLLL">{booking.startTime}</Moment>
             </li>
           ))}
         </ul>

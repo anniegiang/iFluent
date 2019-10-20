@@ -9,11 +9,11 @@
 #  created_at     :datetime         not null
 #  updated_at     :datetime         not null
 #  start_time     :datetime         not null
-#  end_time       :datetime         not null
+#  duration       :integer          not null
 #
 
 class Booking < ApplicationRecord
-  validates :teacher_id, :student_id, :lesson_item_id, :time_slot_id, presence: true
+  validates :teacher_id, :student_id, :lesson_item_id, :start_time, :duration, presence: true
 
   belongs_to :teacher,
     primary_key: :id,

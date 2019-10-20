@@ -33,6 +33,6 @@ class Api::BookingsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit(:student_id, :teacher_id, :start_time, :end_time, :lesson_item_id)
+    params.require(:booking).permit(:student_id, :teacher_id, :start_time, :duration, :lesson_item_id)
   end
 end

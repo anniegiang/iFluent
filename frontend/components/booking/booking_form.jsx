@@ -31,17 +31,23 @@ class BookingForm extends React.Component {
   }
 
   handleSubmit(e) {
-    e.preventDefault();
-    let data = {
-      studentId: this.props.currentUser.id,
-      teacherId: parseInt(this.props.match.params.teacherId),
-      lessonItemId: this.state.lessonItem.id,
-      startTime: this.state.openTimeSlot.startTime,
-      endTime: this.state.openTimeSlot.endTime
-    };
+    if (this.state.lessonItem && this.state.openTimeSlot) {
+      e.preventDefault();
 
-    // this.props.createBooking(data);
-    // this.props.deleteOpenTimeSlot(this.state.openTimeSlot.id);
+      const { openTimeSlot, lessonItem } = this.state;
+
+      let data = {
+        student_id: this.props.currentUser.id,
+        teacher_id: parseInt(this.props.match.params.teacherId),
+        lesson_item_id: lessonItem.id,
+        start_time: openTimeSlot.startTime,
+        duration: lessonItem.duration
+      };
+      this.props.createBooking(data);
+      this.props.deleteOpenTimeSlot(openTimeSlot.id);
+    } else {
+      alert("Booking incomplete");
+    }
   }
 
   render() {

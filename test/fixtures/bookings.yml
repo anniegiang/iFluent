@@ -9,7 +9,7 @@
 #  created_at     :datetime         not null
 #  updated_at     :datetime         not null
 #  start_time     :datetime         not null
-#  end_time       :datetime         not null
+#  duration       :integer          not null
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
