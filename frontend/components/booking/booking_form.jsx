@@ -89,7 +89,11 @@ class BookingForm extends React.Component {
                   );
                 })}
               </div>
-              <input className="booking-form-submit" type="submit" value="Book now" />
+              <input
+                className="booking-form-submit"
+                type="submit"
+                value="Book now"
+              />
             </div>
           </form>
         </div>
