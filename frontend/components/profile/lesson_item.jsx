@@ -100,11 +100,6 @@ class LessonItem extends React.Component {
           >
             <span>BOOK NOW</span>
           </button>
-          {/* <Link to={`/booking/teacher/${this.props.lesson.teacherId}`}>
-            <button type="button" className="modal-lessonDetail-bookBtn">
-              <span>BOOK NOW</span>
-            </button>
-          </Link> */}
         </div>
       </div>
     );

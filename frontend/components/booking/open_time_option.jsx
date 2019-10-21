@@ -7,9 +7,9 @@ const OpenTimeOption = props => {
   return (
     <div
       onClick={() => handleClick("openTimeSlot", openTimeSlot)}
-      className="time-option-container"
+      className="time-option"
     >
-      <Moment className="time-option-start-time" format="LLLL" >
+      <Moment className="time-option-start-time" format="LLLL">
         {openTimeSlot.startTime}
       </Moment>
     </div>

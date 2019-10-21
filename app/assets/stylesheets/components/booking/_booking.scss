@@ -7,7 +7,7 @@
 
 .booking-form-container > h1 {
   text-align: center;
-  margin: 10px 0;
+  margin: 20px 0;
   font-size: 25px;
 }
 
@@ -17,24 +17,27 @@
   display: flex;
 }
 
-.lesson-options-container .lesson-options-title {
+.lesson-options-title,
+.time-options-title {
   margin: 20px 0;
-}
-
-.lesson-options-title {
   font-size: 23px;
   font-weight: 200;
 }
 
-.lesson-options-container {
+.lesson-options-container,
+.time-options-container {
   width: 50%;
+}
+
+.lesson-options-container {
+  margin-right: 40px;
 }
 
 .lesson-option-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   padding: 20px;
   border-radius: 3px;
   box-shadow: rgba(8, 19, 68, 0.2) 0px 2px 8px 0px;
@@ -42,7 +45,7 @@
 
 .lesson-option-title {
   font-size: 18px;
-  margin-bottom: 7px;
+  margin-bottom: 10px;
 }
 
 .lesson-option-description {
@@ -71,9 +74,32 @@
 }
 
 .lesson-item:hover {
-  box-shadow: rgba(8, 19, 68, 0.4) 0px 2px 8px 0px;
+  box-shadow: rgba(8, 19, 68, 0.3) 0px 2px 8px 0px;
 }
 
-.lesson-item:focus {
-  background-color: red;
+.time-option {
+  // box-shadow: rgba(8, 19, 68, 0.2) 0px 2px 2px 0px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  padding: 10px;
+  width: 70%;
+  text-align: center;
+}
+
+.time-option:hover {
+  box-shadow: rgba(8, 19, 68, 0.5) 0px 2px 8px 0px;
+}
+
+.booking-form-submit {
+  min-width: 150px;
+  background-image: linear-gradient(90deg, #ff4338, #ff786b);
+  font-weight: 500;
+  color: #fff;
+  padding: 15px 12px;
+  font-size: 14px;
+  border-radius: 3px;
+  text-align: center;
+  margin: 40px auto;
 }

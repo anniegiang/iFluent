@@ -78,17 +78,19 @@ class BookingForm extends React.Component {
             </div>
             <div className="time-options-container">
               <h1 className="time-options-title">Teacher Availablity</h1>
-              {openTimeSlots.map(openTimeSlot => {
-                return (
-                  <OpenTimeOption
-                    key={openTimeSlot.id}
-                    handleClick={this.handleClick}
-                    openTimeSlot={openTimeSlot}
-                  />
-                );
-              })}
+              <div className="time-options">
+                {openTimeSlots.map(openTimeSlot => {
+                  return (
+                    <OpenTimeOption
+                      key={openTimeSlot.id}
+                      handleClick={this.handleClick}
+                      openTimeSlot={openTimeSlot}
+                    />
+                  );
+                })}
+              </div>
+              <input className="booking-form-submit" type="submit" value="Book now" />
             </div>
-            <input type="submit" value="Book now" />
           </form>
         </div>
       </React.Fragment>
