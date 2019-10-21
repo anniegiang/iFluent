@@ -11,7 +11,7 @@ class SearchBar extends React.Component {
       <div className="teach-language" style={{ top: "0px" }}>
         <p className="teach-language-choice">
           <span onClick={this.props.openDropDown} id="language-to-learn">
-            {this.props.match.params.languageName}
+            {this.props.match.params.languageName || "Languages"}
             <span className="arrow-down"></span>
           </span>
         </p>

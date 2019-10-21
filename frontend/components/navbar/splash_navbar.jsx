@@ -32,7 +32,8 @@ class SplashNavBar extends React.Component {
       <nav className="splash-nav-container">
         <a href="/" className="splash-logo">
           <img
-            src="https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/logo_white.72e72948.svg"
+            src={window.logo}
+            // src="https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/logo_white.72e72948.svg"
             alt="splash-logo"
           />
         </a>
