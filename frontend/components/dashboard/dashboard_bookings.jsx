@@ -4,7 +4,6 @@ import Moment from "react-moment";
 class DashboardBookings extends React.Component {
   render() {
     const { bookings } = this.props;
-    debugger;
     return (
       <div className="dashboard-bookings-container">
         <h1 className="bookings-title">Upcoming Lessons</h1>

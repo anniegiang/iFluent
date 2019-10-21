@@ -9,7 +9,6 @@ class SearchResults extends React.Component {
   }
 
   componentDidMount() {
-    debugger;
     this.props.fetchAllTeachersByLanguage(this.props.match.params.languageName);
   }
 

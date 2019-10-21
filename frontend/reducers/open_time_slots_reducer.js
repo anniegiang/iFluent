@@ -10,7 +10,6 @@ const openTimeSlotsReducer = (state = {}, action) => {
       return action.openTimeSlots
     case DELETE_OPEN_TIME_SLOT:
       const newState = Object.assign({}, state)
-      debugger;
       delete newState[action.openTimeSlotId]
       return newState
     default:

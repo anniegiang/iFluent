@@ -12,16 +12,14 @@ class SearchDropDown extends React.Component {
     }
     const { languages } = this.props;
     return (
-      <div className="menu teach-menu" style={{ width: "300px" }}>
+      <div className="menu teach-menu">
         <div
           className="menu-items menu-items-down"
           style={{
-            overflowY: "hidden",
-            borderRadius: "0px 0px 4px 4px",
-            top: "260%"
+            overflowY: "hidden"
           }}
         >
-          <div style={{ maxHeight: "300px", overflowY: "auto" }}>
+          <div style={{ maxHeight: "400px", overflowY: "auto" }}>
             <div className="menu-group">
               <h1 className="menu-group-name">POPULAR LANGUAGES</h1>
               {languages.map(language => (
