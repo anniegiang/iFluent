@@ -8,9 +8,9 @@ class SearchBar extends React.Component {
     this.handleUpArrow = this.handleUpArrow.bind(this);
   }
 
-  componentDidMount() {
-    this.props.fetchAllTeachersByLanguage(this.props.match.params.languageName);
-  }
+  // componentDidMount() {
+  //   this.props.fetchAllTeachersByLanguage(this.props.match.params.languageName);
+  // }
 
   handleDownArrow(e) {
     const parentEl = document.querySelector("#language-to-learn");
@@ -43,7 +43,7 @@ class SearchBar extends React.Component {
       <div className="teach-language" style={{ top: "0px" }}>
         <p className="teach-language-choice">
           <span onClick={this.handleDownArrow} id="language-to-learn">
-            {this.props.match.params.languageName}
+            English
             <span onClick={this.handleDownArrow} className="arrow-down"></span>
           </span>
         </p>
