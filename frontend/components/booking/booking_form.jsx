@@ -2,6 +2,7 @@ import React from "react";
 import LandingNavBarContainer from "../navbar/landing_navbar_container";
 import LessonOption from "./lesson_option";
 import OpenTimeOption from "./open_time_option";
+import Moment from "react-moment";
 
 class BookingForm extends React.Component {
   constructor(props) {
@@ -113,6 +114,16 @@ class BookingForm extends React.Component {
                   {this.state.lessonItem === null || this.state.lesson === null
                     ? ""
                     : "$" + this.state.lessonItem.price}
+                </h2>
+                <h2>
+                  When:{" "}
+                  {this.state.openTimeSlot === null ? (
+                    ""
+                  ) : (
+                    <Moment className="time-option-start-time" format="LLLL">
+                      {this.state.openTimeSlot.startTime}
+                    </Moment>
+                  )}
                 </h2>
               </div>
               <input

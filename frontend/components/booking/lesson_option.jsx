@@ -15,7 +15,8 @@ const LessonOption = props => {
             onClick={() => handleClick("lessonItem", { item, lesson })}
             value={item.id}
             className="lesson-item"
-            tabindex="0"
+            tabIndex="0"
+            key={item.id}
           >
             <h2 className="lesson-item-duration">{item.duration} minutes</h2>
             <h2 className="lesson-item-price">${formatPrice(item.price)}</h2>

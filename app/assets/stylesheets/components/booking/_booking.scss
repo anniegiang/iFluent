@@ -73,8 +73,6 @@
   margin-bottom: 3px;
 }
 
-.lesson-item:hover,
-.time-option:hover,
 .lesson-item:focus,
 .time-option:focus {
   border: 1px solid #ff786b;
@@ -92,9 +90,10 @@
   text-align: center;
 }
 
-// .time-option:hover {
-//   box-shadow: rgba(8, 19, 68, 0.5) 0px 2px 8px 0px;
-// }
+.lesson-item:hover,
+.time-option:hover {
+  box-shadow: rgba(8, 19, 68, 0.5) 0px 2px 8px 0px;
+}
 
 .booking-form-submit {
   min-width: 150px;
