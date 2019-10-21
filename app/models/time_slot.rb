@@ -10,7 +10,7 @@
 #
 
 class TimeSlot < ApplicationRecord
-  validates :start_time, :end_time, presence: true
+  validates :start_time, presence: true
   
   has_many :open_slots,
     primary_key: :id,

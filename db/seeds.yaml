@@ -34,6 +34,16 @@ users:
     email: linda@gmail.com
     password: "password"
     profile_picture_url: "https://imagesavatar-static01.italki.com/4T064805780_Avatar.jpg"
+  - id: 8
+    name: "Jane"
+    email: jane@gmail.com
+    password: "password"
+    profile_picture_url: "https://imagesavatar-static01.italki.com/T047766180_Avatar.jpg"
+  - id: 9
+    name: "Robert"
+    email: robert@gmail.com
+    password: "password"
+    profile_picture_url: "https://imagesavatar-static01.italki.com/1T035600858_Avatar.jpg"
 
 teachers:
   - id: 1
@@ -41,8 +51,8 @@ teachers:
     trial_rate: 8.00
     hourly_rate: 11.00
     title: "Professional Teacher"
-    country: "United States"
-    video_url: "https://www.youtube.com/watch?v=kVXcqvpJYcI"
+    country: "United Kingdom"
+    video_url: "https://www.youtube.com/embed/kVXcqvpJYcI?enablejsapi=1&modestbranding=1&rel=0&showinfo=0"
     about_me: "Hi, I'm Andrew! I was born and grew up in Sheffield, England. I have also lived in Taiwan for over a year and currently I live with my wife in the Philippines. In England I helped my family operate a construction business for a number of years before I moved overseas to teach English. I really enjoy teaching English online as it allows me to meet many interesting people and work remotely. My interests include traveling, culture, music, food, cycling, nature etc. I also love meeting new people and helping them to improve their English."
   - id: 2
     teacher_id: 5
@@ -68,6 +78,22 @@ teachers:
     country: "China"
     video_url: "https://www.youtube.com/embed/2f45Smme_o0?enablejsapi=1&modestbranding=1&rel=0&showinfo=0"
     about_me: "I am confident that I have the kindness and patience to be a teacher, and I believe that the combination of these factors and professional knowledge can bring students a good learning experience!"
+  - id: 5
+    teacher_id: 8
+    hourly_rate: 15.00
+    trial_rate: 9.00
+    title: "Professional Teacher"
+    country: "Macau"
+    video_url: "https://www.youtube.com/embed/0GFftRMk9dA?enablejsapi=1&modestbranding=1&rel=0&showinfo=0"
+    about_me: "I am confident that I have the kindness and patience to be a teacher, and I believe that the combination of these factors and professional knowledge can bring students a good learning experience!"
+  - id: 6
+    teacher_id: 9
+    hourly_rate: 9.50
+    trial_rate: 5.50
+    title: "Community Tutor"
+    country: "South Africa"
+    video_url: "https://www.youtube.com/embed/t6dQAmvLVmE?enablejsapi=1&modestbranding=1&rel=0&showinfo=0"
+    about_me: "I've worked for 30+ years in various industries and in numerous positions incl. HR & Senior Management. I use this knowledge to enhance my teaching skills by relating to all kinds of people of all ages and backgrounds. I'm a keen sportsman (open ocean swimming, cycling, squash, basketball and football) and have other hobbies including reading, aviation, photography, PC's, graphic design and Lego building!"
 
 languages:
   - id: 1
@@ -112,6 +138,14 @@ teacher_teaches:
     teacher_id: 4
     language_id: 2
     fluency: 5
+  - id: 5
+    teacher_id: 5
+    language_id: 2
+    fluency: 5
+  - id: 6
+    teacher_id: 6
+    language_id: 1
+    fluency: 5
 
 teacher_speaks:
   - id: 1
@@ -138,6 +172,14 @@ teacher_speaks:
     teacher_id: 4
     language_id: 12
     fluency: 4
+  - id: 7
+    teacher_id: 5
+    language_id: 6
+    fluency: 5
+  - id: 8
+    teacher_id: 6
+    language_id: 3
+    fluency: 5
 
 lessons:
   - id: 1
@@ -207,9 +249,65 @@ lessons:
     teacher_id: 4
     language_name: "Chinese (Mandarin)"
     lessons_taught: 412
-    title: "Let's improve our Chinese with Boya Chinese！"
+    title: "Let's improve our Chinese！"
     category: "General"
-    description: "In this session, students will be taught Chinese with the semi-intermediate level of Boya Chinese as the teaching material. Every unit will be taught with 5 periods, so every 5 sessions will be set as one package."
+    description: "In this session, students will be taught Chinese with the semi-intermediate level of teaching material. Every unit will be taught with 5 periods, so every 5 sessions will be set as one package."
+  - id: 11
+    teacher_id: 3
+    language_name: "Chinese (Mandarin)"
+    lessons_taught: 572
+    title: "One on One Chinese conversational practice"
+    category: "Conversation Practice"
+    description: "You can also choose any topics that you are interested, such as music, sports, culture, Chinese daily life. Help you build your confidence to speak Chinese and express your opinion in Chinese. Forget grammars, mistakes, just open your mouth to speak Chinese. The more you speak, the better you speak. Just choose one topic, let's do it! It would be FUN."
+  - id: 12
+    teacher_id: 4
+    language_name: "Chinese (Mandarin)"
+    lessons_taught: 645
+    title: "Conversation practice/Regular course tutoring: Chinese (Mandarin)"
+    category: "Conversation Practice"
+    description: "You will learn the standard pronunciation and structure of Mandarin(it can be a big mess if you don't pronounce correctly or know the structure). We will be doing grammar and have short conversations with examples taken from Chinese culture, traditions, and everyday life."
+  - id: 13
+    teacher_id: 5
+    language_name: "Chinese (Mandarin)"
+    lessons_taught: 1534
+    title: "Trial lesson"
+    category: "Trial"
+    description: "In the trial lesson, we'll talk about your learning plan, goal and preferences, just feel free to book a lesson !"
+  - id: 14
+    teacher_id: 5
+    language_name: "Chinese (Mandarin)"
+    lessons_taught: 412
+    title: "One on One Chinese conversational practice"
+    category: "Conversation Practice"
+    description: "You can also choose any topics that you are interested, such as music, sports, culture, Chinese daily life. Help you build your confidence to speak Chinese and express your opinion in Chinese. Forget grammars, mistakes, just open your mouth to speak Chinese. The more you speak, the better you speak. Just choose one topic, let's do it! It would be FUN."
+  - id: 15
+    teacher_id: 5
+    language_name: "Chinese (Mandarin)"
+    lessons_taught: 412
+    title: "Let's improve our Chinese！"
+    category: "General"
+    description: "In this session, students will be taught Chinese with the semi-intermediate level of teaching material. Every unit will be taught with 5 periods, so every 5 sessions will be set as one package."
+  - id: 16
+    teacher_id: 6
+    lessons_taught: 613
+    language_name: "English"
+    title: "Trial lesson"
+    category: "Trial"
+    description: "In a trial lesson I will demonstrate my teaching methods. It also gives me an opportunity to understand what level the student is at and make a lesson plan."
+  - id: 17
+    teacher_id: 6
+    lessons_taught: 1164
+    language_name: "English"
+    title: "Practical Grammar Lessons"
+    category: "General"
+    description: "We follow an online curriculum together that helps improve all aspects of the English language. Lessons are made to suit your needs and interests. Subject material includes tenses, grammar rules, prepositions, articles and much more! Materials will be provided and homework can be assigned."
+  - id: 18
+    teacher_id: 6
+    language_name: "English"
+    lessons_taught: 512
+    title: "Informal Tutoring"
+    category: "General"
+    description: "Are you intermediate or advanced and need someone to practice speaking English with? Let me help! You choose the topic and I'll help you by using new phrases, idioms, and vocabulary. You can practice your listening, asking questions, and responding. If you prefer I choose the topic, let me know!"
 
 lesson_items:
   - id: 1
@@ -284,3 +382,51 @@ lesson_items:
     lesson_id: 10
     duration: 60
     price: 23.00
+  - id: 19
+    lesson_id: 11
+    duration: 45
+    price: 23.00
+  - id: 20
+    lesson_id: 11
+    duration: 90
+    price: 32.00
+  - id: 21
+    lesson_id: 12
+    duration: 45
+    price: 18.00
+  - id: 22
+    lesson_id: 12
+    duration: 60
+    price: 24.00
+  - id: 23
+    lesson_id: 13
+    duration: 30
+    price: 8.00
+  - id: 24
+    lesson_id: 14
+    duration: 45
+    price: 15.00
+  - id: 25
+    lesson_id: 14
+    duration: 60
+    price: 20.00
+  - id: 26
+    lesson_id: 15
+    duration: 60
+    price: 25.00
+  - id: 27
+    lesson_id: 15
+    duration: 90
+    price: 32.00
+  - id: 28
+    lesson_id: 16
+    duration: 30
+    price: 5.50
+  - id: 29
+    lesson_id: 17
+    duration: 45
+    price: 9.50
+  - id: 30
+    lesson_id: 18
+    duration: 60
+    price: 15.50

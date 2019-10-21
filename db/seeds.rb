@@ -69,11 +69,9 @@ ActiveRecord::Base.transaction do
                 start_time = DateTime.new(2019, month, day, hour, 0)
                 TimeSlot.create({
                     start_time: start_time,
-                    end_time: start_time + 30.minutes,
                 })
                 TimeSlot.create({
                     start_time: start_time + 30.minutes,
-                    end_time: start_time + 60.minutes,
                 })
             end
         end
@@ -91,11 +89,9 @@ ActiveRecord::Base.transaction do
     #             p "================"
     #             TimeSlot.create({
     #                 start_time: start_time,
-    #                 end_time: start_time + 30.minutes,
     #             })
     #             TimeSlot.create({
     #                 start_time: start_time + 30.minutes,
-    #                 end_time: start_time + 60.minutes,
     #             })
     #         end
     #     end

@@ -15,9 +15,17 @@ const TeacherCardRight = props => {
         <div className="teacher-card-video">
           <div className="iframe-video">
             <div className="video-player">
-              <video controls controlsList="nodownload">
-                <source src={props.teacher.videoUrl} type="video/mp4" />
-              </video>
+              {/* <video controls controlsList="nodownload">
+                <source src={props.teacher.videoUrl} />
+              </video> */}
+              <iframe
+                src={props.teacher.videoUrl}
+                frameBorder="0"
+                width="100%"
+                height="422"
+                title="video"
+                allowFullScreen=""
+              ></iframe>
               {/* <div className="video-poster-overlay">
                 <i className="video-play-icon"></i>
               </div> */}
