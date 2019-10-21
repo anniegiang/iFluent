@@ -69,7 +69,7 @@ const TeacherInfoCard = props => {
                   </div>
                 </div>
                 <div>
-                  <span>{totalLessons} LESSONS</span>
+                  <span>{totalLessons} LESSONS TAUGHT</span>
                 </div>
                 <div>
                   <span>{randStudents} STUDENTS</span>

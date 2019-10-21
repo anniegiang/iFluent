@@ -16,12 +16,11 @@ class TeacherCard extends React.Component {
 
   render() {
     return (
-      <div
-        id={this.props.teacher.id}
-        className="search-teacher-card_container"
-        onClick={this.handleClick}
-      >
-        <TeacherCardLeft teacher={this.props.teacher} />
+      <div id={this.props.teacher.id} className="search-teacher-card_container">
+        <TeacherCardLeft
+          language={this.props.language}
+          teacher={this.props.teacher}
+        />
         <TeacherCardRight teacher={this.props.teacher} />
       </div>
     );

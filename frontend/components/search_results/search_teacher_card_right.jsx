@@ -8,7 +8,6 @@ const TeacherCardRight = props => {
       <TabList>
         <Tab>Video</Tab>
         <Tab>Intro</Tab>
-        <Tab>Calendar</Tab>
       </TabList>
 
       <div className="teacher-card-tab-active"></div>
@@ -19,9 +18,9 @@ const TeacherCardRight = props => {
               <video controls controlsList="nodownload">
                 <source src={props.teacher.videoUrl} type="video/mp4" />
               </video>
-              <div className="video-poster-overlay">
+              {/* <div className="video-poster-overlay">
                 <i className="video-play-icon"></i>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -29,10 +28,6 @@ const TeacherCardRight = props => {
 
       <TabPanel className="teacher-card-tab-body">
         <p className="teacher-card-intro">{props.teacher.aboutMe}</p>
-      </TabPanel>
-
-      <TabPanel className="teacher-card-tab-body">
-        <p>Calendar goes here</p>
       </TabPanel>
     </Tabs>
   );
