@@ -8,6 +8,7 @@ class BookingForm extends React.Component {
     super(props);
 
     this.state = {
+      lesson: null,
       lessonItem: null,
       openTimeSlot: null
     };
@@ -25,7 +26,11 @@ class BookingForm extends React.Component {
   }
 
   handleClick(type, data) {
-    this.setState({ [type]: data });
+    if (type === "lessonItem") {
+      this.setState({ lesson: data.lesson, lessonItem: data.item });
+    } else {
+      this.setState({ [type]: data });
+    }
   }
 
   handleSubmit(e) {
@@ -88,6 +93,27 @@ class BookingForm extends React.Component {
                     />
                   );
                 })}
+              </div>
+              <div>
+                <h1>Your Booking</h1>
+                <h2>
+                  Lesson:{" "}
+                  {this.state.lessonItem === null || this.state.lesson === null
+                    ? ""
+                    : this.state.lesson.title}
+                </h2>
+                <h2>
+                  Duration:{" "}
+                  {this.state.lessonItem === null || this.state.lesson === null
+                    ? ""
+                    : this.state.lessonItem.duration + " minutes"}
+                </h2>
+                <h2>
+                  Price:{" "}
+                  {this.state.lessonItem === null || this.state.lesson === null
+                    ? ""
+                    : "$" + this.state.lessonItem.price}
+                </h2>
               </div>
               <input
                 className="booking-form-submit"

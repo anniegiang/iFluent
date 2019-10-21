@@ -12,7 +12,7 @@ const LessonOption = props => {
       <div className="lesson-items">
         {lesson.lessonItems.map(item => (
           <div
-            onClick={() => handleClick("lessonItem", item)}
+            onClick={() => handleClick("lessonItem", { item, lesson })}
             value={item.id}
             className="lesson-item"
             tabindex="0"
