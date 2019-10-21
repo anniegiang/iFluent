@@ -1,9 +1,12 @@
 import React from "react";
+import { withRouter } from "react-router-dom";
 
 class SearchBar extends React.Component {
   constructor(props) {
     super(props);
-
+    this.state = {
+      open: false
+    };
     this.handleDownArrow = this.handleDownArrow.bind(this);
     this.handleUpArrow = this.handleUpArrow.bind(this);
   }
@@ -39,7 +42,7 @@ class SearchBar extends React.Component {
       <div className="teach-language" style={{ top: "0px" }}>
         <p className="teach-language-choice">
           <span onClick={this.handleDownArrow} id="language-to-learn">
-            Search
+            {this.props.match.params.languageName}
             <span className="arrow-down"></span>
           </span>
         </p>
@@ -48,4 +51,4 @@ class SearchBar extends React.Component {
   }
 }
 
-export default SearchBar;
+export default withRouter(SearchBar);
