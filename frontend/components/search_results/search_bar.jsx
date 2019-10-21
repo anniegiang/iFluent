@@ -43,7 +43,7 @@ class SearchBar extends React.Component {
       <div className="teach-language" style={{ top: "0px" }}>
         <p className="teach-language-choice">
           <span onClick={this.handleDownArrow} id="language-to-learn">
-            English
+            Search
             <span onClick={this.handleDownArrow} className="arrow-down"></span>
           </span>
         </p>
