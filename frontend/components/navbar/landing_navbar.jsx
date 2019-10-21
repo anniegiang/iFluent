@@ -1,5 +1,5 @@
 import React from "react";
-
+import SearchBarContainer from "../search_results/search_bar_container";
 class LandingNavBar extends React.Component {
   constructor(props) {
     super(props);
@@ -33,6 +33,7 @@ class LandingNavBar extends React.Component {
             alt="landing-logo"
           />
         </a>
+        <SearchBarContainer />
         <div className="landing-nav-links">
           <a id="find-a-teacher" href="#/teachers/English">
             Find a Teacher

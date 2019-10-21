@@ -4,6 +4,7 @@ import { closeModal } from "../../actions/modal_actions";
 import LoginFormContainer from "../session/login_form_container";
 import SignupFormContainer from "../session/signup_form_container";
 import LessonItemContainer from "../profile/lesson_item_container";
+import SearchDropDownContainer from "../search_results/search_drop_down_container";
 
 function Modal({ modal, closeModal }) {
   if (!modal) {
@@ -19,6 +20,9 @@ function Modal({ modal, closeModal }) {
       break;
     case "lessonItem":
       component = <LessonItemContainer />;
+      break;
+    case "searchDropDown":
+      component = <SearchDropDownContainer />;
       break;
     default:
       return null;
