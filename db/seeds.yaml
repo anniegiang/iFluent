@@ -20,13 +20,13 @@ users:
     password: "password"
     profile_picture_url: "https://imagesavatar-static01.italki.com/T026578497_Avatar.jpg"
   - id: 5
-    name: "Morrison Shelby"
-    email: morrison@gmail.com
+    name: "Shelby Morrison "
+    email: shelby@gmail.com
     password: "password"
     profile_picture_url: "https://imagesavatar-static01.italki.com/1T051411590_Avatar.jpg"
   - id: 6
     name: "Patrick"
-    email: patrick@gmail.com
+    email: patrick1@gmail.com
     password: "password"
     profile_picture_url: "https://imagesavatar-static01.italki.com/3T043188030_Avatar.jpg"
   - id: 7
@@ -35,15 +35,65 @@ users:
     password: "password"
     profile_picture_url: "https://imagesavatar-static01.italki.com/4T064805780_Avatar.jpg"
   - id: 8
-    name: "Jane"
-    email: jane@gmail.com
+    name: "Eco"
+    email: eco@gmail.com
     password: "password"
     profile_picture_url: "https://imagesavatar-static01.italki.com/T047766180_Avatar.jpg"
   - id: 9
+    name: "Patrick"
+    email: patrick2@gmail.com
+    password: "password"
+    profile_picture_url: "https://imagesavatar-static01.italki.com/1T035600858_Avatar.jpg"
+  - id: 10
+    name: "Megan"
+    email: megan@gmail.com
+    password: "password"
+    profile_picture_url: "https://imagesavatar-static01.italki.com/T034766220_Avatar.jpg"
+  - id: 11
+    name: "Russell"
+    email: russell@gmail.com
+    password: "password"
+    profile_picture_url: "https://imagesavatar-static01.italki.com/1T044004630_Avatar.jpg"
+  - id: 12
+    name: "Migaelle Baptiste"
+    email: migaelle@gmail.com
+    password: "password"
+    profile_picture_url: "https://imagesavatar-static01.italki.com/1T060704850_Avatar.jpg"
+  - id: 13
+    name: "Cindy"
+    email: cindy@gmail.com
+    password: "password"
+    profile_picture_url: "https://imagesavatar-static01.italki.com/3T047363820_Avatar.jpg"
+  - id: 14
+    name: "Cesar Rodriguez"
+    email: cesar@gmail.com
+    password: "password"
+    profile_picture_url: "https://imagesavatar-static01.italki.com/T056070240_Avatar.jpg"
+  - id: 15
+    name: "Hector"
+    email: hector@gmail.com
+    password: "password"
+    profile_picture_url: "https://imagesavatar-static01.italki.com/2T009049310_Avatar.jpg"
+  - id: 16
     name: "Robert"
     email: robert@gmail.com
     password: "password"
-    profile_picture_url: "https://imagesavatar-static01.italki.com/1T035600858_Avatar.jpg"
+    profile_picture_url: "https://imagesavatar-static01.italki.com/5T031561200_Avatar.jpg"
+  - id: 17
+    name: "Sherin"
+    email: sherin@gmail.com
+    password: "password"
+    profile_picture_url: "https://imagesavatar-static01.italki.com/T030809922_Avatar.jpg"
+  - id: 18
+    name: "Haroldo Machado"
+    email: haroldo@gmail.com
+    password: "password"
+    profile_picture_url: "https://imagesavatar-static01.italki.com/T043085695_Avatar.jpg"
+  - id: 19
+    name: "Julieta"
+    email: julieta@gmail.com
+    password: "password"
+    profile_picture_url: "https://imagesavatar-static01.italki.com/3T051633770_Avatar.jpg"
 
 teachers:
   - id: 1
@@ -94,6 +144,86 @@ teachers:
     country: "South Africa"
     video_url: "https://www.youtube.com/embed/t6dQAmvLVmE?enablejsapi=1&modestbranding=1&rel=0&showinfo=0"
     about_me: "I've worked for 30+ years in various industries and in numerous positions incl. HR & Senior Management. I use this knowledge to enhance my teaching skills by relating to all kinds of people of all ages and backgrounds. I'm a keen sportsman (open ocean swimming, cycling, squash, basketball and football) and have other hobbies including reading, aviation, photography, PC's, graphic design and Lego building!"
+  - id: 7
+    teacher_id: 10
+    hourly_rate: 10.00
+    trial_rate: 4.00
+    title: "Community Tutor"
+    country: "United States"
+    video_url: "https://www.youtube.com/embed/Ii4qgURY_ms?enablejsapi=1&modestbranding=1&rel=0&showinfo=0"
+    about_me: "My name is Megan and I'm from Miami, Florida in the United States. I love learning about new cultures and helping people become independent learners. In Miami I taught high school students English. Most students had just arrived to the US and were at the beginner level. I enjoyed working with these students and helping them create a strong foundation to learn even more English. After, I moved to New York to attend Columbia University to fulfill the Masters in Teaching English program. While in New York I taught adult students, both intermediate and advanced students. This experience helped me become a more experienced teacher. I love using lesson plans that focus on using real world examples like books, music, movies, TV shows, and current events. I enjoy working with teenagers and adults of all learning levels. Check out my blog at mongoose-esl.com!"
+  - id: 8
+    teacher_id: 11
+    hourly_rate: 19.00
+    trial_rate: 15.00
+    title: "Professional Teacher"
+    country: "Canada"
+    video_url: "https://www.youtube.com/embed/eILn3P1IIug?enablejsapi=1&modestbranding=1&rel=0&showinfo=0"
+    about_me: "I believe that language learning should be fun, personalized and easy. I did a lot of research during my Master Degree at the University of Ottawa on how you can yield fast and lifelong fluency results. I use a range of different materials during my classes: PDF textbooks, videos, quizlet, audios, text documents, it all depends on your goals and learning style. I also let you make a learning style test to figure out what kind of learner you are in order to come up with a personalized approach to your learning quest."
+  - id: 9
+    teacher_id: 12
+    hourly_rate: 13.00
+    trial_rate: 9.00
+    title: "Community Tutor"
+    country: "Haiti"
+    video_url: "https://v.italki.cn/CF1A26BC-BBC0-43D6-8191-75ED283B5459.mp4"
+    about_me: "I'm patient, respectful and result-oriented. I discovered my love for teaching languages while I was volunteering in an association to teach Haitian Creole to foreigners who were visiting my country. Learning a language is not easy . As a teacher , I'm outgoing and  dedicated to engage and motivate my students to succeed  in their  learning journey."
+  - id: 10
+    teacher_id: 13
+    hourly_rate: 12.00
+    trial_rate: 9.00
+    title: "Professional Teacher"
+    country: "Columbia"
+    video_url: "https://www.youtube.com/embed/EoXqilHVB1w?enablejsapi=1&modestbranding=1&rel=0&showinfo=0"
+    about_me: "In my classes you can propose the skills in which you want to focus on whether it is speaking, listening or writing. I don't demand a specific learning speed I think that the classes shoud be adapted to your learning. I adapt the topics to the level of the student for example if you are a beginner we will start with the most basic part of the language. The best way to learn is through practice, practice and more practice."
+  - id: 11
+    teacher_id: 14
+    hourly_rate: 10.00
+    trial_rate: 5.00
+    title: "Professional Teacher"
+    country: "Spain"
+    video_url: "https://www.youtube.com/embed/A7A-52_pGoo?enablejsapi=1&modestbranding=1&rel=0&showinfo=0"
+    about_me: "As a language learner I know all the obstacles we might find during the learning process and how frustrating it can feel at times. Over the years I have learned the best ways to make the most of my time while studying a language, the right techniques for each learning stage, as well as the appropriate tools for each student.  I can adapt to your learning needs and prepare classes with the aim of learning general Spanish, Business Spanish as well as exam preparation."
+  - id: 12
+    teacher_id: 15
+    hourly_rate: 9.50
+    trial_rate: 7.00
+    title: "Professional Teacher"
+    country: "Mexico"
+    video_url: "https://www.youtube.com/embed/mlXP4SPyRgg?enablejsapi=1&modestbranding=1&rel=0&showinfo=0"
+    about_me: "As a teacher, I believe the most important thing for a student is to feel comfortable while learning. I try my best to make students feel engaged, and motivated to practice and learn while they do most of the talking, even if they're just starting out."
+  - id: 13
+    teacher_id: 16
+    hourly_rate: 46.00
+    trial_rate: 18.00
+    title: "Professional Teacher"
+    country: "Germany"
+    video_url: "https://www.youtube.com/embed/f4vXgzM0lhg?enablejsapi=1&modestbranding=1&rel=0&showinfo=0"
+    about_me: "I have been teaching German at one of the most prestigious language schools in Berlin for over six years. I hold a Magister (German equivalent to the master's degree) in Germanistics (German language, literature, and history) from Humboldt-Universität zu Berlin (2001), and a teaching certificate of German as a foreign language from Goethe-Institut München (2010). Before becoming a language teacher, I was a journalist for six years at a local newspaper in Potsdam. Currently, I am working on my bachelor's degree in psychology at Fernuniversität in Hagen."
+  - id: 14
+    teacher_id: 17
+    hourly_rate: 22.50
+    trial_rate: 12.00
+    title: "Community Tutor"
+    country: "Germany"
+    video_url: "https://www.youtube.com/embed/bTT2aAesg3k?enablejsapi=1&modestbranding=1&rel=0&showinfo=0"
+    about_me: "Whether you need to improve your writing, reading or communication skills we can tailor a strategy to reach your goals in the most effective way. Besides talking in German, I love to meet new people, learn about different lifestyles and cultures, travel, read, and most of all challenge me everyday. We'll adjust to your personality and make sure learning German is fun and without pressure. I look forward to meeting you. Bis bald Sherin"
+  - id: 15
+    teacher_id: 18
+    hourly_rate: 14.99
+    trial_rate: 7.00
+    title: "Professional Teacher"
+    country: "Brazil"
+    video_url: "https://www.youtube.com/embed/cVyC5Oe8O1o?enablejsapi=1&modestbranding=1&rel=0&showinfo=0"
+    about_me: "Hey! Oi! I’m Haroldo, a Professional Portuguese and English Teacher from Brazil. I'm a Systems Analyst and also a Musician, and I love talking to people. I'm a certified teacher and I’m here to make things clear and reachable. Whether you're a beginner or have some knowledge, I truly believe there is a way I can help you. Moreover, I would really like to teach you about Pronunciation, Accents, Grammar and Vocabulary, all mixed :) Help me find out more about you, book a lesson and let's talk!"
+  - id: 16
+    teacher_id: 19
+    hourly_rate: 8.00
+    trial_rate: 7.00
+    title: "Professional Teacher"
+    country: "Portugal"
+    video_url: "https://www.youtube.com/embed/6Ag3TuBSZGU?enablejsapi=1&modestbranding=1&rel=0&showinfo=0"
+    about_me: "Hi! My name is Julieta and I am 28. I am from Azores, the Portuguese islands in the middle of the Atlantic. I studied Fine Arts in Portugal, Czech Republic and Denmark, mostly drawing, printmaking and photography. I have always been fascinated with learning languages and how they become a tool to open up a new world for you. In the years abroad, I used English daily and learnt more with everyone I met. When I was a child I have learnt French with my cousins and I have learnt Spanish with friends. "
 
 languages:
   - id: 1
@@ -146,6 +276,46 @@ teacher_teaches:
     teacher_id: 6
     language_id: 1
     fluency: 5
+  - id: 7
+    teacher_id: 7
+    language_id: 1
+    fluency: 5
+  - id: 8
+    teacher_id: 8
+    language_id: 3
+    fluency: 5
+  - id: 9
+    teacher_id: 9
+    language_id: 3
+    fluency: 5
+  - id: 10
+    teacher_id: 10
+    language_id: 4
+    fluency: 5
+  - id: 11
+    teacher_id: 11
+    language_id: 4
+    fluency: 5
+  - id: 12
+    teacher_id: 12
+    language_id: 4
+    fluency: 5
+  - id: 13
+    teacher_id: 13
+    language_id: 6
+    fluency: 5
+  - id: 14
+    teacher_id: 14
+    language_id: 6
+    fluency: 5
+  - id: 15
+    teacher_id: 15
+    language_id: 5
+    fluency: 5
+  - id: 16
+    teacher_id: 16
+    language_id: 5
+    fluency: 5
 
 teacher_speaks:
   - id: 1
@@ -180,6 +350,46 @@ teacher_speaks:
     teacher_id: 6
     language_id: 3
     fluency: 5
+  - id: 9
+    teacher_id: 7
+    language_id: 5
+    fluency: 5
+  - id: 10
+    teacher_id: 8
+    language_id: 6
+    fluency: 5
+  - id: 11
+    teacher_id: 9
+    language_id: 4
+    fluency: 5
+  - id: 12
+    teacher_id: 10
+    language_id: 11
+    fluency: 5
+  - id: 13
+    teacher_id: 11
+    language_id: 1
+    fluency: 2
+  - id: 14
+    teacher_id: 12
+    language_id: 3
+    fluency: 2
+  - id: 15
+    teacher_id: 13
+    language_id: 1
+    fluency: 4
+  - id: 16
+    teacher_id: 14
+    language_id: 1
+    fluency: 4
+  - id: 17
+    teacher_id: 15
+    language_id: 4
+    fluency: 4
+  - id: 18
+    teacher_id: 15
+    language_id: 3
+    fluency: 4
 
 lessons:
   - id: 1
@@ -308,6 +518,188 @@ lessons:
     title: "Informal Tutoring"
     category: "General"
     description: "Are you intermediate or advanced and need someone to practice speaking English with? Let me help! You choose the topic and I'll help you by using new phrases, idioms, and vocabulary. You can practice your listening, asking questions, and responding. If you prefer I choose the topic, let me know!"
+  - id: 19
+    teacher_id: 7
+    language_name: "English"
+    lessons_taught: 512
+    title: "Trial lesson"
+    category: "Trial"
+    description: "Do you want to practice something else other than Speaking? If you want to practice Listening, Reading, or Writing take this lesson! You can bring your own questions and materials to the lesson if you want!"
+  - id: 20
+    teacher_id: 7
+    language_name: "English"
+    lessons_taught: 512
+    title: "Interview Questions and Practice"
+    category: "Business"
+    description: "If you have an interview for a job and need to practice in American English take this lesson! We will practice common questions used in interviews and how you can give the best answer!"
+  - id: 21
+    teacher_id: 7
+    language_name: "English"
+    lessons_taught: 1523
+    title: "Learning through TED Talks & Videos"
+    category: "General"
+    description: "Using an interesting TED Talk or video, this course will help you learn new vocabulary, practice grammar, and promote great discussion!"
+  - id: 22
+    teacher_id: 8
+    language_name: "French"
+    lessons_taught: 258
+    title: "Test preparation: DELF, TEF Canada, TCF, test pour le gouvernement du Canada"
+    category: "Test Preparation"
+    description: "This type of class is meant to prepare you for any of the above listed tests: DELF, TEF Canada, TCF, test pour le gouvernement du Canada. TEF Canada est un test obligatoire dans le cadre des programmes d’immigration économique qui nécessitent des preuves de connaissances linguistiques, à la demande de Citoyenneté et Immigration Canada."
+  - id: 23
+    teacher_id: 8
+    language_name: "French"
+    lessons_taught: 2123
+    title: "French Grammar and Pronunciation"
+    category: "General"
+    description: "I provide French language classes online. I offer a range of services from grammar skills, pronunciation, job interview preparation, vocabulary learning, speaking more confidently, conversational skills, writing, listening, reading and more. I always adapt my classes to the needs and wishes of my students."
+  - id: 24
+    teacher_id: 9
+    language_name: "French"
+    lessons_taught: 642
+    title: "Trial"
+    category: "Trial Lesson"
+    description: "Welcome to my class! Bienvenue à mon cours ! Byenvini nan klas mwen! Do you want to learn french ? or Haitian creole?  Yes!  you have just clicked the right button. I can help you improve your knowledge whatever your level . Feel free to take a class with me to start your learning journey.  PS: TRIAL LESSON includes 30 minutes of practice conversation and vocabulary"
+  - id: 25
+    teacher_id: 9
+    language_name: "French"
+    lessons_taught: 413
+    title: "French - Francais"
+    category: "General"
+    description: "Welcome to my class of French Language ! It is a pleasure to help you with learning this beautiful language. In this class you will know how to pronounce  correctly;  how to improve your vocabulary and your grammar and to have a good conversation. If you are more advanced , I will help you improve your communication . So let's get started!"
+  - id: 26
+    teacher_id: 10
+    language_name: "Spanish"
+    lessons_taught: 241
+    title: "Trial lesson"
+    category: "Trial"
+    description: "Book a trial lesson so you can get a better idea of what type of teacher I am, and what type of classes you can have with me!! Reserve una clase de prueba para que pueda tener una mejor idea de qué tipo de profesora soy y qué tipo de clases puede tener conmigo."
+  - id: 27
+    teacher_id: 10
+    language_name: "Spanish"
+    lessons_taught: 4122
+    title: "Spanish for Beginners"
+    category: "General"
+    description: "Improve your Spanish speaking skills through enjoyable activities, I will help you with pronunciation, and vocabulary as well. Also If you prefer, we can have a ''spontaneous'' conversation. Español para principiantes. Principios básicos. (Pronombres, alfabeto, presentación, conjugación de verbos, etc)"
+  - id: 28
+    teacher_id: 11
+    language_name: "Spanish"
+    lessons_taught: 644
+    title: "Trial lesson"
+    category: "Trial"
+    description: "Book a trial lesson so you can get a better idea of what type of teacher I am, and what type of classes you can have with me!! Reserve una clase de prueba para que pueda tener una mejor idea de qué tipo de profesora soy y qué tipo de clases puede tener conmigo."
+  - id: 29
+    teacher_id: 11
+    language_name: "Spanish"
+    lessons_taught: 4137
+    title: "General Spanish / Exam preparation"
+    category: "General"
+    description: "This course aims to offer structured lessons covering different aspects of the language."
+  - id: 30
+    teacher_id: 11
+    language_name: "Spanish"
+    lessons_taught: 248
+    title: "Informal Tutoring for advanced students"
+    category: "General"
+    description: "Esta clase esta destinada a aquellos hablantes avanzados de español que desean simplemente practicar su expresión oral con un nativo y no requieren recursos durante la clase."
+  - id: 31
+    teacher_id: 12
+    language_name: "Spanish"
+    lessons_taught: 393
+    title: "Trial lesson"
+    category: "Trial"
+    description: "Have a trial lesson so we can meet each other, talk about objectives, challenges and so you can get a better idea of how we will be working together to achieve your language goals."
+  - id: 32
+    teacher_id: 12
+    language_name: "Spanish"
+    lessons_taught: 578
+    title: "Spanish for Beginners"
+    category: "General"
+    description: "Learn Spanish from the very beginning. We will learn structure, vocabulary and develop your conversational and listening skills with the help of different resources."
+  - id: 33
+    teacher_id: 13
+    language_name: "German"
+    lessons_taught: 257
+    title: "Trial lesson"
+    category: "Trial"
+    description: "You are welcome to schedule a trial lesson with me, so that we can have an assessment of your current German level, talk about the possible ways that we could structure the course and put things into details."
+  - id: 34
+    teacher_id: 13
+    language_name: "German"
+    lessons_taught: 1272
+    title: "General German Language Course"
+    category: "General"
+    description: "A class usually consists of three parts: questions from homework and/or self-learning, an introduction and explanation of themed vocabulary and grammar, and a conversation to practice and integrate the new words and rules into speaking. The approach will be further adjusted based on your German level, learning style, short-term and long-term goals."
+  - id: 35
+    teacher_id: 13
+    language_name: "German"
+    lessons_taught: 704
+    title: "German Test Preparation (Goethe-Zertifikat, GDS, TestDaF, telc, ÖSD, etc.)"
+    category: "Test Preparation"
+    description: "Language examinations are not only about the language itself. It is crucial for us to learn how the exam is designed, what types of knowledge are tested, and by what criteria our German levels are evaluated. To pass/ace the exam, we therefore need to feed the examiners exactly what they expect to read and hear from you."
+  - id: 36
+    teacher_id: 13
+    language_name: "German"
+    lessons_taught: 202
+    title: "German Conversation Course"
+    category: "Conversation Practice"
+    description: "This course targets at the transition from receptive vocabulary to productive vocabulary. Together, we will diagnose the problem(s), look for solutions, and further work on the four domains of speaking: pronunciation, fluency, the command and range of vocabulary, and grammatical errors."
+  - id: 37
+    teacher_id: 14
+    language_name: "German"
+    lessons_taught: 293
+    title: "Trial Lesson"
+    category: "Trial"
+    description: "Bei diesem Unterricht handelt es sich um einen Probeunterricht. Dieser Probeunterricht dienst dazu, dass wir uns gegenseitig kennenlernen, über die Lernziele und Interessen sprechen und Du meinen Unterrichtsstil kennenlernst. Mein Unterricht basiert auf ständiger Konversation und ist kein Grammatikunterricht. Ich werde die Grenzen Deiner Sprachkenntnisse testen und Dir dabei helfen, Deine Komfortzone zu verlassen. Denn dort beginnt das eigentliche Lernen."
+  - id: 38
+    teacher_id: 14
+    language_name: "German"
+    lessons_taught: 1983
+    title: "Conversational German"
+    category: "Conversation Practice"
+    description: "The aim of the class is to get to a conversational level. The class is for beginners as well as for advanced students."
+  - id: 39
+    teacher_id: 15
+    language_name: "Portuguese"
+    lessons_taught: 169
+    title: "Trial lesson"
+    category: "Trial"
+    description: "Seja bem vindo! Essa é a oportunidade para nos conhecermos e falarmos mais sobre suas necessidades com o idioma, e sobre como são meus cursos. Se você gostar, teremos um ótimo trabalho juntos :) Espero que sim!"
+  - id: 40
+    teacher_id: 15
+    language_name: "Portuguese"
+    lessons_taught: 382
+    title: "Brazilian Portuguese – START HERE! - A1/A2"
+    category: "General"
+    description: "Welcome to my Portuguese course for Beginners! If you are en English speaker and have now decided to learn this beautiful and melodious language, this program will help you to learn everything you need either for vacation in Brazil, talking to your Brazilian friends or daily communication. In the course you'll learn the topics more simply, because I always focus on the real usage of every expression. Stay away from the old grammar books and we can get you talking from the very first lesson! Questions? Seja muito bem vindo, te espero para nossa primeira aula :)"
+  - id: 41
+    teacher_id: 15
+    language_name: "Portuguese"
+    lessons_taught: 141
+    title: "Brazilian Portuguese – INTERMEDIATE – B1/B2"
+    category: "General"
+    description: "Now it's time to take your Portuguese to next level! This means Subjunctive, Irregular plurals, Natural speech expressions and so much more. Why don't you check it out? Most of my students take a long time to get to next level exactly because they feel lost when talking about directions. It's very important to have someone to guide you in this point. That's why I've developed this program over the years: To help you guys understand and to get deep into the Brazilian culture."
+  - id: 42
+    teacher_id: 15
+    language_name: "Portuguese"
+    lessons_taught: 181
+    title: "3) Brazilian Portuguese – SPEAK LIKE A BRAZILIAN – C1/C2"
+    category: "General"
+    description: "If you can speak Portuguese but you feel there's something missing, or maybe if you can also speak Spanish and the sounds are now starting to get mixed up, well, then you've just got to the right place! I'm a native Portuguese speaker from São Paulo, Brazil, and during these years I've been studying all the nuances of our sounds, as well as the innumerable possibilites and also the right tips to help you how to get a better accent.  Let me help you with your Nasal sounds, oh my God! Sometimes so hard... Or even the unusual double consonants like Lh, Nh, Br, Tr, Gr..."
+  - id: 43
+    teacher_id: 16
+    language_name: "Portuguese"
+    lessons_taught: 383
+    title: "Trial lesson"
+    category: "Trial"
+    description: "Looking forward to meeting you and helping you to reach your goals! :) Espero conhecer-te em breve e poder ajudar-te a alcançar os teus objetivos! :)"
+  - id: 44
+    teacher_id: 16
+    language_name: "Portuguese"
+    lessons_taught: 735
+    title: "Português — Tutoria informal"
+    category: "General"
+    description: "Prática de conversação (pronunciação, fluência, compreensão oral), gramática, ajuda na preparação para testes (português como língua estrangeira), tudo dependendo dos teus objetivos e necessidades. Desde níveis iniciantes a avançados :)"
 
 lesson_items:
   - id: 1
@@ -430,3 +822,195 @@ lesson_items:
     lesson_id: 18
     duration: 60
     price: 15.50
+  - id: 31
+    lesson_id: 19
+    duration: 30
+    price: 4.00
+  - id: 32
+    lesson_id: 20
+    duration: 30
+    price: 10.00
+  - id: 33
+    lesson_id: 20
+    duration: 60
+    price: 20.00
+  - id: 34
+    lesson_id: 21
+    duration: 30
+    price: 10.00
+  - id: 35
+    lesson_id: 21
+    duration: 45
+    price: 15.00
+  - id: 36
+    lesson_id: 21
+    duration: 60
+    price: 20.00
+  - id: 37
+    lesson_id: 22
+    duration: 60
+    price: 39.00
+  - id: 38
+    lesson_id: 22
+    duration: 90
+    price: 56.00
+  - id: 39
+    lesson_id: 23
+    duration: 30
+    price: 19.00
+  - id: 40
+    lesson_id: 23
+    duration: 45
+    price: 25.00
+  - id: 41
+    lesson_id: 23
+    duration: 60
+    price: 29.00
+  - id: 42
+    lesson_id: 24
+    duration: 30
+    price: 9.00
+  - id: 43
+    lesson_id: 25
+    duration: 45
+    price: 9.00
+  - id: 44
+    lesson_id: 25
+    duration: 60
+    price: 13.00
+  - id: 45
+    lesson_id: 25
+    duration: 90
+    price: 16.00
+  - id: 46
+    lesson_id: 26
+    duration: 30
+    price: 9.00
+  - id: 47
+    lesson_id: 27
+    duration: 60
+    price: 15.00
+  - id: 48
+    lesson_id: 27
+    duration: 90
+    price: 25.00
+  - id: 49
+    lesson_id: 28
+    duration: 30
+    price: 5.00
+  - id: 50
+    lesson_id: 29
+    duration: 45
+    price: 18.00
+  - id: 51
+    lesson_id: 29
+    duration: 60
+    price: 22.00
+  - id: 52
+    lesson_id: 29
+    duration: 90
+    price: 38.00
+  - id: 53
+    lesson_id: 30
+    duration: 60
+    price: 15.00
+  - id: 54
+    lesson_id: 31
+    duration: 30
+    price: 7.00
+  - id: 55
+    lesson_id: 32
+    duration: 30
+    price: 12.00
+  - id: 56
+    lesson_id: 32
+    duration: 45
+    price: 14.00
+  - id: 57
+    lesson_id: 32
+    duration: 60
+    price: 16.00
+  - id: 58
+    lesson_id: 33
+    duration: 30
+    price: 18.00
+  - id: 59
+    lesson_id: 34
+    duration: 60
+    price: 46.00
+  - id: 60
+    lesson_id: 35
+    duration: 60
+    price: 46.00
+  - id: 61
+    lesson_id: 36
+    duration: 60
+    price: 46.00
+  - id: 62
+    lesson_id: 37
+    duration: 30
+    price: 12.00
+  - id: 63
+    lesson_id: 38
+    duration: 30
+    price: 22.50
+  - id: 64
+    lesson_id: 38
+    duration: 45
+    price: 28.50
+  - id: 65
+    lesson_id: 38
+    duration: 60
+    price: 35.00
+  - id: 66
+    lesson_id: 39
+    duration: 30
+    price: 7.00
+  - id: 67
+    lesson_id: 40
+    duration: 30
+    price: 14.99
+  - id: 68
+    lesson_id: 40
+    duration: 45
+    price: 15.99
+  - id: 69
+    lesson_id: 40
+    duration: 60
+    price: 16.99
+  - id: 70
+    lesson_id: 41
+    duration: 30
+    price: 14.99
+  - id: 71
+    lesson_id: 41
+    duration: 45
+    price: 15.99
+  - id: 72
+    lesson_id: 41
+    duration: 60
+    price: 16.99
+  - id: 73
+    lesson_id: 42
+    duration: 30
+    price: 14.99
+  - id: 74
+    lesson_id: 42
+    duration: 45
+    price: 15.99
+  - id: 75
+    lesson_id: 42
+    duration: 60
+    price: 16.99
+  - id: 76
+    lesson_id: 43
+    duration: 30
+    price: 7.00
+  - id: 77
+    lesson_id: 44
+    duration: 30
+    price: 8.00
+  - id: 78
+    lesson_id: 44
+    duration: 60
+    price: 14.00
