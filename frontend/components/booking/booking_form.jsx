@@ -62,7 +62,7 @@ class BookingForm extends React.Component {
       <React.Fragment>
         <LandingNavBarContainer />
         <div className="booking-form-container">
-          <h1>Teacher: {teacher.name}</h1>
+          <h1>Book a lesson with {teacher.name}</h1>
           <form className="booking-form" onSubmit={this.handleSubmit}>
             <div className="lesson-options-container">
               <h1 className="lesson-options-title">Choose your lesson</h1>

@@ -1,0 +1,79 @@
+.booking-form-container {
+  margin-top: 7%;
+  width: 100vw;
+  color: #333;
+  position: relative;
+}
+
+.booking-form-container > h1 {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 25px;
+}
+
+.booking-form {
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+}
+
+.lesson-options-container .lesson-options-title {
+  margin: 20px 0;
+}
+
+.lesson-options-title {
+  font-size: 23px;
+  font-weight: 200;
+}
+
+.lesson-options-container {
+  width: 50%;
+}
+
+.lesson-option-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  padding: 20px;
+  border-radius: 3px;
+  box-shadow: rgba(8, 19, 68, 0.2) 0px 2px 8px 0px;
+}
+
+.lesson-option-title {
+  font-size: 18px;
+  margin-bottom: 7px;
+}
+
+.lesson-option-description {
+  font-size: 15px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.lesson-items {
+  display: flex;
+  justify-content: space-evenly;
+  color: #777;
+  font-size: 15px;
+}
+
+.lesson-item {
+  cursor: pointer;
+  padding: 8px;
+  border: 1px solid #777;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.lesson-item-duration {
+  margin-bottom: 3px;
+}
+
+.lesson-item:hover {
+  box-shadow: rgba(8, 19, 68, 0.4) 0px 2px 8px 0px;
+}
+
+.lesson-item:focus {
+  background-color: red;
+}
