@@ -95,28 +95,28 @@ class BookingForm extends React.Component {
                   );
                 })}
               </div>
-              <div>
-                <h1>Your Booking</h1>
-                <h2>
-                  Lesson:{" "}
+              <div className="booking-review">
+                <h1 className="booking-review-title">Your Booking</h1>
+                <h2 className="booking-review-name">
+                  <span className="booking-review-headings"> Lesson: </span>
                   {this.state.lessonItem === null || this.state.lesson === null
                     ? ""
                     : this.state.lesson.title}
                 </h2>
-                <h2>
-                  Duration:{" "}
+                <h2 className="booking-review-duration">
+                  <span className="booking-review-headings"> Duration: </span>
                   {this.state.lessonItem === null || this.state.lesson === null
                     ? ""
                     : this.state.lessonItem.duration + " minutes"}
                 </h2>
-                <h2>
-                  Price:{" "}
+                <h2 className="booking-review-price">
+                  <span className="booking-review-headings"> Price: </span>
                   {this.state.lessonItem === null || this.state.lesson === null
                     ? ""
                     : "$" + this.state.lessonItem.price}
                 </h2>
-                <h2>
-                  When:{" "}
+                <h2 className="booking-review-time">
+                  <span className="booking-review-headings"> When: </span>
                   {this.state.openTimeSlot === null ? (
                     ""
                   ) : (

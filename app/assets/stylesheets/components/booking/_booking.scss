@@ -18,7 +18,8 @@
 }
 
 .lesson-options-title,
-.time-options-title {
+.time-options-title,
+.booking-review-title {
   margin: 20px 0;
   font-size: 23px;
   font-weight: 200;
@@ -95,13 +96,25 @@
   box-shadow: rgba(8, 19, 68, 0.5) 0px 2px 8px 0px;
 }
 
+.booking-review-name,
+.booking-review-duration,
+.booking-review-price,
+.booking-review-time {
+  font-size: 17px;
+  color: #777;
+}
+
+.booking-review-headings {
+  color: #ff4338;
+}
+
 .booking-form-submit {
   min-width: 150px;
   background-image: linear-gradient(90deg, #ff4338, #ff786b);
   font-weight: 500;
   color: #fff;
   padding: 15px 12px;
-  font-size: 14px;
+  font-size: 17px;
   border-radius: 3px;
   text-align: center;
   margin: 40px auto;
