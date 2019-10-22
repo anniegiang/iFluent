@@ -9,7 +9,7 @@ const TeacherRight = props => {
       style={{ left: "auto", top: "auto", bottom: "auto" }}
     >
       <TeacherBook teacher={props.teacher} />
-      {/* <TeacherSchedule /> */}
+      <TeacherSchedule openTimeSlots={props.openTimeSlots} />
     </div>
   );
 };

@@ -5,25 +5,30 @@ import LandingNavBarContainer from "../navbar/landing_navbar_container";
 
 class TeacherProfile extends React.Component {
   componentDidMount() {
-    this.props.fetchTeacher(parseInt(this.props.match.params.teacherId));
-    this.props.fetchLessons(parseInt(this.props.match.params.teacherId));
+    const teacherId = parseInt(this.props.match.params.teacherId);
+    this.props.fetchTeacher(teacherId);
+    this.props.fetchLessons(teacherId);
+    this.props.fetchOpenTimeSlots(teacherId);
   }
 
   render() {
-    if (!this.props.teacher || !this.props.lessons) {
+    if (
+      !this.props.teacher ||
+      !this.props.lessons ||
+      !this.props.openTimeSlots
+    ) {
       return null;
     }
+    const { lessons, teacher, openTimeSlots } = this.props;
     return (
       <React.Fragment>
         <LandingNavBarContainer />
         <div className="Teacher">
-          <TeacherMain
-            lessons={this.props.lessons}
-            teacher={this.props.teacher}
-          />
+          <TeacherMain lessons={lessons} teacher={teacher} />
           <TeacherRight
-            teacher={this.props.teacher}
-            lessons={this.props.lessons}
+            teacher={teacher}
+            lessons={lessons}
+            openTimeSlots={openTimeSlots}
           />
         </div>
       </React.Fragment>
