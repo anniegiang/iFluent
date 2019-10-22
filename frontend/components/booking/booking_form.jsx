@@ -87,15 +87,17 @@ class BookingForm extends React.Component {
             <div className="time-options-container">
               <h1 className="time-options-title">Teacher Availablity</h1>
               <div className="time-options">
-                {openTimeSlots.map(openTimeSlot => {
-                  return (
-                    <OpenTimeOption
-                      key={openTimeSlot.id}
-                      handleClick={this.handleClick}
-                      openTimeSlot={openTimeSlot}
-                    />
-                  );
-                })}
+                {openTimeSlots.length === 0
+                  ? "Teacher is currently unavailable."
+                  : openTimeSlots.map(openTimeSlot => {
+                      return (
+                        <OpenTimeOption
+                          key={openTimeSlot.id}
+                          handleClick={this.handleClick}
+                          openTimeSlot={openTimeSlot}
+                        />
+                      );
+                    })}
               </div>
               <div className="booking-review">
                 <h1 className="booking-review-title">Your Booking</h1>
