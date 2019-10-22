@@ -10,7 +10,6 @@ class Api::OpenSlotsController < ApplicationController
   def destroy
     @open_slot = OpenSlot.find(params[:id])
     @open_slot.destroy
-    @open_slot.save!
     render :show
   end
 end

@@ -47,9 +47,11 @@ class BookingForm extends React.Component {
         start_time: openTimeSlot.startTime,
         duration: lessonItem.duration
       };
-      this.props.createBooking(data);
       this.props.deleteOpenTimeSlot(openTimeSlot.id);
-      this.props.history.push("/dashboard");
+      this.props.createBooking(data).then(() => {
+        this.props.history.push("/dashboard");
+        location.reload();
+      });
     } else {
       alert("Booking incomplete");
     }

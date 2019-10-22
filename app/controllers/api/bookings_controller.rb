@@ -20,7 +20,6 @@ class Api::BookingsController < ApplicationController
       return
     end
 
-    
   end
 
   def create
