@@ -20,10 +20,10 @@ users:
     password: "password"
     profile_picture_url: "https://imagesavatar-static01.italki.com/T026578497_Avatar.jpg"
   - id: 5
-    name: "Shelby Morrison "
-    email: shelby@gmail.com
+    name: "Katie"
+    email: katie@gmail.com
     password: "password"
-    profile_picture_url: "https://imagesavatar-static01.italki.com/1T051411590_Avatar.jpg"
+    profile_picture_url: "https://imagesavatar-static01.italki.com/10T031823100_Avatar.jpg"
   - id: 6
     name: "Patrick"
     email: patrick1@gmail.com
@@ -55,10 +55,10 @@ users:
     password: "password"
     profile_picture_url: "https://imagesavatar-static01.italki.com/1T044004630_Avatar.jpg"
   - id: 12
-    name: "Migaelle Baptiste"
-    email: migaelle@gmail.com
+    name: "Meg"
+    email: meg@gmail.com
     password: "password"
-    profile_picture_url: "https://imagesavatar-static01.italki.com/1T060704850_Avatar.jpg"
+    profile_picture_url: "https://imagesavatar-static01.italki.com/2T063990190_Avatar.jpg"
   - id: 13
     name: "Cindy"
     email: cindy@gmail.com
@@ -94,6 +94,16 @@ users:
     email: julieta@gmail.com
     password: "password"
     profile_picture_url: "https://imagesavatar-static01.italki.com/3T051633770_Avatar.jpg"
+  - id: 20
+    name: "Kaori"
+    email: kaori@gmail.com
+    password: "password"
+    profile_picture_url: "https://imagesavatar-static01.italki.com/8T049417910_Avatar.jpg"
+  - id: 21
+    name: "Japanese Specialist Shuji"
+    email: shuji@gmail.com
+    password: "password"
+    profile_picture_url: "https://imagesavatar-static01.italki.com/T016601834_Avatar.jpg"
 
 teachers:
   - id: 1
@@ -110,8 +120,8 @@ teachers:
     hourly_rate: 17.99
     title: "Professional Teacher"
     country: "United States"
-    video_url: "https://v.italki.cn/xitalki100020338.mp4"
-    about_me: "I love teaching English to people around the world and specialize in teaching adults at the intermediate to advanced stages.  I have a degree in Educational Studies and a 200hr CELTA certificate. I love traveling and exchanging culture, so teaching English to students around the world is quite exciting. I focus on fluency and confidence, using real-world situations. You'll learn common phrases, idioms, vocabulary and more to handle everyday situations."
+    video_url: "https://www.youtube.com/embed/fYwG2vINgxw?enablejsapi=1&modestbranding=1&rel=0&showinfo=0"
+    about_me: "Most importantly, I want you to enjoy our lessons. Learning a language shouldn't be serious all the time. I prefer conversation classes so that you do the majority of the talking. :) I will use PDFs, articles, videos and power points throughout our lessons. Per request, I can provide homework but it will be something fun that covers our classroom discussion."
   - id: 3
     teacher_id: 6
     hourly_rate: 18.00
@@ -164,10 +174,10 @@ teachers:
     teacher_id: 12
     hourly_rate: 13.00
     trial_rate: 9.00
-    title: "Community Tutor"
-    country: "Haiti"
-    video_url: "https://v.italki.cn/CF1A26BC-BBC0-43D6-8191-75ED283B5459.mp4"
-    about_me: "I'm patient, respectful and result-oriented. I discovered my love for teaching languages while I was volunteering in an association to teach Haitian Creole to foreigners who were visiting my country. Learning a language is not easy . As a teacher , I'm outgoing and  dedicated to engage and motivate my students to succeed  in their  learning journey."
+    title: "Professional Teacher"
+    country: "France"
+    video_url: "https://www.youtube.com/embed/Pyv2FnKwB2c?enablejsapi=1&modestbranding=1&rel=0&showinfo=0"
+    about_me: "Hi, I am Meg, a French (native) teacher living in Vancouver, Canada. Graduated in Law, I decided last year to do what makes me truly happy : teaching ! I am currently working at the Alliance Française of Vancouver and the International House, teaching to adults, teenagers and kids. As a former English learner and a current spanish student, I am aware of the challenges we face when learning a new language, at any level. I would be happy to help you taking on these challenges and become a master in French :) "
   - id: 10
     teacher_id: 13
     hourly_rate: 12.00
@@ -224,6 +234,22 @@ teachers:
     country: "Portugal"
     video_url: "https://www.youtube.com/embed/6Ag3TuBSZGU?enablejsapi=1&modestbranding=1&rel=0&showinfo=0"
     about_me: "Hi! My name is Julieta and I am 28. I am from Azores, the Portuguese islands in the middle of the Atlantic. I studied Fine Arts in Portugal, Czech Republic and Denmark, mostly drawing, printmaking and photography. I have always been fascinated with learning languages and how they become a tool to open up a new world for you. In the years abroad, I used English daily and learnt more with everyone I met. When I was a child I have learnt French with my cousins and I have learnt Spanish with friends. "
+  - id: 17
+    teacher_id: 20
+    hourly_rate: 8.00
+    trial_rate: 7.00
+    title: "Professional Teacher"
+    country: "Japan"
+    video_url: "https://www.youtube.com/embed/yx1Pj8AGXRE?enablejsapi=1&modestbranding=1&rel=0&showinfo=0"
+    about_me: "I help individuals of all levels to improve their language skills. I love teaching and working with my students, and share my language and culture with them. That is my biggest motivation to be here:) I'm a friendly and easygoing girl. I like trying new things, traveling around Japan and abroad, eating and cooking. I'm very patient and experienced teacher, and I will provide you fun and friendly learning environment."
+  - id: 18
+    teacher_id: 21
+    hourly_rate: 14.99
+    trial_rate: 10.00
+    title: "Professional Teacher"
+    country: "Japan"
+    video_url: "https://www.youtube.com/embed/K8hRBhOoa6g?enablejsapi=1&modestbranding=1&rel=0&showinfo=0"
+    about_me: "Hello! My name is 'Japanese Specialist Shuji'. Of course that's not my real name. I picked that name because it reflects my background and experience. I studied Japanese linguistics at university and in graduate school. I also passed the 1st Japanese Language Teaching Competency Test in 1988. I've been teaching Japanese linguistics to Japanese students at various universities. I also have experience teaching Japanese to international students at universities and at Japanese language schools. And lastly, I have a lot of experience with private lessons one-on-one lessons. Combined, I have about 27 years of Japanese teaching experience so that is why I chose the name 'Japanese Specialist Shuji'. I can teach students who are absolute beginners with no Japanese ability to advanced students. I can teach the Japanese accent rules, too. Studying the accent rules helps you to speak Japanese naturally. I would love to teach you Japanese."
 
 languages:
   - id: 1
@@ -316,6 +342,14 @@ teacher_teaches:
     teacher_id: 16
     language_id: 5
     fluency: 5
+  - id: 17
+    teacher_id: 17
+    language_id: 7
+    fluency: 5
+  - id: 18
+    teacher_id: 18
+    language_id: 7
+    fluency: 5
 
 teacher_speaks:
   - id: 1
@@ -387,9 +421,17 @@ teacher_speaks:
     language_id: 4
     fluency: 4
   - id: 18
-    teacher_id: 15
+    teacher_id: 16
     language_id: 3
     fluency: 4
+  - id: 19
+    teacher_id: 17
+    language_id: 1
+    fluency: 3
+  - id: 20
+    teacher_id: 18
+    language_id: 1
+    fluency: 5
 
 lessons:
   - id: 1
@@ -700,6 +742,48 @@ lessons:
     title: "Português — Tutoria informal"
     category: "General"
     description: "Prática de conversação (pronunciação, fluência, compreensão oral), gramática, ajuda na preparação para testes (português como língua estrangeira), tudo dependendo dos teus objetivos e necessidades. Desde níveis iniciantes a avançados :)"
+  - id: 45
+    teacher_id: 17
+    language_name: "Japanese"
+    lessons_taught: 163
+    title: "Trial lesson"
+    category: "Trial"
+    description: "Trial lesson and counseling session (if you need). You can take your favorite lesson for the trial to see if you like it."
+  - id: 46
+    teacher_id: 17
+    language_name: "Japanese"
+    lessons_taught: 1527
+    title: "Informal tutoring (Japanese conversation lesson)"
+    category: "Conversation Practice"
+    description: "This course is very practical and aims to develop the students' skills in listening/speaking of conversational Japanese. I offer corrections on skype chat, and help you learn natural way to express your idea. I also try to introduce new phrases and vocabularies as they come up naturally in the conversation. We will have free talk or conversation on your favorite topics. You can also send me grammatical items that you want to practice through conversation. I will prepare topics and questions to practice that. Please let me know of any specific requests for the lesson!"
+  - id: 47
+    teacher_id: 17
+    language_name: "Japanese"
+    lessons_taught: 852
+    title: "Informal tutoring (Japanese conversation lesson)"
+    category: "Conversation Practice"
+    description: "Written and spoken Japanese languages are very different in Japanese. This course is for students who want to improve writing skill and enhance your accuracy and fluency of Japanese. We  will work on to make your  essay/story/report correct and natural.  You will find your habitual mistakes not just in writing but speaking but actually writing."
+  - id: 48
+    teacher_id: 18
+    language_name: "Japanese"
+    lessons_taught: 3805
+    title: "Integrated Japanese"
+    category: "Conversation Practice"
+    description: "I teach you the basic Japanese accent and useful phrases and words used in a class by using documents I will send you via Skype. You practice to pronounce sentences and words in the document I will send you via Skype. You have to be careful to say them with correct accent. You can use CD in the textbook. You read aloud sentences and words.→ I check your understanding and pronunciation and correct mistakes. → You read aloud correctly again (and again). → I say sentences in English. →You translate those to Japanese with correct pronunciation including accent. You answer to the questions on the textbook.→ I check your answer(and pronunciation) and correct mistakes."
+  - id: 49
+    teacher_id: 18
+    language_name: "Japanese"
+    lessons_taught: 995
+    title: "Japanese Conversation"
+    category: "Conversation Practice"
+    description: "We have free conversation or conversation about some topic. The teacher corrects mistakes(about grammar, vocabulary, pronunciation including accent) the student made."
+  - id: 50
+    teacher_id: 18
+    language_name: "Japanese"
+    lessons_taught: 995
+    title: "Japanese Accent Rules"
+    category: "General"
+    description: "We have free conversation or conversation about some topic. The teacher corrects mistakes(about grammar, vocabulary, pronunciation including accent) the student made."
 
 lesson_items:
   - id: 1
@@ -1014,3 +1098,55 @@ lesson_items:
     lesson_id: 44
     duration: 60
     price: 14.00
+  - id: 79
+    lesson_id: 45
+    duration: 30
+    price: 10.00
+  - id: 80
+    lesson_id: 46
+    duration: 30
+    price: 16.00
+  - id: 81
+    lesson_id: 46
+    duration: 60
+    price: 26.00
+  - id: 82
+    lesson_id: 47
+    duration: 60
+    price: 23.00
+  - id: 83
+    lesson_id: 48
+    duration: 30
+    price: 14.00
+  - id: 84
+    lesson_id: 48
+    duration: 45
+    price: 20.00
+  - id: 85
+    lesson_id: 48
+    duration: 60
+    price: 25.00
+  - id: 86
+    lesson_id: 49
+    duration: 30
+    price: 14.00
+  - id: 87
+    lesson_id: 49
+    duration: 45
+    price: 20.00
+  - id: 88
+    lesson_id: 49
+    duration: 60
+    price: 25.00
+  - id: 89
+    lesson_id: 50
+    duration: 30
+    price: 14.00
+  - id: 90
+    lesson_id: 50
+    duration: 45
+    price: 20.00
+  - id: 91
+    lesson_id: 50
+    duration: 60
+    price: 25.00
