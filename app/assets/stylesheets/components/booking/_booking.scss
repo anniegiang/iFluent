@@ -76,9 +76,11 @@
 
 .lesson-item:focus,
 .time-option:focus {
-  border: 1px solid #ff786b;
+  // border: 1px solid #ff786b;
+  border: 1px solid #7ec937;
   color: white;
-  background-image: linear-gradient(90deg, #ff4338, #ff786b);
+  background-color: #7ec937;
+  // background-image: linear-gradient(90deg, #ff4338, #ff786b);
 }
 
 .time-option {
