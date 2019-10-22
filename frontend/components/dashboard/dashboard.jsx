@@ -15,12 +15,10 @@ class Dashboard extends React.Component {
     const { bookings, currentUser } = this.props;
     return (
       <div className="flex-container">
-        <div style={{ position: "static", zIndex: "inherit" }}>
-          <LandingNavBarContainer />
-          <div className="dashboard">
-            <DashboardHero bookings={bookings} currentUser={currentUser} />
-            <DashboardBookings bookings={bookings} />
-          </div>
+        <LandingNavBarContainer />
+        <div className="dashboard">
+          <DashboardHero bookings={bookings} currentUser={currentUser} />
+          <DashboardBookings bookings={bookings} />
         </div>
       </div>
     );

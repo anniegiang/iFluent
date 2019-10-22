@@ -2,8 +2,7 @@ class Api::BookingsController < ApplicationController
   
   def index # all current_user bookings
     if logged_in?
-      @bookings = current_user.bookings
-      # @bookings = current_user.bookings.includes(:teacher => [:user], :lesson_item => [:lesson]) # efficient queries using pre-fetched associations
+      @bookings = current_user.bookings.includes(:teacher => [:user], :lesson_item => [:lesson]) # efficient queries using pre-fetched associations
     else
       render json: ["Must be logged in to view bookings"], status: 422
     end
