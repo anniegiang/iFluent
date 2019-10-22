@@ -99,7 +99,6 @@
   color: rgb(119, 119, 119);
   width: 133px;
   margin: auto 0;
-  // cursor: pointer;
 }
 
 .dashboard-lesson .lesson-info div:first-child {
@@ -184,7 +183,6 @@
 .dashboard-bookings-container {
   width: 945px;
   margin: 0 auto;
-  // padding: 20px 0px 20px 20px;
 
   .bookings-container {
     text-align: center;
@@ -200,6 +198,10 @@
     .lesson-teacher {
       font-weight: 300;
       color: #333333;
+    }
+
+    .lesson-teacher-link {
+      color: #337ab7;
     }
 
     .lesson-language {
