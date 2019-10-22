@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 		resources :teachers, only: [:index, :show]
 		resources :languages, only: [:index, :show]
 		resources :lessons, only: [:index, :show]
-		resources :bookings, only: [:index, :show, :create]
+		resources :bookings, only: [:index, :show, :create, :destroy]
 		resources :open_slots, only: [:index, :show, :destroy]
 		resource :session, only: [:create, :destroy]
 	end

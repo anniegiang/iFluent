@@ -3,6 +3,12 @@ import Moment from "react-moment";
 
 const DashboardBookings = props => {
   const { bookings } = props;
+
+  const handleDelete = id => {
+    props.deleteBooking(id);
+    location.reload();
+  };
+
   return (
     <div className="dashboard-bookings-container">
       <h1 className="bookings-title">Upcoming Lessons</h1>
@@ -27,6 +33,9 @@ const DashboardBookings = props => {
                 {booking.teacher}
               </a>
             </h4>
+            <button onClick={() => handleDelete(booking.id)}>
+              Cancel Booking
+            </button>
           </li>
         ))}
       </ul>

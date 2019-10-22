@@ -12,13 +12,16 @@ class Dashboard extends React.Component {
     if (!this.props.bookings) {
       return;
     }
-    const { bookings, currentUser } = this.props;
+    const { bookings, currentUser, deleteBooking } = this.props;
     return (
       <div className="flex-container">
         <LandingNavBarContainer />
         <div className="dashboard">
           <DashboardHero bookings={bookings} currentUser={currentUser} />
-          <DashboardBookings bookings={bookings} />
+          <DashboardBookings
+            deleteBooking={deleteBooking}
+            bookings={bookings}
+          />
         </div>
       </div>
     );

@@ -32,6 +32,12 @@ class Api::BookingsController < ApplicationController
 		end
   end
 
+  def destroy
+    @booking = Booking.find(params[:id])
+    @booking.destroy
+    render :index
+  end
+
   def booking_params
     params.require(:booking).permit(:student_id, :teacher_id, :start_time, :duration, :lesson_item_id)
   end

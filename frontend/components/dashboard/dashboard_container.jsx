@@ -1,7 +1,6 @@
 import { connect } from 'react-redux';
 import Dashboard from './dashboard';
-import { fetchAllUsers, fetchUser } from '../../actions/user_actions';
-import { fetchAllBookings, fetchBooking } from '../../actions/booking_actions';
+import { fetchAllBookings, deleteBooking } from '../../actions/booking_actions';
 
 const msp = state => {
   return {
@@ -13,7 +12,7 @@ const msp = state => {
 const mdp = dispatch => {
   return {
     fetchAllBookings: () => dispatch(fetchAllBookings()),
-    fetchBooking: id => dispatch(fetchBooking(id))
+    deleteBooking: id => dispatch(deleteBooking(id))
   }
 };
 
