@@ -33,7 +33,10 @@ const DashboardBookings = props => {
                 {booking.teacher}
               </a>
             </h4>
-            <button onClick={() => handleDelete(booking.id)}>
+            <button
+              className="cancel-booking-btn"
+              onClick={() => handleDelete(booking.id)}
+            >
               Cancel Booking
             </button>
           </li>
