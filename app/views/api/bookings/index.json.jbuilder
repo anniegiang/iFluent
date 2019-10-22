@@ -1,6 +1,9 @@
-@sorted_bookings = @bookings.sort_by { |b| b[:start_time] }
+@sorted_bookings = @bookings.order('start_time ASC')
+currentTime = Time.new
 json.array! @sorted_bookings do |booking|
-    json.partial! 'booking', booking: booking
+    if booking.start_time >= currentTime
+      json.partial! 'booking', booking: booking
+    end
 end
 
 # correct top-level keys but unsorted
