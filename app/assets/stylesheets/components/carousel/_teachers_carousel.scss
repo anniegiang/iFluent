@@ -78,65 +78,65 @@
 //   }
 // }
 
-// .prev-arrow {
-//   position: absolute;
-//   top: 50%;
-//   left: -30px;
-//   margin-top: -32px;
-//   width: 20px;
-//   height: 42px;
-//   cursor: pointer;
-// }
+.prev-arrow {
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  margin-top: -32px;
+  width: 20px;
+  height: 42px;
+  cursor: pointer;
+}
 
-// .prev-arrow:before {
-//   top: 29px;
-//   transform: rotate(55deg);
-// }
+.prev-arrow:before {
+  top: 29px;
+  transform: rotate(55deg);
+}
 
-// .prev-arrow:after {
-//   top: 13px;
-//   transform: rotate(125deg);
-// }
+.prev-arrow:after {
+  top: 13px;
+  transform: rotate(125deg);
+}
 
-// .next-arrow:after,
-// .next-arrow:before {
-//   content: "";
-//   position: absolute;
-//   display: inline-block;
-//   left: 0;
-//   width: 20px;
-//   height: 2px;
-//   background-color: #777;
-//   z-index: 99;
-// }
+.next-arrow:after,
+.next-arrow:before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  width: 20px;
+  height: 2px;
+  background-color: #777;
+  z-index: 99;
+}
 
-// .prev-arrow:after,
-// .prev-arrow:before {
-//   content: "";
-//   position: absolute;
-//   display: inline-block;
-//   left: 0;
-//   width: 20px;
-//   height: 2px;
-//   background-color: #777;
-//   z-index: 99;
-// }
-// .next-arrow {
-//   position: absolute;
-//   top: 50%;
-//   right: -30px;
-//   margin-top: -32px;
-//   width: 20px;
-//   height: 42px;
-//   cursor: pointer;
-// }
+.prev-arrow:after,
+.prev-arrow:before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  width: 20px;
+  height: 2px;
+  background-color: #777;
+  z-index: 99;
+}
+.next-arrow {
+  position: absolute;
+  top: 50%;
+  right: -30px;
+  margin-top: -32px;
+  width: 20px;
+  height: 42px;
+  cursor: pointer;
+}
 
-// .next-arrow:before {
-//   top: 29px;
-//   transform: rotate(125deg);
-// }
+.next-arrow:before {
+  top: 29px;
+  transform: rotate(125deg);
+}
 
-// .next-arrow:after {
-//   top: 13px;
-//   transform: rotate(55deg);
-// }
+.next-arrow:after {
+  top: 13px;
+  transform: rotate(55deg);
+}
