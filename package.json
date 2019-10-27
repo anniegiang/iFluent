@@ -12,12 +12,12 @@
     "moment": "^2.24.0",
     "npm": "^6.11.3",
     "react": "^16.9.0",
-    "react-alice-carousel": "^1.15.3",
     "react-datepicker": "^2.9.6",
     "react-dom": "^16.9.0",
     "react-moment": "^0.9.6",
     "react-redux": "^7.1.1",
     "react-router-dom": "^5.0.1",
+    "react-slick": "^0.25.2",
     "react-tabs": "^3.0.0",
     "redux": "^4.0.4",
     "redux-logger": "^3.0.6",
@@ -61,6 +61,7 @@
     "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.16.0",
-    "eslint-plugin-standard": "^4.0.1"
+    "eslint-plugin-standard": "^4.0.1",
+    "file-loader": "^4.2.0"
   }
 }
