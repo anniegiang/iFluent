@@ -127,6 +127,9 @@ class TeachersCarousel extends Component {
       slidesPerRow: 3,
       dots: true,
       infinite: true,
+      autoplay: true,
+      speed: 1000,
+      cssEase: "linear",
       nextArrow: <SampleNextArrow />,
       prevArrow: <SamplePrevArrow />
     };
