@@ -5,8 +5,8 @@ function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div
-      className={className}
-      style={{ ...style, display: "block", background: "red" }}
+      className="next-arrow"
+      style={{ ...style, display: "block" }}
       onClick={onClick}
     />
   );
@@ -16,8 +16,8 @@ function SamplePrevArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div
-      className={className}
-      style={{ ...style, display: "block", background: "green" }}
+      className="prev-arrow"
+      style={{ ...style, display: "block" }}
       onClick={onClick}
     />
   );
@@ -26,7 +26,6 @@ function SamplePrevArrow(props) {
 class TeachersCarousel extends Component {
   render() {
     const settings = {
-      className: "center",
       speed: 500,
       rows: 2,
       slidesPerRow: 3,
@@ -36,65 +35,83 @@ class TeachersCarousel extends Component {
       prevArrow: <SamplePrevArrow />
     };
     return (
-      <div className="homepage-teachers-slider">
+      <div className="teachers-carousel-container">
         <h1>
           10,000+ teachers.
-          <span class="homepage-anylanguage"> Any language.</span>
+          <span className="anylanguage"> Any language.</span>
         </h1>
         <Slider {...settings}>
-          <div>
-            <h3>1</h3>
+          <div className="teacher-item">
+            <img
+              src="https://www.italki.com/static/media/dutch.5e6ef5bd.jpg"
+              alt=""
+            />
           </div>
-          <div>
-            <h3>2</h3>
+          <div className="teacher-item">
+            <img
+              src="https://www.italki.com/static/media/dutch.5e6ef5bd.jpg"
+              alt=""
+            />
           </div>
-          <div>
-            <h3>3</h3>
+          <div className="teacher-item">
+            <img
+              src="https://www.italki.com/static/media/dutch.5e6ef5bd.jpg"
+              alt=""
+            />
           </div>
-          <div>
-            <h3>4</h3>
+          <div className="teacher-item">
+            <img
+              src="https://www.italki.com/static/media/dutch.5e6ef5bd.jpg"
+              alt=""
+            />
           </div>
-          <div>
-            <h3>5</h3>
+          <div className="teacher-item">
+            <img
+              src="https://www.italki.com/static/media/dutch.5e6ef5bd.jpg"
+              alt=""
+            />
           </div>
-          <div>
-            <h3>6</h3>
+          <div className="teacher-item">
+            <img
+              src="https://www.italki.com/static/media/dutch.5e6ef5bd.jpg"
+              alt=""
+            />
           </div>
-          <div>
-            <h3>7</h3>
+          <div className="teacher-item">
+            <img
+              src="https://www.italki.com/static/media/dutch.5e6ef5bd.jpg"
+              alt=""
+            />
           </div>
-          <div>
-            <h3>8</h3>
+          <div className="teacher-item">
+            <img
+              src="https://www.italki.com/static/media/dutch.5e6ef5bd.jpg"
+              alt=""
+            />
           </div>
-          <div>
-            <h3>9</h3>
+          <div className="teacher-item">
+            <img
+              src="https://www.italki.com/static/media/dutch.5e6ef5bd.jpg"
+              alt=""
+            />
           </div>
-          <div>
-            <h3>10</h3>
+          <div className="teacher-item">
+            <img
+              src="https://www.italki.com/static/media/dutch.5e6ef5bd.jpg"
+              alt=""
+            />
           </div>
-          <div>
-            <h3>11</h3>
+          <div className="teacher-item">
+            <img
+              src="https://www.italki.com/static/media/dutch.5e6ef5bd.jpg"
+              alt=""
+            />
           </div>
-          <div>
-            <h3>12</h3>
-          </div>
-          <div>
-            <h3>13</h3>
-          </div>
-          <div>
-            <h3>14</h3>
-          </div>
-          <div>
-            <h3>15</h3>
-          </div>
-          <div>
-            <h3>16</h3>
-          </div>
-          <div>
-            <h3>17</h3>
-          </div>
-          <div>
-            <h3>18</h3>
+          <div className="teacher-item">
+            <img
+              src="https://www.italki.com/static/media/dutch.5e6ef5bd.jpg"
+              alt=""
+            />
           </div>
         </Slider>
       </div>
