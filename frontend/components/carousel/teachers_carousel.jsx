@@ -141,7 +141,11 @@ class TeachersCarousel extends Component {
             <div key={idx} className="teacher-item">
               <div className=".teacher-item-pic-container">
                 <a href={`#/teachers/${teacher.language}`}>
-                  <img className="teacher-item-pic" src={teacher.img} alt={teacher} />
+                  <img
+                    className="teacher-item-pic"
+                    src={teacher.img}
+                    alt={teacher}
+                  />
                 </a>
                 <div className="teacher-detail">
                   <img
@@ -155,6 +159,12 @@ class TeachersCarousel extends Component {
             </div>
           ))}
         </Slider>
+
+        <div className="homepage-find-your-teacher">
+          <a href="#/teachers/English">
+            <div className="find-your-teacher">Find your teacher</div>
+          </a>
+        </div>
       </div>
     );
   }
