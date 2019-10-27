@@ -24,6 +24,95 @@ function SamplePrevArrow(props) {
 }
 
 class TeachersCarousel extends Component {
+  static defaultProps = {
+    teachers: [
+      {
+        img: "https://www.italki.com/static/media/english_UK.0b1dc079.jpg",
+        language: "English"
+      },
+      {
+        img: "https://www.italki.com/static/media/spanish.32d567a0.jpg",
+        language: "Spanish"
+      },
+      {
+        flag: "https://www.italki.com/static/media/france.4b6deacc.svg",
+        img: "https://www.italki.com/static/media/french.87f7b7cf.jpg",
+        language: "French"
+      },
+      {
+        flag: "https://www.italki.com/static/media/japan.60b87b49.svg",
+        img: "https://www.italki.com/static/media/japanese.99636b79.jpg",
+        language: "Japanese"
+      },
+      {
+        flag: "https://www.italki.com/static/media/china.1156edea.svg",
+        img: "https://www.italki.com/static/media/chinese.ba590708.jpg",
+        language: "Chinese"
+      },
+      {
+        img: "https://www.italki.com/static/media/german.8ce1eca6.jpg",
+        flag: "https://www.italki.com/static/media/germany.ab4f232a.svg",
+        language: "German"
+      },
+      {
+        img: "https://www.italki.com/static/media/italian.c4abb062.jpg",
+        flag: "https://www.italki.com/static/media/italy.62b3f764.svg",
+        language: "Italian"
+      },
+      {
+        flag: "https://www.italki.com/static/media/russia.ee120f11.svg",
+        img: "https://www.italki.com/static/media/russian.c6c8acfd.jpg",
+        language: "Russian"
+      },
+      {
+        img: "https://www.italki.com/static/media/portuguese.e159c420.jpg",
+        language: "Portuguese"
+      },
+      {
+        flag: "https://www.italki.com/static/media/korea.75ac9327.svg",
+        img: "https://www.italki.com/static/media/korean.a0d01156.jpg",
+        language: "Korean"
+      },
+      {
+        img: "https://www.italki.com/static/media/arabic.5d7f2efc.jpg",
+        language: "Arabic"
+      },
+      {
+        img: "https://www.italki.com/static/media/dutch.5e6ef5bd.jpg",
+        flag: "https://www.italki.com/static/media/nederland.8c94355c.svg",
+        language: "Dutch"
+      },
+      {
+        img: "https://www.italki.com/static/media/turkish.3433d42b.jpg",
+        language: "Turkish"
+      },
+      {
+        img: "https://www.italki.com/static/media/hebrew.faaf0b13.jpg",
+        flag: "https://www.italki.com/static/media/israel.ab315ab1.svg",
+        language: "Hebrew"
+      },
+      {
+        flag: "https://www.italki.com/static/media/poland.ba65fa93.svg",
+        img: "https://www.italki.com/static/media/polish.faad616a.jpg",
+        language: "Polish"
+      },
+      {
+        img: "https://www.italki.com/static/media/hindi.5c1a2b79.jpg",
+        language: "Hindi"
+      },
+      {
+        img: "https://www.italki.com/static/media/serbian.cae18b82.jpg",
+        language: "Serbian"
+      },
+      {
+        img:
+          "https://www.italki.com/static/media/english_US-small.f573024c.jpg",
+        flag: "https://www.italki.com/static/media/usa.4b11fcae.svg",
+        language: "ASL"
+      }
+    ]
+  };
+
   render() {
     const settings = {
       speed: 500,
@@ -41,78 +130,13 @@ class TeachersCarousel extends Component {
           <span className="anylanguage"> Any language.</span>
         </h1>
         <Slider {...settings}>
-          <div className="teacher-item">
-            <img
-              src="https://www.italki.com/static/media/dutch.5e6ef5bd.jpg"
-              alt=""
-            />
-          </div>
-          <div className="teacher-item">
-            <img
-              src="https://www.italki.com/static/media/dutch.5e6ef5bd.jpg"
-              alt=""
-            />
-          </div>
-          <div className="teacher-item">
-            <img
-              src="https://www.italki.com/static/media/dutch.5e6ef5bd.jpg"
-              alt=""
-            />
-          </div>
-          <div className="teacher-item">
-            <img
-              src="https://www.italki.com/static/media/dutch.5e6ef5bd.jpg"
-              alt=""
-            />
-          </div>
-          <div className="teacher-item">
-            <img
-              src="https://www.italki.com/static/media/dutch.5e6ef5bd.jpg"
-              alt=""
-            />
-          </div>
-          <div className="teacher-item">
-            <img
-              src="https://www.italki.com/static/media/dutch.5e6ef5bd.jpg"
-              alt=""
-            />
-          </div>
-          <div className="teacher-item">
-            <img
-              src="https://www.italki.com/static/media/dutch.5e6ef5bd.jpg"
-              alt=""
-            />
-          </div>
-          <div className="teacher-item">
-            <img
-              src="https://www.italki.com/static/media/dutch.5e6ef5bd.jpg"
-              alt=""
-            />
-          </div>
-          <div className="teacher-item">
-            <img
-              src="https://www.italki.com/static/media/dutch.5e6ef5bd.jpg"
-              alt=""
-            />
-          </div>
-          <div className="teacher-item">
-            <img
-              src="https://www.italki.com/static/media/dutch.5e6ef5bd.jpg"
-              alt=""
-            />
-          </div>
-          <div className="teacher-item">
-            <img
-              src="https://www.italki.com/static/media/dutch.5e6ef5bd.jpg"
-              alt=""
-            />
-          </div>
-          <div className="teacher-item">
-            <img
-              src="https://www.italki.com/static/media/dutch.5e6ef5bd.jpg"
-              alt=""
-            />
-          </div>
+          {this.props.teachers.map(teacher => (
+            <div className="teacher-item">
+              <a href={`#/teachers/${teacher.language}`}>
+                <img src={teacher.img} alt={teacher} />
+              </a>
+            </div>
+          ))}
         </Slider>
       </div>
     );
