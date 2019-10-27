@@ -28,10 +28,12 @@ class TeachersCarousel extends Component {
     teachers: [
       {
         img: "https://www.italki.com/static/media/english_UK.0b1dc079.jpg",
+        flag: "https://www.italki.com/static/media/usa.4b11fcae.svg",
         language: "English"
       },
       {
         img: "https://www.italki.com/static/media/spanish.32d567a0.jpg",
+        flag: "https://www.italki.com/static/media/usa.4b11fcae.svg",
         language: "Spanish"
       },
       {
@@ -66,6 +68,7 @@ class TeachersCarousel extends Component {
       },
       {
         img: "https://www.italki.com/static/media/portuguese.e159c420.jpg",
+        flag: "https://www.italki.com/static/media/usa.4b11fcae.svg",
         language: "Portuguese"
       },
       {
@@ -75,6 +78,7 @@ class TeachersCarousel extends Component {
       },
       {
         img: "https://www.italki.com/static/media/arabic.5d7f2efc.jpg",
+        flag: "https://www.italki.com/static/media/usa.4b11fcae.svg",
         language: "Arabic"
       },
       {
@@ -84,6 +88,7 @@ class TeachersCarousel extends Component {
       },
       {
         img: "https://www.italki.com/static/media/turkish.3433d42b.jpg",
+        flag: "https://www.italki.com/static/media/usa.4b11fcae.svg",
         language: "Turkish"
       },
       {
@@ -98,10 +103,12 @@ class TeachersCarousel extends Component {
       },
       {
         img: "https://www.italki.com/static/media/hindi.5c1a2b79.jpg",
+        flag: "https://www.italki.com/static/media/usa.4b11fcae.svg",
         language: "Hindi"
       },
       {
         img: "https://www.italki.com/static/media/serbian.cae18b82.jpg",
+        flag: "https://www.italki.com/static/media/usa.4b11fcae.svg",
         language: "Serbian"
       },
       {
@@ -130,11 +137,21 @@ class TeachersCarousel extends Component {
           <span className="anylanguage"> Any language.</span>
         </h1>
         <Slider {...settings}>
-          {this.props.teachers.map(teacher => (
-            <div className="teacher-item">
-              <a href={`#/teachers/${teacher.language}`}>
-                <img src={teacher.img} alt={teacher} />
-              </a>
+          {this.props.teachers.map((teacher, idx) => (
+            <div key={idx} className="teacher-item">
+              <div className=".teacher-item-pic-container">
+                <a href={`#/teachers/${teacher.language}`}>
+                  <img className="teacher-item-pic" src={teacher.img} alt={teacher} />
+                </a>
+                <div className="teacher-detail">
+                  <img
+                    className="teacher-flag"
+                    src={teacher.flag}
+                    alt={teacher.language}
+                  />
+                  <h2 className="teacher-detail-title">{teacher.language}</h2>
+                </div>
+              </div>
             </div>
           ))}
         </Slider>
