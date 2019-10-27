@@ -6,7 +6,7 @@ const HomePageWhyItalki = props => {
   return (
     <div className="homepage-why-italki">
       <h1 className="why-italki-title">
-        <span>Why ifluent?</span>
+        <span>Why iFluent?</span>
       </h1>
       <WhyItalki />
       <Companies />

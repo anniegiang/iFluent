@@ -10,7 +10,7 @@ const HomepageBottomBanner = props => {
         </h1>
         <p>
           <span>
-            On italki it’s about mastering a timeless skill, cultivating new
+            On iFluent it’s about mastering a timeless skill, cultivating new
             perspectives, and connecting with fascinating people from around the
             world.
           </span>

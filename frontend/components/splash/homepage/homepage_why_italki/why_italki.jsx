@@ -13,7 +13,7 @@ const WhyItalki = props => {
       <WhyItalkiItem
         className="homepage-why-tialki-pay"
         h1Text="Pay Per Lesson"
-        pText="On italki you only pay per lesson and at the price that meets your budget."
+        pText="On iFluent you only pay per lesson and at the price that meets your budget."
         imgUrl="https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/illustrations-02.e3592c22.svg"
       />
       <WhyItalkiItem
