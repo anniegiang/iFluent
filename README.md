@@ -8,6 +8,16 @@ iFluent is a full-stack clone of iTalki, an online platform that connects langua
 - Frontend: React, Redux
 
 ## Features
+- Designed the ability to search for teachers by language by sending the language name as a query and establishing Active Record associations between teachers and languages to filter teachers based on the given language.
+
+- Enhanced query fetch performance by prefetching data associations using Active Record’s includes method, avoiding N+1 queries for nested associations.
+
+- Improved state organization by storing core data types in objects and making the IDs as keys and data as values, achieving constant lookup time and normalizing the Redux store.
+
+- Implemented secure user authentication by storing hashed passwords generated using Bcrypt and storing session tokens using Rail’s Session to maintain user-specific state to correctly identify users upon HTTP requests.
+
+- Leveraged the React-Slick library to build a photos carousel that allows users to click through slides using navigation arrows.
+
 
 ### Secure authentication
 
@@ -30,6 +40,3 @@ def index
 end
 ```
 
-### Teacher Profile
-
-- Users can view lessons offered by teachers.
