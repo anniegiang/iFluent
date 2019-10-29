@@ -36,6 +36,27 @@ class LandingNavBar extends React.Component {
         </a>
         <SearchBarContainer />
         <div className="landing-nav-links">
+          <a
+            className="social"
+            href="https://github.com/anniegiang"
+            target="_blank"
+          >
+            <i className="fab fa-github"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/annie-giang-113bb4101/"
+            target="_blank"
+            className="social"
+          >
+            <i className="fab fa-linkedin-in"></i>
+          </a>
+          <a
+            href="https://anniegiang.github.io/"
+            target="_blank"
+            className="social"
+          >
+            Portfolio
+          </a>
           <a id="find-a-teacher" href="#/dashboard">
             Dashboard
           </a>

@@ -26,6 +26,7 @@
 .splash-nav-links {
   padding-right: 30px;
 
+  a,
   button {
     margin-left: 25px;
     text-transform: uppercase;
@@ -35,6 +36,13 @@
     padding: 10px 13px;
     color: #fff;
     cursor: pointer;
+  }
+
+  .social {
+    border: none;
+    margin-left: 3px;
+    font-size: 14px;
+
   }
 
   :hover {
