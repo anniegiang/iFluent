@@ -30,7 +30,19 @@ class BookingForm extends React.Component {
     if (type === "lessonItem") {
       this.setState({ lesson: data.lesson, lessonItem: data.item });
     } else {
-      this.setState({ [type]: data });
+      this.setState({ [type]: data }, () => {
+        const allTimeOptions = Array.from(
+          document.getElementsByClassName("time-option")
+        );
+        let timeSlot;
+        for (let i = 0; i < allTimeOptions.length; i++) {
+          if (parseInt(allTimeOptions[i].id) === this.state.openTimeSlot.id) {
+            timeSlot = allTimeOptions[i];
+          }
+        }
+
+        timeSlot.classList.toggle("selected");
+      });
     }
   }
 

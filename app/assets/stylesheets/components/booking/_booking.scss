@@ -74,13 +74,19 @@
   margin-bottom: 3px;
 }
 
-.lesson-item:focus,
-.time-option:focus {
-  // border: 1px solid #ff786b;
+// .lesson-item:focus,
+// .time-option:focus {
+//   // border: 1px solid #ff786b;
+//   // background-image: linear-gradient(90deg, #ff4338, #ff786b);
+//   border: 1px solid #7ec937;
+//   color: white;
+//   background-color: #7ec937;
+// }
+
+.selected {
   border: 1px solid #7ec937;
-  color: white;
   background-color: #7ec937;
-  // background-image: linear-gradient(90deg, #ff4338, #ff786b);
+  color: white;
 }
 
 .time-option {
