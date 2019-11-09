@@ -4,13 +4,24 @@ import DashboardBookings from "./dashboard_bookings";
 import LandingNavBarContainer from "../navbar/landing_navbar_container";
 
 class Dashboard extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      fetchedBookings: false
+    };
+  }
+
   componentDidMount() {
-    this.props.fetchAllBookings();
+    this.props
+      .fetchAllBookings()
+      .then(() => this.setState({ fetchedBookings: true }));
   }
 
   render() {
-    if (!this.props.bookings) {
-      return;
+    if (!this.state.fetchedBookings) {
+      // debugger;
+      return null;
     }
     const { bookings, currentUser, deleteBooking } = this.props;
     return (
