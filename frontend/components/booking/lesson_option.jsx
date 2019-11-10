@@ -17,6 +17,8 @@ const LessonOption = props => {
             className="lesson-item"
             tabIndex="0"
             key={item.id}
+            id={item.id}
+            selected={false}
           >
             <h2 className="lesson-item-duration">{item.duration} minutes</h2>
             <h2 className="lesson-item-price">${formatPrice(item.price)}</h2>

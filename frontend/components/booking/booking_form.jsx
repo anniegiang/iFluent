@@ -28,7 +28,9 @@ class BookingForm extends React.Component {
 
   handleClick(type, data) {
     if (type === "lessonItem") {
-      this.setState({ lesson: data.lesson, lessonItem: data.item });
+      this.setState({ lesson: data.lesson, lessonItem: data.item }, () => {
+        this.handleSelectedLessonOption(this.state.lessonItem.id);
+      });
     } else {
       this.setState({ [type]: data }, () => {
         this.handleSelectedTimeOption(this.state.openTimeSlot.id);
@@ -45,6 +47,22 @@ class BookingForm extends React.Component {
     for (let i = 0; i < allTimeOptions.length; i++) {
       let option = allTimeOptions[i];
       let optionId = parseInt(allTimeOptions[i].id);
+      if (option.selected || optionId === id) {
+        option.selected = !option.selected;
+        option.classList.toggle("selected");
+      }
+    }
+  }
+
+  handleSelectedLessonOption(id) {
+    const allLessonOptions = Array.from(
+      document.getElementsByClassName("lesson-item")
+    );
+
+    let option;
+    for (let i = 0; i < allLessonOptions.length; i++) {
+      let option = allLessonOptions[i];
+      let optionId = parseInt(allLessonOptions[i].id);
       if (option.selected || optionId === id) {
         option.selected = !option.selected;
         option.classList.toggle("selected");
