@@ -23,7 +23,7 @@ class HomePageHero extends React.Component {
           <video
             autoPlay
             loop
-            poster="https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/hero-img.5353d1d3.jpg"
+            poster={window.splashTemp}
             src={window.splashVideo}
             type="video/mp4"
           ></video>
