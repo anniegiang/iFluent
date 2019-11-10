@@ -9,6 +9,7 @@ const OpenTimeOption = props => {
       className="time-option"
       tabIndex="0"
       id={openTimeSlot.id}
+      selected={false}
     >
       <Moment className="time-option-start-time" format="LLLL">
         {openTimeSlot.startTime}
