@@ -24,7 +24,7 @@ class HomePageHero extends React.Component {
             autoPlay
             loop
             poster={window.splashTemp}
-            src={window.splashVideo}
+            src="https://ifluent-dev.s3-us-west-1.amazonaws.com/homepagevideo_short_version2.98c5bfce.mp4"
             type="video/mp4"
           ></video>
           <div className="homepage-hero_background"></div>
