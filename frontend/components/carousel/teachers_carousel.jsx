@@ -139,13 +139,12 @@ class TeachersCarousel extends Component {
 
   render() {
     const settings = {
-      speed: 500,
+      speed: 100,
       rows: 2,
       slidesPerRow: 3,
       dots: true,
       infinite: true,
       autoplay: true,
-      speed: 1000,
       cssEase: "linear",
       nextArrow: <SampleNextArrow />,
       prevArrow: <SamplePrevArrow />
