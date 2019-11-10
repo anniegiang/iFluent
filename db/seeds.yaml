@@ -18,92 +18,92 @@ users:
     name: "Andrew Bradbury"
     email: andrew@gmail.com
     password: "password"
-    profile_picture_url: "https://imagesavatar-static01.italki.com/T026578497_Avatar.jpg"
+    profile_picture_url: "https://ifluent-dev.s3-us-west-1.amazonaws.com/2sRXkzMQKwJexHeR6y7RoWd2"
   - id: 5
     name: "Katie"
     email: katie@gmail.com
     password: "password"
-    profile_picture_url: "https://imagesavatar-static01.italki.com/10T031823100_Avatar.jpg"
+    profile_picture_url: "https://ifluent-dev.s3-us-west-1.amazonaws.com/tV16WWXpZTVVymuKA1jzySy7"
   - id: 6
     name: "Patrick"
     email: patrick1@gmail.com
     password: "password"
-    profile_picture_url: "https://imagesavatar-static01.italki.com/3T043188030_Avatar.jpg"
+    profile_picture_url: "https://ifluent-dev.s3-us-west-1.amazonaws.com/oTyrfPkKKWbpeL3Dxki6TLHh"
   - id: 7
     name: "Linda"
     email: linda@gmail.com
     password: "password"
-    profile_picture_url: "https://imagesavatar-static01.italki.com/4T064805780_Avatar.jpg"
+    profile_picture_url: "https://ifluent-dev.s3-us-west-1.amazonaws.com/88sPsCUcNtzCwE5a5pWJwn3k"
   - id: 8
     name: "Eco"
     email: eco@gmail.com
     password: "password"
-    profile_picture_url: "https://imagesavatar-static01.italki.com/T047766180_Avatar.jpg"
+    profile_picture_url: "https://ifluent-dev.s3-us-west-1.amazonaws.com/ysA2xjFGXrqmYUgW9p5MXjZp"
   - id: 9
     name: "Patrick"
     email: patrick2@gmail.com
     password: "password"
-    profile_picture_url: "https://imagesavatar-static01.italki.com/1T035600858_Avatar.jpg"
+    profile_picture_url: "https://ifluent-dev.s3-us-west-1.amazonaws.com/bspaZ7CCQNpVrhD12cD4xZ8X"
   - id: 10
     name: "Megan"
     email: megan@gmail.com
     password: "password"
-    profile_picture_url: "https://imagesavatar-static01.italki.com/T034766220_Avatar.jpg"
+    profile_picture_url: "https://ifluent-dev.s3-us-west-1.amazonaws.com/TSFddsJPHZZhLKkeksudqN7r"
   - id: 11
     name: "Russell"
     email: russell@gmail.com
     password: "password"
-    profile_picture_url: "https://imagesavatar-static01.italki.com/1T044004630_Avatar.jpg"
+    profile_picture_url: "https://ifluent-dev.s3-us-west-1.amazonaws.com/7o8tbAStAgyT3dKKpouMovQA"
   - id: 12
     name: "Meg"
     email: meg@gmail.com
     password: "password"
-    profile_picture_url: "https://imagesavatar-static01.italki.com/2T063990190_Avatar.jpg"
+    profile_picture_url: "https://ifluent-dev.s3-us-west-1.amazonaws.com/ndCAz2QcuvTEQhmMErdsqeDE"
   - id: 13
     name: "Cindy"
     email: cindy@gmail.com
     password: "password"
-    profile_picture_url: "https://imagesavatar-static01.italki.com/3T047363820_Avatar.jpg"
+    profile_picture_url: "https://ifluent-dev.s3-us-west-1.amazonaws.com/tFRovmsV5cpBJUZwscmiFrFQ"
   - id: 14
     name: "Cesar Rodriguez"
     email: cesar@gmail.com
     password: "password"
-    profile_picture_url: "https://imagesavatar-static01.italki.com/T056070240_Avatar.jpg"
+    profile_picture_url: "https://ifluent-dev.s3-us-west-1.amazonaws.com/dSfFZ6pb5HB281DZ6ZPfFfMN"
   - id: 15
     name: "Hector"
     email: hector@gmail.com
     password: "password"
-    profile_picture_url: "https://imagesavatar-static01.italki.com/2T009049310_Avatar.jpg"
+    profile_picture_url: "https://ifluent-dev.s3-us-west-1.amazonaws.com/azYqYkLz2nwcq9bdLAQMFKZm"
   - id: 16
     name: "Robert"
     email: robert@gmail.com
     password: "password"
-    profile_picture_url: "https://imagesavatar-static01.italki.com/5T031561200_Avatar.jpg"
+    profile_picture_url: "https://ifluent-dev.s3-us-west-1.amazonaws.com/FuWh5LH7ahdnB8FsGCGZjWkd"
   - id: 17
     name: "Sherin"
     email: sherin@gmail.com
     password: "password"
-    profile_picture_url: "https://imagesavatar-static01.italki.com/T030809922_Avatar.jpg"
+    profile_picture_url: "https://ifluent-dev.s3-us-west-1.amazonaws.com/BeNMqJRKdRoM6R5bDpp3m7Zx"
   - id: 18
     name: "Haroldo Machado"
     email: haroldo@gmail.com
     password: "password"
-    profile_picture_url: "https://imagesavatar-static01.italki.com/T043085695_Avatar.jpg"
+    profile_picture_url: "https://ifluent-dev.s3-us-west-1.amazonaws.com/L4c7g76zEaKstTqTr3m2HnPy"
   - id: 19
     name: "Julieta"
     email: julieta@gmail.com
     password: "password"
-    profile_picture_url: "https://imagesavatar-static01.italki.com/3T051633770_Avatar.jpg"
+    profile_picture_url: "https://ifluent-dev.s3-us-west-1.amazonaws.com/Sm26vyTTgvNSWXd4FQKicsxn"
   - id: 20
     name: "Kaori"
     email: kaori@gmail.com
     password: "password"
-    profile_picture_url: "https://imagesavatar-static01.italki.com/8T049417910_Avatar.jpg"
+    profile_picture_url: "https://ifluent-dev.s3-us-west-1.amazonaws.com/xf6PhA9kiddNNumC3YbDd7nt"
   - id: 21
     name: "Japanese Specialist Shuji"
     email: shuji@gmail.com
     password: "password"
-    profile_picture_url: "https://imagesavatar-static01.italki.com/T016601834_Avatar.jpg"
+    profile_picture_url: "https://ifluent-dev.s3-us-west-1.amazonaws.com/7LramyX7uFwvmddHs41v9gZv"
 
 teachers:
   - id: 1
