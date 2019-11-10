@@ -20,34 +20,34 @@ const Companies = props => {
   return (
     <ul className="homepage-companies">
       <Company
-        imgUrl="https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/bbc.778e046f.svg"
+        imgUrl="https://ifluent-dev.s3-us-west-1.amazonaws.com/bbc-778e046f.svg"
         alt="bbc"
       />
       <Company
-        imgUrl="https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/business.c2af4635.svg"
+        imgUrl="https://ifluent-dev.s3-us-west-1.amazonaws.com/business-c2af4635.svg"
         alt="business"
       />
       <Company
-        imgUrl="https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/theguardian.770a9aa8.svg"
+        imgUrl="https://ifluent-dev.s3-us-west-1.amazonaws.com/theguardian-770a9aa8.svg"
         alt="theguardian"
       />
       <Company
-        imgUrl="https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/tc.a16a0112.svg"
+        imgUrl="https://ifluent-dev.s3-us-west-1.amazonaws.com/tc-a16a0112.svg"
         alt="tc"
       />
       <Company
-        imgUrl="https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/quartz.e616e10a.svg"
+        imgUrl="https://ifluent-dev.s3-us-west-1.amazonaws.com/quartz-e616e10a.svg"
         alt="quartz"
       />
       <Company
-        imgUrl="https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/lifehacker-new.17be92a8.svg"
+        imgUrl="https://ifluent-dev.s3-us-west-1.amazonaws.com/lifehacker-new-17be92a8.svg"
         alt="lifehacker"
       />
       <li>
         <div className={companyStyle3}>
           <img
             style={imgStyle3}
-            src="https://d1m3ds7i7t710d.cloudfront.net/orion/static/media/post.b5d4953a.svg"
+            src="https://ifluent-dev.s3-us-west-1.amazonaws.com/post-b5d4953a.svg"
             alt="post"
           />
           <div className={companyStyle3}></div>
