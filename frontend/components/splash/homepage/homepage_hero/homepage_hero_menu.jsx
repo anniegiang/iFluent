@@ -77,6 +77,7 @@ class HomePageHeroMenu extends React.Component {
           <input
             className="homepage-hero_menu-choice-select"
             type="text"
+            disabled
             placeholder="Choose a language"
           />
           <span className="homepage-hero_menu-search-icon">
