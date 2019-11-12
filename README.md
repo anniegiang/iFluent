@@ -24,18 +24,12 @@ iFluent is a full-stack clone of iTalki, an online platform that connects langua
 
 - Leveraged the React-Slick library to build a photos carousel that allows users to click through slides using navigation arrows.
 
+## Code sneak peak
 
-### Secure authentication
-
-- Utilized Bcrypt to create password digests.
-- Maintained state by generating a session token each time a client logged in and storing the token in the client's cookie.
-
-### Search Results
-
-- Users can search for teachers based on languages. In order to filter teachers correctly, the name of the language is stored in the params upon an ajax call to Teachers#index.
-
+### Search languages by teacher
 ```
 controllers/api/teachers_controller
+
 def index
     @language = Language.find_by(language: params[:language]) #language name
     if @language
@@ -46,3 +40,40 @@ def index
 end
 ```
 
+### Create a booking
+```
+controllers/api/bookings_controller
+
+def create
+  @booking = Booking.new(booking_params)
+    if @booking.save
+       render :show 
+    else
+       render json: @booking.errors.full_messages, status: 422
+    end
+end
+
+def booking_params
+    params.require(:booking).permit(:student_id, :teacher_id, :start_time, :duration, :lesson_item_id)
+end
+```
+### Booking form onClick button styling 
+```
+frontend/components/booking/booking_form.jsx
+
+  handleSelectedTimeOption(id) {
+    const allTimeOptions = Array.from(
+      document.getElementsByClassName("time-option")
+    );
+
+    let option;
+    for (let i = 0; i < allTimeOptions.length; i++) {
+      let option = allTimeOptions[i];
+      let optionId = parseInt(allTimeOptions[i].id);
+      if (option.selected || optionId === id) {
+        option.selected = !option.selected;
+        option.classList.toggle("selected");
+      }
+    }
+  }
+```
