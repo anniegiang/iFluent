@@ -2,6 +2,10 @@
 
 iFluent is a full-stack clone of iTalki, an online platform that connects language-learning enthusiasts with teachers among a variety of languages. iFluent features the ability to discover teachers across different languages, as well as the ability to book lessons.
 
+![](splash.gif)
+![](search-results.gif)
+![](booking.gif)
+
 ## Technologies
 
 - Backend: Ruby on Rails, PostgreSQL
