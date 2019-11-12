@@ -1,4 +1,5 @@
 # iFluent
+## Live: https://ifluent.herokuapp.com/
 
 iFluent is a full-stack clone of iTalki, an online platform that connects language-learning enthusiasts with teachers among a variety of languages. iFluent features the ability to discover teachers across different languages, as well as the ability to book lessons.
 
@@ -10,6 +11,7 @@ iFluent is a full-stack clone of iTalki, an online platform that connects langua
 
 - Backend: Ruby on Rails, PostgreSQL
 - Frontend: React, Redux
+- Other: AWS
 
 ## Features
 - Designed the ability to search for teachers by language by sending the language name as a query and establishing Active Record associations between teachers and languages to filter teachers based on the given language.
