@@ -50,11 +50,7 @@ class LandingNavBar extends React.Component {
           >
             <i className="fab fa-linkedin-in"></i>
           </a>
-          <a
-            href="https://anniegiang.github.io/"
-            target="_blank"
-            className="social"
-          >
+          <a href="https://anniegiang.me/" target="_blank" className="social">
             Portfolio
           </a>
           <a id="find-a-teacher" href="#/dashboard">

@@ -52,11 +52,7 @@ class SplashNavBar extends React.Component {
           >
             Linkedin
           </a>
-          <a
-            href="https://anniegiang.github.io/"
-            target="_blank"
-            className="social"
-          >
+          <a href="https://anniegiang.me/" target="_blank" className="social">
             Portfolio
           </a>
           <button onClick={this.props.openModalLogin}>Log In</button>
