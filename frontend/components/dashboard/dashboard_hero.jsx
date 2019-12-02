@@ -13,7 +13,9 @@ const DashboardHero = props => {
             </div>
           </div>
           <section className="dashboard-person">
-            <div className="dashboard-name dashboard-name-common">{name}</div>
+            <div className="dashboard-name dashboard-name-common">
+              Welcome, {name}!
+            </div>
             <div className="dashboard-id">
               <span>User ID: </span>
               <span>{id}</span>
