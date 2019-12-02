@@ -28,24 +28,6 @@ const DashboardHero = props => {
               <span className="upcoming-lessons">Upcoming Lessons</span>
             </div>
           </section>
-          <section className="lesson-info">
-            <div>0</div>
-            <div>
-              <span className="action-required">Action Required</span>
-            </div>
-          </section>
-          <section className="lesson-info">
-            <div>0</div>
-            <div>
-              <span className="active-packages">Active Packages</span>
-            </div>
-          </section>
-        </div>
-        <div className="dashboard-total-balance">
-          <header>
-            <span>Total Balance</span>
-          </header>
-          <section className="dashboard-total-money">$0 USD</section>
         </div>
       </div>
       <div className="recommend-teacher-slider-container">
@@ -54,7 +36,7 @@ const DashboardHero = props => {
           type="button"
           className="find-your-teacher-btn"
         >
-          <span>FIND YOUR TEACHER</span>
+          <span>DISCOVER TEACHERS</span>
         </a>
       </div>
     </div>

@@ -9,6 +9,7 @@
 
 .dashboard-user {
   display: flex;
+  justify-content: center;
   width: 945px;
   margin: 0 auto;
 }
@@ -18,10 +19,7 @@
   background-color: rgb(255, 255, 255);
   box-shadow: rgba(8, 19, 68, 0.1) 0px 2px 8px 0px;
   border-radius: 6px;
-}
-
-.dashboard-info {
-  width: 366px;
+  width: 280px;
   margin-right: 10px;
   position: relative;
   padding: 20px 0px 20px 20px;
@@ -84,9 +82,6 @@
   box-shadow: rgba(8, 19, 68, 0.1) 0px 2px 8px 0px;
   border-radius: 6px;
   margin-right: 10px;
-}
-
-.dashboard-lesson {
   padding: 7px;
 }
 
