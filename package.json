@@ -9,7 +9,7 @@
     "css-loader": "^3.2.0",
     "faker": "^4.1.0",
     "install": "^0.13.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "npm": "^6.11.3",
     "react": "^16.9.0",
     "react-datepicker": "^2.9.6",
